@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 45.6176, 17.3789 )
+text = "niv wuz here :3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
