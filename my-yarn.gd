@@ -38,6 +38,9 @@ func choice(text, marker):
 func action(text):
 	pass
 	
+func display_image(path):
+	scene.display_image(path)
+	
 func yarn_custom_logic(to):
 	if not to in game.counters:
 		game.counters[to] = 0

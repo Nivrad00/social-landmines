@@ -58,6 +58,9 @@ func story_setting(setting, value):
 # called for each node name
 func yarn_custom_logic(to):
 	pass
+	
+func display_image(path):
+	pass
 
 # called for each node name (after)
 func yarn_custom_logic_after(to):
@@ -113,6 +116,13 @@ func new_yarn_fibre(line):
 		line = line.replace('<<', '')
 		line = line.replace('>>', '')
 		fibre['statement'] = line
+		return fibre
+	elif line.strip_edges().substr(0,5) == '[img]':
+		var fibre = {}
+		fibre['kind'] = 'image'
+		line = line.replace('[img]', '')
+		line = line.replace('[/img]', '')
+		fibre['path'] = "res://" + line
 		return fibre
 	# text fibre
 	var fibre = {}
@@ -190,6 +200,8 @@ func yarn_unravel(to, from=false):
 						'logic':
 							var statement = fibre['statement']
 							logic(statement)
+						'image':
+							display_image(fibre['path'])
 			'code':
 				yarn_code(to)
 	else:

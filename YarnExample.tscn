@@ -30,13 +30,13 @@ valign = 1
 [node name="PageHBox" type="HBoxContainer" parent="PageVBox"]
 margin_top = 64.0
 margin_right = 868.0
-margin_bottom = 426.0
+margin_bottom = 506.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="DialogVBox" type="VBoxContainer" parent="PageVBox/PageHBox"]
 margin_right = 432.0
-margin_bottom = 362.0
+margin_bottom = 442.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -51,14 +51,14 @@ valign = 1
 [node name="DialogScroll" type="ScrollContainer" parent="PageVBox/PageHBox/DialogVBox"]
 margin_top = 44.0
 margin_right = 432.0
-margin_bottom = 362.0
+margin_bottom = 442.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 scroll_horizontal_enabled = false
 
 [node name="Dialog" type="MarginContainer" parent="PageVBox/PageHBox/DialogVBox/DialogScroll"]
 margin_right = 432.0
-margin_bottom = 318.0
+margin_bottom = 398.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 0
@@ -68,11 +68,11 @@ custom_constants/margin_bottom = 0
 
 [node name="Panel" type="Panel" parent="PageVBox/PageHBox/DialogVBox/DialogScroll/Dialog"]
 margin_right = 432.0
-margin_bottom = 318.0
+margin_bottom = 398.0
 
 [node name="Margin" type="MarginContainer" parent="PageVBox/PageHBox/DialogVBox/DialogScroll/Dialog"]
 margin_right = 432.0
-margin_bottom = 318.0
+margin_bottom = 398.0
 custom_constants/margin_right = 16
 custom_constants/margin_top = 16
 custom_constants/margin_left = 16
@@ -82,12 +82,12 @@ custom_constants/margin_bottom = 16
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 416.0
-margin_bottom = 302.0
+margin_bottom = 382.0
 
 [node name="ChoicesVBox" type="VBoxContainer" parent="PageVBox/PageHBox"]
 margin_left = 436.0
 margin_right = 868.0
-margin_bottom = 362.0
+margin_bottom = 442.0
 rect_min_size = Vector2( 300, 0 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -103,7 +103,7 @@ valign = 1
 [node name="Choices" type="MarginContainer" parent="PageVBox/PageHBox/ChoicesVBox"]
 margin_top = 44.0
 margin_right = 432.0
-margin_bottom = 362.0
+margin_bottom = 442.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/margin_right = 0
@@ -113,11 +113,11 @@ custom_constants/margin_bottom = 0
 
 [node name="Panel" type="Panel" parent="PageVBox/PageHBox/ChoicesVBox/Choices"]
 margin_right = 432.0
-margin_bottom = 318.0
+margin_bottom = 398.0
 
 [node name="Margin" type="MarginContainer" parent="PageVBox/PageHBox/ChoicesVBox/Choices"]
 margin_right = 432.0
-margin_bottom = 318.0
+margin_bottom = 398.0
 custom_constants/margin_right = 16
 custom_constants/margin_top = 16
 custom_constants/margin_left = 16
@@ -127,10 +127,10 @@ custom_constants/margin_bottom = 16
 margin_left = 16.0
 margin_top = 16.0
 margin_right = 416.0
-margin_bottom = 302.0
+margin_bottom = 382.0
 
 [node name="Bottom" type="MarginContainer" parent="PageVBox"]
-margin_top = 430.0
+margin_top = 510.0
 margin_right = 868.0
 margin_bottom = 550.0
 rect_min_size = Vector2( 0, 40 )
@@ -143,19 +143,18 @@ custom_constants/margin_bottom = 0
 margin_left = 16.0
 margin_top = 12.0
 margin_right = 852.0
-margin_bottom = 120.0
+margin_bottom = 40.0
 custom_constants/separation = 12
 
-[node name="NotesLabel" type="Label" parent="PageVBox/Bottom/VBoxContainer"]
-margin_right = 836.0
-margin_bottom = 82.0
-text = "Welcome to Godot Yarn Importer!  The focus of this is to provide a GDScript library that reads \"*.yarn.txt\" files from Yarn (https://github.com/InfiniteAmmoInc/Yarn), then imports it into a data structure useful for Godot.  Convienience functions are included but the GUI portion of the import is up to *you*, the developer.  Whether you want basic 2D, custom 2D, 3D controls, or whatever, you are responsible for the look and feel and you must choose the components used to create the GUI. A basic vanilla dialog+choice GUI is provided merely as an example."
-autowrap = true
-
 [node name="VisitLabel" type="Label" parent="PageVBox/Bottom/VBoxContainer"]
-margin_top = 94.0
 margin_right = 836.0
-margin_bottom = 108.0
+margin_bottom = 14.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PageVBox/Bottom/VBoxContainer"]
+layer = -1
+
+[node name="image" type="Sprite" parent="PageVBox/Bottom/VBoxContainer/CanvasLayer"]
+centered = false
 
 [node name="Settings" type="Label" parent="PageVBox"]
 margin_top = 554.0

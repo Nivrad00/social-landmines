@@ -2,6 +2,7 @@ extends Control
 
 onready var dialog = $PageVBox/PageHBox/DialogVBox/DialogScroll/Dialog/Margin/VBox
 onready var choices = $PageVBox/PageHBox/ChoicesVBox/Choices/Margin/VBox
+onready var image = $PageVBox/Bottom/VBoxContainer/CanvasLayer/image
 
 var yarn
 
@@ -33,7 +34,17 @@ func on_choice_press(marker):
 		child.queue_free()
 	# jump to next node
 	yarn.yarn_unravel(marker)
-	
+
+func create_texture(img):
+	var texture = ImageTexture.new()
+	var image = Image.new()
+	image.load(img)
+	texture.create_from_image(image)
+	return texture
+
+func display_image(path):
+	image.texture = create_texture(path)
+
 func add_separator(to):
 	if to.get_child_count()>0:
 		var separator = HSeparator.new()

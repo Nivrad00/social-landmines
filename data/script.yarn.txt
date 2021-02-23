@@ -3,7 +3,7 @@ tags:
 colorID: 0
 position: 886,-30
 ---
-[img]store.PNG[/img]
+[img]seed.PNG[/img]
 Farmer 1: Welcome to my store
 [[I would like to buy some beans|Beans]]
 [[I need to use the restroom|Restroom]]
@@ -22,6 +22,7 @@ tags:
 colorID: 0
 position: 1064,238
 ---
+[img]restroom.jpg[/img]
 <<if $peed is false>>
     Me: Could I use the restroom?
     Farmer 1: Sure, it's down this way and to the left. 
