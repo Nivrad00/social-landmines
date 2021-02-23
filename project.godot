@@ -15,8 +15,17 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Social Landmines"
+config/name="Yarn Importer"
+run/main_scene="res://YarnExample.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+game="*res://game.gd"
+
+[display]
+
+window/size/width=900
 
 [rendering]
 
