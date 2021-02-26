@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
+[ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Control"]
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainDialog" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "default_event"
+auto_start = true
+
+[node name="background" parent="." instance=ExtResource( 2 )]
+visible = false
