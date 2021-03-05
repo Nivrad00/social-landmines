@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://game/scenes/Dialogue.gd" type="Script" id=1]
+[ext_resource path="res://game/scenes/beans.gd" type="Script" id=2]
+[ext_resource path="res://game/backgrounds/backgrounds.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/scenes/restroom.gd" type="Script" id=4]
+[ext_resource path="res://game/scenes/sale.gd" type="Script" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="backgrounds" parent="." instance=ExtResource( 3 )]
+position = Vector2( 646.948, 362.738 )
+
+[node name="Dialogue" type="Node" parent="."]
+script = ExtResource( 1 )
+default_starting_event = "Dialogue"
+auto_start = true
+
+[node name="beans" type="Node" parent="Dialogue"]
+script = ExtResource( 2 )
+default_starting_event = "beans"
+
+[node name="sale" type="Node" parent="Dialogue/beans"]
+script = ExtResource( 5 )
+default_starting_event = "sale"
+
+[node name="restroom" type="Node" parent="Dialogue"]
+script = ExtResource( 4 )
+default_starting_event = "restroom"
