@@ -153,6 +153,8 @@ func cond(condition):
 
 
 func step():
+	print('')
+	print('stepping with stack: ' + str(self.event_stack))
 	if not step_semaphore:
 		step_semaphore = Semaphore.new()
 	if is_active():
