@@ -15,12 +15,6 @@ func default_event():
 	print('entering default event')
 	start_event("default_event")
 	
-	# for some reason calling cond() once makes it start working
-	# unclogs the gutter, if you will
-	# it seems like the first time you call cond(), is_active() is false
-	# so you need to call it once to make the thread active again
-	# cond(false)
-	
 	# start by initializing the yarn story and proceeding up to the first choice
 	current_choices = []
 	print('initializing yarn story')
@@ -28,7 +22,7 @@ func default_event():
 	
 	# then continue looping through the story, handling choices as they appear
 	while true:
-		# the loop ends if the thread isn't running?
+		# the loop should end if the thread isn't running -- eg, this thread is obsolete
 		if not is_running():
 			print('breaking out from dialog loop')
 			break
