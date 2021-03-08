@@ -17,6 +17,7 @@ extends Node
 var yarn = {}
 var environment = {}
 var skip = false
+var if_hit = false
 
 # OVERRIDE METHODS
 #
@@ -28,23 +29,42 @@ func say(text):
 func choice(text, marker):
 	pass
 
-# rudamentary conditional handling and variable definition
+# evaluate logic / math expressions
+func evaluate(expr):
+	var evalTokenizer = EvalTokenizer.new()
+	var evalTree = EvalTree.new(evalTokenizer.tokenize(expr))
+	var evalEvaluator = EvalEvaluate.new(evalTree.get_tree())
+	return evalEvaluator.evaluate(environment)
+
+# handles conditional handling and variable definition
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")
+	# "set variable to expression"
 	if split_statement[0] == "set":
 		var name = split_statement[1]
-		var value = split_statement[3]
-		environment[name] = value
+		environment[name] = evaluate(statement.split("to")[1])
+	# if "expression"
 	if split_statement[0] == "if":
-		var name = split_statement[1]
-		var value = split_statement[3]
-		if not environment.has(name) or environment[name] != value:
+		if not evaluate(statement.split("if")[1]):
 			skip = true
+		else:
+			if_hit = true
+	# "elseif "expression"
+	if split_statement[0] == "elseif":
+		var check = evaluate(statement.split("elseif")[1])
+		if not check or if_hit:
+			skip = true
+		else:
+			skip = false
+			if_hit = true
+	#run statements under else if no if/elseif ran
 	if split_statement[0] == "else":
-		skip = not skip
+		skip = if_hit
+	#end of conditionals, reset vars
 	if split_statement[0] == "endif":
 		skip = false
+		if_hit = false
 		
 	
 # called for each line of text
@@ -70,7 +90,7 @@ func yarn_custom_logic_after(to):
 #
 func spin_yarn(file, start_thread = false):
 	yarn = load_yarn(file)
-	environment["$peed"] = "false"
+	environment["$peed"] = 0
 	# Find the starting thread...
 	if not start_thread:
 		start_thread = yarn['start']
@@ -109,6 +129,15 @@ func new_yarn_fibre(line):
 			fibre['text'] = split[0]
 			fibre['marker'] = split[1]
 			return fibre
+		else:
+			var fibre = {}
+			fibre['kind'] = 'jump'
+			line = line.replace('[[', '')
+			line = line.replace(']]', '')
+			var split = line.split('|')
+			fibre['marker'] = split[0]
+			return fibre
+			
 	# logic instructions
 	elif line.strip_edges().substr(0,2) == '<<':
 		var fibre = {}
@@ -196,12 +225,17 @@ func yarn_unravel(to, from=false):
 								say(text)
 						'choice':
 							var text = yarn_text_variables(fibre['text'])
-							choice(text, fibre['marker'])
+							if not skip:
+								choice(text, fibre['marker'])
+						'jump':
+							if not skip:
+								yarn_unravel(fibre['marker'])
 						'logic':
 							var statement = fibre['statement']
 							logic(statement)
 						'image':
-							display_image(fibre['path'])
+							if not skip:
+								display_image(fibre['path'])
 			'code':
 				yarn_code(to)
 	else:
