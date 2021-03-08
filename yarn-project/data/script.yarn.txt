@@ -34,6 +34,7 @@ position: -300,816
 <<elseif $peed < 4>>
     Me: *walks to the bathroom*
 <<else>>
+    Farmer 2: That's the {$peed + "th"} time!
     Farmer 2: Stop using the bathroom and get out of my store!
 <<endif>>
 <<set $peed to $peed + 1>>

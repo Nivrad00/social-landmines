@@ -24,13 +24,19 @@ func eval_string(string, env):
 			return false
 		return env.get(string)
 
+func add_concat(a, b):
+	if typeof(b) == TYPE_STRING or typeof(a) == TYPE_STRING:
+		return str(a) + str(b)
+	else:
+		return a + b
+
 func eval_expr(node, env):
 	if node == null:
 		return 0
 	var lhs = eval_expr(node.left, env)
 	var rhs = eval_expr(node.right, env)
 	match node.op:
-		Op.ADD: return lhs + rhs
+		Op.ADD: return add_concat(lhs, rhs)
 		Op.SUB: return lhs - rhs
 		Op.MUL: return lhs * rhs
 		Op.DIV: return lhs / rhs

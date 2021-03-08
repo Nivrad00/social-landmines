@@ -18,6 +18,7 @@ var yarn = {}
 var environment = {}
 var skip = false
 var if_hit = false
+var bracketRegex = RegEx.new()
 
 # OVERRIDE METHODS
 #
@@ -35,6 +36,13 @@ func evaluate(expr):
 	var evalTree = EvalTree.new(evalTokenizer.tokenize(expr))
 	var evalEvaluator = EvalEvaluate.new(evalTree.get_tree())
 	return evalEvaluator.evaluate(environment)
+
+#process inline expressions in text
+func say_preprocess(text):
+	for m in bracketRegex.search_all(text):
+		var evaluated = evaluate(m.get_string())
+		text = text.substr(0,m.get_start()) + evaluated + text.substr(m.get_end(), len(text))
+	return text
 
 # handles conditional handling and variable definition
 func logic(statement):
@@ -91,6 +99,7 @@ func yarn_custom_logic_after(to):
 func spin_yarn(file, start_thread = false):
 	yarn = load_yarn(file)
 	environment["$peed"] = 0
+	bracketRegex.compile("{.*}")
 	# Find the starting thread...
 	if not start_thread:
 		start_thread = yarn['start']
@@ -222,7 +231,7 @@ func yarn_unravel(to, from=false):
 						'text':
 							var text = yarn_text_variables(fibre['text'])
 							if not skip:
-								say(text)
+								say(say_preprocess(text))
 						'choice':
 							var text = yarn_text_variables(fibre['text'])
 							if not skip:
