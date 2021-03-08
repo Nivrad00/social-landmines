@@ -12,6 +12,10 @@ export var version_control = false
 var target = 0
 var condition_stack = []
 
+# this is used as a fix for rollback -- we need to save what we pop out of
+#  the condition stack so we can rollback again later
+var temp_condition_stack = []
+
 
 var event_stack = []#LIFO stack of elements [event_name, current_counter, target, condition_stack(FIFO stack)]
 
@@ -147,18 +151,39 @@ func cond(condition):
 	
 	if is_active(true):
 		event_stack[0][3].push_front(condition)
+		
 	else:
+		# this is where rakugo pops conditions out of the event stack one by one to 
+		#   automatically "make choices" while jumping forward to a particular state 
+		#   in the event
+		# my edit was to save all the popped conditions in temp_condition_stack 
+		#   so we can put them back in later
 		condition = event_stack[0][3].pop_back()
+		temp_condition_stack.push_front(condition)
+		
 	return condition
 
 
 func step():
-	print('')
-	print('stepping with stack: ' + str(self.event_stack))
+	# print('stepping with stack: ' + str(self.event_stack))
+	# print('and temporary condition stack: ' + str(self.temp_condition_stack))
+	# print('')
 	if not step_semaphore:
 		step_semaphore = Semaphore.new()
+		
 	if is_active():
+		# if temp_condition_stack has stuff in it while is_active() is true,
+		#   that means we just finished jumping forward to a particular state,
+		#   so we need to overwrite anything remaining in the event stack
+		#   with temp_condition_stack
+		# this will allow us to remember previous choices so we can rollback 
+		#   again later
+		if temp_condition_stack.size() > 0:
+			event_stack[0][3] = temp_condition_stack
+			temp_condition_stack = []
+		
 		step_semaphore.wait()
+		
 	event_stack[0][1] += 1
 	step_semaphore = Semaphore.new()# Preventing a case of multiple post skipping steps
 

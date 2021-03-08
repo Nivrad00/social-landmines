@@ -23,8 +23,9 @@ func story_setting(setting, value):
 
 func say(text):
 	parent.say(null, text)
+	parent.last_say = [null, text]
 	parent.step()
-	
+		
 func choice(text, marker):
 	parent.current_choices.append([text, marker, {}])
 	
