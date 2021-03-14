@@ -91,7 +91,10 @@ func load_game(save_name := "quick"):
 
 
 func rollback(amount:int = 1):
-	self.StoreManager.change_current_stack_index(self.StoreManager.current_store_id + amount)
+	# small change: don't allow rollback while skipping
+	# (it's pointless and causes glitches)
+	if not skipping:
+		self.StoreManager.change_current_stack_index(self.StoreManager.current_store_id + amount)
 
 
 func prepare_quitting():

@@ -1,7 +1,7 @@
 extends Dialogue
 
 var yarn_importer = null
-var yarn_path = 'res://yarn/script.yarn.txt'
+var yarn_path = 'res://yarn/script.yarn'
 var current_choices = []
 var next_marker = null
 var last_say = [null, '']
