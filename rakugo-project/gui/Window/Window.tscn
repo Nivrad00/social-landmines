@@ -45,7 +45,6 @@ __meta__ = {
 
 [node name="InGameGUI" parent="Panel/TabContainer" instance=ExtResource( 2 )]
 visible = false
-mouse_filter = 2
 
 [node name="Loading" type="Control" parent="Panel/TabContainer"]
 visible = false

@@ -22,7 +22,10 @@ func _blocked_step():
 func _on_say(_character, _text, _parameters):
 	self.visible_characters = -1
 	self.bbcode_text = _text
-	if not Rakugo.skipping and _parameters.get('typing'):
+	
+	# changed this to prevent typing effect when typing speed is set to max
+	if not Rakugo.skipping and _parameters.get('typing')\
+	and float(Settings.get("rakugo/default/delays/typing_effect_delay")) > 0:
 		if _parameters.get('typing_effect_delay'):
 			delay = _parameters.get('typing_effect_delay')
 		else:

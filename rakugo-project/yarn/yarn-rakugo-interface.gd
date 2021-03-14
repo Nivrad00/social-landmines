@@ -22,7 +22,7 @@ func story_setting(setting, value):
 	pass
 
 func say(text):
-	parent.say(null, text)
+	parent.say(null, text, {'typing': true})
 	parent.last_say = [null, text]
 	parent.step()
 		

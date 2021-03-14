@@ -58,7 +58,7 @@ scroll_active = false
 script = ExtResource( 2 )
 
 [node name="TypingTimer" type="Timer" parent="MarginContainer/VBox/Text"]
-wait_time = 0.1
+one_shot = true
 
 [node name="AskEntry" type="LineEdit" parent="MarginContainer/VBox"]
 visible = false
