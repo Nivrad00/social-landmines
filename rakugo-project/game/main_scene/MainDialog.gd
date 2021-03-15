@@ -32,8 +32,9 @@ func default_event():
 			
 		# if any choices were populated while unraveling, then display the choice
 		# also repeat the previous say(), since rakugo expects a say() to accompany every choice
+		# make sure it doesn't log the repeated line in the history, though
 		if current_choices.size() > 0:
-			say(last_say[0], last_say[1])
+			say(last_say[0], last_say[1], {'no_history': true, 'typing': false})
 			last_say = [null, '']
 			var choice = menu(current_choices)
 			step()

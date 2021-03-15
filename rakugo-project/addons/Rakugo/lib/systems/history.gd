@@ -13,6 +13,9 @@ func init():
 
 
 func _on_say(character, text, parameters):
+	# added a way to bypass adding lines to history
+	if parameters.get('no_history'):
+		return
 	last_say_hash = hash_say(character, text, parameters)
 	if not last_say_hash in global_history:
 		step_has_unseen = true
