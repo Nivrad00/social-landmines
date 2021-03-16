@@ -26,6 +26,9 @@ var bracketRegex = RegEx.new()
 func say(text):
 	pass
 	
+func clean_environment():
+	environment = {"$player": "anonymous", "$peed": 0} 
+	
 # called to request new choice button
 func choice(text, marker):
 	pass
@@ -101,6 +104,7 @@ func yarn_custom_logic_after(to):
 func spin_yarn(file, start_thread = false):
 	yarn = load_yarn(file)
 	bracketRegex.compile("{.*}")
+	clean_environment()
 	# Find the starting thread...
 	if not start_thread:
 		start_thread = yarn['start']

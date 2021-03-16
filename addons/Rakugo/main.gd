@@ -23,7 +23,6 @@ var persistent = null setget set_persistent_store, get_persistent_store
 # don't save this
 var scene_anchor:Node
 
-
 var active := false
 var loading_in_progress := false
 var started := false
@@ -73,6 +72,7 @@ func _ready():
 
 
 ## Rakugo flow control
+
 
 # it starts Rakugo
 func start(after_load:bool = false):

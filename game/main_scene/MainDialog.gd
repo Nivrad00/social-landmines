@@ -11,7 +11,7 @@ func _ready():
 	yarn_importer.connect_scene(self)
 	
 	Rakugo.define_character("Background", "background", Color.pink)
-	
+
 func default_event():
 	# print('entering default event')
 	start_event("default_event")
