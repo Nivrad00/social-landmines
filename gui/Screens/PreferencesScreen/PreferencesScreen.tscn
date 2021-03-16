@@ -66,6 +66,7 @@ text = "Fullscreen"
 script = ExtResource( 3 )
 
 [node name="Skip" type="VBoxContainer" parent="Rows/OptionScreen"]
+visible = false
 margin_left = 238.0
 margin_right = 413.0
 margin_bottom = 93.0
@@ -98,11 +99,11 @@ text = "After Choices"
 [node name="HBoxContainer" type="HBoxContainer" parent="Rows"]
 margin_top = 133.0
 margin_right = 1024.0
-margin_bottom = 255.0
+margin_bottom = 184.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Rows/HBoxContainer"]
 margin_right = 300.0
-margin_bottom = 122.0
+margin_bottom = 51.0
 custom_constants/separation = 20
 
 [node name="TextSpeedBox" type="VBoxContainer" parent="Rows/HBoxContainer/VBoxContainer"]
@@ -133,6 +134,7 @@ ticks_on_borders = true
 script = ExtResource( 6 )
 
 [node name="AutoBox" type="VBoxContainer" parent="Rows/HBoxContainer/VBoxContainer"]
+visible = false
 margin_top = 71.0
 margin_right = 300.0
 margin_bottom = 122.0

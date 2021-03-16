@@ -1,0 +1,669 @@
+[gd_resource type="Resource" load_steps=51 format=2]
+
+[ext_resource path="res://addons/Rakugo/lib/resources/character.gd" type="Script" id=1]
+[ext_resource path="res://addons/Rakugo/lib/resources/store.gd" type="Script" id=2]
+[ext_resource path="res://addons/Rakugo/lib/resources/store_stack.gd" type="Script" id=3]
+[ext_resource path="res://addons/Rakugo/lib/resources/history_entry.gd" type="Script" id=4]
+
+[sub_resource type="Resource" id=28]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=3]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: That's the 14th time!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=4]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=5]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=6]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: That's the 13th time!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=7]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=8]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=9]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: That's the 12th time!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=10]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=11]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=12]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=13]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: That's the 5th time!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=14]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=15]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: Stop using the bathroom and get out of my store!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=16]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 2: That's the 4th time!"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=17]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=18]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Me: *walks to the bathroom*"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=19]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=20]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Me: *walks to the bathroom*"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=21]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=22]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Me: *walks to the bathroom*"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=23]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=24]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Me: Thanks"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=25]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Sure, it's down this way and to the left."
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=26]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Me: Could I use the restroom?"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=27]
+script = ExtResource( 4 )
+character_tag = ""
+text = "Farmer 1: Welcome to my store"
+parameters = {
+"typing": true
+}
+
+[sub_resource type="Resource" id=29]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 28 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 43, 43, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=30]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=31]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 30 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 42, 42, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=32]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=33]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 32 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 41, 27, [ true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=34]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=35]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 34 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 40, 27, [ true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=36]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=37]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 36 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 39, 27, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background restroom": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=38]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=39]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 38 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 38, 27, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=40]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=41]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 40 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 37, 27, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=42]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=43]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 42 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 36, 27, [ true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=44]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=45]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 44 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 35, 27, [ true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background seed": true
+}, {
+
+} ]
+}
+}
+
+[sub_resource type="Resource" id=46]
+script = ExtResource( 1 )
+name = "Background"
+tag = "background"
+color = Color( 1, 0.75, 0.8, 1 )
+prefix = ""
+suffix = ""
+show_parameters = {
+
+}
+say_parameters = {
+
+}
+variables = {
+"script": ExtResource( 1 )
+}
+
+[sub_resource type="Resource" id=47]
+script = ExtResource( 2 )
+game_version = "0.0.1"
+rakugo_version = "3.1.1"
+properties = {
+"background": SubResource( 46 ),
+"current_dialogue": "MainDialog",
+"current_dialogue_event_stack": [ [ "default_event", 34, 27, [ true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false, true, true, false ] ] ],
+"current_dialogue_script_version": 1877172709,
+"current_scene": "Main",
+"dialogue_class_script_version": 1597699784,
+"event_played": {
+404308907: 1,
+3658192747: 1
+},
+"history": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"scene": "",
+"script": ExtResource( 2 ),
+"showable_shown": {
+"$ background _": [ {
+"$ background *": true,
+"$ background restroom": true
+}, {
+
+} ]
+}
+}
+
+[resource]
+script = ExtResource( 3 )
+stack = [ SubResource( 29 ), SubResource( 31 ), SubResource( 33 ), SubResource( 35 ), SubResource( 37 ), SubResource( 39 ), SubResource( 41 ), SubResource( 43 ), SubResource( 45 ), SubResource( 47 ) ]
+current_id = 0
