@@ -10,7 +10,7 @@ var default_property_list:Dictionary = {
 
 	
 	"rakugo/game/info/credits" : [
-		"Your Company", PropertyInfo.new(
+		"Team Landmines - UNC COMP 585 Serious Games Spring 2021", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_MULTILINE_TEXT, 
 			"", PROPERTY_USAGE_DEFAULT)
 	],
@@ -53,7 +53,7 @@ var default_property_list:Dictionary = {
 
 
 	"rakugo/default/narrator/name" : [
-		"Narrator", PropertyInfo.new(
+		"", PropertyInfo.new(
 			"", TYPE_STRING, PROPERTY_HINT_NONE, 
 			"", PROPERTY_USAGE_DEFAULT)
 	],
@@ -143,6 +143,11 @@ var default_property_list:Dictionary = {
 			"save_pages,save_list", PROPERTY_USAGE_DEFAULT)
 	],
 
+	"rakugo/saves/skip_naming" : [
+		true, PropertyInfo.new(
+			"", TYPE_BOOL, PROPERTY_HINT_NONE, 
+			"", PROPERTY_USAGE_EDITOR)
+	],
 
 	"rakugo/saves/test_mode" : [
 		true, PropertyInfo.new(

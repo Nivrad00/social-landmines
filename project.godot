@@ -110,7 +110,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="New Rakugo Game"
+config/name="Forward"
+config/description="Progress at Your Pace"
 run/main_scene="res://game/main_scene/Main.tscn"
 boot_splash/image="res://graphics/splash.png"
 boot_splash/fullsize=false
@@ -272,6 +273,9 @@ rakugo_hide_ui_toggle={
 [rakugo]
 
 default/narrator/name=""
+game/info/credits="Team Landmines
+UNC COMP 585 Serious Games"
+saves/skip_naming=false
 
 [rendering]
 

@@ -1,7 +1,6 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://gui/Screens/SavesScreen/Slot.tscn" type="PackedScene" id=1]
-[ext_resource path="res://gui/Screens/SavesScreen/SkipNamingButton.gd" type="Script" id=2]
 [ext_resource path="res://gui/Screens/SavesScreen/GridContainer.gd" type="Script" id=3]
 [ext_resource path="res://gui/Screens/SavesScreen/ScrollContainer.gd" type="Script" id=4]
 [ext_resource path="res://gui/Screens/SavesScreen/SavesScreen.gd" type="Script" id=5]
@@ -147,8 +146,8 @@ __meta__ = {
 }
 
 [node name="PreviousPage" type="Button" parent="PageNavBar"]
-margin_left = 120.0
-margin_right = 147.0
+margin_left = 139.0
+margin_right = 166.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -159,6 +158,7 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="QuisavePage" type="Button" parent="PageNavBar"]
+visible = false
 margin_left = 167.0
 margin_right = 186.0
 margin_bottom = 38.0
@@ -172,8 +172,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page1" type="Button" parent="PageNavBar"]
-margin_left = 206.0
-margin_right = 221.0
+margin_left = 186.0
+margin_right = 201.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -186,8 +186,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page2" type="Button" parent="PageNavBar"]
-margin_left = 241.0
-margin_right = 256.0
+margin_left = 221.0
+margin_right = 236.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -199,8 +199,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page3" type="Button" parent="PageNavBar"]
-margin_left = 276.0
-margin_right = 291.0
+margin_left = 256.0
+margin_right = 271.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -212,8 +212,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page4" type="Button" parent="PageNavBar"]
-margin_left = 311.0
-margin_right = 326.0
+margin_left = 291.0
+margin_right = 306.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -225,8 +225,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page5" type="Button" parent="PageNavBar"]
-margin_left = 346.0
-margin_right = 361.0
+margin_left = 326.0
+margin_right = 341.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -238,8 +238,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page6" type="Button" parent="PageNavBar"]
-margin_left = 381.0
-margin_right = 396.0
+margin_left = 361.0
+margin_right = 376.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -251,8 +251,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page7" type="Button" parent="PageNavBar"]
-margin_left = 416.0
-margin_right = 431.0
+margin_left = 396.0
+margin_right = 411.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -264,8 +264,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page8" type="Button" parent="PageNavBar"]
-margin_left = 451.0
-margin_right = 466.0
+margin_left = 431.0
+margin_right = 446.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -277,8 +277,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page9" type="Button" parent="PageNavBar"]
-margin_left = 486.0
-margin_right = 501.0
+margin_left = 466.0
+margin_right = 481.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -290,8 +290,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page10" type="Button" parent="PageNavBar"]
-margin_left = 521.0
-margin_right = 551.0
+margin_left = 501.0
+margin_right = 531.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -303,8 +303,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="Page11" type="Button" parent="PageNavBar"]
-margin_left = 571.0
-margin_right = 601.0
+margin_left = 551.0
+margin_right = 581.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -316,8 +316,8 @@ flat = true
 script = ExtResource( 12 )
 
 [node name="NextPage" type="Button" parent="PageNavBar"]
-margin_left = 621.0
-margin_right = 648.0
+margin_left = 601.0
+margin_right = 628.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 0, 30 )
 theme = ExtResource( 8 )
@@ -326,18 +326,6 @@ custom_fonts/font = SubResource( 7 )
 text = ">"
 flat = true
 script = ExtResource( 12 )
-
-[node name="SkipNamingButton" type="CheckButton" parent="."]
-anchor_left = 0.8
-anchor_top = 0.9
-anchor_right = 0.9
-anchor_bottom = 0.95
-theme = ExtResource( 8 )
-text = "Skip Naming"
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ConfirmationPopup" type="AcceptDialog" parent="."]
 visible = true
@@ -371,13 +359,11 @@ __meta__ = {
 }
 [connection signal="add_save_slot" from="." to="SavePage/ScrollContainer/GridContainer" method="_on_add_save_slot"]
 [connection signal="clear_save_slots" from="." to="SavePage/ScrollContainer/GridContainer" method="_on_clear_save_slots"]
-[connection signal="mode_changed" from="." to="SkipNamingButton" method="_on_save_mode_changed"]
 [connection signal="page_changed" from="." to="PageLabel" method="_on_page_changed"]
 [connection signal="page_changed" from="." to="PageNavBar" method="_on_page_changed"]
 [connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="text_changed" from="PageLabel" to="PageLabel" method="_on_text_changed"]
 [connection signal="visibility_changed" from="SavePage/ScrollContainer" to="SavePage/ScrollContainer" method="_on_visibility_changed"]
 [connection signal="change_page" from="PageNavBar" to="." method="_on_change_page"]
-[connection signal="toggled" from="SkipNamingButton" to="SkipNamingButton" method="_on_toggled"]
 [connection signal="confirmed" from="ConfirmationPopup" to="ConfirmationPopup" method="_on_confirmed"]
 [connection signal="popup_hide" from="ConfirmationPopup" to="ConfirmationPopup" method="_on_popup_hide"]

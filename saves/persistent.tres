@@ -8,9 +8,14 @@ game_version = "0.0.1"
 rakugo_version = "3.1.1"
 properties = {
 "global_history": {
+23278557: true,
 82290581: true,
+116829756: true,
+359016120: true,
 447012593: true,
+509485673: true,
 747919611: true,
+1078841972: true,
 1380456216: true,
 1454020623: true,
 2426180219: true,
@@ -18,13 +23,15 @@ properties = {
 2709873472: true,
 2805303268: true,
 2833775524: true,
+2857460311: true,
 3356517307: true,
 3531039278: true,
+4120631135: true,
 4287610978: true
 },
 "settings": {
 "rakugo/default/delays/typing_effect_delay": 0.01,
 "rakugo/saves/current_page": 1,
-"rakugo/saves/skip_naming": true
+"rakugo/saves/skip_naming": false
 }
 }
