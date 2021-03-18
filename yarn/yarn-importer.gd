@@ -163,11 +163,17 @@ func new_yarn_fibre(line):
 		line = line.replace('[/img]', '')
 		fibre['path'] = line
 		return fibre
+	
 	# text fibre
-	var fibre = {}
-	fibre['kind'] = 'text'
-	fibre['text'] = line.strip_edges()
-	return fibre
+	elif line.strip_edges().length() > 0:
+		var fibre = {}
+		fibre['kind'] = 'text'
+		fibre['text'] = line.strip_edges()
+		return fibre
+	
+	# ignore empty lines
+	return null
+	
 
 # Create Yarn data structure from file (must be *.yarn.txt Yarn format)
 func load_yarn(path):
