@@ -283,9 +283,7 @@ func menu(choices:Array, parameters: Dictionary = {}):
 
 func _menu_yield(returns:Array):
 	returns[0] = yield(Rakugo, "menu_return")
-	print('A. ' + str(return_lock))
 	if return_lock:
-		print('B. ' + str(return_lock))
 		return_lock.post()
 
 

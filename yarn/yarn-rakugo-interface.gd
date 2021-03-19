@@ -1,17 +1,12 @@
 extends "res://yarn/yarn-importer.gd"
 
-# An example extended class of "yarn-importer"
-#
-# It is recommended you create your own based on this example.
-#
-# It is easier to just tie "yarn-importer" directly into your scene,
-#  but in time you will likely reuse this class many times, 
-#  and it can grow overly complicated merged in your scene
-# You might also have multiple types of story GUIs, 
-#  then you'd want one of these for each type of GUI
-
 var parent
 
+# note: if the <<load x>> command isn't at the end of the yarn node,
+# the rest of the node will execute before the load actually happens
+func load_new_yarn(scene_name):
+	parent.next_scene = str(scene_name)
+	
 func connect_scene(p):
 	parent = p
 
@@ -26,6 +21,8 @@ func say(text):
 	parent.last_say = [null, text]
 	parent.step()
 		
+# like load, if the choices aren't at the end of the node,
+# the rest of the node will execute before the choice actually appears
 func choice(text, marker):
 	parent.current_choices.append([text, marker, {}])
 	

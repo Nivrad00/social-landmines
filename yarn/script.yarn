@@ -56,5 +56,5 @@ position: 160,586
 ---
 Farmer 1: They taste fine to me. 
 Farmer 1: No refunds!
-[[Start]]
+<<load reentry.tova>>
 ===

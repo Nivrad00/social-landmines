@@ -1,15 +1,15 @@
 extends Dialogue
 
 var yarn_importer = null
-var yarn_path = 'res://yarn/reentry.tova.yarn'
+var yarn_path = 'res://yarn/'
+var default_yarn_scene = 'script'
+
 var current_choices = []
+var next_scene = null
 var next_marker = null
 var last_say = [null, '']
 
-func _ready():
-	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
-	yarn_importer.connect_scene(self)
-	
+func _ready():	
 	Rakugo.define_character("Background", "background", Color.pink)
 	
 func default_event():
@@ -18,14 +18,16 @@ func default_event():
 	
 	# start by initializing the yarn story and proceeding up to the first choice
 	current_choices = []
+	next_scene = null
 	# print('initializing yarn story')
-	yarn_importer.spin_yarn(yarn_path)
+	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
+	yarn_importer.connect_scene(self)
+	yarn_importer.spin_yarn(yarn_path + default_yarn_scene + '.yarn')
 	
 	# then continue looping through the story, handling choices as they appear
 	while true:
 		# the loop should end if the thread isn't running (that is, this thread is obsolete)
 		if not is_running():
-			# print('breaking out from dialog loop')
 			break
 			
 		next_marker = null
@@ -44,9 +46,21 @@ func default_event():
 				if cond(choice == data[1]):
 					next_marker = data[1]
 			
-		# then go to the marker corresponding to the player's choice
-		if next_marker:
+			# then go to the marker corresponding to the player's choice
+			if next_marker:
+				current_choices = []
+				next_scene = null
+				yarn_importer.yarn_unravel(next_marker)
+				
+		# else if next_scene was set, then we're jumping to another yarn file
+		elif next_scene:
+			var path = yarn_path + next_scene + '.yarn'
 			current_choices = []
-			yarn_importer.yarn_unravel(next_marker)
+			next_scene = null
+			yarn_importer.spin_yarn(path)
+			
+		# else we're lost -- exit the loop
+		else:
+			break
 		
 	end_event()

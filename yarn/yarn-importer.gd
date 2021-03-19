@@ -30,6 +30,10 @@ func say(text):
 func choice(text, marker):
 	pass
 
+# called to move to a different yarn file
+func load_new_yarn(scene_name):
+	pass
+
 # evaluate logic / math expressions
 func evaluate(expr):
 	var evalTokenizer = EvalTokenizer.new()
@@ -47,19 +51,23 @@ func say_preprocess(text):
 	return text
 
 # handles conditional handling and variable definition
+# as well as custom commands (music, images, scene changes)
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")
+	
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
 		var name = split_statement[1]
 		environment[name] = evaluate(statement.split("to")[1])
+		
 	# "IF expression"
 	if split_statement[0] == "if":
 		if not evaluate(statement.split("if")[1]):
 			skip = true
 		else:
 			if_hit = true
+			
 	# "ELSEIF expression"
 	if split_statement[0] == "elseif":
 		var check = evaluate(statement.split("elseif")[1])
@@ -68,14 +76,20 @@ func logic(statement):
 		else:
 			skip = false
 			if_hit = true
+			
 	#run statements under else if no if/elseif ran
 	if split_statement[0] == "else":
 		skip = if_hit
+		
 	#end of conditionals, reset vars
 	if split_statement[0] == "endif":
 		skip = false
 		if_hit = false
 		
+	# load another yarn
+	if split_statement[0] == "load":
+		split_statement.remove(0)
+		load_new_yarn(split_statement.join(" "))
 	
 # called for each line of text
 func yarn_text_variables(text):
@@ -99,6 +113,13 @@ func yarn_custom_logic_after(to):
 # START SPINNING YOUR YARN
 #
 func spin_yarn(file, start_thread = false):
+	# start by resetting some of the state
+	
+	skip = false
+	if_hit = false
+
+	# okay now go ahead
+	
 	yarn = load_yarn(file)
 	bracketRegex.compile("{.*}")
 	# Find the starting thread...
