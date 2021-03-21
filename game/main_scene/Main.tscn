@@ -23,17 +23,17 @@ visible = false
 
 [node name="Teacher" parent="." instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 168.982, 230 )
+position = Vector2( 650, 400 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Brad" parent="." instance=ExtResource( 4 )]
 visible = false
-position = Vector2( 993.979, 408.631 )
+position = Vector2( 650, 400 )
 
 [node name="Chad" parent="." instance=ExtResource( 5 )]
 visible = false
-position = Vector2( -268.271, 293.669 )
+position = Vector2( 650, 400 )
 
 [node name="Peer" parent="." instance=ExtResource( 6 )]
 visible = false
-position = Vector2( 296.363, 251.96 )
+position = Vector2( 650, 400 )

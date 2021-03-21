@@ -4,13 +4,13 @@ colorID: 0
 position: 592,-426
 ---
 <<show background cafeteria>>
-<<show chad smirk>>
-<<show brad smirk>>
+<<show chad smirk left>>
+<<show brad smirk right>>
 Chad: Oh my god
 Brad: What?
 Chad: They are back! You know they were sent away because they are crazy!
 Brad: What do you mean? Like locked up?
-<<show chad angry>>
+<<show chad angry left>>
 Chad: Big time. Hey! Are you gonna go crazy and attack someone? Or did the doctors fix you?
 [[Look to your peers for comfort|Peers_2]]
 [[Ignore them and keep eating |Ignore]]
@@ -102,10 +102,10 @@ position: -257,-302
 ---
 <<hide chad>>
 <<hide brad>>
-<<show peer normal>>
+<<show peer normal right>>
 Peer: What's going on? Is there anything that I can help with?
 [[No, but thanks|No, but thanks]]
-[[I actually just got back from the hospital. It has been hard being back, but it's been nice having friends around.|hospital]]
+[[Just got back from the hospital...|hospital]]
 ===
 title: I'm fine
 tags: 
@@ -178,6 +178,8 @@ tags:
 colorID: 0
 position: -534,-34
 ---
+{$player}: I actually just got back from the hospital. 
+{$player}: It has been hard being back, but it's been nice having friends around.
 Peer: Yeah, that sounds like it would be really hard. If you ever need anything, I am always here to help.
 [[Thanks|Node]]
 ===

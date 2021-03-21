@@ -123,6 +123,18 @@ func apply_shown():
 
 
 func show_showable(node, tag, args):
+	# character positioning
+	# only position the outside Node2D and don't mess with the background
+	if node is Node2D and not node is Sprite and not "background" in tag:	
+		match args["position"]:
+			"left":
+				node.position.x = 240
+			"center":
+				node.position.x = 650
+			"right":
+				node.position.x = 1040
+	
+	
 	if node.has_method("_show"):
 		node._show(tag, args)
 	elif node.has_method("show"):

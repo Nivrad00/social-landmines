@@ -16,8 +16,8 @@ func yarn_text_variables(text):
 func story_setting(setting, value):
 	pass
 	
-func show(character, mood, position=null):
-	parent.show(character + " " + mood)
+func show(character, mood, position="center"):
+	parent.show(character + " " + mood, {position=position})
 
 func hide(character):
 	parent.hide(character)

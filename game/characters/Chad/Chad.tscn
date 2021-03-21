@@ -14,12 +14,10 @@ scale = Vector2( 0.55, 0.55 )
 "$ chad #",
 "showable",
 ]]
-position = Vector2( 943.245, 207.692 )
 texture = ExtResource( 1 )
 
 [node name="smirk" type="Sprite" parent="." groups=[
 "$ chad #",
 "showable",
 ]]
-position = Vector2( 943.245, 207.692 )
 texture = ExtResource( 2 )

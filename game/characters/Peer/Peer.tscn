@@ -13,5 +13,4 @@ scale = Vector2( 0.55, 0.55 )
 "$ peer #",
 "showable",
 ]]
-position = Vector2( 619.415, 223.566 )
 texture = ExtResource( 1 )

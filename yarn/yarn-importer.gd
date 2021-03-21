@@ -15,13 +15,13 @@ extends Node
 # Fibre: a text or choice or logic (Yarn line)
 
 var yarn = {}
-var environment = {"$player": "anonymous", "$peed": 0}
+var environment = {"$player": "Me", "$peed": 0}
 var skip = false
 var if_hit = false
 var bracketRegex = RegEx.new()
 
 func clean_environment():
-	environment = {"$player": "anonymous", "$peed": 0} 
+	environment = {"$player": "Me", "$peed": 0} 
 
 # OVERRIDE METHODS
 #
@@ -59,6 +59,7 @@ func say_preprocess(text):
 		text = text.substr(0,m.get_start()) + evaluated + text.substr(m.get_end(), len(text))
 	return text
 
+# handle non-logic commands (music, images, scene changes)
 func command(cmd):
 	var split = cmd.split(" ")
 	match split[0]:
@@ -78,7 +79,6 @@ func command(cmd):
 			load_new_yarn(split.join(" "))
 
 # handles conditional handling and variable definition
-# as well as custom commands (music, images, scene changes)
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")

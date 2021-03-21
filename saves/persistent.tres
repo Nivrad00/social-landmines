@@ -7,7 +7,44 @@ script = ExtResource( 1 )
 game_version = "0.0.1"
 rakugo_version = "3.1.1"
 properties = {
+"global_history": {
+78421773: true,
+130940888: true,
+159452717: true,
+330006045: true,
+415243641: true,
+778623636: true,
+899241280: true,
+931636477: true,
+981082650: true,
+1083018530: true,
+1292661310: true,
+1476673517: true,
+1531307295: true,
+1675003105: true,
+1805298245: true,
+1916281443: true,
+1931811533: true,
+2039021688: true,
+2118496338: true,
+2299369279: true,
+2488389411: true,
+2700279289: true,
+2935187190: true,
+2994435674: true,
+3019709988: true,
+3060297058: true,
+3114315690: true,
+3263526544: true,
+3829696474: true,
+4193923767: true
+},
 "settings": {
+"display/window/size/fullscreen": false,
+"display/window/size/height": 720.0,
+"display/window/size/maximized": false,
+"display/window/size/width": 1280.0,
+"rakugo/default/delays/typing_effect_delay": 0.009,
 "rakugo/saves/current_page": 1
 }
 }
