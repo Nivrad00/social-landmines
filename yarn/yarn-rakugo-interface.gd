@@ -15,10 +15,20 @@ func yarn_text_variables(text):
 
 func story_setting(setting, value):
 	pass
+	
+func show(character, mood, position=null):
+	parent.show(character + " " + mood)
+
+func hide(character):
+	parent.hide(character)
 
 func say(text):
-	parent.say(null, text, {'typing': true})
-	parent.last_say = [null, text]
+	var speaker = null
+	if ":" in text:
+		speaker = text.split(":")[0].to_lower()
+		text = text.split(":")[1]
+	parent.say(speaker, text, {'typing': true})
+	parent.last_say = [speaker, text]
 	parent.step()
 		
 # like load, if the choices aren't at the end of the node,

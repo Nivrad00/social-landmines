@@ -4,6 +4,7 @@ colorID: 0
 position: -70,816
 ---
 [img]background seed[/img]
+<<show teacher happy>>
 Farmer 1: Welcome to my store
 <<if $checkedOut != true>>
 [[I would like to buy some beans|Beans]]

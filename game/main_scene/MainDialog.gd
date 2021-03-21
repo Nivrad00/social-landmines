@@ -2,7 +2,7 @@ extends Dialogue
 
 var yarn_importer = null
 var yarn_path = 'res://yarn/'
-var default_yarn_scene = 'script'
+var default_yarn_scene = 'bully_jamie'
 
 var current_choices = []
 var next_scene = null
@@ -11,7 +11,10 @@ var last_say = [null, '']
 
 func _ready():	
 	Rakugo.define_character("Background", "background", Color.pink)
-	
+	Rakugo.define_character("Teacher", "teacher", Color.red)
+	Rakugo.define_character("Brad", "brad", Color.red)
+	Rakugo.define_character("Chad", "chad", Color.yellow)
+	Rakugo.define_character("Peer", "peer", Color.green)
 func default_event():
 	# print('entering default event')
 	start_event("default_event")

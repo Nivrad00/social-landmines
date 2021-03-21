@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1_4_sdf.png-0af2347958a6bbeb5460246602e5cdae.stex"
+path="res://.import/cafeteria.jpg-1caf3279e972bef507b9e2cc17ea6ded.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://saves/1_4_sdf.png"
-dest_files=[ "res://.import/1_4_sdf.png-0af2347958a6bbeb5460246602e5cdae.stex" ]
+source_file="res://game/characters/background/cafeteria.jpg"
+dest_files=[ "res://.import/cafeteria.jpg-1caf3279e972bef507b9e2cc17ea6ded.stex" ]
 
 [params]
 

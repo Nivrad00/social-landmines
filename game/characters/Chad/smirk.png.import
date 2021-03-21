@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/1_1_save.png-ea434cde24ff5a9a5de4a401414ac149.stex"
+path="res://.import/smirk.png-e97d8fb0d0d82808cc8bc0fd4e21983e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://saves/1_1_save.png"
-dest_files=[ "res://.import/1_1_save.png-ea434cde24ff5a9a5de4a401414ac149.stex" ]
+source_file="res://game/characters/Chad/smirk.png"
+dest_files=[ "res://.import/smirk.png-e97d8fb0d0d82808cc8bc0fd4e21983e.stex" ]
 
 [params]
 

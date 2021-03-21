@@ -20,6 +20,9 @@ var skip = false
 var if_hit = false
 var bracketRegex = RegEx.new()
 
+func clean_environment():
+	environment = {"$player": "anonymous", "$peed": 0} 
+
 # OVERRIDE METHODS
 #
 # called to request new dialog
@@ -32,6 +35,12 @@ func choice(text, marker):
 
 # called to move to a different yarn file
 func load_new_yarn(scene_name):
+	pass
+	
+func show(character, mood, position=null):
+	pass
+
+func hide(character):
 	pass
 
 # evaluate logic / math expressions
@@ -50,6 +59,24 @@ func say_preprocess(text):
 		text = text.substr(0,m.get_start()) + evaluated + text.substr(m.get_end(), len(text))
 	return text
 
+func command(cmd):
+	var split = cmd.split(" ")
+	match split[0]:
+		'show':
+			if len(split) == 4:
+				show(split[1],split[2],split[3])
+			else:
+				show(split[1],split[2])
+		'play':
+			pass
+		'hide':
+			hide(split[1])
+		'stop':
+			pass
+		'load':
+			split.remove(0)
+			load_new_yarn(split.join(" "))
+
 # handles conditional handling and variable definition
 # as well as custom commands (music, images, scene changes)
 func logic(statement):
@@ -62,14 +89,14 @@ func logic(statement):
 		environment[name] = evaluate(statement.split("to")[1])
 		
 	# "IF expression"
-	if split_statement[0] == "if":
+	elif split_statement[0] == "if":
 		if not evaluate(statement.split("if")[1]):
 			skip = true
 		else:
 			if_hit = true
 			
 	# "ELSEIF expression"
-	if split_statement[0] == "elseif":
+	elif split_statement[0] == "elseif":
 		var check = evaluate(statement.split("elseif")[1])
 		if not check or if_hit:
 			skip = true
@@ -78,18 +105,18 @@ func logic(statement):
 			if_hit = true
 			
 	#run statements under else if no if/elseif ran
-	if split_statement[0] == "else":
+	elif split_statement[0] == "else":
 		skip = if_hit
 		
 	#end of conditionals, reset vars
-	if split_statement[0] == "endif":
+	elif split_statement[0] == "endif":
 		skip = false
 		if_hit = false
-		
-	# load another yarn
-	if split_statement[0] == "load":
-		split_statement.remove(0)
-		load_new_yarn(split_statement.join(" "))
+
+	# other commands handled by command func
+	else:
+		command(statement)
+
 	
 # called for each line of text
 func yarn_text_variables(text):
@@ -114,10 +141,10 @@ func yarn_custom_logic_after(to):
 #
 func spin_yarn(file, start_thread = false):
 	# start by resetting some of the state
-	
 	skip = false
 	if_hit = false
-
+	# fix for loading from save variable issues
+	clean_environment()
 	# okay now go ahead
 	
 	yarn = load_yarn(file)
@@ -250,6 +277,8 @@ func load_yarn(path):
 #
 func yarn_unravel(to, from=false):
 	yarn_custom_logic(to)
+	skip = false
+	if_hit = false
 	if to in yarn['threads']:
 		var thread = yarn['threads'][to]
 		match thread['kind']:

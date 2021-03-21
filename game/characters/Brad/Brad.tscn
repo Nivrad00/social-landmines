@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/characters/Brad/smirk.png" type="Texture" id=1]
+
+[node name="Brad" type="Node2D" groups=[
+"$ brad *",
+"showable",
+]]
+position = Vector2( 1000, 420 )
+scale = Vector2( 0.55, 0.55 )
+
+[node name="smirk" type="Sprite" parent="." groups=[
+"$ brad #",
+"showable",
+]]
+texture = ExtResource( 1 )

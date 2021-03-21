@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/characters/Teacher/Teacher.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Control"]
 mouse_filter = 2
@@ -16,3 +20,20 @@ auto_start = true
 
 [node name="background" parent="." instance=ExtResource( 2 )]
 visible = false
+
+[node name="Teacher" parent="." instance=ExtResource( 3 )]
+visible = false
+position = Vector2( 168.982, 230 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Brad" parent="." instance=ExtResource( 4 )]
+visible = false
+position = Vector2( 993.979, 408.631 )
+
+[node name="Chad" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( -268.271, 293.669 )
+
+[node name="Peer" parent="." instance=ExtResource( 6 )]
+visible = false
+position = Vector2( 296.363, 251.96 )
