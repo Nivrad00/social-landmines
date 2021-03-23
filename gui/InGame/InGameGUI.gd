@@ -1,6 +1,9 @@
 extends Control
 
 var hide_toggle = false
+# i know hardcoded paths are bad, but it seems silly to establish
+# a new signal system just for one button...
+onready var skip_button = $QuickMenu/ButtonList/Skip
 
 func _input(event):
 	if visible:
@@ -10,11 +13,12 @@ func _input(event):
 			Rakugo.activate_skipping()
 		if event.is_action_released("rakugo_skip"):
 			Rakugo.deactivate_skipping()
+			
 		if event.is_action_pressed("rakugo_skip_toggle"):
-			if Rakugo.skipping:
-				Rakugo.deactivate_skipping()
-			else:
-				Rakugo.activate_skipping()
+			# changed this to go through the skip button
+			skip_button.emit_signal("pressed")
+			skip_button.pressed = !skip_button.pressed
+			
 		if event.is_action_pressed("rakugo_rollback"):
 			Rakugo.rollback(1)
 		if event.is_action_pressed("rakugo_rollforward"):
