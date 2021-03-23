@@ -111,7 +111,7 @@ func load_scene(scene_id:String, force_reload:bool = false):
 func reset_game():
 	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
 	started = false
-	emit_signal("game_ended")
+	emit_signal("game_ended") 
 
 
 
@@ -244,7 +244,6 @@ func show(showable_tag:String, parameters := {}):
 # statement of type hide
 func hide(showable_tag:String):
 	ShowableManager.hide(showable_tag)
-
 
 func notify(text:String, parameters:Dictionary):
 	emit_signal('notify', text, parameters)

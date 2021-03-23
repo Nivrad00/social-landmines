@@ -15,6 +15,7 @@ func _ready():
 	Rakugo.define_character("Brad", "brad", Color.red)
 	Rakugo.define_character("Chad", "chad", Color.yellow)
 	Rakugo.define_character("Peer", "peer", Color.green)
+
 func default_event():
 	# print('entering default event')
 	start_event("default_event")

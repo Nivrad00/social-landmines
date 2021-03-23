@@ -3,9 +3,6 @@
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
 [ext_resource path="res://gui/Screens/MenuBar/NavMenuButton.gd" type="Script" id=2]
 
-
-
-
 [node name="NavButton" type="Button"]
 theme = ExtResource( 1 )
 action_mode = 0

@@ -17,11 +17,13 @@ func _ready():
 	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
 	scene_links = load(Settings.get("rakugo/game/scenes/scene_links")).get_as_dict()
 	current_scene = Settings.get("application/run/main_scene")
+	print(current_scene)
 	current_scene_node = get_tree().current_scene
 	
 	for k in scene_links.keys():
 		inverse_scene_links[scene_links[k]] = k
 	current_scene = inverse_scene_links[current_scene]
+	print(inverse_scene_links)
 	preload_scenes()
 
 
@@ -50,7 +52,7 @@ func load_scene_resource(key, path, force_reload=false):
 
 func load_scene(scene:String, force_reload = default_force_reload):
 	var scene_entry = get_scene_entry(scene)
-	
+		
 	if current_scene != scene_entry[0] or force_reload:
 		Rakugo.emit_signal("loading", NAN)
 		load_scene_resource(scene_entry[0], scene_entry[1], force_reload)
@@ -68,11 +70,11 @@ func get_scene_entry(scene):
 	var scene_path
 	var scene_id
 	if not scene in self.scene_links:
-		if not scene_id in self.inverse_scene_links:
-			push_warning("Scene '%s' not found in linker" % scene_id)
+		if not scene in self.inverse_scene_links:
+			push_warning("Scene '%s' not found in linker" % scene)
 			scene_id = scene.get_file()
 		else:
-			scene_id = self.inverse_scene_links[scene_id]
+			scene_id = self.inverse_scene_links[scene]
 		scene_path = scene
 	else:
 		scene_id = scene
