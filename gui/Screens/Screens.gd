@@ -25,13 +25,7 @@ func _on_nav_button_press(nav):
 				Window.select_ui_tab(1)
 
 		"save":
-			# don't take screenshots of the menu, silly!
-			# if Screens is already visible when navigating to SaveMenu, SaveMenu
-			#   will just use the previous screenshot that it should already have stored
-			if visible:
-				save_menu(null)
-			else:
-				save_menu(get_screenshot())
+			save_menu()
 
 		"load":
 			load_menu()
@@ -75,10 +69,8 @@ func show_page(action):
 	Window.select_ui_tab(0)
 
 
-func save_menu(screenshot):
+func save_menu():
 	$SubMenus/SavesSlotScreen.save_mode = true
-	if screenshot:
-		$SubMenus/SavesSlotScreen.screenshot = screenshot
 	show_page("save")
 
 
@@ -121,3 +113,10 @@ func _on_SavesSlotScreen_mode_changed(save_mode):
 		emit_signal("show_menu", "save", Rakugo.started)
 	else:
 		emit_signal("show_menu", "load", Rakugo.started)
+
+# update a screenshot whenever the menu is shown, for potential use as a SavesSlotScreen thumbnail
+func _on_Screens_visibility_changed():
+	# for some reason this actually takes the screenshot before the menu is shown
+	# cowabunga!
+	if visible:
+		$SubMenus/SavesSlotScreen.screenshot = get_screenshot()
