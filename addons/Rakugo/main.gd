@@ -109,9 +109,15 @@ func load_scene(scene_id:String, force_reload:bool = false):
 
 
 func reset_game():
-	SceneLoader.load_scene(Settings.get("application/run/main_scene"))
+	# add "true, true" to the load_scene call to force reload and to reset showables
+	# (this makes sure the visuals reset when the game ends)
+	SceneLoader.load_scene(Settings.get("application/run/main_scene"), true, true)
 	started = false
+	# Screens.gd was already using the game_ended signal to reset the ui focus
+	# now ChoiceMenu.gd uses it to get rid of any lingering choices as well
 	emit_signal("game_ended") 
+	
+	menu_return(null)
 
 
 

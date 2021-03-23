@@ -9,7 +9,7 @@ var current_scene_node:Node
 
 var previous_scene_node:Node
 
-signal scene_changed(scene_node)
+signal scene_changed(scene_node, reset_showables)
 #Assess the need of those
 
 
@@ -17,13 +17,11 @@ func _ready():
 	default_force_reload = Settings.get("rakugo/game/scenes/force_reload")
 	scene_links = load(Settings.get("rakugo/game/scenes/scene_links")).get_as_dict()
 	current_scene = Settings.get("application/run/main_scene")
-	print(current_scene)
 	current_scene_node = get_tree().current_scene
 	
 	for k in scene_links.keys():
 		inverse_scene_links[scene_links[k]] = k
 	current_scene = inverse_scene_links[current_scene]
-	print(inverse_scene_links)
 	preload_scenes()
 
 
@@ -50,7 +48,7 @@ func load_scene_resource(key, path, force_reload=false):
 		preloaded_scenes[key] = ResourceLoader.load(path, "PackedScene", force_reload)
 
 
-func load_scene(scene:String, force_reload = default_force_reload):
+func load_scene(scene:String, force_reload = default_force_reload, reset_showables = false):
 	var scene_entry = get_scene_entry(scene)
 		
 	if current_scene != scene_entry[0] or force_reload:
@@ -62,7 +60,7 @@ func load_scene(scene:String, force_reload = default_force_reload):
 		Rakugo.clean_scene_anchor()
 		Rakugo.scene_anchor.add_child(current_scene_node)
 		Rakugo.emit_signal("loading", 1)
-		emit_signal("scene_changed", current_scene_node)
+		emit_signal("scene_changed", current_scene_node, reset_showables)
 		return current_scene_node
 
 

@@ -5,7 +5,6 @@ var shown = {}
 ## Shown structure:
 #{<radical>:[{<tags>:true}, {<params>}]}
 
-
 func init():
 	Rakugo.SceneLoader.connect("scene_changed", self, "_on_scene_changed")
 	self.declare_showables()
@@ -19,7 +18,10 @@ func _restore(store):
 	apply_shown()
 
 
-func _on_scene_changed(scene):
+func _on_scene_changed(scene, reset_showables=false):
+	# now has the ability to reset showables
+	if reset_showables:
+		shown = {}
 	declare_showables()
 	clean_shown()
 	apply_shown()

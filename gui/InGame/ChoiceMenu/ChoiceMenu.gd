@@ -7,8 +7,15 @@ onready var expression = Expression.new()
 func _ready():
 	purge_childs()
 	Rakugo.connect("menu", self, "build")
+	Rakugo.connect("game_ended", self, "_on_game_end")
 
-
+# now listens to game_ended signal and clears the choices accordingly
+func _on_game_end():
+	if self.get_children().size() > 0:
+		purge_childs()
+		Rakugo.menu_return(null)
+		
+	
 func _restore(_store):
 	purge_childs()
 
