@@ -25,7 +25,13 @@ func _on_nav_button_press(nav):
 				Window.select_ui_tab(1)
 
 		"save":
-			save_menu(get_screenshot())
+			# don't take screenshots of the menu, silly!
+			# if Screens is already visible when navigating to SaveMenu, SaveMenu
+			#   will just use the previous screenshot that it should already have stored
+			if visible:
+				save_menu(null)
+			else:
+				save_menu(get_screenshot())
 
 		"load":
 			load_menu()
@@ -71,7 +77,8 @@ func show_page(action):
 
 func save_menu(screenshot):
 	$SubMenus/SavesSlotScreen.save_mode = true
-	$SubMenus/SavesSlotScreen.screenshot = screenshot
+	if screenshot:
+		$SubMenus/SavesSlotScreen.screenshot = screenshot
 	show_page("save")
 
 
