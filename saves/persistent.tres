@@ -37,6 +37,7 @@ properties = {
 2118496338: true,
 2127890277: true,
 2299369279: true,
+2356747160: true,
 2488389411: true,
 2700279289: true,
 2775536771: true,
@@ -55,9 +56,9 @@ properties = {
 },
 "settings": {
 "display/window/size/fullscreen": false,
-"display/window/size/height": 712.0,
+"display/window/size/height": 711.0,
 "display/window/size/maximized": false,
-"display/window/size/width": 1280.0,
+"display/window/size/width": 1264.0,
 "rakugo/default/delays/typing_effect_delay": 0.009,
 "rakugo/saves/current_page": 1
 }
