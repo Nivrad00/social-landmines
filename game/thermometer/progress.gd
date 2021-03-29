@@ -6,8 +6,7 @@ func _ready():
 
 #When signal is recieved, value of progress value changes to current mood value
 func on_mood_change(mood):
-	var sig_val = int(mood)
-	self.value = sig_val
+	self.value = int(mood)
 	
 	
 

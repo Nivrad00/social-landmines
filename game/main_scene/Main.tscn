@@ -21,6 +21,7 @@ script = ExtResource( 1 )
 default_starting_event = "default_event"
 
 [node name="background" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1.49829, 1.49835 )
 
 [node name="Teacher" parent="." instance=ExtResource( 3 )]
 visible = false
