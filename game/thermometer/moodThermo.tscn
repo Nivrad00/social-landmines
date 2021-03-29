@@ -11,23 +11,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="thermometer" type="TextureProgress" parent="."]
 margin_right = 380.0
 margin_bottom = 511.0
-
-[node name="thermometer" type="TextureProgress" parent="VBoxContainer"]
-margin_right = 380.0
-margin_bottom = 300.0
 value = 100.0
 texture_under = ExtResource( 1 )
 fill_mode = 3
 
-[node name="progress" type="TextureProgress" parent="VBoxContainer/thermometer"]
+[node name="progress" type="TextureProgress" parent="thermometer"]
 margin_left = 106.908
 margin_top = 28.5087
 margin_right = 406.908
 margin_bottom = 328.509
-value = 32.0
 texture_progress = ExtResource( 2 )
 fill_mode = 3
 script = ExtResource( 3 )

@@ -125,6 +125,7 @@ config/quit_on_go_back=false
 Rakugo="*res://addons/Rakugo/Rakugo.tscn"
 Settings="*res://addons/Rakugo/Settings.gd"
 Window="*res://gui/Window/Window.tscn"
+Global="*res://game/main_scene/Global.gd"
 
 [debug]
 
