@@ -6,7 +6,8 @@ func _ready():
 
 
 func _on_toggled(value):
-	OS.window_fullscreen = value
+	if value:
+		OS.window_fullscreen = true
 
 
 func _on_visibility_changed():

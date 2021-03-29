@@ -5,6 +5,9 @@ var hide_toggle = false
 # a new signal system just for one button...
 onready var skip_button = $QuickMenu/ButtonList/Skip
 
+func _ready():
+	Rakugo.connect("game_ended", self, "_on_game_end")
+	
 func _input(event):
 	if visible:
 		if event.is_action_pressed("ui_cancel"):
@@ -50,7 +53,15 @@ func _on_quick_button_press(quick_action):
 		"skip":
 			if Rakugo.skipping:
 				Rakugo.deactivate_skipping()
+				$SkipDisplay.hide()
 			else:
 				Rakugo.activate_skipping()
+				$SkipDisplay.show()
 		_:
 			Window.Screens._on_nav_button_press(quick_action)
+
+func _on_game_end():
+	Rakugo.deactivate_skipping()
+	$SkipDisplay.hide()
+	skip_button.pressed = false
+	

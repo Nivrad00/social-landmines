@@ -114,7 +114,8 @@ func reset_game():
 	SceneLoader.load_scene(Settings.get("application/run/main_scene"), true, true)
 	started = false
 	# Screens.gd was already using the game_ended signal to reset the ui focus
-	# now ChoiceMenu.gd uses it to get rid of any lingering choices as well
+	# now ChoiceMenu.gd uses it to get rid of any lingering choices
+	# and InGameGUI.gd uses it to stop skipping
 	emit_signal("game_ended") 
 	
 	menu_return(null)

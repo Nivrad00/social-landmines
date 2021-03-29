@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
@@ -6,6 +6,23 @@
 [ext_resource path="res://gui/InGame/NotifyDisplay/NotifyDisplay.tscn" type="PackedScene" id=4]
 [ext_resource path="res://gui/InGame/DialoguePanel/DialoguePanel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://gui/QuickMenu/QuickMenu.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Skip Animation"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "Skipping >", "Skipping >>", "Skipping >>>" ]
+}
 
 [node name="InGameGUI" type="Control"]
 pause_mode = 1
@@ -29,4 +46,33 @@ anchor_bottom = 0.7
 [node name="QuickMenu" parent="." instance=ExtResource( 6 )]
 
 [node name="NotifyDisplay" parent="." instance=ExtResource( 4 )]
+
+[node name="SkipDisplay" type="PanelContainer" parent="."]
+visible = false
+anchor_top = 0.1
+anchor_bottom = 0.1
+margin_top = -53.5193
+margin_right = 236.0
+margin_bottom = -10.5193
+rect_min_size = Vector2( 100, 20 )
+mouse_filter = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SkipDisplay"]
+margin_left = 40.0
+margin_top = 8.0
+margin_right = 196.0
+margin_bottom = 35.0
+text = "Skipping >>>"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SkipDisplay"]
+autoplay = "Skip Animation"
+"anims/Skip Animation" = SubResource( 1 )
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]

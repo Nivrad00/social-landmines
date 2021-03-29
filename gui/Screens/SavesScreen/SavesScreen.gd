@@ -274,7 +274,8 @@ func load_save(caller: String) -> void:
 func _on_visibility_changed():
 	if visible:
 		if use_pages:
-			_on_change_page(Settings.get('rakugo/saves/current_page', 1), 0)
+			# updated to start on page 1 instead of 0
+			_on_change_page(Settings.get('rakugo/saves/current_page', 1), 1)
 		else:
 			update_grid()
 
@@ -287,7 +288,8 @@ func _on_change_page(page, incremental_change):
 			page = "A"
 	match page:
 		0:
-			var value = clamp(Settings.get('rakugo/saves/current_page', 1) + incremental_change, -2, 1000)
+			# changing the clamp values to disable Q, A, and 0 and to prevent scrolling past the right edge
+			var value = clamp(Settings.get('rakugo/saves/current_page', 1) + incremental_change, 1, 11)
 			Settings.set('rakugo/saves/current_page', value)
 		"Q":
 			Settings.set('rakugo/saves/current_page', -1)

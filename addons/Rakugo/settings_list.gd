@@ -50,6 +50,13 @@ var default_property_list:Dictionary = {
 			"renpy,bbcode,markdown,markdown_simple",
 			PROPERTY_USAGE_CATEGORY)
 	],
+	
+	"rakugo/game/text/scrolling_enabled" : [
+		true, PropertyInfo.new(
+			"", TYPE_BOOL, PROPERTY_HINT_NONE, 
+			"", PROPERTY_USAGE_DEFAULT)
+	],
+
 
 
 	"rakugo/default/narrator/name" : [
@@ -75,7 +82,7 @@ var default_property_list:Dictionary = {
 
 
 	"rakugo/default/delays/typing_effect_delay" : [
-		0.1, PropertyInfo.new(
+		0.03, PropertyInfo.new(
 			"", TYPE_REAL, PROPERTY_HINT_EXP_RANGE, 
 			"0.005, 1.0,or_greater", PROPERTY_USAGE_DEFAULT)
 	],
