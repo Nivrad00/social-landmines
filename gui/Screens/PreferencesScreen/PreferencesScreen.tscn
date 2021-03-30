@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
 [ext_resource path="res://gui/Screens/PreferencesScreen/WindowCheck.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://gui/Screens/PreferencesScreen/TextScrollingDisabledCheck.gd" type="Script" id=5]
 [ext_resource path="res://gui/Screens/PreferencesScreen/TextScrollingButtonGroup.tres" type="ButtonGroup" id=6]
 [ext_resource path="res://gui/Screens/PreferencesScreen/DisplayButtonGroup.tres" type="ButtonGroup" id=7]
+[ext_resource path="res://gui/Screens/PreferencesScreen/SoundBusControl/SoundBusControl.tscn" type="PackedScene" id=8]
 
 [node name="PreferencesScreen" type="Panel"]
 anchor_right = 1.0
@@ -26,9 +27,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="OptionScreen" type="HBoxContainer" parent="Rows"]
+[node name="SoundBusControl" parent="Rows" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 1024.0
-margin_bottom = 93.0
+margin_bottom = 64.0
+
+[node name="OptionScreen" type="HBoxContainer" parent="Rows"]
+margin_top = 104.0
+margin_right = 1024.0
+margin_bottom = 197.0
 custom_constants/separation = 100
 __meta__ = {
 "_edit_use_anchors_": false
