@@ -29,6 +29,12 @@ func clean_environment():
 func say(text):
 	pass
 	
+func play_audio(file):
+	pass
+	
+func stop_audio():
+	pass
+	
 # called to request new choice button
 func choice(text, marker):
 	pass
@@ -69,11 +75,11 @@ func command(cmd):
 			else:
 				show(split[1],split[2])
 		'play':
-			pass
+			play_audio("res://audio/" + cmd.split("play ")[1])
 		'hide':
 			hide(split[1])
 		'stop':
-			pass
+			stop_audio()
 		'load':
 			split.remove(0)
 			load_new_yarn(split.join(" "))
@@ -82,14 +88,11 @@ func command(cmd):
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")
-	print(split_statement)
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
 		if split_statement[1] == "$mood":
 			environment["$mood"] = int(Global.mood)
-			print(Global.mood)
 			Global.mood = evaluate(statement.split("to")[1])
-			print(Global.mood)
 		else:
 			var name = split_statement[1]
 			environment[name] = evaluate(statement.split("to")[1])

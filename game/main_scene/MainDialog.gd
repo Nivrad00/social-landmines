@@ -8,6 +8,7 @@ var current_choices = []
 var next_scene = null
 var next_marker = null
 var last_say = [null, '']
+onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
 	Rakugo.define_character("Background", "background", Color.pink)
@@ -25,7 +26,7 @@ func default_event():
 	next_scene = null
 	# print('initializing yarn story')
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
-	yarn_importer.connect_scene(self)
+	yarn_importer.connect_scene(self, audioPlayer)
 	yarn_importer.spin_yarn(yarn_path + default_yarn_scene + '.yarn')
 	
 	# then continue looping through the story, handling choices as they appear

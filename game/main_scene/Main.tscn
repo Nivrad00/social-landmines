@@ -61,3 +61,5 @@ pause_mode = 2
 stream = ExtResource( 10 )
 autoplay = true
 bus = "BGM"
+
+[node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]

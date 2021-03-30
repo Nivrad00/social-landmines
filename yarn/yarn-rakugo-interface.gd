@@ -1,14 +1,16 @@
 extends "res://yarn/yarn-importer.gd"
 
 var parent
+var audioPlayer
 
 # note: if the <<load x>> command isn't at the end of the yarn node,
 # the rest of the node will execute before the load actually happens
 func load_new_yarn(scene_name):
 	parent.next_scene = str(scene_name)
 	
-func connect_scene(p):
+func connect_scene(p, a):
 	parent = p
+	audioPlayer = a
 
 func yarn_text_variables(text):
 	return text
@@ -47,3 +49,12 @@ func yarn_custom_logic(to):
 
 func yarn_custom_logic_after(to):
 	pass
+	
+func play_audio(file):
+	#if !audioPlayer.is_playing():
+	audioPlayer.stream = load(file)
+	audioPlayer.stream.loop = false
+	audioPlayer.play()
+
+func stop_audio():
+	audioPlayer.stop()
