@@ -86,8 +86,10 @@ func logic(statement):
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
 		if split_statement[1] == "$mood":
-			environment["$mood"] = Global.mood
+			environment["$mood"] = int(Global.mood)
+			print(Global.mood)
 			Global.mood = evaluate(statement.split("to")[1])
+			print(Global.mood)
 		else:
 			var name = split_statement[1]
 			environment[name] = evaluate(statement.split("to")[1])
