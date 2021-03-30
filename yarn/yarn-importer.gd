@@ -82,11 +82,15 @@ func command(cmd):
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")
-	
+	print(split_statement)
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
-		var name = split_statement[1]
-		environment[name] = evaluate(statement.split("to")[1])
+		if split_statement[1] == "$mood":
+			environment["$mood"] = Global.mood
+			Global.mood = evaluate(statement.split("to")[1])
+		else:
+			var name = split_statement[1]
+			environment[name] = evaluate(statement.split("to")[1])
 		
 	# "IF expression"
 	elif split_statement[0] == "if":
