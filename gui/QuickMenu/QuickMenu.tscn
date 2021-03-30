@@ -50,7 +50,16 @@ size_flags_vertical = 3
 text = "History"
 quick_action = "history"
 
+[node name="Preferences" parent="ButtonList" instance=ExtResource( 4 )]
+margin_right = 217.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Pref."
+quick_action = "preferences"
+
 [node name="Back" parent="ButtonList" instance=ExtResource( 4 )]
+visible = false
 margin_right = 217.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
@@ -105,16 +114,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Q. Load"
 quick_action = "quickload"
-
-[node name="Preferences" parent="ButtonList" instance=ExtResource( 4 )]
-visible = false
-margin_left = 707.0
-margin_right = 880.0
-margin_bottom = 40.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Pref."
-quick_action = "preferences"
 
 [node name="Quit" parent="ButtonList" instance=ExtResource( 4 )]
 visible = false

@@ -14,7 +14,7 @@ func on_loop():
 
 
 func can_skip() -> bool:
-	var output = Rakugo.skipping
-	output = output and (not Rakugo.History.step_has_unseen)#TODO add back skip unseen
-	output = output and (not Rakugo.StepBlocker.is_blocking())
-	return output
+	return Rakugo.skipping and (not Rakugo.StepBlocker.is_blocking())
+	# removed "only skip seen steps" feature due to general bugginess
+	# and (not Rakugo.History.step_has_unseen)
+		

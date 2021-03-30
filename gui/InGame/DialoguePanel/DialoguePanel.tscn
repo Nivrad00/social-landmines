@@ -59,6 +59,9 @@ script = ExtResource( 2 )
 [node name="TypingTimer" type="Timer" parent="MarginContainer/VBox/Text"]
 one_shot = true
 
+[node name="TestTimer" type="Timer" parent="MarginContainer/VBox/Text"]
+one_shot = true
+
 [node name="AskEntry" type="LineEdit" parent="MarginContainer/VBox"]
 visible = false
 margin_top = 53.0

@@ -24,7 +24,11 @@ func _on_say(_character, _text, _parameters):
 	self.bbcode_text = _text
 	
 	# changed this to prevent typing effect when typing speed is set to max
+	# and to use the "text scrolling" toggle
+	# (we abandoned the speed slider in favor of an enabled/disabled toggle
+	#   because of a bug where the speed would be limited by the framerate)
 	if not Rakugo.skipping and _parameters.get('typing')\
+	and float(Settings.get("rakugo/game/text/scrolling_enabled"))\
 	and float(Settings.get("rakugo/default/delays/typing_effect_delay")) > 0:
 		if _parameters.get('typing_effect_delay'):
 			delay = _parameters.get('typing_effect_delay')

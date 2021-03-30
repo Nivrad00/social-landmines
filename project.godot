@@ -275,7 +275,6 @@ rakugo_hide_ui_toggle={
 
 game/info/credits="Team Landmines
 UNC COMP 585 Serious Games"
-saves/skip_naming=false
 
 [rendering]
 

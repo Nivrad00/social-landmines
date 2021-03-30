@@ -13,7 +13,7 @@ func _on_toggled(value):
 
 func _on_visibility_changed():
 	if is_window_default_size():
-				pressed = true
+		pressed = true
 
 func _on_window_resized():
 	pressed = is_window_default_size()
