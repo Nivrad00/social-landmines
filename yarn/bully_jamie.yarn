@@ -24,7 +24,7 @@ position: 164,-564
 <<hide chad>>
 <<hide brad>>
 <<show peer normal>>
-<<set $mood to $mood + 10>>
+<<set $mood to $mood + 30>>
 Peer: Hey, I'm sorry about them. 
 Peer: They're so mean, I don't know how anyone puts up with them. 
 Peer: One time in gym class they asked the coach if they could switch partners because I was 'the slowest runner in class'. 
@@ -113,6 +113,7 @@ tags:
 colorID: 0
 position: -264,-549
 ---
+<<set $mood to $mood + 25>>
 Peer: Okay, well I am always here for you if you need someone to talk to.
 [[Thanks|Node]]
 ===
