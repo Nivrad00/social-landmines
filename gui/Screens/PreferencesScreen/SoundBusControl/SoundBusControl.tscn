@@ -50,7 +50,7 @@ func set_bus_volume(value: int):
 
 
 func set_bus_on(value: bool) -> void:
-	AudioServer.set_bus_mute(bus_id, !value)
+	AudioServer.set_bus_mute(bus_id, value)
 	mute = value
 #	prints(\"bus:\", bus_name, bus_id,
 #	AudioServer.get_bus_name(bus_id),
