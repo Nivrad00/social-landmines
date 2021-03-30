@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://game/thermometer/moodThermo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://game/main_scene/question.gd" type="Script" id=8]
 [ext_resource path="res://game/main_scene/Global.gd" type="Script" id=9]
+[ext_resource path="res://game/Music/ForwardSongDraft.ogg" type="AudioStream" id=10]
 
 [node name="Main" type="Control"]
 mouse_filter = 2
@@ -54,3 +55,9 @@ version_control = true
 
 [node name="Global" type="Node" parent="."]
 script = ExtResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 10 )
+autoplay = true
+bus = "BGM"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=1]
 [ext_resource path="res://gui/Screens/PreferencesScreen/WindowCheck.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://gui/Screens/PreferencesScreen/TextScrollingDisabledCheck.gd" type="Script" id=5]
 [ext_resource path="res://gui/Screens/PreferencesScreen/TextScrollingButtonGroup.tres" type="ButtonGroup" id=6]
 [ext_resource path="res://gui/Screens/PreferencesScreen/DisplayButtonGroup.tres" type="ButtonGroup" id=7]
+[ext_resource path="res://gui/Screens/PreferencesScreen/SoundBusControl/SoundBusControl.tscn" type="PackedScene" id=8]
 
 [node name="PreferencesScreen" type="Panel"]
 anchor_right = 1.0
@@ -98,6 +99,13 @@ theme = ExtResource( 1 )
 group = ExtResource( 6 )
 text = "Disabled"
 script = ExtResource( 5 )
+
+[node name="SoundBusControl" parent="Rows" instance=ExtResource( 8 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 133.0
+margin_right = 1024.0
+margin_bottom = 197.0
 [connection signal="toggled" from="Rows/OptionScreen/Display/WindowCheck" to="Rows/OptionScreen/Display/WindowCheck" method="_on_toggled"]
 [connection signal="visibility_changed" from="Rows/OptionScreen/Display/WindowCheck" to="Rows/OptionScreen/Display/WindowCheck" method="_on_visibility_changed"]
 [connection signal="toggled" from="Rows/OptionScreen/Display/FullscreenCheck" to="Rows/OptionScreen/Display/FullscreenCheck" method="_on_toggled"]
