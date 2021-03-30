@@ -138,8 +138,14 @@ func load_store_stack(save_name: String):
 
 	unpack_data(savefile_path)
 
-	#Rakugo.start(true)
-	#Rakugo.load_scene(get_current_store().scene)
+	# these lines were commented out for some reason...
+	# running Rakugo.start() if rakugo's not already started fixed a bug with loading from 
+	#   the main menu
+	# running Rakugo.load_scene() caused an error -- i imagine we don't need it since we're
+	#   only using one rakugo scene, but this may be indicative of problems with using multiple scenes
+	if !Rakugo.started:
+		Rakugo.start(true)
+	# Rakugo.load_scene(get_current_store().scene)
 
 	call_for_restoring()
 	

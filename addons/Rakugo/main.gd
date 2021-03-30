@@ -76,6 +76,7 @@ func _ready():
 
 # it starts Rakugo
 func start(after_load:bool = false):
+	print('starting...' + str(after_load))
 	started = true
 	if not after_load:
 		emit_signal("started")
