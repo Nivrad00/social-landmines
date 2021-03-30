@@ -30,6 +30,7 @@ properties = {
 2048137511: true,
 2127890277: true,
 2299369279: true,
+2356747160: true,
 2488389411: true,
 2700279289: true,
 2775536771: true,
@@ -47,6 +48,7 @@ properties = {
 4193923767: true
 },
 "settings": {
+
 "display/window/size/fullscreen": true,
 "display/window/size/height": 720.0,
 "display/window/size/maximized": false,

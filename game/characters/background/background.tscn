@@ -13,7 +13,7 @@
 "$ background #",
 "showable",
 ]]
-position = Vector2( 638, 367 )
+position = Vector2( 640, 360 )
 texture = ExtResource( 1 )
 
 [node name="seed" type="Sprite" parent="." groups=[
@@ -27,6 +27,6 @@ texture = ExtResource( 2 )
 "$ background #",
 "showable",
 ]]
-position = Vector2( 655.925, 364.845 )
-scale = Vector2( 2.5688, 2.74173 )
+position = Vector2( 640, 360 )
+scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 3 )
