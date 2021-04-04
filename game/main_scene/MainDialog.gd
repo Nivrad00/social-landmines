@@ -8,6 +8,9 @@ var current_choices = []
 var next_scene = null
 var next_marker = null
 var last_say = [null, '']
+
+signal end_game
+
 onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
@@ -69,3 +72,6 @@ func default_event():
 			break
 		
 	end_event()
+
+func end_game():
+	emit_signal('end_game')

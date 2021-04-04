@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://game/main_scene/question.gd" type="Script" id=8]
 [ext_resource path="res://game/main_scene/Global.gd" type="Script" id=9]
 [ext_resource path="res://game/Music/ForwardSongDraft.ogg" type="AudioStream" id=10]
+[ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
+[ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
 
 [node name="Main" type="Control"]
 mouse_filter = 2
@@ -63,3 +65,36 @@ autoplay = true
 bus = "BGM"
 
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="EndScreen" type="Control" parent="."]
+visible = false
+margin_right = 1280.0
+margin_bottom = 720.0
+mouse_filter = 2
+theme = ExtResource( 11 )
+script = ExtResource( 12 )
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen"]
+modulate = Color( 1, 1, 1, 0.780392 )
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="EndScreen"]
+margin_top = 258.0
+margin_right = 1277.0
+margin_bottom = 345.0
+text = "Congrats :)"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="EndScreen"]
+margin_left = 4.0
+margin_top = 397.0
+margin_right = 1279.0
+margin_bottom = 453.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="end_game" from="MainDialog" to="EndScreen" method="_on_end_game"]

@@ -43,6 +43,10 @@ func choice(text, marker):
 func load_new_yarn(scene_name):
 	pass
 	
+# called when the game ends (duh)
+func end_game():
+	pass
+	
 func show(character, mood, position=null):
 	pass
 
@@ -83,6 +87,8 @@ func command(cmd):
 		'load':
 			split.remove(0)
 			load_new_yarn(split.join(" "))
+		'end':
+			end_game()
 
 # handles conditional handling and variable definition
 func logic(statement):

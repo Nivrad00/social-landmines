@@ -83,6 +83,7 @@ Teacher
 School Counselor
 Principal
 *End Scene*
+<<end>>
 ===
 title: Cafeteria
 tags: 
@@ -96,6 +97,7 @@ Choose where to sit
 With friend
 Alone
 *End Scene*
+<<end>>
 ===
 title: Not doing so well
 tags: 
@@ -132,6 +134,7 @@ colorID: 0
 position: 1318,-395
 ---
 Let's try the 4-7-8 breathing technique. Breathe in for a count of four, hold for a count of seven, and release for a count of eight. Continue this process five times or until feel more relaxed.
+<<end>>
 ===
 title: No.
 tags: 
