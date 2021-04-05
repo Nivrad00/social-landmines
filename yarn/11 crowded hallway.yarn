@@ -1,0 +1,9 @@
+title: Start
+tags: 
+colorID: 0
+position: -19,-302
+---
+Hallway again.
+{$player}: I should go see the counselor...
+<<load 11.5 counselor>>
+===

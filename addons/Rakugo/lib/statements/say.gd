@@ -20,10 +20,20 @@ func exec(character, text:String, parameters = {}) -> void:
 
 #Utils functions
 
-func _get_character(character):
-	if character is String:
-		character = Rakugo.get_current_store().get(character)
-	return character
+func _get_character(character_input):
+	if character_input is String:
+		# get predetermined character
+		var character = Rakugo.get_current_store().get(character_input)
+	
+		# if there's no predetermined character...
+		if not character:
+			character = Character.new()
+			character.init(character_input, character_input, "cccccc")
+		
+		return character
+		
+	else:
+		return character_input
 
 
 func get_narrator():

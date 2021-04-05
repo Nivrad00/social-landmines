@@ -1,0 +1,146 @@
+title: Start
+tags: 
+colorID: 0
+position: -19,-302
+---
+(User walks down crowded hallway. Students are walking quickly and one student knocks into User’s shoulder)
+
+Peer 1: Hi, User!
+Peer 2: Glad you're back. 
+
+(User continues walking down hallway.User passes by groups of students staring and whispering.)
+
+Peer 3 (saying to friends loudly and laughing):They just got back from the psych ward!
+
+User options:
+[[Ignore and keep walking]]
+[[Go to a teacher, school counselor or trusted adult]]
+[[Say something back]]
+===
+title: Ignore and keep walking
+tags: 
+colorID: 0
+position: -354,-539
+---
+(User has options of internal dialogue or breathing technique to choose from, then gets to their classroom)
+
+Internal dialogue options:
+[[You can do this. (Peer 3) is being childish. It’s ok to need help .]]
+[[Don’t pay attention to them. Keep walking. You’re almost to the classroom.]]
+===
+title: Go to a teacher, school counselor or trusted adult
+tags: 
+colorID: 0
+position: 335,-511
+---
+(User enters into room of trusted adult.)
+
+User options:
+[[Tell them what happened and report who did it]]
+[[Tell them what happened and ask for help dealing with it]]
+[[Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.]]
+===
+title: Say something back
+tags: 
+colorID: 0
+position: -20,-33
+---
+User: I went to a hospital, and that’s really rude for you to laugh about it.
+[[End]]
+===
+title: You can do this. (Peer 3) is being childish. It’s ok to need help .
+tags: 
+colorID: 0
+position: -195,-814
+---
+Empty Text
+[[End]]
+===
+title: Don’t pay attention to them. Keep walking. You’re almost to the classroom.
+tags: 
+colorID: 0
+position: -504,-806
+---
+Empty Text
+[[End]]
+===
+title: Tell them what happened and report who did it
+tags: 
+colorID: 0
+position: 332,-791
+---
+Trusted adult: From what you're telling me, it sounds like Peer 3 said some hurtful stuff. 
+
+Trusted adult: It means a lot that you trust me enough to tell me this. (Insert clinically appropriate response)
+
+Trusted adult: I'll handle it from here. Come back if you need any other support!
+
+(User exits room.)
+[[End]]
+===
+title: Tell them what happened and ask for help dealing with it
+tags: 
+colorID: 0
+position: 615,-778
+---
+(Adult response would be clinically appropriate)
+
+Trusted adult: From what you're telling me, it sounds like that student said some hurtful stuff. 
+
+Trusted adult: It means a lot that you trust me enough to tell me this. (Insert clinically appropriate response)
+
+Trusted adult: I'll handle it from here. Come back if you need any other support!
+
+(User exits room.)
+[[End]]
+===
+title: Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.
+tags: 
+colorID: 0
+position: 637,-506
+---
+User: Hi, Trusted Adult. I'm feeling kind of:
+[[overwhelmed]]
+[[stressed]]
+[[numb]]
+
+User: Can I come and sit down?
+
+Trusted Adult: Sure, would you like to tell me a little about what's making you feel (overwhelmed/stressed/numb)?
+
+Trusted Adult: That's a lot to manage. I can see your stress. Here's what we can do...(insert clinically appropriate response)
+
+(User finishes exercise or dialogue and exits room)
+===
+title: overwhelmed
+tags: 
+colorID: 0
+position: 925,-505
+---
+Empty Text
+[[End]]
+===
+title: stressed
+tags: 
+colorID: 0
+position: 894,-226
+---
+Empty Text
+[[End]]
+===
+title: numb
+tags: 
+colorID: 0
+position: 610,-227
+---
+Empty Text
+[[End]]
+===
+title: End
+tags: 
+colorID: 0
+position: -673,-233
+---
+Whoops, time for class...
+<<load 3 homeroom>>
+===

@@ -30,7 +30,7 @@ func hide(character):
 func say(text):
 	var speaker = null
 	if ":" in text:
-		speaker = text.split(":")[0].to_lower()
+		speaker = text.split(":")[0]
 		text = text.split(":")[1]
 	parent.say(speaker, text, {'typing': true})
 	parent.last_say = [speaker, text]
@@ -53,10 +53,9 @@ func yarn_custom_logic(to):
 func yarn_custom_logic_after(to):
 	pass
 	
-func play_audio(file):
-	#if !audioPlayer.is_playing():
+func play_audio(audio_name):
+	var file = "res://game/audio/" + audio_name
 	audioPlayer.stream = load(file)
-	audioPlayer.stream.loop = false
 	audioPlayer.play()
 
 func stop_audio():

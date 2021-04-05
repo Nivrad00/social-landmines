@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapsplat_bells.ogg-3d85031117b5eb1b3809f264078fae8b.oggstr"
+
+[deps]
+
+source_file="res://game/audio/zapsplat_bells.ogg"
+dest_files=[ "res://.import/zapsplat_bells.ogg-3d85031117b5eb1b3809f264078fae8b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

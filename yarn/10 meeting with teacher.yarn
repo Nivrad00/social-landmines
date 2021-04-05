@@ -1,0 +1,196 @@
+title: Start
+tags: 
+colorID: 4
+position: 155,1581
+---
+<<show inside clasroom>>
+<<show MS. Roberts happy center>>
+
+Ms. Roberts: Welcome back! 
+Ms. Roberts: I’m glad to have you back in my classroom and to help you get situated so you can catch up on the work that you've missed. We need to figure out how to get you caught up on all of the assignments. 
+Ms. Roberts: How are you feeling about this?
+
+[[I don’t want to fall behind in this class.|Fall behind]]
+[[I’m nervous that I won't be able to complete the homework that I missed.|complete the homework]]
+[[I’m feeling overwhelmed|overwhelmed]]
+===
+title: Fall behind
+tags: 
+colorID: 0
+position: -593,-53
+---
+Ms. Roberts: I understand it must feel stressful to come back to school and have to catch up on your learning. 
+Ms. Roberts:I will try to help you as best as I can, but I do need you to get started on a few things for me.
+
+
+[[I’m ready|Im ready]] 
+[[I guess so|Guess so]]
+[[Only if I have to|Have to]]
+===
+title: complete the homework
+tags: 
+colorID: 0
+position: 152,1057
+---
+Ms. Roberts:I understand it must feel stressful to have to catch up on all of this work. I have a list of assignments you need to complete. 
+Ms. Roberts: What kind of support do you need from me?
+
+<<if $support is true>> 
+[[Can you help me make a timeline to get caught up?|Help me]]
+
+<<if $support is false>>
+[[Nothing|Nothing]] 
+[[I am not doing any of this|Not doing]]
+===
+title: overwhelmed
+tags: 
+colorID: 0
+position: 832,-64
+---
+Ms. Roberts:  I understand it must feel stressful to come back to school and have to catch up on your learning. 
+Ms. Roberts:I will try to help you as best as I can, but I do need you to get started on a few things for me.
+
+[[I’m ready|Im ready]] 
+[[I guess so|Guess so]]
+[[Only if I have to|Have to]]
+===
+title: Im ready
+tags: 
+colorID: 0
+position: 174,206
+---
+Ms. Roberts: Last week we had our unit quiz on The Civil War. 
+Ms. Roberts:The majority of the material you had already learned about before you left. 
+Ms. Roberts:Do you think you could take that quiz tomorrow at lunch?
+
+[[Okay|Okay]]
+[[I feel like I need some more time to study for that quiz. Would it be alright if I could have the weekend to study and take it next week?|Next week]]
+[[Could you remind me the main points that I should know before taking the quiz? I feel a little behind.|feel behind]]
+===
+title: Guess so
+tags: 
+colorID: 0
+position: 56,-376
+---
+Ms. Roberts: Last week we had our unit quiz on The Civil War.
+Ms. Roberts:The majority of the material you had already learned about before you left.
+Ms. Roberts:Do you think you could take that quiz tomorrow at lunch?
+
+[[Okay|Okay]]
+[[I feel like I need some more time to study for that quiz. Would it be alright if I could have the weekend to study and take it next week?|Next week]]
+[[Could you remind me the main points that I should know before taking the quiz? I feel a little behind.|feel behind]]
+===
+title: Have to
+tags: 
+colorID: 0
+position: 274,-807
+---
+Ms. Roberts:Last week we had our unit quiz on The Civil War. 
+Ms. Roberts:The majority of the material you had already learned about before you left. 
+Ms. Roberts:Do you think you could take that quiz tomorrow at lunch?
+
+[[Okay|Okay]]
+[[I feel like I need some more time to study for that quiz. Would it be alright if I could have the weekend to study and take it next week?|Next week]]
+[[Could you remind me the main points that I should know before taking the quiz? I feel a little behind.|feel behind]]
+===
+title: Okay
+tags: 
+colorID: 0
+position: -381,-1307
+---
+Ms. Roberts: Great!
+Ms. Roberts:Oh, I almost forgot! 
+Ms. Roberts:I’ll also need you to read through chapters 4-6 over the weekend. 
+Ms. Roberts:We’re going to start on chapter 7 next week. 
+Ms. Roberts:I had students complete a 2 page response to a prompt about chapter 5 that I can give you. 
+Ms. Roberts:I’d like for you to have that response completed by the end of next week. 
+Ms. Roberts:Do you have any questions for me?
+
+[[Am I able to come to you later if I need help with writing the response?|End]]
+[[Do you have any notes from the days that I missed class, or should I get the notes from a classmate?|End]]
+[[I’m feeling somewhat nervous to complete all of this work. But I will try my hardest.|End]]
+===
+title: Next week
+tags: 
+colorID: 0
+position: 103,-1430
+---
+Ms. Roberts: Yes that would be acceptable. 
+Ms. Roberts: I understand that it may take some time to get back on track.
+Ms. Roberts:Oh, I almost forgot! 
+Ms. Roberts:I’ll also need you to read through chapters 4-6 over the weekend. 
+Ms. Roberts:We’re going to start on chapter 7 next week. 
+Ms. Roberts:I had students complete a 2 page response to a prompt about chapter 5 that I can give you. 
+Ms. Roberts:I’d like for you to have that response completed by the end of next week. 
+Ms. Roberts:Do you have any questions for me?
+
+[[Am I able to come to you later if I need help with writing the response?|End]]
+[[Do you have any notes from the days that I missed class, or should I get the notes from a classmate?|End]]
+[[I’m feeling somewhat nervous to complete all of this work. But I will try my hardest.|End]]
+===
+title: feel behind
+tags: 
+colorID: 0
+position: 778,-1356
+---
+Ms. Roberts:Here. 
+Ms. Roberts:Let me give you these worksheets that I had your classmates complete when you were absent. 
+Ms. Roberts:They are a good way to study for the quiz.
+Ms. Roberts:Oh, I almost forgot! 
+Ms. Roberts:I’ll also need you to read through chapters 4-6 over the weekend. 
+Ms. Roberts:We’re going to start on chapter 7 next week. 
+Ms. Roberts:I had students complete a 2 page response to a prompt about chapter 5 that I can give you. 
+Ms. Roberts:I’d like for you to have that response completed by the end of next week. 
+Ms. Roberts:Do you have any questions for me?
+
+[[Am I able to come to you later if I need help with writing the response?|End]]
+[[Do you have any notes from the days that I missed class, or should I get the notes from a classmate?|End]]
+[[I’m feeling somewhat nervous to complete all of this work. But I will try my hardest.|End]]
+===
+title: End
+tags: 
+colorID: 0
+position: 150,-1912
+---
+Ms. Roberts:You are always welcome to come and talk to me if you need any additional instruction or if you're stuck on any concept. 
+Ms. Roberts:I encourage you to reach out to a classmate to get some of the notes that you missed. 
+Ms. Roberts:I’m sure that you must have a lot on your plate with all of your other classes that you missed. Ms. Roberts:Definitely try your hardest. 
+Ms. Roberts:But don’t overdo it.
+Ms. Roberts:Take breaks if you need it.
+Ms. Roberts:Always let me know if you need any help,{$player}.
+
+<<load 11 crowded hallway>>
+===
+title: Nothing
+tags: 
+colorID: 0
+position: -1221,968
+---
+Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
+
+[[]I'm ready|Im ready]]
+[[I guess so |Guess so]]
+[[Only if I have to |Have to]]
+===
+title: Not doing
+tags: 
+colorID: 0
+position: 171,741
+---
+Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
+
+[[]I'm ready|Im ready]]
+[[I guess so |Guess so]]
+[[Only if I have to |Have to]]
+===
+title: Help me
+tags: 
+colorID: 0
+position: 1449,996
+---
+Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
+
+[[]I'm ready|Im ready]]
+[[I guess so |Guess so]]
+[[Only if I have to |Have to]]
+===

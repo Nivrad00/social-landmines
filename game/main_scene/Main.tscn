@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -7,9 +7,7 @@
 [ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/thermometer/moodThermo.tscn" type="PackedScene" id=7]
-[ext_resource path="res://game/main_scene/question.gd" type="Script" id=8]
 [ext_resource path="res://game/main_scene/Global.gd" type="Script" id=9]
-[ext_resource path="res://game/Music/ForwardSongDraft.ogg" type="AudioStream" id=10]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
 [ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
 
@@ -97,6 +95,7 @@ __meta__ = {
 [node name="MainDialog" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "default_event"
+auto_start = true
 
 [node name="background" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1.49829, 1.49835 )
@@ -124,24 +123,13 @@ margin_top = -5.3454
 margin_right = 1484.12
 margin_bottom = 505.655
 
-[node name="question" type="Node" parent="."]
-script = ExtResource( 8 )
-default_starting_event = "question"
-auto_start = true
-version_control = true
-
 [node name="Global" type="Node" parent="."]
 script = ExtResource( 9 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-pause_mode = 2
-stream = ExtResource( 10 )
-autoplay = true
-bus = "BGM"
 
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="EndScreen" type="Control" parent="."]
+visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
 mouse_filter = 2

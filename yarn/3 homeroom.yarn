@@ -1,0 +1,10 @@
+title: Start
+tags: 
+colorID: 0
+position: -19,-302
+---
+You sit through homeroom.
+{$player}: Homeroom... so boring...
+The bell rings. Ring ring ring!
+<<load 4 hallway>>
+===

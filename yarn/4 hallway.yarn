@@ -1,0 +1,9 @@
+title: Start
+tags: 
+colorID: 0
+position: -19,-302
+---
+You walk through the hallway...
+{$player}: What a neutral hallway experience.
+<<load 5 class 1>>
+===

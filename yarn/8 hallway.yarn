@@ -1,0 +1,9 @@
+title: Start
+tags: 
+colorID: 0
+position: -19,-302
+---
+Back in the hallway again.
+{$player}: *Yawn*
+<<load 9 class 2>>
+===

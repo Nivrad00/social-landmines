@@ -1,0 +1,86 @@
+title: Start
+tags: 
+colorID: 0
+position: -358,499
+---
+<<Show Crowded Hallway>>
+<<Show classmates angry left, right, center>>
+<<Show Peer Smirk Right>>
+
+Peer: Hey you! You’ve been gone forever. Where have you been?
+
+[[Ignore and keep walking|Ignore]]
+[[I’ve been out sick |Sick]]
+[[I was dealing with depression |Dealing with depression]]
+[[Leave me alone |Leave me]]
+===
+title: Ignore
+tags: 
+colorID: 0
+position: -913,31
+---
+<< Hide Peer>>
+<<Show Peer Smirk Right>>
+
+Peer: Hey not so fast! I’ll walk with you. 
+Peer: I heard that you went to the hospital for something
+
+[[That is none of your business |None of your business]]
+[[ have to get to class early |Get to class]]
+[[I was out sick. But I’m back now |Back now]]
+===
+title: Sick
+tags: 
+colorID: 0
+position: -518,1
+---
+Peer: I heard that you wanted to hurt yourself
+
+[[That is none of your business |None of your business]]
+[[ have to get to class early |Get to class]]
+[[I was out sick. But I’m back now |Back now]]
+===
+title: Dealing with depression
+tags: 
+colorID: 0
+position: -140,-15
+---
+Peer: Oh. Are you feeling better?
+
+[[That is none of your business |None of your business]]
+[[ have to get to class early |Get to class]]
+[[I was out sick. But I’m back now |Back now]]
+===
+title: Leave me
+tags: 
+colorID: 0
+position: 186,46
+---
+Peer: No way! I want to talk to you. 
+Peer: Why were you gone last week? I heard it was because you wanted to hurt yourself.
+
+[[That is none of your business |None of your business]]
+[[ have to get to class early |Get to class]]
+[[I was out sick. But I’m back now |Back now]]
+===
+title: None of your business
+tags: 
+colorID: 0
+position: -334,-1205
+---
+<<load 7 cafeteria>>
+===
+title: Get to class
+tags: 
+colorID: 0
+position: -854,-869
+---
+<<load 7 cafeteria>>
+===
+title: Back now
+tags: 
+colorID: 0
+position: 135,-861
+---
+<<load 7 cafeteria>>
+===

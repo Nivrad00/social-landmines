@@ -29,7 +29,7 @@ func clean_environment():
 func say(text):
 	pass
 	
-func play_audio(file):
+func play_audio(audio_name):
 	pass
 	
 func stop_audio():
@@ -79,7 +79,7 @@ func command(cmd):
 			else:
 				show(split[1],split[2])
 		'play':
-			play_audio("res://audio/" + cmd.split("play ")[1])
+			play_audio(cmd.split("play ")[1])
 		'hide':
 			hide(split[1])
 		'stop':
