@@ -20,7 +20,7 @@ Counselor: Hi, ______. Would you like to take a seat?
 title: Plate
 tags: 
 colorID: 0
-position: 148,29
+position: 117,40
 ---
 <<if $trigger is "Academic">>
 Counselor: What would you like to talk about?
@@ -146,14 +146,16 @@ Empty Text
 title: schedule
 tags: 
 colorID: 0
-position: 158,421
+position: -948,-562
 ---
 (Dr. Marraccini: What kinds of scheduling problems would there be?)
+
+[[End]]
 ===
 title: school work
 tags: 
 colorID: 0
-position: -119,30
+position: -223,12
 ---
 Counselor: I'm sorry to hear that. Can you tell me more about what's been challenging for you?
 

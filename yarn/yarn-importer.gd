@@ -58,7 +58,16 @@ func evaluate(expr):
 	var evalTokenizer = EvalTokenizer.new()
 	var evalTree = EvalTree.new(evalTokenizer.tokenize(expr))
 	var evalEvaluator = EvalEvaluate.new(evalTree.get_tree())
-	return evalEvaluator.evaluate(environment)
+	
+	# use both local and global variables
+	var all_vars = {}
+	var global_vars = Global.get_dict()
+	for var_name in global_vars:
+		all_vars['$' + var_name] = global_vars[var_name]
+	for var_name in environment:
+		all_vars[var_name] = environment[var_name]
+	
+	return evalEvaluator.evaluate(all_vars)
 
 #process inline expressions in text
 func say_preprocess(text):
@@ -96,12 +105,17 @@ func logic(statement):
 	var split_statement = statement.split(" ")
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
-		if split_statement[1] == "$mood":
-			environment["$mood"] = int(Global.mood)
-			Global.mood = evaluate(statement.split("to")[1])
-		else:
-			var name = split_statement[1]
-			environment[name] = evaluate(statement.split("to")[1])
+		if split_statement[1].substr(0, 1) == '$':
+			
+			# if the var is defined in Global, set it there (without the $)
+			if split_statement[1].substr(1) in Global.var_list:
+				var var_name = split_statement[1].substr(1)
+				Global.set(var_name, evaluate(statement.split("to")[1]))
+			
+			# else set it locally
+			else:
+				var var_name = split_statement[1]
+				environment[var_name] = evaluate(statement.split("to")[1])
 		
 	# "IF expression"
 	elif split_statement[0] == "if":

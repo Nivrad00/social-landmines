@@ -201,7 +201,7 @@ modulate = Color( 1, 1, 1, 0 )
 margin_top = 330.0
 margin_right = 949.0
 margin_bottom = 417.0
-text = "Consider asking your school counselor about  any accomodations you found helpful or situations you found difficult.
+text = "Consider asking your school counselor about any accomodations you found helpful or situations you found difficult.
 "
 align = 1
 valign = 1
