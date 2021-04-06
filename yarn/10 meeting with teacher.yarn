@@ -3,7 +3,6 @@ tags:
 colorID: 4
 position: 155,1581
 ---
-<<show background clasroom3>>
 <<show MS. Roberts happy center>>
 
 Ms. Roberts: Welcome back! 
@@ -35,12 +34,14 @@ position: 152,1057
 Ms. Roberts:I understand it must feel stressful to have to catch up on all of this work. I have a list of assignments you need to complete. 
 Ms. Roberts: What kind of support do you need from me?
 
-<<if $support is true>> 
+<<if $support == true>> 
 [[Can you help me make a timeline to get caught up?|Help me]]
 
-<<if $support is false>>
+<<else>>
 [[Nothing|Nothing]] 
 [[I am not doing any of this|Not doing]]
+
+<</if>>
 ===
 title: overwhelmed
 tags: 

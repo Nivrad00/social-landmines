@@ -14,33 +14,33 @@ Peer 2: Glad you're back.
 Peer 3 (saying to friends loudly and laughing):They just got back from the psych ward!
 
 User options:
-[[Ignore and keep walking]]
-[[Go to a teacher, school counselor or trusted adult]]
-[[Say something back]]
+[[Ignore and keep walking|Ignore and keep walking]]
+[[Go to a teacher, school counselor or trusted adult|Go to a teacher, school counselor or trusted adult]]
+[[Say something back|Say something back]]
 ===
 title: Ignore and keep walking
 tags: 
 colorID: 0
-position: -354,-539
+position: -344,-538
 ---
 (User has options of internal dialogue or breathing technique to choose from, then gets to their classroom)
 
 Internal dialogue options:
-[[You can do this. (Peer 3) is being childish. It’s ok to need help .]]
-[[Don’t pay attention to them. Keep walking. You’re almost to the classroom.]]
+[[You can do this. (Peer 3) is being childish. It’s ok to need help .|You can do this. (Peer 3) is being childish. It’s ok to need help .]]
+[[Don’t pay attention to them. Keep walking. You’re almost to the classroom.|Don’t pay attention to them. Keep walking. You’re almost to the classroom.]]
 ===
 title: Go to a teacher, school counselor or trusted adult
 tags: 
 colorID: 0
-position: 335,-511
+position: 268,-498
 ---
 <<show background couselors-office>>
 (User enters into room of trusted adult.)
 
 User options:
-[[Tell them what happened and report who did it]]
-[[Tell them what happened and ask for help dealing with it]]
-[[Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.]]
+[[Tell them what happened and report who did it|Tell them what happened and report who did it]]
+[[Tell them what happened and ask for help dealing with it|Tell them what happened and ask for help dealing with it]]
+[[Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.|Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.]]
 ===
 title: Say something back
 tags: 
@@ -99,13 +99,18 @@ Trusted adult: I'll handle it from here. Come back if you need any other support
 title: Don’t tell them what happened, but let them know you’re feeling overwhelmed, etc.
 tags: 
 colorID: 0
-position: 637,-506
+position: 629,-503
 ---
 User: Hi, Trusted Adult. I'm feeling kind of:
-[[overwhelmed]]
-[[stressed]]
-[[numb]]
-
+[[overwhelmed|overwhelmed]]
+[[stressed|stressed]]
+[[numb|numb]]
+===
+title: overwhelmed
+tags: 
+colorID: 0
+position: 925,-505
+---
 User: Can I come and sit down?
 
 Trusted Adult: Sure, would you like to tell me a little about what's making you feel (overwhelmed/stressed/numb)?
@@ -113,21 +118,20 @@ Trusted Adult: Sure, would you like to tell me a little about what's making you 
 Trusted Adult: That's a lot to manage. I can see your stress. Here's what we can do...(insert clinically appropriate response)
 
 (User finishes exercise or dialogue and exits room)
-===
-title: overwhelmed
-tags: 
-colorID: 0
-position: 925,-505
----
-Empty Text
 [[End]]
 ===
 title: stressed
 tags: 
 colorID: 0
-position: 894,-226
+position: 892,-230
 ---
-Empty Text
+User: Can I come and sit down?
+
+Trusted Adult: Sure, would you like to tell me a little about what's making you feel (overwhelmed/stressed/numb)?
+
+Trusted Adult: That's a lot to manage. I can see your stress. Here's what we can do...(insert clinically appropriate response)
+
+(User finishes exercise or dialogue and exits room)
 [[End]]
 ===
 title: numb
@@ -135,7 +139,13 @@ tags:
 colorID: 0
 position: 610,-227
 ---
-Empty Text
+User: Can I come and sit down?
+
+Trusted Adult: Sure, would you like to tell me a little about what's making you feel (overwhelmed/stressed/numb)?
+
+Trusted Adult: That's a lot to manage. I can see your stress. Here's what we can do...(insert clinically appropriate response)
+
+(User finishes exercise or dialogue and exits room)
 [[End]]
 ===
 title: End

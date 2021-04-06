@@ -39,6 +39,7 @@ tags:
 colorID: 0
 position: 1127,-333
 ---
+<<show background restroom>>
 Student enters bathroom
 Would you like to practice some mindfulness breathing?
 [[Yes|Yes.]]
@@ -63,6 +64,7 @@ Teacher
 School Counselor
 Principal
 *End Scene*
+<<load 8 hallway>>
 ===
 title: Cafeteria
 tags: 
