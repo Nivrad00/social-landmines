@@ -38,7 +38,7 @@ Counselor:I'm sorry to hear that. Would it be helpful to ask what supports you m
 title: plan of action
 tags: 
 colorID: 0
-position: 815,-1337
+position: 804,-1360
 ---
 Counselor:Ok, before we begin making a plan about your academic work, is there anything you want to share/want us to know? 
 
@@ -57,7 +57,7 @@ Counselor: We are nearly done with this quarter, so there is nothing we can do a
 Counselor: You will need to go to each of your teachers and make a plan for completing the missed assignments.
 Counselor: Mom, for next semester, we could make changes to {$player}'s schedule – is that something you would like?
 
-[[|Mom schedule q]]
+[[Mom schedule q]]
 ===
 title: hesitant
 tags: 
@@ -411,7 +411,7 @@ position: 329,-1421
 Mom: Yes, we’d like {$player} to take less challenging courses so they can focus on recovering. 
 Mom: Can you swap them out of some of those courses?
 
-[[|counselor scheduling a]]
+[[counselor scheduling a]]
 ===
 title: counselor scheduling a
 tags: 
@@ -528,8 +528,8 @@ tags:
 colorID: 0
 position: 2188,-1127
 ---
-YOU WILL BE DIRECTED TO A SCHOOL PROFESSIONAL ASAP.
-[[|counselor help]]
+You will be directed to a school professional ASAP.
+[[counselor help]]
 ===
 title: counselor help
 tags: 
