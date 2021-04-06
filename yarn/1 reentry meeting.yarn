@@ -7,6 +7,7 @@ Welcome to the April 4th, 2021 draft of Forward!
 The scripts in this version of the game are a work in progress and may be changed dramatically.
 Anyway, let's get started...
 <<play main_theme.ogg>>
+<<show background meeting-room>>
 Principal: Welcome back, {$player}. How are you feeling today?
 
 [[fine, thanks|Fine]]

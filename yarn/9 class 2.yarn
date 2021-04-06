@@ -3,7 +3,9 @@ tags:
 colorID: 0
 position: -19,-302
 ---
-Ms. Teacher McTeacherface: {$player}, what's 2 + 2?
+<<show background classroom3>>
+Ms. Roberts: {$player}, what's 2 + 2?
 {$player}: Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+Class ends, and Ms. Robert pulls you aside...
 <<load 10 meeting with teacher>>
 ===

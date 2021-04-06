@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<show background hallway>>
 (User walks down crowded hallway. Students are walking quickly and one student knocks into User’s shoulder)
 
 Peer 1: Hi, User!
@@ -33,6 +34,7 @@ tags:
 colorID: 0
 position: 335,-511
 ---
+<<show background couselors-office>>
 (User enters into room of trusted adult.)
 
 User options:

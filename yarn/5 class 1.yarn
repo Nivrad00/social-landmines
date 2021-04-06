@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<show background classroom2>>
 You go to class.
 Mr. Teachalot: Uhhhhhhh {$player} where you have been?
 {$player}: Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh

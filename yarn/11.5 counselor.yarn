@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: 417,35
 ---
+<<show background counselors-office>>
 <<if $trigger is "Academic">>
 Counselor: Hi, ______. Would you like to take a seat?
 [[Yes, I have a lot on my plate right now.|Plate]]

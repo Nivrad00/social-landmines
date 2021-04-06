@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<show background hallway>>
 Back in the hallway again.
 {$player}: *Yawn*
 <<load 9 class 2>>

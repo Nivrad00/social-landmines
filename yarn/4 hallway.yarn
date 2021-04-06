@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<show background hallway>>
 You walk through the hallway...
 {$player}: What a neutral hallway experience.
 <<load 5 class 1>>

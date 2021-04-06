@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<show background classroom1>>
 You sit through homeroom.
 {$player}: Homeroom... so boring...
 The bell rings. Ring ring ring!
