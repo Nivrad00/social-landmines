@@ -1,9 +1,9 @@
 restroom: ?
 cafeteria: ?
+suburb: Bibin Tom https://unsplash.com/@99bibin
 meeting-room: Arlington Research https://unsplash.com/@arlington_research
 classroom1: Dids https://www.pexels.com/@didsss
 hallway: Aedrian https://unsplash.com/@aedrian
 classroom2: MChe Lee https://unsplash.com/@mclee
 classroom3: Matt Hoffman https://unsplash.com/@__matthoffman__
 counselors-office: Chalo Garcia https://unsplash.com/@photosbychalo
-suburb: Bibin Tom https://unsplash.com/@99bibin
