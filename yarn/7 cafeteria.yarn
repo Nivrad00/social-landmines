@@ -30,9 +30,9 @@ position: 758,-701
 ---
 Bully 1: Oh, so you're just going to ignore us? 
 Bully 2: I told you they were crazy
-[[Will you please leave me alone?]]
-[[Say nothing]]
-[[I am not crazy]]
+[[Will you please leave me alone?|Will you please leave me alone?]]
+[[Say nothing|Say nothing]]
+[[I am not crazy|I am not crazy]]
 ===
 title: Bathroom
 tags: 
@@ -133,7 +133,7 @@ tags:
 colorID: 0
 position: 615,-1016
 ---
-[[|Node_2]]
+[[Node_2]]
 ===
 title: I am not crazy
 tags: 
@@ -142,7 +142,7 @@ position: 857,-1018
 ---
 Bully 2: Yeah, keep telling yourself that.
 Peer: Just ignore them, they are just trying to get under your skin.
-[[|Node_2]]
+[[Node_2]]
 ===
 title: No, but thanks
 tags: 

@@ -1,4 +1,4 @@
-title: Start
+﻿title: Start
 tags: 
 colorID: 4
 position: 155,1581
@@ -22,7 +22,7 @@ Ms. Roberts: I understand it must feel stressful to come back to school and have
 Ms. Roberts:I will try to help you as best as I can, but I do need you to get started on a few things for me.
 
 
-[[I’m ready|Im ready]] 
+[[I’m ready|ready]] 
 [[I guess so|Guess so]]
 [[Only if I have to|Have to]]
 ===
@@ -51,11 +51,11 @@ position: 832,-64
 Ms. Roberts:  I understand it must feel stressful to come back to school and have to catch up on your learning. 
 Ms. Roberts:I will try to help you as best as I can, but I do need you to get started on a few things for me.
 
-[[I’m ready|Im ready]] 
+[[I’m ready|ready]] 
 [[I guess so|Guess so]]
 [[Only if I have to|Have to]]
 ===
-title: Im ready
+title: ready
 tags: 
 colorID: 0
 position: 174,206
@@ -169,7 +169,7 @@ position: -1221,968
 ---
 Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
 
-[[]I'm ready|Im ready]]
+[[]I'm ready|ready]]
 [[I guess so |Guess so]]
 [[Only if I have to |Have to]]
 ===
@@ -180,7 +180,7 @@ position: 171,741
 ---
 Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
 
-[[]I'm ready|Im ready]]
+[[]I'm ready|ready]]
 [[I guess so |Guess so]]
 [[Only if I have to |Have to]]
 ===
@@ -191,7 +191,7 @@ position: 1449,996
 ---
 Ms. Roberts: Ok, I will try to help you as best as I can, but I do need you to get started on a few things for me.
 
-[[]I'm ready|Im ready]]
+[[]I'm ready|ready]]
 [[I guess so |Guess so]]
 [[Only if I have to |Have to]]
 ===
