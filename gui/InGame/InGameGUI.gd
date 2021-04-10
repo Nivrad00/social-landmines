@@ -76,16 +76,10 @@ func _on_resource_button_press(resource_name):
 	$Minigames.show()
 	$Minigames.start_minigame(resource_name)
 	
-	# wait for the minigames screen to finish fading in, then collapse the dropdown
-	yield($Minigames, 'faded_in')
-	if $ResourcesMenu.dropdown_shown:
-		$ResourcesMenu.toggle_dropdown()
-	
 	
 func _on_game_end():
 	Rakugo.deactivate_skipping()
 	$SkipDisplay.hide()
-	if $ResourcesMenu.dropdown_shown:
-		$ResourcesMenu.toggle_dropdown()
+	$ResourcesMenu.hide_dropdown()
 	skip_button.pressed = false
 	
