@@ -7,6 +7,7 @@ onready var skip_button = $QuickMenu/ButtonList/Skip
 
 func _ready():
 	Rakugo.connect("game_ended", self, "_on_game_end")
+	$SkipDisplay.hide()
 	
 func _input(event):
 	if visible:

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/progressbar.jpg-8d155cd5cd2ca48874c4e8d7ba0f161f.stex"
+path="res://.import/imageedit_8_9964836039-removebg-preview.png-630b1eeb1b983b2e047cf54dacb57db8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/thermometer/progressbar.jpg"
-dest_files=[ "res://.import/progressbar.jpg-8d155cd5cd2ca48874c4e8d7ba0f161f.stex" ]
+source_file="res://gui/InGame/thermometer/imageedit_8_9964836039-removebg-preview.png"
+dest_files=[ "res://.import/imageedit_8_9964836039-removebg-preview.png-630b1eeb1b983b2e047cf54dacb57db8.stex" ]
 
 [params]
 

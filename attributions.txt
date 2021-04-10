@@ -7,3 +7,6 @@ hallway: Aedrian https://unsplash.com/@aedrian
 classroom2: MChe Lee https://unsplash.com/@mclee
 classroom3: Matt Hoffman https://unsplash.com/@__matthoffman__
 counselors-office: Chalo Garcia https://unsplash.com/@photosbychalo
+
+
+icons: https://fontawesome.com/
