@@ -61,6 +61,27 @@ func _on_quick_button_press(quick_action):
 		_:
 			Window.Screens._on_nav_button_press(quick_action)
 
+func _on_resource_button_press(resource_name):
+	# when the user wants to use a resource!
+	# currently minigame state isn't stored, so saving during a minigame and then loading
+	#   that save should just cause the minigame to disappear
+	
+	if resource_name == 'Counselor':
+		pass # todo
+		
+	if Rakugo.skipping:
+		skip_button.emit_signal("pressed")
+		skip_button.pressed = !skip_button.pressed
+		
+	$Minigames.show()
+	$Minigames.start_minigame(resource_name)
+	
+	# wait for the minigames screen to finish fading in, then collapse the dropdown
+	yield($Minigames, 'faded_in')
+	if $ResourcesMenu.dropdown_shown:
+		$ResourcesMenu.toggle_dropdown()
+	
+	
 func _on_game_end():
 	Rakugo.deactivate_skipping()
 	$SkipDisplay.hide()
