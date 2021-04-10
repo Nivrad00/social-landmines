@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/caret-down-solid.png-db27f75c257cb029facfa18dec538583.stex"
+path="res://.import/caret-down-solid.png-5ddb011943c4e7407042d62b91fc1576.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/caret-down-solid.png"
-dest_files=[ "res://.import/caret-down-solid.png-db27f75c257cb029facfa18dec538583.stex" ]
+source_file="res://gui/InGame/ResourcesMenu/caret-down-solid.png"
+dest_files=[ "res://.import/caret-down-solid.png-5ddb011943c4e7407042d62b91fc1576.stex" ]
 
 [params]
 

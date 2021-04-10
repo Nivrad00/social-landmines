@@ -1,0 +1,18 @@
+restroom: ?
+cafeteria: ?
+suburb: Bibin Tom https://unsplash.com/@99bibin
+meeting-room: Arlington Research https://unsplash.com/@arlington_research
+classroom1: Dids https://www.pexels.com/@didsss
+hallway: Aedrian https://unsplash.com/@aedrian
+classroom2: MChe Lee https://unsplash.com/@mclee
+classroom3: Matt Hoffman https://unsplash.com/@__matthoffman__
+counselors-office: Chalo Garcia https://unsplash.com/@photosbychalo
+
+
+icons: Font Awesome (must give credit, indicate modifications, and link to license)
+https://fontawesome.com/license
+changed the color of caret-down-solid
+
+
+font: Lato, retrieved from Google Fonts, designed by Łukasz Dziedzic
+licensed under the Open Font License https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL

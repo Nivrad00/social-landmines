@@ -64,5 +64,7 @@ func _on_quick_button_press(quick_action):
 func _on_game_end():
 	Rakugo.deactivate_skipping()
 	$SkipDisplay.hide()
+	if $ResourcesMenu.dropdown_shown:
+		$ResourcesMenu.toggle_dropdown()
 	skip_button.pressed = false
 	
