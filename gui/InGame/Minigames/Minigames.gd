@@ -3,9 +3,10 @@ extends Control
 const FADE_SPEED = 7
 
 var target_opacity = 0
+var minigame_shown = false
 
 signal exiting()
-signal faded_in()
+signal starting()
 
 func _ready():
 	modulate.a = 0
@@ -21,7 +22,9 @@ func start_minigame(minigame_name):
 	# make all relevant nodes interactible 
 	# (including the bg, which prevents input to the rest of the gui)
 	set_mouse_filter_recursive(self, Control.MOUSE_FILTER_STOP)
+	minigame_shown = true
 	
+	emit_signal('starting')
 	show()
 	target_opacity = 1
 	
@@ -31,6 +34,15 @@ func end_minigame():
 	
 	# make nodes not interactible, even while fadeout is still happening
 	set_mouse_filter_recursive(self, Control.MOUSE_FILTER_IGNORE)
+	minigame_shown = false
+
+# for when the game resets
+func end_minigame_immediately():
+	target_opacity = 0
+	modulate.a = 0
+	hide()
+	set_mouse_filter_recursive(self, Control.MOUSE_FILTER_IGNORE)
+	minigame_shown = false
 
 func set_mouse_filter_recursive(node, filter):
 	# there's no way this is efficient... but... idk how else to do it...
@@ -48,5 +60,4 @@ func _process(delta):
 		hide()
 	elif target_opacity == 1 and modulate.a >= 0.999:
 		modulate.a == 1
-		emit_signal('faded_in')
 	

@@ -38,28 +38,28 @@ border_width_bottom = 3
 border_blend = true
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.384314, 1, 0.913725, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.686275, 0.490196, 1, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.666667, 1, 0.482353, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0, 0, 0, 1 )
 border_width_left = 3
 border_width_right = 3
@@ -68,7 +68,7 @@ border_blend = true
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "Fade In"
 length = 0.8
 tracks/0/type = "value"
@@ -84,7 +84,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "Fade Out"
 length = 0.8
 tracks/0/type = "value"
@@ -210,14 +210,14 @@ size_flags_vertical = 3
 margin_top = 0.0
 margin_right = 363.0
 margin_bottom = 40.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 3 )
 resource_name = "DeepBreathing"
 button_text = "Deep breathing"
 button_icon = ExtResource( 12 )
 
 [node name="ResourceOption2" parent="ResourcesMenu/Content/MarginContainer/VBoxContainer" instance=ExtResource( 10 )]
 margin_right = 363.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 4 )
 resource_name = "FidgetSpinner"
 button_text = "Fidget Spinner"
 
@@ -225,7 +225,7 @@ button_text = "Fidget Spinner"
 margin_top = 88.0
 margin_right = 363.0
 margin_bottom = 128.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 5 )
 resource_name = "ColoringBook"
 button_text = "Coloring Book"
 
@@ -247,7 +247,7 @@ custom_constants/margin_left = 80
 margin_left = 80.0
 margin_right = 383.0
 margin_bottom = 40.0
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 6 )
 
 [node name="Button" type="Button" parent="ResourcesMenu/Tab/Panel"]
 anchor_right = 1.0
@@ -366,8 +366,8 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Minigames"]
-"anims/Fade In" = SubResource( 8 )
-"anims/Fade Out" = SubResource( 9 )
+"anims/Fade In" = SubResource( 7 )
+"anims/Fade Out" = SubResource( 8 )
 
 [node name="MoodThermometer" parent="." instance=ExtResource( 9 )]
 margin_left = 1153.28
@@ -375,8 +375,9 @@ margin_top = 12.0
 margin_right = 1254.28
 margin_bottom = 312.0
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
-[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
+[connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
-[connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown"]
-[connection signal="faded_in" from="Minigames" to="ResourcesMenu" method="hide_dropdown"]
+[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
+[connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
+[connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
 [connection signal="pressed" from="Minigames/BackButton" to="Minigames" method="end_minigame"]

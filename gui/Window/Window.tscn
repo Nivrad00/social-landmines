@@ -89,3 +89,4 @@ script = ExtResource( 8 )
 
 [node name="QuitScreen" parent="Panel" instance=ExtResource( 9 )]
 visible = false
+[connection signal="load_file" from="Panel/TabContainer/Screens" to="Panel/TabContainer/InGameGUI" method="_on_game_end"]

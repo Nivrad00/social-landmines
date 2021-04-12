@@ -2,6 +2,7 @@ extends Control
 
 signal show_menu(menu, game_started)
 signal show_main_menu_confirm()
+signal load_file()
 
 func _ready():
 	if Engine.editor_hint:
@@ -120,3 +121,7 @@ func _on_Screens_visibility_changed():
 	# cowabunga!
 	if visible:
 		$SubMenus/SavesSlotScreen.screenshot = get_screenshot()
+
+
+func _on_load_file():
+	emit_signal('load_file')

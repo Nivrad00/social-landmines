@@ -1,5 +1,7 @@
 extends VBoxContainer
 
+signal opened()
+
 var dropdown_shown = false
 var target_pos = 0
 var target_opacity = 0
@@ -39,9 +41,10 @@ func toggle_dropdown():
 		bg.mouse_filter = Control.MOUSE_FILTER_STOP
 		dropdown_shown = true
 		caret.flip_v = true
+		emit_signal('opened')
 
-func hide_dropdown():
-	# do it immediately
+# for when the game resets or when a minigame ends
+func hide_dropdown_immediately():
 	if dropdown_shown:
 		target_pos = hidden_pos()
 		target_opacity = 0
