@@ -11,7 +11,7 @@ var last_say = [null, '']
 
 signal end_game
 
-onready var question = get_node("../Control")
+onready var question = get_node("../Node2D/Questions")
 onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
@@ -23,6 +23,7 @@ func _ready():
 
 func default_event():
 	# print('entering default event')
+	question.show()
 	start_event("default_event")
 	# placeholder for questionnaire
 	Global.trigger = 'Social'
