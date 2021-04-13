@@ -5,12 +5,12 @@
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.926283, 0.962402, 0.0413532, 1 )
+bg_color = Color( 0.952941, 1, 0.141176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=2]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.4028, 0.4664, 0.53, 0.784314 )
+bg_color = Color( 0.92549, 0.486275, 0.105882, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 content_margin_top = 5.0
@@ -30,7 +30,11 @@ bg_color = Color( 0, 0, 0, 0.352941 )
 [sub_resource type="StyleBoxFlat" id=5]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.232775, 0.86084, 0.0437145, 1 )
+bg_color = Color( 0.145098, 0.556863, 0.243137, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [node name="ChoiceButton" type="Button"]
 margin_top = 333.0
