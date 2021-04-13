@@ -7,6 +7,7 @@ var default_yarn_scene = '1 reentry meeting'
 var current_choices = []
 var next_scene = null
 var next_marker = null
+var first_time = true
 var last_say = [null, '']
 
 signal end_game
@@ -21,9 +22,13 @@ func _ready():
 	Rakugo.define_character("Chad", "Chad", Color.yellow)
 	Rakugo.define_character("Peer", "Peer", Color.green)
 
+
 func default_event():
-	# print('entering default event')
-	question.show()
+	if first_time:
+		question.show()
+		first_time = false
+	
+	print('entering default event')
 	start_event("default_event")
 	# placeholder for questionnaire
 	Global.trigger = 'Social'
