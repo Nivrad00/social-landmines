@@ -205,6 +205,7 @@ func new_yarn_thread():
 
 # Internally create a new fibre (during loading)
 func new_yarn_fibre(line):
+	line = line.strip_edges()
 	# choice fibre
 	if line.substr(0,2) == '[[':
 		if line.find('|') != -1:

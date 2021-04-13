@@ -10,8 +10,8 @@ Anyway, let's get started...
 <<show background meeting-room>>
 Principal: Welcome back, {$player}. How are you feeling today?
 
-[[fine, thanks|Fine]]
-[[been better|been]]
+[[fine, thanks|Fine]]   
+[[been better|been]] 
 [[I don’t really want to talk about it|No talk]]
 ===
 title: Fine
@@ -22,7 +22,7 @@ position: -1612,-480
 Counselor: Glad to hear it. 
 Counselor: We like to come together as a team to meet and consider the best way to support students who have been gone, so this meeting is about thinking through different ways to help support your transition and make sure you get caught up with your school work.
 Counselor: Before we talk about academics, is there anything you are particularly worried about?
-[[No|plan of action]] 
+[[No|plan of action]]  
 [[Yes|been]]
 [[I’m uncomfortable speaking about this right now|plan of action]]
 ===
