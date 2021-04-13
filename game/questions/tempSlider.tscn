@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://game/questions/Control.gd" type="Script" id=1]
+[ext_resource path="res://game/questions/images/progressbar.jpg" type="Texture" id=2]
+[ext_resource path="res://game/questions/images/imageedit_8_9964836039-removebg-preview.png" type="Texture" id=3]
+
+
+
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -774.0
+margin_bottom = -275.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 1.94052
+margin_top = -0.178391
+margin_right = 301.941
+margin_bottom = 299.822
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="TextureRect2"]
+margin_left = 107.0
+margin_top = 29.2202
+margin_right = 127.0
+margin_bottom = 226.22
+size_flags_horizontal = 5
+size_flags_vertical = 5
+value = 50.0
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="mouse_entered" from="TextureRect2/TextureProgress" to="." method="_on_TextureProgress_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect2/TextureProgress" to="." method="_on_TextureProgress_mouse_exited"]

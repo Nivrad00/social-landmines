@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/questions/questionaire.tscn" type="PackedScene" id=7]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
 [ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
 
@@ -89,6 +90,10 @@ mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Control" parent="." instance=ExtResource( 7 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
 
 [node name="MainDialog" type="Node" parent="."]
 script = ExtResource( 1 )

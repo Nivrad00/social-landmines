@@ -4,6 +4,7 @@ extends Node
 #whenever mood is changed outside of this node, setMood functionis called
 var mood = 0 setget setMood;
 var trigger = ''
+var playerName = ''
 
 # list of all globally defined variables (all global variables are predetermined)
 var var_list = ['mood', 'trigger']

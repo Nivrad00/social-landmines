@@ -11,6 +11,7 @@ var last_say = [null, '']
 
 signal end_game
 
+onready var question = get_node("../Control")
 onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
@@ -23,9 +24,7 @@ func _ready():
 func default_event():
 	# print('entering default event')
 	start_event("default_event")
-	
 	# placeholder for questionnaire
-	Global.mood = 50
 	Global.trigger = 'Social'
 	
 	# start by initializing the yarn story and proceeding up to the first choice
