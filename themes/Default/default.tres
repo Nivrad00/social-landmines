@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=41 format=2]
+[gd_resource type="Theme" load_steps=43 format=2]
 
 [ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://fonts/DejaVu/DejaVuSans-Bold.ttf" type="DynamicFontData" id=2]
@@ -15,11 +15,14 @@ font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxEmpty" id=37]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0.0156863, 0.0156863, 0.0156863, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=5]
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0.0313726, 0.0313726, 0.0313726, 0.498039 )
+border_color = Color( 0.952941, 1, 0.141176, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=6]
 
@@ -42,6 +45,8 @@ content_margin_left = 10.0
 color = Color( 0.756863, 0.878431, 1, 1 )
 thickness = 5
 vertical = true
+
+[sub_resource type="StyleBoxEmpty" id=39]
 
 [sub_resource type="StyleBoxLine" id=14]
 content_margin_left = 10.0
@@ -151,18 +156,21 @@ expand_margin_right = 10.0
 expand_margin_top = 10.0
 expand_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0, 0, 0, 1 )
+
 [resource]
 default_font = SubResource( 28 )
-Button/colors/font_color = Color( 0.533333, 0.533333, 0.533333, 1 )
+Button/colors/font_color = Color( 0.145098, 0.556863, 0.243137, 1 )
 Button/colors/font_color_disabled = Color( 0.533333, 0.533333, 0.533333, 0.498039 )
-Button/colors/font_color_hover = Color( 0.756863, 0.878431, 1, 1 )
-Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/colors/font_color_hover = Color( 0.952941, 1, 0.141176, 1 )
+Button/colors/font_color_pressed = Color( 0.976471, 0.541176, 0.027451, 1 )
 Button/constants/hseparation = 2
 Button/fonts/font = SubResource( 1 )
 Button/styles/disabled = SubResource( 2 )
-Button/styles/focus = SubResource( 3 )
-Button/styles/hover = SubResource( 4 )
-Button/styles/normal = SubResource( 5 )
+Button/styles/focus = SubResource( 37 )
+Button/styles/hover = SubResource( 38 )
+Button/styles/normal = SubResource( 35 )
 Button/styles/pressed = SubResource( 6 )
 CheckButton/colors/font_color = Color( 0.533333, 0.533333, 0.533333, 1 )
 CheckButton/colors/font_color_disabled = Color( 0.533333, 0.533333, 0.533333, 0.498039 )
@@ -180,7 +188,7 @@ CheckButton/styles/disabled = SubResource( 11 )
 CheckButton/styles/focus = SubResource( 12 )
 CheckButton/styles/hover = SubResource( 12 )
 CheckButton/styles/hover_pressed = SubResource( 13 )
-CheckButton/styles/normal = SubResource( 12 )
+CheckButton/styles/normal = SubResource( 39 )
 CheckButton/styles/pressed = SubResource( 14 )
 HSlider/icons/grabber = SubResource( 15 )
 HSlider/icons/grabber_disabled = SubResource( 16 )
@@ -243,8 +251,11 @@ WindowDialog/icons/close_highlight = SubResource( 33 )
 WindowDialog/styles/panel = SubResource( 34 )
 script = ExtResource( 6 )
 links_color = Color( 0.133333, 0.368627, 0.74902, 1 )
-idle_node_color = Color( 0.533333, 0.533333, 0.533333, 1 )
+idle_node_color = Color( 0.054902, 0.690196, 0.945098, 1 )
 focus_node_color = Color( 0.6, 0.8, 1, 1 )
 hover_node_color = Color( 0.756863, 0.878431, 1, 1 )
 pressed_node_color = Color( 1, 1, 1, 1 )
 disable_node_color = Color( 0.533333, 0.533333, 0.533333, 0.498039 )
+save_button_focus = SubResource( 36 )
+save_button_hover = SubResource( 38 )
+save_button_normal = SubResource( 35 )

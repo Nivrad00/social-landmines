@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://gui/QuickMenu/QuickMenu.gd" type="Script" id=1]
 [ext_resource path="res://gui/QuickMenu/QuickMenuButton.tscn" type="PackedScene" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.952941, 1, 0.141176, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=5]
 
 [node name="QuickMenu" type="MarginContainer"]
 anchor_top = 1.0
@@ -55,7 +70,10 @@ margin_right = 217.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/hover = SubResource( 2 )
+custom_styles/normal = SubResource( 1 )
 text = "Pref."
+flat = false
 quick_action = "preferences"
 
 [node name="Back" parent="ButtonList" instance=ExtResource( 4 )]
@@ -73,7 +91,9 @@ margin_right = 438.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/hover = SubResource( 3 )
 text = "Save"
+flat = false
 quick_action = "save"
 
 [node name="Load" parent="ButtonList" instance=ExtResource( 4 )]
@@ -82,7 +102,9 @@ margin_right = 659.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/hover = SubResource( 4 )
 text = "Load"
+flat = false
 quick_action = "load"
 
 [node name="Skip" parent="ButtonList" instance=ExtResource( 4 )]
@@ -91,8 +113,10 @@ margin_right = 880.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_styles/hover = SubResource( 5 )
 toggle_mode = true
 text = "Skip"
+flat = false
 quick_action = "skip"
 
 [node name="QSave" parent="ButtonList" instance=ExtResource( 4 )]

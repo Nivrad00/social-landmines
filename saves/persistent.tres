@@ -46,6 +46,7 @@ properties = {
 552466504: true,
 589249204: true,
 600984294: true,
+620431001: true,
 654304757: true,
 654712004: true,
 657261618: true,
@@ -54,6 +55,7 @@ properties = {
 690020195: true,
 726201178: true,
 738971947: true,
+750733901: true,
 760903106: true,
 778623636: true,
 890805606: true,
@@ -262,9 +264,9 @@ properties = {
 },
 "settings": {
 "display/window/size/fullscreen": false,
-"display/window/size/height": 720,
+"display/window/size/height": 814.0,
 "display/window/size/maximized": false,
-"display/window/size/width": 1280.0,
+"display/window/size/width": 1447.0,
 "rakugo/default/delays/typing_effect_delay": 0.03,
 "rakugo/game/text/scrolling_enabled": false,
 "rakugo/saves/current_page": 1
