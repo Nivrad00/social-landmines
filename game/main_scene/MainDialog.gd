@@ -3,10 +3,17 @@ extends Dialogue
 var yarn_importer = null
 var yarn_path = 'res://yarn/'
 var default_yarn_scene = '1 reentry meeting'
+onready var quest = get_node("../Questions")
+onready var choice = get_node("/root/Window/Panel/TabContainer/InGameGUI/ChoiceMenu")
+onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/DialoguePanel")
+onready var resource = get_node("/root/Window/Panel/TabContainer/InGameGUI/ResourcesMenu")
+onready var therm = get_node("/root/Window/Panel/TabContainer/InGameGUI/MoodThermometer")
+onready var quick = get_node("/root/Window/Panel/TabContainer/InGameGUI/QuickMenu")
 
 var current_choices = []
 var next_scene = null
 var next_marker = null
+var first_time = true
 var last_say = [null, '']
 
 signal end_game
@@ -20,12 +27,21 @@ func _ready():
 	Rakugo.define_character("Chad", "Chad", Color.yellow)
 	Rakugo.define_character("Peer", "Peer", Color.green)
 
+
 func default_event():
-	# print('entering default event')
-	start_event("default_event")
+	quest.hide()
+	choice.show()
+	dialogue.show()
+	resource.show()
+	therm.show()
+	quick.show()
 	
+	if first_time:
+		first_time = false
+	
+	print('entering default event')
+	start_event("default_event")
 	# placeholder for questionnaire
-	Global.mood = 50
 	Global.trigger = 'Social'
 	
 	# start by initializing the yarn story and proceeding up to the first choice
