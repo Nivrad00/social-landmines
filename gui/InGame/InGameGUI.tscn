@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://themes/Default/DefaultCustom.tres" type="Theme" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://gui/InGame/ResourcesMenu/ResourceOption.tscn" type="PackedScene" id=10]
 [ext_resource path="res://gui/InGame/Minigames/Minigames.gd" type="Script" id=11]
 [ext_resource path="res://gui/InGame/ResourcesMenu/DeepBreathing.png" type="Texture" id=12]
+[ext_resource path="res://gui/InGame/ColoringBook/ColoringBook.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Skip Animation"
@@ -283,7 +284,6 @@ __meta__ = {
 }
 
 [node name="Minigames" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
@@ -345,24 +345,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ColoringBook" type="Control" parent="Minigames/Games"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-mouse_filter = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label3" type="Label" parent="Minigames/Games/ColoringBook"]
-margin_left = 54.7447
-margin_top = 43.4182
-margin_right = 170.745
-margin_bottom = 73.4182
-text = "spinning..."
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ColoringBook" parent="Minigames/Games" instance=ExtResource( 13 )]
 
 [node name="BackButton" type="Button" parent="Minigames" groups=[
 "minigame_interactable",
@@ -388,8 +371,8 @@ margin_right = 1254.28
 margin_bottom = 312.0
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
 [connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
-[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
+[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
 [connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
 [connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
 [connection signal="pressed" from="Minigames/BackButton" to="Minigames" method="end_minigame"]
