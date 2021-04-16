@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="FidgetSpinner" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 54.7447
+margin_top = 43.4182
+margin_right = 170.745
+margin_bottom = 73.4182
+text = "spinning..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
