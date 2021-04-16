@@ -3,6 +3,12 @@ extends Dialogue
 var yarn_importer = null
 var yarn_path = 'res://yarn/'
 var default_yarn_scene = '1 reentry meeting'
+onready var quest = get_node("../Questions")
+onready var choice = get_node("/root/Window/Panel/TabContainer/InGameGUI/ChoiceMenu")
+onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/DialoguePanel")
+onready var resource = get_node("/root/Window/Panel/TabContainer/InGameGUI/ResourcesMenu")
+onready var therm = get_node("/root/Window/Panel/TabContainer/InGameGUI/MoodThermometer")
+onready var quick = get_node("/root/Window/Panel/TabContainer/InGameGUI/QuickMenu")
 
 var current_choices = []
 var next_scene = null
@@ -12,7 +18,6 @@ var last_say = [null, '']
 
 signal end_game
 
-onready var question = get_node("../Node2D/Questions")
 onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
@@ -24,8 +29,14 @@ func _ready():
 
 
 func default_event():
+	quest.hide()
+	choice.show()
+	dialogue.show()
+	resource.show()
+	therm.show()
+	quick.show()
+	
 	if first_time:
-		question.show()
 		first_time = false
 	
 	print('entering default event')

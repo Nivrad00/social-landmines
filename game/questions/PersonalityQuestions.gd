@@ -1,26 +1,18 @@
 extends VBoxContainer
 
-onready var check1 = get_node("Checkboxes/CheckBox")
-onready var check2 = get_node("Checkboxes/CheckBox2")
-onready var check3 = get_node("Checkboxes/CheckBox3")
-onready var check4 = get_node("Checkboxes/CheckBox4")
-onready var check5 = get_node("Checkboxes/CheckBox5")
-onready var check6 = get_node("Checkboxes/CheckBox6")
-onready var check7 = get_node("Checkboxes/CheckBox7")
-onready var check8 = get_node("Checkboxes/CheckBox8")
-onready var check9 = get_node("Checkboxes/CheckBox9")
 var checked = []
 
 func _ready():
-	check1.connect("toggled",self,"limit_checks",[check1])
-	check2.connect("toggled",self,"limit_checks",[check2])
-	check3.connect("toggled",self,"limit_checks",[check3])
-	check4.connect("toggled",self,"limit_checks",[check4])
-	check5.connect("toggled",self,"limit_checks",[check5])
-	check6.connect("toggled",self,"limit_checks",[check6])
-	check7.connect("toggled",self,"limit_checks",[check7])
-	check8.connect("toggled",self,"limit_checks",[check8])
-	check9.connect("toggled",self,"limit_checks",[check9])
+	
+	$Checkboxes/CheckBox.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox])
+	$Checkboxes/CheckBox2.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox2])
+	$Checkboxes/CheckBox3.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox3])
+	$Checkboxes/CheckBox4.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox4])
+	$Checkboxes/CheckBox5.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox5])
+	$Checkboxes/CheckBox6.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox6])
+	$Checkboxes/CheckBox7.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox7])
+	$Checkboxes/CheckBox8.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox8])
+	$Checkboxes/CheckBox9.connect("toggled",self,"limit_checks",[$Checkboxes/CheckBox9])
 
 
 func limit_checks(button_pressed,which):

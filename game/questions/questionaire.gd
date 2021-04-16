@@ -5,7 +5,7 @@ onready var pnOptions = get_node("MarginContainer/PanelContainer/ScrollContainer
 onready var subNoun = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/subject")
 onready var objNoun = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/object")
 onready var posNoun = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/posessive")
-onready var setMood = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/MoodQuestion/TextureRect/Control/TextureRect2/TextureProgress")
+onready var setMood = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/MoodQuestion/CenterContainer/TextureRect/TextureProgress")
 onready var AQ1 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/AnxietyQuestions/Question1/VBoxContainer/HSlider")
 onready var AQ2 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/AnxietyQuestions/Question2/VBoxContainer/HSlider")
 onready var AQ3 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/AnxietyQuestions/Question3/VBoxContainer/HSlider")
@@ -23,6 +23,8 @@ onready var check6 = get_node("MarginContainer/PanelContainer/ScrollContainer/VB
 onready var check7 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox7")
 onready var check8 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox8")
 onready var check9 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox9")
+
+signal submit_success
 
 func _ready():
 	pass
@@ -84,12 +86,17 @@ func handle_checks():
 	return pressed
 
 func _on_Button_pressed():
-	if(basic_errors()):
-		print(nameLine.text.empty())
-		print(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty()))
-		print("errors exist")
-	else:
+	#if(basic_errors()):
+	#	print(nameLine.text.empty())
+	#	print(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty()))
+	#	print("errors exist")
+	#else:
 		Global.mood = int(handle_mood())
 		Global.playerName = str(handle_name())
 		print("submit sucessfully")
-		self.hide()
+		emit_signal("submit_success")
+		
+
+
+func _on_HSlider_value_changed(value):
+	pass # Replace with function body.

@@ -4,7 +4,7 @@ extends OptionButton
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var other = get_node("/root/Main/Node2D/Questions/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalQuestions/Pronouns/OtherOption")
+onready var other = get_node("/root/Main/Questions/MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalQuestions/Pronouns/OtherOption")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.connect("item_selected",self,"on_item_selected")
