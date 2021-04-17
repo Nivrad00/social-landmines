@@ -59,7 +59,7 @@ func _process(delta):
 	bg.modulate.a += (target_opacity - bg.modulate.a) / 2 * delta * DROPDOWN_SPEED
 	
 	if target_opacity == 0 and bg.modulate.a <= 0.001:
-		bg.modulate.a == 0
+		bg.modulate.a = 0
 		bg.hide()
-	elif target_opacity == 1 and modulate.a >= 0.999:
-		bg.modulate.a == 1
+	elif target_opacity == 1 and bg.modulate.a >= 0.999:
+		bg.modulate.a = 1

@@ -308,12 +308,16 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="DeepBreathing" parent="Minigames/Games" instance=ExtResource( 14 )]
 
 [node name="FidgetSpinner" parent="Minigames/Games" instance=ExtResource( 15 )]
 
 [node name="ColoringBook" parent="Minigames/Games" instance=ExtResource( 13 )]
+visible = false
 
 [node name="BackButton" type="Button" parent="Minigames" groups=[
 "minigame_interactable",
