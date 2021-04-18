@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://gui/Minigames/FidgetSpinner.gd" type="Script" id=1]
+[ext_resource path="res://gui/Minigames/fidget_spinner.png" type="Texture" id=2]
+[ext_resource path="res://gui/Minigames/fidget_background.png" type="Texture" id=3]
+
+[node name="FidgetSpinner" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.192157, 0.0941176, 0.313726, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="TextureRect" parent="."]
+modulate = Color( 0.529412, 0.423529, 0.709804, 0.505882 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 1089.67, -157.994 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spinner" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 408.0
+margin_top = 43.5186
+margin_right = -408.0
+margin_bottom = -177.481
+rect_pivot_offset = Vector2( 231.783, 282.309 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Center" type="Button" parent="Spinner"]
+margin_left = 180.0
+margin_top = 232.0
+margin_right = 285.0
+margin_bottom = 335.0
+focus_mode = 0
+shortcut_in_tooltip = false
+action_mode = 0
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Spinner/Center" to="Spinner" method="start_dragging"]
+[connection signal="button_up" from="Spinner/Center" to="Spinner" method="stop_dragging"]

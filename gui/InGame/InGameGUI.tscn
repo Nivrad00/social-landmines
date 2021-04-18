@@ -10,11 +10,11 @@
 [ext_resource path="res://gui/InGame/ResourcesMenu/caret-down-solid.png" type="Texture" id=8]
 [ext_resource path="res://gui/InGame/thermometer/moodThermo.tscn" type="PackedScene" id=9]
 [ext_resource path="res://gui/InGame/ResourcesMenu/ResourceOption.tscn" type="PackedScene" id=10]
-[ext_resource path="res://gui/InGame/Minigames/Minigames.gd" type="Script" id=11]
+[ext_resource path="res://gui/Minigames/Minigames.gd" type="Script" id=11]
 [ext_resource path="res://gui/InGame/ResourcesMenu/DeepBreathing.png" type="Texture" id=12]
-[ext_resource path="res://gui/InGame/ColoringBook/ColoringBook.tscn" type="PackedScene" id=13]
-[ext_resource path="res://gui/InGame/ColoringBook/DeepBreathing.tscn" type="PackedScene" id=14]
-[ext_resource path="res://gui/InGame/ColoringBook/FidgetSpinner.tscn" type="PackedScene" id=15]
+[ext_resource path="res://gui/Minigames/DeepBreathing.tscn" type="PackedScene" id=13]
+[ext_resource path="res://gui/Minigames/ColoringBook.tscn" type="PackedScene" id=14]
+[ext_resource path="res://gui/Minigames/FidgetSpinner.tscn" type="PackedScene" id=15]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Skip Animation"
@@ -312,12 +312,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DeepBreathing" parent="Minigames/Games" instance=ExtResource( 14 )]
+[node name="ColoringBook" parent="Minigames/Games" instance=ExtResource( 14 )]
+visible = false
+
+[node name="DeepBreathing" parent="Minigames/Games" instance=ExtResource( 13 )]
 
 [node name="FidgetSpinner" parent="Minigames/Games" instance=ExtResource( 15 )]
-
-[node name="ColoringBook" parent="Minigames/Games" instance=ExtResource( 13 )]
-visible = false
+margin_right = 1240.0
+margin_bottom = 680.0
 
 [node name="BackButton" type="Button" parent="Minigames" groups=[
 "minigame_interactable",
