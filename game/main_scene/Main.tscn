@@ -166,10 +166,23 @@ size_flags_vertical = 3
 margin_right = 1080.0
 margin_bottom = 42.0
 
-[node name="Question1" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Name"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Name"]
 margin_right = 1080.0
 margin_bottom = 14.0
+
+[node name="Question1" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Name/HBoxContainer"]
+margin_right = 153.0
+margin_bottom = 14.0
 text = "Please Enter Your Name"
+
+[node name="nameError" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Name/HBoxContainer"]
+visible = false
+margin_left = 157.0
+margin_right = 1080.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "*name cannot be empty"
+align = 2
 
 [node name="askName" type="LineEdit" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Name"]
 margin_top = 18.0
@@ -187,10 +200,23 @@ margin_top = 46.0
 margin_right = 1080.0
 margin_bottom = 84.0
 
-[node name="Question2" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
 margin_right = 1080.0
 margin_bottom = 14.0
+
+[node name="Question2" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns/HBoxContainer"]
+margin_right = 181.0
+margin_bottom = 14.0
 text = "Please Select Your Pronouns"
+
+[node name="pronounError" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns/HBoxContainer"]
+visible = false
+margin_left = 185.0
+margin_right = 1080.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "*pronouns cannot be empty"
+align = 2
 
 [node name="OptionButton" type="OptionButton" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
 margin_top = 18.0
@@ -247,10 +273,23 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 8 )
 
-[node name="Label" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions"]
 margin_right = 1080.0
 margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer"]
+margin_right = 433.0
+margin_bottom = 14.0
 text = "Identify the two aspects listed blow that are most important to you:"
+
+[node name="aspectError" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer"]
+visible = false
+margin_left = 437.0
+margin_right = 1080.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "*please select two aspects"
+align = 2
 
 [node name="Checkboxes" type="VBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions"]
 margin_top = 18.0
@@ -975,9 +1014,7 @@ margin_bottom = 720.0
 [node name="Label" type="Label" parent="Questions/PageThree/MoodQuestion"]
 margin_right = 1080.0
 margin_bottom = 116.0
-text = "
-
-A 0 usually indicates feeling really good or happy and a 10 is the absolute worst you could imagine feeling, indicating you would need help to stay safe. Usually, when your feeling thermometer gets to anything over a 5 this is a sign that it might help to use a coping skill. In real life, these numbers are different for different people. In the game, they are not real, but give you a chance to see how the thermometer could go up and down in any given situation.
+text = "This is a mood thermometer. You will see this in the top right corner throughout the game. A 0 usually indicates feeling really good or happy and a 10 is the absolute worst you could imagine feeling, indicating you would need help to stay safe. Usually, when your feeling thermometer gets to anything over a 5 this is a sign that it might help to use a coping skill. In real life, these numbers are different for different people. In the game, they are not real, but give you a chance to see how the thermometer could go up and down in any given situation.
 
 Right now, in real life, how would you rate your feelings on the thermometer?"
 autowrap = true

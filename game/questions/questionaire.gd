@@ -32,13 +32,17 @@ func _ready():
 func handle_name():
 	return nameLine.get_text()
 
-func handle_pronouns():
+func get_pronouns():
 	var option_id = pnOptions.get_selected()
 	if(option_id != 4):
 		return str(pnOptions.get_item_text(option_id))
 	else:
 		var otherNouns = subNoun.get_text() + "/" + objNoun.get_text() + "/" + posNoun.get_text()
 		return otherNouns
+
+func handle_pronouns(string):
+	var nounArray = string.split("/")
+	return nounArray
 
 func handle_anxiety():
 	var array = [
@@ -59,12 +63,18 @@ func handle_mood():
 	
 
 func basic_errors():
+	var errors = 0
 	if(nameLine.text.empty()):
-		return true
-	elif(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty())):
-		return true
+		$PageOne/VBoxContainer/PersonalQuestions/Name/HBoxContainer/nameError.show()
+		errors = errors + 1
+	if(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty())):
+		$PageOne/VBoxContainer/PersonalQuestions/Pronouns/HBoxContainer/pronounError.show()
+		errors = errors + 1
+	if(handle_checks().size() != 2):
+		$PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer/aspectError.show()
+		errors = errors + 1
 	else:
-		return false
+		return errors
 		
 func handle_checks():
 	var pressed = []
@@ -85,20 +95,22 @@ func handle_checks():
 	return pressed
 
 func _on_Submit_pressed():
-	#if(basic_errors()):
-	#	print(nameLine.text.empty())
-	#	print(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty()))
-	#	print("errors exist")
-	#else:
+		Global.objNoun = str(handle_pronouns(get_pronouns())[0].to_lower())
+		Global.subNoun = str(handle_pronouns(get_pronouns())[1].to_lower())
+		Global.possNoun = str(handle_pronouns(get_pronouns())[2].to_lower())
 		Global.mood = int(handle_mood())
 		Global.playerName = str(handle_name())
+		Global.moodMultiplier = handle_anxiety()
 		print("submit sucessfully")
 		emit_signal("submit_success")
 
 
 func _on_PageOneNext_pressed():
-	$PageOne.hide()
-	$PageTwo.show()
+	if(basic_errors() != 0):
+		pass
+	else:
+		$PageOne.hide()
+		$PageTwo.show()
 
 
 func _on_PageTwoBack_pressed():

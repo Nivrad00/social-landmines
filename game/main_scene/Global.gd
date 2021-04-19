@@ -5,6 +5,10 @@ extends Node
 var mood = 0 setget setMood;
 var trigger = ''
 var playerName = ''
+var objNoun = ''
+var subNoun = ''
+var possNoun = ''
+var moodMultiplier = []
 
 # list of all globally defined variables (all global variables are predetermined)
 var var_list = ['mood', 'trigger']
