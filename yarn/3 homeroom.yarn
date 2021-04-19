@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -19,-302
 ---
+<<play Forward.wav>>
 <<show background classroom1>>
 You sit through homeroom.
 {$player}: Homeroom... so boring...

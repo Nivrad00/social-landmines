@@ -15,6 +15,8 @@ var next_scene = null
 var next_marker = null
 var first_time = true
 var last_say = [null, '']
+var current_audio = null
+var audio_dict = {}
 
 signal end_game
 
@@ -26,6 +28,22 @@ func _ready():
 	Rakugo.define_character("Brad", "Brad", Color.red)
 	Rakugo.define_character("Chad", "Chad", Color.yellow)
 	Rakugo.define_character("Peer", "Peer", Color.green)
+	
+	# preload audio, otherwise there are issues
+	var dir = Directory.new()
+	var path = 'res://game/audio/'
+	if dir.open(path) == OK:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		while file_name != "":
+			if dir.current_is_dir():
+				pass
+			else:
+				if file_name.split('.')[-1] in ['ogg', 'wav']:
+					audio_dict[file_name] = load(path + file_name)
+			file_name = dir.get_next()
+	else:
+		print("An error occurred when trying to load the audio files.")
 
 
 func default_event():
@@ -94,4 +112,6 @@ func default_event():
 	end_event()
 
 func end_game():
+	# need to wait a second or rakugo will crash. don't ask me why
+	yield(get_tree().create_timer(0.1), "timeout")
 	emit_signal('end_game')

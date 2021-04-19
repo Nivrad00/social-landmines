@@ -4,6 +4,7 @@ colorID: 0
 position: -19,-302
 ---
 <<show background hallway>>
+<<play crowd.wav>>
 (User walks down crowded hallway. Students are walking quickly and one student knocks into User’s shoulder)
 
 Peer 1: Hi, User!
@@ -34,6 +35,7 @@ colorID: 0
 position: 268,-498
 ---
 <<show background couselors-office>>
+<<stop>>
 (User enters into room of trusted adult.)
 
 User options:

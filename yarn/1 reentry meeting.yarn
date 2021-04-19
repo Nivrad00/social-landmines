@@ -3,10 +3,7 @@ tags: ""
 colorID: 0
 position: -1789,-1112
 ---
-Welcome to the April 4th, 2021 draft of Forward!
-The scripts in this version of the game are a work in progress and may be changed dramatically.
-Anyway, let's get started...
-<<play main_theme.ogg>>
+<<play Reentry.wav>>
 <<show background meeting-room>>
 Principal: Welcome back, {$player}. How are you feeling today?
 
