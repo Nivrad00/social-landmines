@@ -22,8 +22,14 @@ func _ready():
 func questions():
 	start_event("questions")
 	quest.show()
+	
+	step()
+	
+	jump("","MainDialog","")
+	
+	end_event()
 
 func submit():
+	Rakugo.story_step()
 	question_shown = false
-	print("signal recieved")
-	jump("","MainDialog","")
+	return
