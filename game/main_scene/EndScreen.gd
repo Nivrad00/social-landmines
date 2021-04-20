@@ -16,7 +16,6 @@ func _on_end_game():
 	Window.Screens._on_nav_button_press('main_menu')
 
 func add_line():
-	print(shown)
 	if shown >= $Container.get_children().size():
 		return
 	

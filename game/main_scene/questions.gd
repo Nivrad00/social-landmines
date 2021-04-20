@@ -20,16 +20,20 @@ func _ready():
 
 
 func questions():
+	print('test')
 	start_event("questions")
+	
 	quest.show()
 	
 	step()
 	
+
+	question_shown = false
 	jump("","MainDialog","")
 	
 	end_event()
 
 func submit():
 	Rakugo.story_step()
-	question_shown = false
+
 	return

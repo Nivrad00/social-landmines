@@ -39,11 +39,7 @@ func enable():
 func reset():
 	# get new coloring page
 	var random_page_name = coloring_page_names[randi() % coloring_page_names.size()]
-	var image = Image.new()
-	image.load(coloring_page_path + random_page_name)
-	var texture = ImageTexture.new()
-	texture.create_from_image(image)
-	$ColoringPage.texture = texture
+	$ColoringPage.texture = load(coloring_page_path + random_page_name)
 	
 	# erase drawing
 	$DrawViewport/Pen.to_erase = true

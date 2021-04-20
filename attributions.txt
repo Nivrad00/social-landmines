@@ -1,3 +1,7 @@
+(temporary list until we make a credits page)
+
+BACKGROUNDS (attribution required or at least highly suggested, i dont remember)
+
 restroom: ?
 cafeteria: ?
 suburb: Bibin Tom https://unsplash.com/@99bibin
@@ -8,5 +12,14 @@ classroom2: MChe Lee https://unsplash.com/@mclee
 classroom3: Matt Hoffman https://unsplash.com/@__matthoffman__
 counselors-office: Chalo Garcia https://unsplash.com/@photosbychalo
 
+SOUND (some of these require attribution)
 
+crowd: tim.kahn https://freesound.org/people/tim.kahn/sounds/336999/
+
+OTHER
+
+jamie and her sister - visual design
+marisa and her mother - guided meditation
+darvin - music
+The instructions for meditation and guided meditation are inspired by the teachings of Thich Nhat Han and adapted by Pam Perugi Marraccini.
 icons: https://fontawesome.com/
