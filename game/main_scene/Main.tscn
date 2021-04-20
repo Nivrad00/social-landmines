@@ -152,14 +152,16 @@ __meta__ = {
 margin_left = 100.0
 margin_top = 50.0
 margin_right = 1180.0
-margin_bottom = 428.0
+margin_bottom = 526.0
 size_flags_vertical = 0
+custom_constants/separation = 50
 
 [node name="PersonalQuestions" type="VBoxContainer" parent="Questions/PageOne/VBoxContainer"]
 margin_right = 1080.0
-margin_bottom = 84.0
+margin_bottom = 90.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+custom_constants/separation = 10
 
 [node name="Name" type="VBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions"]
 margin_right = 1080.0
@@ -195,9 +197,9 @@ __meta__ = {
 }
 
 [node name="Pronouns" type="VBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions"]
-margin_top = 46.0
+margin_top = 52.0
 margin_right = 1080.0
-margin_bottom = 84.0
+margin_bottom = 90.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
 margin_right = 1080.0
@@ -264,9 +266,9 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="PersonalityQuestions" type="VBoxContainer" parent="Questions/PageOne/VBoxContainer"]
-margin_top = 88.0
+margin_top = 140.0
 margin_right = 1080.0
-margin_bottom = 354.0
+margin_bottom = 406.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource( 8 )
@@ -348,9 +350,9 @@ margin_bottom = 248.0
 text = "Friendships"
 
 [node name="PageOneButtons" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer"]
-margin_top = 358.0
+margin_top = 456.0
 margin_right = 1080.0
-margin_bottom = 378.0
+margin_bottom = 476.0
 
 [node name="PageOneNext" type="Button" parent="Questions/PageOne/VBoxContainer/PageOneButtons"]
 margin_left = 519.0
@@ -376,23 +378,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Questions/PageTwo"]
+[node name="MarginContainer" type="MarginContainer" parent="Questions/PageTwo"]
 margin_left = 100.0
 margin_top = 50.0
 margin_right = 1183.0
 margin_bottom = 668.0
 size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="Questions/PageTwo/ScrollContainer"]
-margin_right = 1083.0
-margin_bottom = 796.0
-size_flags_horizontal = 3
 custom_constants/margin_right = 25
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer"]
 margin_right = 1058.0
-margin_bottom = 796.0
+margin_bottom = 618.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 50
@@ -400,594 +396,609 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AnxietyQuestions" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer"]
-margin_right = 1046.0
-margin_bottom = 726.0
-custom_constants/separation = 20
-
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer"]
+margin_right = 1058.0
 margin_bottom = 14.0
 text = "How much anxiety or distress do you usually feel in the following situations? Please rate your anxiety or distress from 0 (none) to 8 (very much):"
 autowrap = true
 
-[node name="AQ1" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 34.0
-margin_right = 1046.0
-margin_bottom = 103.0
+[node name="ScrollContainer" type="ScrollContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 1058.0
+margin_bottom = 548.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1"]
-margin_right = 1046.0
+[node name="MarginContainer" type="MarginContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer"]
+margin_right = 1058.0
+margin_bottom = 692.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 30
+
+[node name="AnxietyQuestions" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer"]
+margin_right = 1028.0
+margin_bottom = 692.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+
+[node name="AQ1" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_right = 1016.0
+margin_bottom = 69.0
+
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "1. Being around a lot of kids in school "
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HBoxContainer"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ2" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 123.0
-margin_right = 1046.0
-margin_bottom = 192.0
+[node name="AQ2" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 89.0
+margin_right = 1016.0
+margin_bottom = 158.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "2. Being around a lot of adults in schoo"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HBoxContainer"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ3" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 212.0
-margin_right = 1046.0
-margin_bottom = 281.0
+[node name="AQ3" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 178.0
+margin_right = 1016.0
+margin_bottom = 247.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "3. Having one-on-one conversations with adults in school"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HBoxContainer2"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ4" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 301.0
-margin_right = 1046.0
-margin_bottom = 370.0
+[node name="AQ4" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 267.0
+margin_right = 1016.0
+margin_bottom = 336.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "4. Saying the wrong thing to other kids"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HBoxContainer3"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ5" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 390.0
-margin_right = 1046.0
-margin_bottom = 459.0
+[node name="AQ5" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 356.0
+margin_right = 1016.0
+margin_bottom = 425.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "5. Getting picked on or made fun of by other kids"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer4" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer"]
+[node name="HBoxContainer4" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HBoxContainer4"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ6" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 479.0
-margin_right = 1046.0
-margin_bottom = 548.0
+[node name="AQ6" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 445.0
+margin_right = 1016.0
+margin_bottom = 514.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "6. Being in crowded places"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer5" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer"]
+[node name="HBoxContainer5" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HBoxContainer5"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ7" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 568.0
-margin_right = 1046.0
-margin_bottom = 637.0
+[node name="AQ7" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 534.0
+margin_right = 1016.0
+margin_bottom = 603.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "7. Getting a lot of attention from other kids"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer6" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer"]
+[node name="HBoxContainer6" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HBoxContainer6"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="AQ8" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions"]
-margin_top = 657.0
-margin_right = 1046.0
-margin_bottom = 726.0
+[node name="AQ8" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions"]
+margin_top = 623.0
+margin_right = 1016.0
+margin_bottom = 692.0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8"]
-margin_right = 1046.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8"]
+margin_right = 1016.0
 margin_bottom = 14.0
 text = "8. Getting a lot of attention from teachers"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8"]
 margin_top = 18.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 69.0
 
-[node name="HSlider" type="HSlider" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer"]
-margin_right = 1046.0
+[node name="HSlider" type="HSlider" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer"]
+margin_right = 1016.0
 margin_bottom = 16.0
 max_value = 8.0
 tick_count = 5
 ticks_on_borders = true
 
-[node name="HBoxContainer7" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer"]
+[node name="HBoxContainer7" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer"]
 margin_top = 20.0
-margin_right = 1046.0
+margin_right = 1016.0
 margin_bottom = 51.0
 custom_constants/separation = 0
 
-[node name="Label" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
-margin_right = 259.0
+[node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
+margin_right = 252.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "0
 "
 
-[node name="Label3" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
-margin_left = 259.0
-margin_right = 267.0
+[node name="Label3" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
+margin_left = 252.0
+margin_right = 260.0
 margin_bottom = 31.0
 size_flags_horizontal = 0
 text = "2
 "
 
-[node name="Label4" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
-margin_left = 267.0
-margin_right = 527.0
+[node name="Label4" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
+margin_left = 260.0
+margin_right = 512.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 5
 text = "4"
 align = 2
 
-[node name="Label5" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
-margin_left = 527.0
-margin_right = 786.0
+[node name="Label5" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
+margin_left = 512.0
+margin_right = 764.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "6
 "
 align = 2
 
-[node name="Label2" type="Label" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
-margin_left = 786.0
-margin_right = 1046.0
+[node name="Label2" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HBoxContainer7"]
+margin_left = 764.0
+margin_right = 1016.0
 margin_bottom = 31.0
 size_flags_horizontal = 3
 text = "8
 "
 align = 2
 
-[node name="PageTwoButtons" type="HBoxContainer" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer"]
-margin_top = 776.0
-margin_right = 1046.0
-margin_bottom = 796.0
+[node name="PageTwoButtons" type="HBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer"]
+margin_top = 598.0
+margin_right = 1058.0
+margin_bottom = 618.0
 
-[node name="PageTwoBack" type="Button" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/PageTwoButtons"]
-margin_left = 239.0
-margin_right = 281.0
+[node name="PageTwoBack" type="Button" parent="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons"]
+margin_left = 242.0
+margin_right = 284.0
 margin_bottom = 20.0
 size_flags_horizontal = 6
 size_flags_vertical = 0
 text = "Back"
 align = 0
 
-[node name="PageTwoNext" type="Button" parent="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/PageTwoButtons"]
-margin_left = 764.0
-margin_right = 806.0
+[node name="PageTwoNext" type="Button" parent="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons"]
+margin_left = 773.0
+margin_right = 815.0
 margin_bottom = 20.0
 size_flags_horizontal = 6
 size_flags_vertical = 0
@@ -1283,8 +1294,8 @@ wait_time = 4.0
 one_shot = true
 [connection signal="end_game" from="MainDialog" to="EndScreen" method="_on_end_game"]
 [connection signal="pressed" from="Questions/PageOne/VBoxContainer/PageOneButtons/PageOneNext" to="Questions" method="_on_PageOneNext_pressed"]
-[connection signal="pressed" from="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoBack" to="Questions" method="_on_PageTwoBack_pressed"]
-[connection signal="pressed" from="Questions/PageTwo/ScrollContainer/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoNext" to="Questions" method="_on_PageTwoNext_pressed"]
+[connection signal="pressed" from="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoBack" to="Questions" method="_on_PageTwoBack_pressed"]
+[connection signal="pressed" from="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoNext" to="Questions" method="_on_PageTwoNext_pressed"]
 [connection signal="value_changed" from="Questions/PageThree/MoodQuestion/HSlider" to="Questions/PageThree/MoodQuestion/CenterContainer/TextureRect/TextureProgress" method="_on_HSlider_value_changed"]
 [connection signal="pressed" from="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons/PageThreeBack" to="Questions" method="_on_PageThreeBack_pressed"]
 [connection signal="pressed" from="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons/Submit" to="Questions" method="_on_Submit_pressed"]

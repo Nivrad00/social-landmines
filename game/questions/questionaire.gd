@@ -17,14 +17,14 @@ onready var PQ7 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q7
 onready var PQ8 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q8
 onready var PQ9 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q9
 
-onready var AQ1 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HSlider
-onready var AQ2 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HSlider
-onready var AQ3 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HSlider
-onready var AQ4 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HSlider
-onready var AQ5 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HSlider
-onready var AQ6 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HSlider
-onready var AQ7 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HSlider
-onready var AQ8 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HSlider
+onready var AQ1 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HSlider
+onready var AQ2 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HSlider
+onready var AQ3 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HSlider
+onready var AQ4 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ4/VBoxContainer/HSlider
+onready var AQ5 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5/VBoxContainer/HSlider
+onready var AQ6 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HSlider
+onready var AQ7 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HSlider
+onready var AQ8 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HSlider
 
 onready var main_dialog = get_node("../MainDialog")
 
