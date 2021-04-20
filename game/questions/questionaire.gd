@@ -95,11 +95,11 @@ func handle_checks():
 	return pressed
 
 func _on_Submit_pressed():
-		Global.objNoun = str(handle_pronouns(get_pronouns())[0].to_lower())
-		Global.subNoun = str(handle_pronouns(get_pronouns())[1].to_lower())
-		Global.possNoun = str(handle_pronouns(get_pronouns())[2].to_lower())
+		Global.obj = str(handle_pronouns(get_pronouns())[0].to_lower())
+		Global.subj = str(handle_pronouns(get_pronouns())[1].to_lower())
+		Global.poss = str(handle_pronouns(get_pronouns())[2].to_lower())
 		Global.mood = int(handle_mood())
-		Global.playerName = str(handle_name())
+		Global.player = str(handle_name())
 		Global.moodMultiplier = handle_anxiety()
 		print("submit sucessfully")
 		emit_signal("submit_success")
