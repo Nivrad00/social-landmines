@@ -15,14 +15,15 @@ onready var PQ6 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q6
 onready var PQ7 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q7
 onready var PQ8 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q8
 onready var PQ9 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q9
-onready var AQ1 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ1
-onready var AQ2 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ2
-onready var AQ3 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ3
-onready var AQ4 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ4
-onready var AQ5 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ5
-onready var AQ6 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ6
-onready var AQ7 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ7
-onready var AQ8 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ8
+
+onready var AQ1 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ1/VBoxContainer/HSlider
+onready var AQ2 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ2/VBoxContainer/HSlider
+onready var AQ3 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ3/VBoxContainer/HSlider
+onready var AQ4 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ4/VBoxContainer/HSlider
+onready var AQ5 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ5/VBoxContainer/HSlider
+onready var AQ6 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ6/VBoxContainer/HSlider
+onready var AQ7 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ7/VBoxContainer/HSlider
+onready var AQ8 = $PageTwo/ScrollContainer/MarginContainer/VBoxContainer/AnxietyQuestions/AQ8/VBoxContainer/HSlider
 onready var main_dialog = get_node("../MainDialog")
 
 signal submit_success
@@ -96,13 +97,17 @@ func handle_checks():
 	return pressed
 
 func _on_Submit_pressed():
-		Global.obj = str(handle_pronouns(get_pronouns())[0].to_lower())
-		Global.subj = str(handle_pronouns(get_pronouns())[1].to_lower())
-		Global.poss = str(handle_pronouns(get_pronouns())[2].to_lower())
 		Global.mood = int(handle_mood())
-		Global.player = str(handle_name())
-		Global.moodMultiplier = handle_anxiety()
-		print("submit sucessfully")
+		main_dialog.set_var("$player", str(handle_name()))
+		main_dialog.set_var("$passion1", str(handle_checks()[0]))
+		main_dialog.set_var("$passion2", str(handle_checks()[1]))
+		var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
+		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
+		for i in range(0,len(anxieties)):
+			main_dialog.set_var(anxieties[i], handle_anxiety()[i])
+		main_dialog.set_var("$pronoun_sbj", handle_pronouns(get_pronouns())[0].to_lower())
+		main_dialog.set_var("$pronoun_obj", handle_pronouns(get_pronouns())[1].to_lower())
+		main_dialog.set_var("$pronoun_pos", handle_pronouns(get_pronouns())[2].to_lower())
 		emit_signal("submit_success")
 
 

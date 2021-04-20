@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
-[ext_resource path="res://game/main_scene/OtherOption.gd" type="Script" id=7]
 [ext_resource path="res://game/questions/PersonalityQuestions.gd" type="Script" id=8]
 [ext_resource path="res://game/questions/OptionButton.gd" type="Script" id=9]
 [ext_resource path="res://game/questions/questionaire.gd" type="Script" id=10]
@@ -231,7 +230,6 @@ margin_top = 42.0
 margin_right = 1080.0
 margin_bottom = 66.0
 size_flags_vertical = 3
-script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
