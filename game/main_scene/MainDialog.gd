@@ -48,6 +48,7 @@ func _ready():
 
 
 func default_event():
+	#pressing play prompts the user with the questionaire
 	quest.hide()
 	choice.show()
 	dialogue.show()

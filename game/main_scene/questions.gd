@@ -27,6 +27,7 @@ func questions():
 	
 	step()
 	
+
 	question_shown = false
 	jump("","MainDialog","")
 	
@@ -34,4 +35,5 @@ func questions():
 
 func submit():
 	Rakugo.story_step()
+
 	return
