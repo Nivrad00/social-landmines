@@ -23,6 +23,7 @@ onready var check6 = get_node("MarginContainer/PanelContainer/ScrollContainer/VB
 onready var check7 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox7")
 onready var check8 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox8")
 onready var check9 = get_node("MarginContainer/PanelContainer/ScrollContainer/VBoxContainer/PersonalityQuestions/Checkboxes/CheckBox9")
+onready var main_dialog = get_node("../MainDialog")
 
 signal submit_success
 
@@ -93,7 +94,17 @@ func _on_Button_pressed():
 	#else:
 		Global.mood = int(handle_mood())
 		Global.playerName = str(handle_name())
-		print("submit sucessfully")
+		#set variables in yarn from questionnaire
+		main_dialog.set_var("$player", str(handle_name()))
+		main_dialog.set_var("$passion1", str(handle_checks()[0]))
+		main_dialog.set_var("$passion2", str(handle_checks()[1]))
+		var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
+		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
+		for i in range(0,len(anxieties)):
+			main_dialog.set_var(anxieties[i], handle_anxiety()[i])
+		main_dialog.set_var("$pronoun_sbj", handle_pronouns().split("/")[0].to_lower())
+		main_dialog.set_var("$pronoun_obj", handle_pronouns().split("/")[1].to_lower())
+		main_dialog.set_var("$pronoun_pos", handle_pronouns().split("/")[2].to_lower())
 		emit_signal("submit_success")
 		
 

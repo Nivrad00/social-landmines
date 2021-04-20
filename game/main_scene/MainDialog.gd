@@ -28,7 +28,8 @@ func _ready():
 	Rakugo.define_character("Brad", "Brad", Color.red)
 	Rakugo.define_character("Chad", "Chad", Color.yellow)
 	Rakugo.define_character("Peer", "Peer", Color.green)
-	
+	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
+	yarn_importer.connect_scene(self, audioPlayer)
 	# preload audio, otherwise there are issues
 	var dir = Directory.new()
 	var path = 'res://game/audio/'
@@ -66,8 +67,7 @@ func default_event():
 	current_choices = []
 	next_scene = null
 	# print('initializing yarn story')
-	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
-	yarn_importer.connect_scene(self, audioPlayer)
+	
 	yarn_importer.spin_yarn(yarn_path + default_yarn_scene + '.yarn')
 	
 	# then continue looping through the story, handling choices as they appear
@@ -115,3 +115,7 @@ func end_game():
 	# need to wait a second or rakugo will crash. don't ask me why
 	yield(get_tree().create_timer(0.1), "timeout")
 	emit_signal('end_game')
+	
+#set a var in the yarn environment
+func set_var(variable, value):
+	yarn_importer.environment[variable] = value

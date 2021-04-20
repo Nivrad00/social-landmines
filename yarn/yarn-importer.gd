@@ -15,13 +15,25 @@ extends Node
 # Fibre: a text or choice or logic (Yarn line)
 
 var yarn = {}
-var environment = {"$player": "Me", "$peed": 0}
+var environment = {"$player": "Me"}
 var skip = false
 var if_hit = false
 var bracketRegex = RegEx.new()
 
-func clean_environment():
-	environment = {"$player": "Me", "$peed": 0} 
+func clean_environment(env):
+	environment = {}
+	# maintain variables from questionnaire
+	environment["$player"] = env["$player"]
+	environment["$passion1"] = env["$passion1"]
+	environment["$passion2"] = env["$passion2"]
+	environment["$pronoun_sbj"] = env["$pronoun_sbj"]
+	environment["$pronoun_obj"] = env["$pronoun_obj"]
+	environment["$pronoun_pos"] = env["$pronoun_pos"]
+	var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
+		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
+	for a in anxieties:
+		environment[a] = env[a]
+	
 
 # OVERRIDE METHODS
 #
@@ -71,12 +83,13 @@ func evaluate(expr):
 
 #process inline expressions in text
 func say_preprocess(text):
-	for m in bracketRegex.search_all(text):
+	var m = bracketRegex.search(text)
+	if not m:
+		return text
+	else:
 		var evaluated = evaluate(m.get_string())
-		if not evaluated:
-			evaluated = "undefined"
 		text = text.substr(0,m.get_start()) + evaluated + text.substr(m.get_end(), len(text))
-	return text
+		return say_preprocess(text)
 
 # handle non-logic commands (music, images, scene changes)
 func command(cmd):
@@ -173,11 +186,11 @@ func spin_yarn(file, start_thread = false):
 	skip = false
 	if_hit = false
 	# fix for loading from save variable issues
-	clean_environment()
+	clean_environment(environment)
 	# okay now go ahead
 	
 	yarn = load_yarn(file)
-	bracketRegex.compile("{.*}")
+	bracketRegex.compile("{[^{}]*}")
 	# Find the starting thread...
 	if not start_thread:
 		start_thread = yarn['start']
