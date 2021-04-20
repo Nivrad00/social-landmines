@@ -23,6 +23,7 @@ onready var AQ5 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ5
 onready var AQ6 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ6
 onready var AQ7 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ7
 onready var AQ8 = $PageTwo/ScrollContainer/VBoxContainer/AnxietyQuestions/AQ8
+onready var main_dialog = get_node("../MainDialog")
 
 signal submit_success
 
