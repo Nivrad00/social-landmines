@@ -1,171 +1,154 @@
 title: Start
 tags: 
 colorID: 0
-position: 592,-426
+position: 45,-200
 ---
 <<show background cafeteria>>
-Bully 1: Oh my god
-Bully 2: What?
-Bully 1: They are back! You know they were sent away because they are crazy!
-Bully 2: What do you mean? Like locked up?
-Bully 1: Big time. Hey! Are you gonna go crazy and attack someone? Or did the doctors fix you?
-[[Look to your peers for comfort|Peers_2]]
-[[Ignore them and keep eating |Ignore]]
-[[Leave the cafeteria and go to the bathroom|Bathroom]]
+You find your way to your usual seat in the cafeteria.
+
+<<show juana laugh center>>
+Juana: Hey, how was your weekend?
+{$player}: Good, how was yours?
+<<show juana smile center>>
+Peer: Pretty good, didn't do much.
+
+<<show brad smirk left>>
+<<show chad smirk right>>
+<<show juana frown center>>
+Brad: Oh my God.
+Chad: What?
+
+<<if $category1 == "popularity">> 
+    Brad: That party last week was so awesome. EVERYONE was there. 
+    Brad: {$player}, I didn't see you there, too bad.
+    <<show chad laugh right>>
+    Chad: Ha! {$player} would never be invited, no one likes you {$player}!
+
+<<elseif $category1 == "partner">> 
+    Brad: Did you see {$player}'s {$passion1} with that hot kid from the alternative school the other night?
+    <<show chad laugh right>>
+    Chad: Yeah, I saw them kissing last week.
+    Brad: Sucks to be {$them}. I don't think they even know {$their} {$passion1} is cheating..
+
+<<elseif $category1 == "friendships">> 
+    Brad: {$player} is sitting next to someone! All of {$player}'s friends have been pretending to like {$them} because they feel bad for {$them}.
+    <<show chad laugh right>>
+    Chad: Yeah, I know, they should just tell {$player} they don't like {$them} already..
+    Brad: I'm so glad my friends don't hang with me just because they pity me.
+
+<<elseif $passion1 == "academic">>
+    Brad: Did you see that {$player} failed that test last week?
+    Chad: Nice going, idiot!
+    Brad: You really cared about that didn't you? Sucks to be you...
+<<elseif $passion1 == "sports">>
+    Brad: Did you see that {$player} totally blew it at {$their} game last week?
+    Chad: Nice going, idiot!
+    Brad: You really cared about that didn't you? Sucks to be you...
+<<elseif $passion1 == "theater">>
+    Brad: Did you see how much {$player} sucked at {$their} performance last week?
+    Chad: Nice going, idiot!
+    Brad: You really cared about that didn't you? Sucks to be you...
+<<elseif $passion1 == "arts">>
+    Brad: Did you see {$player}'s crappy work at that art show last week?
+    Chad: Nice going, idiot!
+    Brad: You really cared about that didn't you? Sucks to be you...
+<<endif>>
+
+<<show chad laugh right>>
+
+<<endif>>
+<<show chad smirk right>>
+
+[[Look to coping skills|Coping skills]]
+[[Ignore them|Ignore]]
+[[Say something back|Say something]]
 ===
-title: Peers_2
+title: Coping skills
 tags: 
 colorID: 0
-position: 164,-564
+position: -220,-456
 ---
-Peer: Hey, I'm sorry about them. They're so mean, I don't know how anyone puts up with them. One time in gym class they asked the coach if they could switch partners because I was 'the slowest runner in class'. I'm really glad you're back at school. Lunch was so boring without you. How are you?
-[[Not doing so well]]
-[[I'm fine]]
-[[I don't really want to talk about it]]
+Pick which skill you would like to use.
+<<set $mood to $mood - 20 * $picked_on>>
+<<copingskills>>
+...
+[[End lunch]]
 ===
 title: Ignore
 tags: 
 colorID: 0
-position: 758,-701
+position: 34,-468
 ---
-Bully 1: Oh, so you're just going to ignore us? 
-Bully 2: I told you they were crazy
-[[Will you please leave me alone?|Will you please leave me alone?]]
-[[Say nothing|Say nothing]]
-[[I am not crazy|I am not crazy]]
+<<show brad angry left>>
+Brad: Oh, so you're just going to ignore us? 
+Chad: I told you {$they} were stupid.
+[[End lunch]]
 ===
-title: Bathroom
+title: Say something
 tags: 
 colorID: 0
-position: 1127,-333
+position: 317,-442
 ---
-<<show background restroom>>
-Student enters bathroom
-Would you like to practice some mindfulness breathing?
-[[Yes|Yes.]]
-[[No|No.]]
+{$player}: Whatever, I was busy anyways.
+Chad: Yeah, keep telling yourself that.
+Brad: Maybe it’s because no one likes you, loser.
+[[You should really watch your mouth!|Watch mouth]]
+[[Please just leave me alone|Leave alone]]
 ===
-title: Node
+title: Watch mouth
 tags: 
 colorID: 0
-position: 87,-131
+position: 302,-692
 ---
-Query: Would you like to tell a trusted staff member about what happened? Or would you like to go back to the cafeteria and finish your lunch?
-[[Tell a trusted staff member|Staff]]
-[[Go back to the cafeteria|Staff]]
+{$player}: You should really watch your mouth!
+Chad: Oh, what are you gonna do about it?
+
+<<if $category1 == "extracurricular">>
+    <<show brad angry left>>
+    Brad: You better watch yourself, {$player}.
+
+<<elseif $category1 == "popularity">>
+    <<show brad angry left>>
+    Brad: Yeah, you’re all alone and have no one to back you up.
+    Juana: Hey, I'm right here...
+
+<<elseif $category1 == "partner">>
+    <<show brad angry left>>
+    Brad: Yeah, you’re all alone. Not even your {$passion1} wants to be with you.
+
+<<elseif $category1 == "friendships">>
+    <<show brad angry left>>
+    Brad: Yeah, you’re all alone and have no one to back you up.
+    Juana: Hey, I'm right here...
+
+<<endif>>
+
+<<set $mood to $mood + 20 * $picked_on>>
+[[End lunch]]
 ===
-title: Staff
+title: Leave alone
 tags: 
 colorID: 0
-position: 397,-55
+position: 556,-681
 ---
-Pick who you would like to tell
-Teacher
-School Counselor
-Principal
-*End Scene*
+{$player}: Please, just leave me alone. 
+Chad: Whatever, you’re not worth it.  
+Brad: Yeah, let’s just go eat.
+
+<<set $mood to $mood - 20 * $picked_on>>
+[[End lunch]]
+===
+title: End lunch
+tags: 
+colorID: 0
+position: 333,-1017
+---
+<<hide brad>>
+<<hide chad>>
+The bullies wander away.
+Juana: ...I'm sorry about that.
+{$player}: Whatever.
+<<hide juana>>
+The rest of your lunch passes uneventfully.
 <<load 8 hallway>>
-===
-title: Cafeteria
-tags: 
-colorID: 0
-position: 1775,-936
----
-Choose where to sit
-With friend
-Alone
-*End Scene*
-<<load 8 hallway>>
-===
-title: Not doing so well
-tags: 
-colorID: 0
-position: -540,-340
----
-Peer: What's going on? Is there anything that I can help with?
-[[No, but thanks]]
-[[I actually just got back from the hospital. It has been hard being back, but it's been nice having friends around.]]
-===
-title: I'm fine
-tags: 
-colorID: 0
-position: -398,-609
----
-Peer: Okay, well I am always here for you if you need someone to talk to.
-[[Thanks|Node]]
-===
-title: I don't really want to talk about it
-tags: 
-colorID: 0
-position: -256,-795
----
-Peer: Okay, maybe some other time then. I am always here for you if you need someone to talk to.
-[[Thanks|Node]]
-===
-title: Yes.
-tags: 
-colorID: 0
-position: 1796,-653
----
-Let's try the 4-7-8 breathing technique. Breathe in for a count of four, hold for a count of seven, and release for a count of eight. Continue this process five times or until feel more relaxed.
-<<load 8 hallway>>
-===
-title: No.
-tags: 
-colorID: 0
-position: 1180,-817
----
-Query: Would you like to tell a trusted staff member about what happened? Or would you like to go back to the cafeteria and finish your lunch?
-[[Tell a trusted staff member|Staff]]
-[[Go back to the cafeteria|Cafeteria]]
-===
-title: Will you please leave me alone?
-tags: 
-colorID: 0
-position: 381,-1002
----
-Bully 2: Whatever, you aren't worth it anyways.
-Peer: Don't pay attention to them, they are just trying to get under our skin.
-[[Thanks|Node_2]]
-===
-title: Say nothing
-tags: 
-colorID: 0
-position: 615,-1016
----
-[[Node_2]]
-===
-title: I am not crazy
-tags: 
-colorID: 0
-position: 857,-1018
----
-Bully 2: Yeah, keep telling yourself that.
-Peer: Just ignore them, they are just trying to get under your skin.
-[[Node_2]]
-===
-title: No, but thanks
-tags: 
-colorID: 0
-position: -233,71
----
-Peer: Okay, well I am always here if you need anything.
-[[Thanks|Node]]
-===
-title: I actually just got back from the hospital. It has been hard being back, but it's been nice having friends around.
-tags: 
-colorID: 0
-position: -534,-34
----
-Peer: Yeah, that sounds like it would be really hard. If you ever need anything, I am always here to help.
-[[Thanks|Node]]
-===
-title: Node_2
-tags: 
-colorID: 0
-position: 576,-1344
----
-Query: Would you like to tell a trusted staff member about what happened? Or would you like to go back to the cafeteria and finish your lunch?
-[[Tell a trusted staff member|Staff]]
-[[Go back to the cafeteria|Cafeteria]]
 ===

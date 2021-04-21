@@ -23,16 +23,26 @@ var bracketRegex = RegEx.new()
 func clean_environment(env):
 	environment = {}
 	# maintain variables from questionnaire
-	environment["$player"] = env["$player"]
-	environment["$passion1"] = env["$passion1"]
-	environment["$passion2"] = env["$passion2"]
-	environment["$pronoun_sbj"] = env["$pronoun_sbj"]
-	environment["$pronoun_obj"] = env["$pronoun_obj"]
-	environment["$pronoun_pos"] = env["$pronoun_pos"]
-	var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
-		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
-	for a in anxieties:
-		environment[a] = env[a]
+	var questionnaire_variables = [
+		'$player',
+		'$they',
+		'$them',
+		'$their',
+		'$passion1',
+		'$passion2',
+		'$category1',
+		'$category2',
+		"$around_kids", 
+		"$around_adults", 
+		"$one_on_one", 
+		"$wrong_thing", 
+		"$picked_on", 
+		"$crowded_places", 
+		"$attention_kids", 
+		"$attention_teachers"
+	]
+	for variable in questionnaire_variables:
+		environment[variable] = env[variable]
 	
 
 # OVERRIDE METHODS

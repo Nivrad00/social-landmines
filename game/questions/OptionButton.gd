@@ -13,9 +13,9 @@ func _ready():
 
 func add_items():
 	self.add_item("He/Him/His")
-	self.add_item("She/Her/Hers")
-	self.add_item("They/Them/Theirs")
-	self.add_item("Xe/Xem/Xyrs")
+	self.add_item("She/Her/Her")
+	self.add_item("They/Them/Their")
+	self.add_item("Xe/Xem/Xyr")
 	self.add_item("Other (Please Specify):")
 
 func on_item_selected(id):

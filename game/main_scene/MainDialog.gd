@@ -2,7 +2,7 @@ extends Dialogue
 
 var yarn_importer = null
 var yarn_path = 'res://yarn/'
-var default_yarn_scene = '1 reentry meeting'
+var default_yarn_scene = 'Cafeteria Finalized'
 onready var quest = get_node("../Questions")
 onready var choice = get_node("/root/Window/Panel/TabContainer/InGameGUI/ChoiceMenu")
 onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/DialoguePanel")
@@ -61,8 +61,6 @@ func default_event():
 	
 	print('entering default event')
 	start_event("default_event")
-	# placeholder for questionnaire
-	Global.trigger = 'Social'
 	
 	# start by initializing the yarn story and proceeding up to the first choice
 	current_choices = []

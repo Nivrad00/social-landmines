@@ -5,7 +5,7 @@
 [ext_resource path="res://game/characters/Teacher/Teacher.tscn" type="PackedScene" id=3]
 [ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
-[ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/characters/Juana/Juana.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/main_scene/Q1.gd" type="Script" id=7]
 [ext_resource path="res://game/questions/PersonalityQuestions.gd" type="Script" id=8]
 [ext_resource path="res://game/questions/OptionButton.gd" type="Script" id=9]
@@ -130,7 +130,7 @@ position = Vector2( 650, 400 )
 visible = false
 position = Vector2( 650, 400 )
 
-[node name="Peer" parent="." instance=ExtResource( 6 )]
+[node name="Juana" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 650, 400 )
 

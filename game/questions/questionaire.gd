@@ -118,7 +118,9 @@ func _on_Submit_pressed():
 		main_dialog.set_var("$they", handle_pronouns(get_pronouns())[0].to_lower())
 		main_dialog.set_var("$them", handle_pronouns(get_pronouns())[1].to_lower())
 		main_dialog.set_var("$their", handle_pronouns(get_pronouns())[2].to_lower())
-
+		
+		print(main_dialog.yarn_importer.environment)
+		
 		emit_signal("submit_success")
 
 
