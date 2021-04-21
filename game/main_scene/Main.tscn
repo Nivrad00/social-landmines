@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game/characters/Peer/Peer.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/main_scene/Q1.gd" type="Script" id=7]
 [ext_resource path="res://game/questions/PersonalityQuestions.gd" type="Script" id=8]
 [ext_resource path="res://game/questions/OptionButton.gd" type="Script" id=9]
 [ext_resource path="res://game/questions/questionaire.gd" type="Script" id=10]
@@ -15,6 +16,14 @@
 [ext_resource path="res://game/main_scene/questions.gd" type="Script" id=14]
 [ext_resource path="res://gui/InGame/thermometer/progressbar.jpg" type="Texture" id=15]
 [ext_resource path="res://game/main_scene/TextureProgress.gd" type="Script" id=16]
+[ext_resource path="res://game/main_scene/Q2.gd" type="Script" id=17]
+[ext_resource path="res://game/main_scene/Q3.gd" type="Script" id=18]
+[ext_resource path="res://game/main_scene/sports.gd" type="Script" id=19]
+[ext_resource path="res://game/main_scene/Q5.gd" type="Script" id=20]
+[ext_resource path="res://game/main_scene/Q4.gd" type="Script" id=21]
+[ext_resource path="res://game/main_scene/theater.gd" type="Script" id=22]
+[ext_resource path="res://game/main_scene/popularity.gd" type="Script" id=23]
+[ext_resource path="res://game/main_scene/friendships.gd" type="Script" id=24]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -280,7 +289,7 @@ margin_bottom = 14.0
 [node name="Label" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer"]
 margin_right = 433.0
 margin_bottom = 14.0
-text = "Identify the two aspects listed blow that are most important to you:"
+text = "Identify the two aspects listed below that are most important to you:"
 
 [node name="aspectError" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer"]
 visible = false
@@ -296,58 +305,67 @@ margin_top = 18.0
 margin_right = 1080.0
 margin_bottom = 266.0
 
-[node name="Q1" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="girlfriend" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_right = 1080.0
 margin_bottom = 24.0
 text = "My girlfriend"
+script = ExtResource( 7 )
 
-[node name="Q2" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="boyfriend" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 28.0
 margin_right = 1080.0
 margin_bottom = 52.0
 text = "My boyfriend"
+script = ExtResource( 17 )
 
-[node name="Q3" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="partner" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 56.0
 margin_right = 1080.0
 margin_bottom = 80.0
 text = "My partner"
+script = ExtResource( 18 )
 
-[node name="Q4" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="school" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 84.0
 margin_right = 1080.0
 margin_bottom = 108.0
 text = "Doing well in school"
+script = ExtResource( 21 )
 
-[node name="Q5" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="art" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 112.0
 margin_right = 1080.0
 margin_bottom = 136.0
 text = "Making cool art"
+script = ExtResource( 20 )
 
-[node name="Q6" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="sports" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 140.0
 margin_right = 1080.0
 margin_bottom = 164.0
 text = "Sports"
+script = ExtResource( 19 )
 
-[node name="Q7" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="theater" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 168.0
 margin_right = 1080.0
 margin_bottom = 192.0
 text = "Theater"
+script = ExtResource( 22 )
 
-[node name="Q8" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="popularity" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 196.0
 margin_right = 1080.0
 margin_bottom = 220.0
 text = "What other kids think of me"
+script = ExtResource( 23 )
 
-[node name="Q9" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
+[node name="friendships" type="CheckBox" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/Checkboxes"]
 margin_top = 224.0
 margin_right = 1080.0
 margin_bottom = 248.0
 text = "Friendships"
+script = ExtResource( 24 )
 
 [node name="PageOneButtons" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer"]
 margin_top = 456.0

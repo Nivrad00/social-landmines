@@ -20,7 +20,6 @@ func _ready():
 
 
 func questions():
-	print('test')
 	start_event("questions")
 	
 	quest.show()

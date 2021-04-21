@@ -7,15 +7,15 @@ onready var subNoun = $PageOne/VBoxContainer/PersonalQuestions/Pronouns/OtherOpt
 onready var objNoun = $PageOne/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/object
 onready var posNoun = $PageOne/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/posessive
 onready var setMood = $PageThree/MoodQuestion/CenterContainer/TextureRect/TextureProgress
-onready var PQ1 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q1
-onready var PQ2 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q2
-onready var PQ3 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q3
-onready var PQ4 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q4
-onready var PQ5 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q5
-onready var PQ6 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q6
-onready var PQ7 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q7
-onready var PQ8 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q8
-onready var PQ9 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/Q9
+onready var PQ1 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/girlfriend
+onready var PQ2 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/boyfriend
+onready var PQ3 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/partner
+onready var PQ4 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/school
+onready var PQ5 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/art
+onready var PQ6 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/sports
+onready var PQ7 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/theater
+onready var PQ8 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/popularity
+onready var PQ9 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/friendships
 
 onready var AQ1 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HSlider
 onready var AQ2 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HSlider
@@ -95,22 +95,29 @@ func handle_checks():
 	]
 	for i in checkArray:
 		if(i.is_pressed()):
-			pressed.append(i.get_text())
+			pressed.append(i)
+	randomize()
+	pressed.shuffle()
 	return pressed
 
 func _on_Submit_pressed():
+		var personality_array = handle_checks()
+
 		Global.mood = int(handle_mood())
 		main_dialog.set_var("$player", str(handle_name()))
-		main_dialog.set_var("$passion1", str(handle_checks()[0]))
-		main_dialog.set_var("$passion2", str(handle_checks()[1]))
+		main_dialog.set_var("$passion1", str(personality_array[0].passion))
+		main_dialog.set_var("$passion2", str(personality_array[1].passion))
+		main_dialog.set_var("$category1", str(personality_array[0].category))
+		main_dialog.set_var("$category2", str(personality_array[1].category))
+		
 		var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
 		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
 		for i in range(0,len(anxieties)):
 			main_dialog.set_var(anxieties[i], handle_anxiety()[i])
 
-		main_dialog.set_var("$pronoun_sbj", handle_pronouns(get_pronouns())[0].to_lower())
-		main_dialog.set_var("$pronoun_obj", handle_pronouns(get_pronouns())[1].to_lower())
-		main_dialog.set_var("$pronoun_pos", handle_pronouns(get_pronouns())[2].to_lower())
+		main_dialog.set_var("$they", handle_pronouns(get_pronouns())[0].to_lower())
+		main_dialog.set_var("$them", handle_pronouns(get_pronouns())[1].to_lower())
+		main_dialog.set_var("$their", handle_pronouns(get_pronouns())[2].to_lower())
 
 		emit_signal("submit_success")
 

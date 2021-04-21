@@ -4,15 +4,15 @@ var checked = []
 
 func _ready():
 	
-	$Checkboxes/Q1.connect("toggled",self,"limit_checks",[$Checkboxes/Q1])
-	$Checkboxes/Q2.connect("toggled",self,"limit_checks",[$Checkboxes/Q2])
-	$Checkboxes/Q3.connect("toggled",self,"limit_checks",[$Checkboxes/Q3])
-	$Checkboxes/Q4.connect("toggled",self,"limit_checks",[$Checkboxes/Q4])
-	$Checkboxes/Q5.connect("toggled",self,"limit_checks",[$Checkboxes/Q5])
-	$Checkboxes/Q6.connect("toggled",self,"limit_checks",[$Checkboxes/Q6])
-	$Checkboxes/Q7.connect("toggled",self,"limit_checks",[$Checkboxes/Q7])
-	$Checkboxes/Q8.connect("toggled",self,"limit_checks",[$Checkboxes/Q8])
-	$Checkboxes/Q9.connect("toggled",self,"limit_checks",[$Checkboxes/Q9])
+	$Checkboxes/girlfriend.connect("toggled",self,"limit_checks",[$Checkboxes/girlfriend])
+	$Checkboxes/boyfriend.connect("toggled",self,"limit_checks",[$Checkboxes/boyfriend])
+	$Checkboxes/partner.connect("toggled",self,"limit_checks",[$Checkboxes/partner])
+	$Checkboxes/school.connect("toggled",self,"limit_checks",[$Checkboxes/school])
+	$Checkboxes/art.connect("toggled",self,"limit_checks",[$Checkboxes/art])
+	$Checkboxes/sports.connect("toggled",self,"limit_checks",[$Checkboxes/sports])
+	$Checkboxes/theater.connect("toggled",self,"limit_checks",[$Checkboxes/theater])
+	$Checkboxes/popularity.connect("toggled",self,"limit_checks",[$Checkboxes/popularity])
+	$Checkboxes/friendships.connect("toggled",self,"limit_checks",[$Checkboxes/friendships])
 
 
 func limit_checks(button_pressed,which):
