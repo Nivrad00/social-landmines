@@ -52,11 +52,11 @@ vertical = true
 [sub_resource type="ImageTexture" id=17]
 
 [sub_resource type="StyleBoxLine" id=18]
-color = Color( 0.756863, 0.878431, 1, 1 )
+color = Color( 0.643137, 0.501961, 0.878431, 1 )
 thickness = 10
 
 [sub_resource type="StyleBoxLine" id=19]
-color = Color( 0.376471, 0.505882, 0.631373, 1 )
+color = Color( 0.478431, 0.333333, 0.72549, 1 )
 thickness = 10
 
 [sub_resource type="StyleBoxFlat" id=20]
@@ -110,21 +110,21 @@ font_data = ExtResource( 2 )
 [sub_resource type="StyleBoxEmpty" id=28]
 
 [sub_resource type="StyleBoxLine" id=29]
-color = Color( 0.6, 0.8, 1, 1 )
+color = Color( 0.643137, 0.501961, 0.878431, 1 )
 grow_begin = 11.0
 grow_end = -11.0
 thickness = 10
 vertical = true
 
 [sub_resource type="StyleBoxLine" id=30]
-color = Color( 0.756863, 0.878431, 1, 1 )
+color = Color( 0.74902, 0.631373, 0.941176, 1 )
 grow_begin = 11.0
 grow_end = -11.0
 thickness = 10
 vertical = true
 
 [sub_resource type="StyleBoxLine" id=31]
-color = Color( 0.376471, 0.505882, 0.631373, 1 )
+color = Color( 0.478431, 0.333333, 0.72549, 1 )
 grow_end = -21.0
 thickness = 10
 vertical = true

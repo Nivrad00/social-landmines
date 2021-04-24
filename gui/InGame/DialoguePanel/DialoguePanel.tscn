@@ -9,7 +9,7 @@
 bg_color = Color( 0, 0, 0, 0.501961 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.92549, 0.486275, 0.105882, 1 )
+bg_color = Color( 0.333333, 0.12549, 0.631373, 1 )
 
 [node name="DialoguePanel" type="PanelContainer"]
 anchor_top = 0.7
