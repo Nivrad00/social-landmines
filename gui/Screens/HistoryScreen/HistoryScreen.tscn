@@ -1,12 +1,16 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://gui/Screens/HistoryScreen/ScrollContainer.gd" type="Script" id=1]
 [ext_resource path="res://gui/Screens/HistoryScreen/HistoryItem.tscn" type="PackedScene" id=2]
 [ext_resource path="res://gui/Screens/HistoryScreen/History.gd" type="Script" id=3]
 
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+
 [node name="HistoryScreen" type="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

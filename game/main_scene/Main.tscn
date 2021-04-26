@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://game/main_scene/theater.gd" type="Script" id=22]
 [ext_resource path="res://game/main_scene/popularity.gd" type="Script" id=23]
 [ext_resource path="res://game/main_scene/friendships.gd" type="Script" id=24]
+[ext_resource path="res://game/characters/Peer2/Peer2.tscn" type="PackedScene" id=25]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -129,6 +130,9 @@ position = Vector2( 650, 400 )
 [node name="Chad" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 650, 400 )
+
+[node name="Peer2" parent="." instance=ExtResource( 25 )]
+visible = false
 
 [node name="Juana" parent="." instance=ExtResource( 6 )]
 visible = false
@@ -287,7 +291,7 @@ margin_right = 1080.0
 margin_bottom = 14.0
 
 [node name="Label" type="Label" parent="Questions/PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer"]
-margin_right = 433.0
+margin_right = 441.0
 margin_bottom = 14.0
 text = "Identify the two aspects listed below that are most important to you:"
 
@@ -518,7 +522,7 @@ margin_bottom = 158.0
 [node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2"]
 margin_right = 1016.0
 margin_bottom = 14.0
-text = "2. Being around a lot of adults in schoo"
+text = "2. Being around a lot of adults in school"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2"]
 margin_top = 18.0
@@ -728,7 +732,7 @@ margin_bottom = 425.0
 [node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5"]
 margin_right = 1016.0
 margin_bottom = 14.0
-text = "5. Getting picked on or made fun of by other kids"
+text = "5. Getting picked on or made fun of by peers"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ5"]
 margin_top = 18.0
@@ -868,7 +872,7 @@ margin_bottom = 603.0
 [node name="Label" type="Label" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7"]
 margin_right = 1016.0
 margin_bottom = 14.0
-text = "7. Getting a lot of attention from other kids"
+text = "7. Getting a lot of attention from peers"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7"]
 margin_top = 18.0
@@ -1028,38 +1032,59 @@ visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
 custom_constants/margin_right = 100
+custom_constants/margin_top = 50
 custom_constants/margin_left = 100
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MoodQuestion" type="VBoxContainer" parent="Questions/PageThree"]
+[node name="MarginContainer2" type="MarginContainer" parent="Questions/PageThree"]
 margin_left = 100.0
+margin_top = 50.0
 margin_right = 1180.0
 margin_bottom = 720.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 25
 
-[node name="Label" type="Label" parent="Questions/PageThree/MoodQuestion"]
-margin_right = 1080.0
-margin_bottom = 116.0
+[node name="MoodQuestion" type="VBoxContainer" parent="Questions/PageThree/MarginContainer2"]
+margin_right = 1055.0
+margin_bottom = 670.0
+
+[node name="Label2" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion"]
+margin_right = 1055.0
+margin_bottom = 82.0
+size_flags_stretch_ratio = 0.72
 text = "This is a mood thermometer. You will see this in the top right corner throughout the game. A 0 usually indicates feeling really good or happy and a 10 is the absolute worst you could imagine feeling, indicating you would need help to stay safe. Usually, when your feeling thermometer gets to anything over a 5 this is a sign that it might help to use a coping skill. In real life, these numbers are different for different people. In the game, they are not real, but give you a chance to see how the thermometer could go up and down in any given situation.
+"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-Right now, in real life, how would you rate your feelings on the thermometer?"
+[node name="Label" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion"]
+margin_top = 86.0
+margin_right = 1055.0
+margin_bottom = 100.0
+text = "Right now, in real life, how would you rate your feelings on the thermometer?"
 autowrap = true
 
-[node name="CenterContainer" type="CenterContainer" parent="Questions/PageThree/MoodQuestion"]
-margin_top = 120.0
-margin_right = 1080.0
-margin_bottom = 420.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion"]
+margin_top = 104.0
+margin_right = 1055.0
+margin_bottom = 404.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_constants/separation = -500
 
-[node name="TextureRect" type="TextureRect" parent="Questions/PageThree/MoodQuestion/CenterContainer"]
-margin_left = 390.0
-margin_right = 690.0
+[node name="TextureRect" type="TextureRect" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer"]
+margin_right = 777.0
 margin_bottom = 300.0
 size_flags_horizontal = 7
 size_flags_vertical = 0
 texture = ExtResource( 13 )
 
-[node name="TextureProgress" type="TextureProgress" parent="Questions/PageThree/MoodQuestion/CenterContainer/TextureRect"]
+[node name="TextureProgress" type="TextureProgress" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/TextureRect"]
 margin_left = 106.755
 margin_top = 28.8776
 margin_right = 126.755
@@ -1071,128 +1096,135 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSlider" type="HSlider" parent="Questions/PageThree/MoodQuestion"]
-margin_top = 424.0
-margin_right = 1080.0
-margin_bottom = 440.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer"]
+margin_left = 277.0
+margin_top = 133.0
+margin_right = 1055.0
+margin_bottom = 167.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+
+[node name="HSlider" type="HSlider" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer"]
+margin_right = 778.0
+margin_bottom = 16.0
 max_value = 10.0
 step = 0.01
 tick_count = 11
 ticks_on_borders = true
 
-[node name="SliderLabels" type="HBoxContainer" parent="Questions/PageThree/MoodQuestion"]
-margin_top = 444.0
-margin_right = 1080.0
-margin_bottom = 458.0
+[node name="SliderLabels" type="HBoxContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer"]
+margin_top = 20.0
+margin_right = 778.0
+margin_bottom = 34.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_right = 94.0
+[node name="Label" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_right = 67.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "0"
 
-[node name="Label2" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 98.0
-margin_right = 193.0
+[node name="Label2" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 71.0
+margin_right = 138.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "   1"
+text = " 1"
 
-[node name="Label3" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 197.0
-margin_right = 291.0
+[node name="Label3" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 142.0
+margin_right = 209.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "      2"
+text = "   2"
 
-[node name="Label4" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 295.0
-margin_right = 390.0
+[node name="Label4" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 213.0
+margin_right = 280.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "        3"
+text = "    3"
 
-[node name="Label5" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 394.0
-margin_right = 488.0
+[node name="Label5" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 284.0
+margin_right = 351.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "          4"
+text = "     4"
 
-[node name="Label6" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 492.0
-margin_right = 587.0
+[node name="Label6" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 355.0
+margin_right = 422.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
 text = "5"
 align = 1
 
-[node name="Label7" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 591.0
-margin_right = 685.0
+[node name="Label7" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 426.0
+margin_right = 493.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "  6"
+text = " 6"
 align = 1
 
-[node name="Label8" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 689.0
-margin_right = 784.0
+[node name="Label8" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 497.0
+margin_right = 564.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "     7"
+text = "  7"
 align = 1
 
-[node name="Label9" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 788.0
-margin_right = 882.0
+[node name="Label9" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 568.0
+margin_right = 635.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "       8"
+text = "    8"
 align = 1
 
-[node name="Label10" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 886.0
-margin_right = 981.0
+[node name="Label10" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 639.0
+margin_right = 706.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "          9"
+text = "     9"
 align = 1
 
-[node name="Label11" type="Label" parent="Questions/PageThree/MoodQuestion/SliderLabels"]
-margin_left = 985.0
-margin_right = 1080.0
+[node name="Label11" type="Label" parent="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/SliderLabels"]
+margin_left = 710.0
+margin_right = 778.0
 margin_bottom = 14.0
 size_flags_horizontal = 3
-text = "10"
+text = " 10"
 align = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Questions/PageThree/MoodQuestion"]
-margin_top = 462.0
-margin_right = 1080.0
-margin_bottom = 532.0
+[node name="MarginContainer" type="MarginContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion"]
+margin_top = 408.0
+margin_right = 1055.0
+margin_bottom = 478.0
 custom_constants/margin_top = 25
 custom_constants/margin_bottom = 25
 
-[node name="PageThreeButtons" type="HBoxContainer" parent="Questions/PageThree/MoodQuestion/MarginContainer"]
+[node name="PageThreeButtons" type="HBoxContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion/MarginContainer"]
 margin_top = 25.0
-margin_right = 1080.0
+margin_right = 1055.0
 margin_bottom = 45.0
 
-[node name="PageThreeBack" type="Button" parent="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons"]
-margin_left = 248.0
-margin_right = 290.0
+[node name="PageThreeBack" type="Button" parent="Questions/PageThree/MarginContainer2/MoodQuestion/MarginContainer/PageThreeButtons"]
+margin_left = 241.0
+margin_right = 283.0
 margin_bottom = 20.0
 size_flags_horizontal = 6
 size_flags_vertical = 0
 text = "Back"
 
-[node name="Submit" type="Button" parent="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons"]
-margin_left = 782.0
-margin_right = 839.0
+[node name="Submit" type="Button" parent="Questions/PageThree/MarginContainer2/MoodQuestion/MarginContainer/PageThreeButtons"]
+margin_left = 763.0
+margin_right = 820.0
 margin_bottom = 20.0
 size_flags_horizontal = 6
 size_flags_vertical = 0
@@ -1314,8 +1346,8 @@ one_shot = true
 [connection signal="pressed" from="Questions/PageOne/VBoxContainer/PageOneButtons/PageOneNext" to="Questions" method="_on_PageOneNext_pressed"]
 [connection signal="pressed" from="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoBack" to="Questions" method="_on_PageTwoBack_pressed"]
 [connection signal="pressed" from="Questions/PageTwo/MarginContainer/VBoxContainer/PageTwoButtons/PageTwoNext" to="Questions" method="_on_PageTwoNext_pressed"]
-[connection signal="value_changed" from="Questions/PageThree/MoodQuestion/HSlider" to="Questions/PageThree/MoodQuestion/CenterContainer/TextureRect/TextureProgress" method="_on_HSlider_value_changed"]
-[connection signal="pressed" from="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons/PageThreeBack" to="Questions" method="_on_PageThreeBack_pressed"]
-[connection signal="pressed" from="Questions/PageThree/MoodQuestion/MarginContainer/PageThreeButtons/Submit" to="Questions" method="_on_Submit_pressed"]
+[connection signal="value_changed" from="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/VBoxContainer/HSlider" to="Questions/PageThree/MarginContainer2/MoodQuestion/HBoxContainer/TextureRect/TextureProgress" method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="Questions/PageThree/MarginContainer2/MoodQuestion/MarginContainer/PageThreeButtons/PageThreeBack" to="Questions" method="_on_PageThreeBack_pressed"]
+[connection signal="pressed" from="Questions/PageThree/MarginContainer2/MoodQuestion/MarginContainer/PageThreeButtons/Submit" to="Questions" method="_on_Submit_pressed"]
 [connection signal="pressed" from="EndScreen/SkipButton" to="EndScreen" method="add_line"]
 [connection signal="timeout" from="EndScreen/FadeInTimer" to="EndScreen" method="add_line"]

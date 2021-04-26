@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://themes/Default/DefaultCustom.tres" type="Theme" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://gui/Minigames/DeepBreathing.tscn" type="PackedScene" id=13]
 [ext_resource path="res://gui/Minigames/ColoringBook.tscn" type="PackedScene" id=14]
 [ext_resource path="res://gui/Minigames/FidgetSpinner.tscn" type="PackedScene" id=15]
+[ext_resource path="res://gui/Minigames/Counselor.tscn" type="PackedScene" id=16]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Skip Animation"
@@ -286,6 +287,7 @@ __meta__ = {
 }
 
 [node name="Minigames" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
@@ -321,7 +323,13 @@ visible = false
 margin_right = 1240.0
 margin_bottom = 680.0
 
-[node name="BackButton" type="Button" parent="Minigames" groups=[
+[node name="Counselor" parent="Minigames/Games" instance=ExtResource( 16 )]
+visible = false
+
+[node name="CanvasLayer" type="Node2D" parent="Minigames"]
+z_index = 3
+
+[node name="BackButton" type="Button" parent="Minigames/CanvasLayer" groups=[
 "minigame_interactable",
 ]]
 anchor_right = 1.0
@@ -349,4 +357,4 @@ margin_bottom = 312.0
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
 [connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
 [connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
-[connection signal="pressed" from="Minigames/BackButton" to="Minigames" method="end_minigame"]
+[connection signal="pressed" from="Minigames/CanvasLayer/BackButton" to="Minigames" method="end_minigame"]

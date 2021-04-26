@@ -129,11 +129,17 @@ func logic(statement):
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
 		if split_statement[1].substr(0, 1) == '$':
-			
 			# if the var is defined in Global, set it there (without the $)
 			if split_statement[1].substr(1) in Global.var_list:
 				var var_name = split_statement[1].substr(1)
-				Global.set(var_name, evaluate(statement.split("to")[1]))
+				var value = evaluate(statement.split("to")[1])
+				Global.set(var_name, value)
+				# prevent mood from being set outside of 0-100
+				if var_name == "mood":
+					if value > 100:
+						Global.set("mood", 100)
+					elif value < 0:
+						Global.set("mood", 0)
 			
 			# else set it locally
 			else:

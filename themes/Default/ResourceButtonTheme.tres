@@ -1,21 +1,21 @@
 [gd_resource type="Theme" load_steps=4 format=2]
 
 [sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 1, 1, 1, 0.196078 )
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 1, 1, 1, 0.623529 )
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 1, 1, 1, 0 )
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3

@@ -1,11 +1,51 @@
 title: Start
 tags: 
 colorID: 0
-position: -19,-302
+position: -67,-128
 ---
-<<show background classroom2>>
-You go to class.
-Mr. Teachalot: Uhhhhhhh {$player} where you have been?
-{$player}: Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+<<show background classroom3>>
+<<show teacher happy center>>
+
+Teacher: Hey {$player}. Where have you been? 
+
+[[I was out sick |Work]] 
+[[I was in the hospital |Work]]
+[[I was dealing with mental health concerns |Work]]  
+[[Silence |Work]]
+===
+title: Work
+tags: 
+colorID: 0
+position: -71,-469
+---
+Teacher: Well, you have a lot of work to catch up on
+[[No problem |Thermometer Good]]
+[[I will try my best |Thermometer Neutral]]
+[[Silence |Thermometer Bad]]
+===
+title: Thermometer Good
+tags: 
+colorID: 0
+position: -376,-725
+---
+<<set $mood to $mood - 10>>
+<<hide teacher>>
+<<load 6 hallway>>
+===
+title: Thermometer Neutral
+tags: 
+colorID: 0
+position: -64,-751
+---
+<<hide teacher>>
+<<load 6 hallway>>
+===
+title: Thermometer Bad
+tags: 
+colorID: 0
+position: 242,-750
+---
+<<set $mood to $mood + 10>>
+<<hide teacher>>
 <<load 6 hallway>>
 ===

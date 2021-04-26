@@ -27,7 +27,8 @@ func _ready():
 	Rakugo.define_character("Teacher", "Teacher", Color.red)
 	Rakugo.define_character("Brad", "Brad", Color.red)
 	Rakugo.define_character("Chad", "Chad", Color.yellow)
-	Rakugo.define_character("Peer", "Peer", Color.green)
+	Rakugo.define_character("Juana", "Juana", Color.green)
+	Rakugo.define_character("Peer2", "Peer2", Color.green)
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
 	yarn_importer.connect_scene(self, audioPlayer)
 	# preload audio, otherwise there are issues

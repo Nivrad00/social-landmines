@@ -5,14 +5,20 @@
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.952941, 1, 0.141176, 1 )
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id=2]
-content_margin_top = 5.0
-content_margin_bottom = 5.0
-bg_color = Color( 0.92549, 0.486275, 0.105882, 1 )
-
-[sub_resource type="StyleBoxFlat" id=3]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0, 0, 0, 0.784314 )
@@ -22,15 +28,15 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 0.435294, 0.435294, 0.435294, 1 )
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=3]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0, 0, 0, 0.352941 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 content_margin_top = 5.0
 content_margin_bottom = 5.0
-bg_color = Color( 0.145098, 0.556863, 0.243137, 1 )
+bg_color = Color( 0.333333, 0.12549, 0.631373, 1 )
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -42,13 +48,13 @@ margin_right = 1280.0
 margin_bottom = 347.0
 focus_mode = 0
 custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 0.443137, 0.443137, 0.443137, 1 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
 custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
 enabled_focus_mode = 0
 text = "Choice Button"
