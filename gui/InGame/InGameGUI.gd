@@ -96,9 +96,6 @@ func _on_resource_button_press(resource_name):
 	# currently minigame state isn't stored, so saving during a minigame and then loading
 	#   that save should just cause the minigame to disappear
 	
-	if resource_name == 'Counselor':
-		return # todo
-		
 	$Minigames.show()
 	$Minigames.start_minigame(resource_name)
 

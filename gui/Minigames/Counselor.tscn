@@ -1,0 +1,184 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://gui/Minigames/Counselor.gd" type="Script" id=1]
+[ext_resource path="res://themes/Default/DefaultCustom.tres" type="Theme" id=2]
+[ext_resource path="res://fonts/DejaVu/DejaVuSans.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://game/characters/Counselor/neutral.png" type="Texture" id=4]
+[ext_resource path="res://game/characters/background/counselors-office.jpg" type="Texture" id=5]
+[ext_resource path="res://gui/Minigames/Counselor/meditation.tres" type="AudioStream" id=6]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.223529, 0.372549, 0.917647, 1 )
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+
+[sub_resource type="DynamicFont" id=2]
+size = 24
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.792157, 0.792157, 0.792157, 0.607843 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.478431, 0.333333, 0.72549, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.184314, 0.184314, 0.184314, 1 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="neutral" type="Sprite" parent="."]
+position = Vector2( 648.079, 235.488 )
+scale = Vector2( 0.588838, 0.588838 )
+z_index = 1
+texture = ExtResource( 4 )
+
+[node name="counselors-office" type="Sprite" parent="."]
+position = Vector2( 638.502, 318.501 )
+scale = Vector2( 0.226248, 0.226248 )
+texture = ExtResource( 5 )
+
+[node name="Controls" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Dialogue" type="Panel" parent="Controls"]
+margin_left = 22.505
+margin_top = 509.502
+margin_right = 1253.51
+margin_bottom = 708.502
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Dialogue"]
+margin_left = 50.0
+margin_top = 15.0
+margin_right = 1180.0
+margin_bottom = 203.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Dialogue/MarginContainer"]
+margin_right = 1130.0
+margin_bottom = 188.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speaker" type="RichTextLabel" parent="Controls/Dialogue/MarginContainer/VBoxContainer"]
+margin_right = 1130.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 11
+size_flags_stretch_ratio = 0.2
+custom_fonts/normal_font = SubResource( 2 )
+text = "Counselor:"
+
+[node name="message" type="RichTextLabel" parent="Controls/Dialogue/MarginContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 1130.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 2 )
+text = "Hello! Would you like to join me for a guided meditation?"
+
+[node name="Options" type="Panel" parent="Controls"]
+visible = false
+margin_left = 472.0
+margin_top = 141.0
+margin_right = 815.0
+margin_bottom = 330.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Controls/Options"]
+margin_left = 36.1451
+margin_top = 17.5322
+margin_right = 302.145
+margin_bottom = 88.5322
+theme = ExtResource( 2 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
+text = "Sure"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Controls/Options"]
+margin_left = 37.4777
+margin_top = 100.038
+margin_right = 307.478
+margin_bottom = 169.038
+theme = ExtResource( 2 )
+custom_styles/hover = SubResource( 8 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+text = "No thanks"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="meditation_audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 2.0
+[connection signal="gui_input" from="." to="." method="_on_Control_gui_input"]
+[connection signal="pressed" from="Controls/Options/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Controls/Options/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="finished" from="meditation_audio" to="." method="_on_meditation_audio_finished"]

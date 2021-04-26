@@ -6,7 +6,6 @@ position: -1789,-1112
 <<play Reentry.wav>>
 <<show background meeting-room>>
 Principal: Welcome back, {$player}. How are you feeling today?
-
 [[fine, thanks|Fine]]
 [[been better|been]]
 [[I don’t really want to talk about it|No talk]]

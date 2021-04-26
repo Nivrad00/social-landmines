@@ -1,86 +1,79 @@
 title: Start
 tags: 
 colorID: 0
-position: -358,499
+position: -211,480
 ---
 <<show background hallway>>
-<<Show classmates angry left, right, center>>
-<<Show Peer Smirk Right>>
-
+<<show peer2 smirk center>>
 Peer: Hey you! You’ve been gone forever. Where have you been?
-
-[[Ignore and keep walking|Ignore]]
+[[Ignore and keep walking |Ignore]]
 [[I’ve been out sick |Sick]]
-[[I was dealing with depression |Dealing with depression]]
+[[I was dealing with mental health issues |Dealing]]
 [[Leave me alone |Leave me]]
 ===
 title: Ignore
 tags: 
 colorID: 0
-position: -913,31
+position: -572,148
 ---
-<< Hide Peer>>
-<<Show Peer Smirk Right>>
-
+<<hide peer2>>
 Peer: Hey not so fast! I’ll walk with you. 
-Peer: I heard that you went to the hospital for something
-
-[[That is none of your business |None of your business]]
-[[ have to get to class early |Get to class]]
-[[I was out sick. But I’m back now |Back now]]
+<<show peer2 smirk center>>
+Peer: I heard that you went to the hospital for something.
+[[That is none of your business |Sick]] 
+[[I have to get to class early |Sick]]
+[[I was dealing with mental health issues |Dealing]] 
+[[I was out sick. But I’m back now |Sick]]
+[[Ignore and keep walking |Sick]]
 ===
 title: Sick
 tags: 
 colorID: 0
-position: -518,1
+position: -444,-407
 ---
-Peer: I heard that you wanted to hurt yourself
+<<show peer2 tired center>>
+Peer: I heard that you wanted to hurt yourself.
 
-[[That is none of your business |None of your business]]
-[[ have to get to class early |Get to class]]
-[[I was out sick. But I’m back now |Back now]]
-===
-title: Dealing with depression
-tags: 
-colorID: 0
-position: -140,-15
----
-Peer: Oh. Are you feeling better?
-
-[[That is none of your business |None of your business]]
-[[ have to get to class early |Get to class]]
-[[I was out sick. But I’m back now |Back now]]
+[[That is none of your business |Class]] 
+[[I have to get to class early |Class]]
+[[I was dealing with mental health issues |Dealing]]
+[[I was out sick. But I’m back now |Dealing]]
+[[Ignore and keep walking |Class]]
 ===
 title: Leave me
 tags: 
 colorID: 0
-position: 186,46
+position: 276,246
 ---
 Peer: No way! I want to talk to you. 
-Peer: Why were you gone last week? I heard it was because you wanted to hurt yourself.
+Peer: Why were you gone last week? 
+Peer: I heard it was because you wanted to hurt yourself.
 
-[[That is none of your business |None of your business]]
-[[ have to get to class early |Get to class]]
-[[I was out sick. But I’m back now |Back now]]
+[[That is none of your business |Class]] 
+[[I have to get to class early |Class]]
+[[I was out sick |Dealing]]
+[[I was dealing with mental health issues |Dealing]] 
+[[Ignore and keep walking |Class]]
 ===
-title: None of your business
+title: Dealing
 tags: 
 colorID: 0
-position: -334,-1205
+position: -122,15
 ---
-<<load 7 cafeteria>>
+Peer: Oh. Are you feeling better?
+
+[[That is none of your business |Class]]
+[[I have to get to class early |Class]]
+[[Thanks for asking. I’m glad to be back |Class]] 
+[[Thanks for asking. I’m feeling pretty crappy still actually |Class]]
+[[I was dealing with mental health issues |Class]] 
+[[Ignore and keep walking |Class]]
 ===
-title: Get to class
+title: Class
 tags: 
 colorID: 0
-position: -854,-869
+position: 32,-582
 ---
-<<load 7 cafeteria>>
-===
-title: Back now
-tags: 
-colorID: 0
-position: 135,-861
----
+<<hide peer2>>
 <<load 7 cafeteria>>
 ===
