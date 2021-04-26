@@ -10,6 +10,7 @@ func set_dialogue(text):
 
 func start_minigame():
 	state = 0
+	$Controls/Options.hide()
 	set_dialogue("Hello! Would you like to join me for a guided meditation?")
 
 
