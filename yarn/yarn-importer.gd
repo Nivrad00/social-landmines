@@ -39,10 +39,16 @@ func clean_environment(env):
 		"$picked_on", 
 		"$crowded_places", 
 		"$attention_kids", 
-		"$attention_teachers"
+		"$attention_teachers",
+		'$support_hallway', 
+		'$support_work', 
+		'$support_lessons', 
+		'$support_calming'
 	]
+	
 	for variable in questionnaire_variables:
-		environment[variable] = env[variable]
+		if variable in env:
+			environment[variable] = env[variable]
 	
 
 # OVERRIDE METHODS
@@ -88,7 +94,6 @@ func evaluate(expr):
 		all_vars['$' + var_name] = global_vars[var_name]
 	for var_name in environment:
 		all_vars[var_name] = environment[var_name]
-	
 	return evalEvaluator.evaluate(all_vars)
 
 #process inline expressions in text
@@ -98,7 +103,7 @@ func say_preprocess(text):
 		return text
 	else:
 		var evaluated = evaluate(m.get_string())
-		text = text.substr(0,m.get_start()) + evaluated + text.substr(m.get_end(), len(text))
+		text = text.substr(0,m.get_start()) + str(evaluated) + text.substr(m.get_end(), len(text))
 		return say_preprocess(text)
 
 # handle non-logic commands (music, images, scene changes)

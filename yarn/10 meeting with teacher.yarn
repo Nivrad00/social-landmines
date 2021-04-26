@@ -21,12 +21,11 @@ position: -881,-160
 <<set $mood to $mood + 20>>
 Ms. Roberts: I have a list of assignments you need to complete
 Ms. Roberts: What kind of support do you need from me?
-<<if $support is true>>
+<<if $support_work is true>>
 [[Can you help me make a timeline to get caught up?|Help me]]
-<<else>>
+<<endif>>
 [[Nothing|Nothing-not]] 
 [[I am not doing any of this|Nothing-not]]
-<<endif>>
 ===
 title: Complete
 tags: 
@@ -36,12 +35,11 @@ position: 212,-202
 <<set $mood to $mood + 20>>
 Ms. Roberts: I have a list of assignments you need to complete
 Ms. Roberts: What kind of support do you need from me?
-<<if $support is true>>
+<<if $support_work is true>>
 [[Can you help me make a timeline to get caught up?|Help me]]
-<<else>>
+<<endif>>
 [[Nothing|Nothing-not]] 
 [[I am not doing any of this|Nothing-not]]
-<<endif>>
 ===
 title: Help me
 tags: 
