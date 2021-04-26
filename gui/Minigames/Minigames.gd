@@ -14,9 +14,7 @@ func _ready():
 	hide()
 	
 func start_minigame(_minigame_name):
-	print($Games)
 	for child in $Games.get_children():
-		print(child)
 		if child.name == _minigame_name:
 			child.show()
 			if child.has_method('start_minigame'):

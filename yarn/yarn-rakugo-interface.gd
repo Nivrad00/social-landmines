@@ -22,7 +22,6 @@ func story_setting(setting, value):
 	pass
 	
 func show(character, mood, position="center"):
-	print(character + " " + mood, position)
 	parent.show(character + " " + mood, {position=position})
 
 func hide(character):

@@ -3,7 +3,7 @@ tags:
 colorID: 0
 position: -67,-128
 ---
-<<show background classroom>>
+<<show background classroom3>>
 <<show teacher happy center>>
 
 Teacher: Hey {$player}. Where have you been? 
@@ -29,6 +29,7 @@ colorID: 0
 position: -376,-725
 ---
 <<set $mood to $mood - 10>>
+<<hide teacher>>
 <<load 6 hallway>>
 ===
 title: Thermometer Neutral
@@ -36,6 +37,7 @@ tags:
 colorID: 0
 position: -64,-751
 ---
+<<hide teacher>>
 <<load 6 hallway>>
 ===
 title: Thermometer Bad
@@ -44,5 +46,6 @@ colorID: 0
 position: 242,-750
 ---
 <<set $mood to $mood + 10>>
+<<hide teacher>>
 <<load 6 hallway>>
 ===
