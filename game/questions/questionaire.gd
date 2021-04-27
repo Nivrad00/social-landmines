@@ -113,7 +113,13 @@ func _on_Submit_pressed():
 		var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
 		"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
 		for i in range(0,len(anxieties)):
-			main_dialog.set_var(anxieties[i], handle_anxiety()[i])
+			var response = handle_anxiety()[i]
+			if response <= 2:
+				Global.set_var(anxieties[i], 10)
+			elif response <= 5:
+				Global.set_var(anxieties[i], 20)
+			elif response <= 8:
+				Global.set_var(anxieties[i], 30)
 
 		Global.set_var("they", handle_pronouns(get_pronouns())[0].to_lower())
 		Global.set_var("them", handle_pronouns(get_pronouns())[1].to_lower())

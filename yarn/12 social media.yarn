@@ -5,7 +5,8 @@ position: 391,393
 ---
 Your phone pings as you receive a text message notification
 
-<<if $category2 == 'extracurricular>>
+<<end>>
+<<if $category2 == 'extracurricular'>>
     Your phone pings as you receive a text message notification
     Claire: “Hey...”
     Claire: “Is it true that you got EXTRA time for a test that you BOMBED?!”
@@ -16,7 +17,7 @@ Your phone pings as you receive a text message notification
     [[Ignore it|Ignore]]
     [[Message back|Message back1]]
 
-<<elseif $category2 == 'popularity >>
+<<elseif $category2 == 'popularity' >>
     Your phone pings as you receive a text message notification
     Claire: “Hey {$player}!”
     Claire: “Did you hear all about how awesome my birthday party was last weekend?”
@@ -29,7 +30,7 @@ Your phone pings as you receive a text message notification
 
 
 
-<<elseif $category2 == 'relationship >>
+<<elseif $category2 == 'partner' >>
     Your phone pings as you receive a text message notification
     You open the message to see a photo of your partner holding hands with someone else.
     Claire (the texter): “Looks like you weren’t worth waiting for.” 
@@ -41,7 +42,7 @@ Your phone pings as you receive a text message notification
     [[Message back|Message back3]]
 
 
-<<elseif $category2 == 'friendship >>
+<<elseif $category2 == 'friendships' >>
     Your phone pings as you receive a text message notification
     Claire: Hey, are you coming?
     {$player}: Huh?
@@ -169,4 +170,5 @@ colorID: 0
 position: -1140,255
 ---
 Empty Text
+<<end>>
 ===
