@@ -85,6 +85,21 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="Animation" id=5]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [sub_resource type="Animation" id=6]
 resource_name = "Fade In"
 tracks/0/type = "value"
@@ -101,22 +116,6 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=7]
-resource_name = "Fade In"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "Fade In"
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
@@ -1096,7 +1095,7 @@ __meta__ = {
 margin_top = 86.0
 margin_right = 1055.0
 margin_bottom = 100.0
-text = "Right now, in real life, how would you rate your feelings on the thermometer?"
+text = "Using the slider below, how would you rate your feelings on the thermometer?"
 autowrap = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageThree/MarginContainer2/MoodQuestion"]
@@ -1362,7 +1361,7 @@ valign = 1
 autowrap = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EndScreen/Container/Label5"]
-"anims/Fade In" = SubResource( 6 )
+"anims/Fade In" = SubResource( 5 )
 
 [node name="Stressors" type="Label" parent="EndScreen/Container"]
 margin_top = 497.0
@@ -1375,7 +1374,7 @@ valign = 1
 autowrap = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EndScreen/Container/Stressors"]
-"anims/Fade In" = SubResource( 7 )
+"anims/Fade In" = SubResource( 6 )
 
 [node name="Button" type="Button" parent="EndScreen/Container"]
 margin_top = 558.0
@@ -1388,7 +1387,7 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="EndScreen/Container/Button"]
-"anims/Fade In" = SubResource( 5 )
+"anims/Fade In" = SubResource( 7 )
 
 [node name="FadeInTimer" type="Timer" parent="EndScreen"]
 wait_time = 4.0

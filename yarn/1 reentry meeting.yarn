@@ -3,7 +3,7 @@ tags:
 colorID: 0
 position: -132,-63
 ---
-<<show background counselors-office>>
+<<show background meeting-room>>
 Principal: Welcome back, {$player}. How are you feeling today? 
 
 	[[fine, thanks|fine]]
@@ -160,8 +160,8 @@ position: 356,-910
 Counselor: One thing that can help kids who have been out for a while is having a pass that allows them to come visit me when they are feeling overwhelmed.
 Counselor: This could be in class, in the hall, in the cafeteria--wherever and whenever.
 Counselor: Do you think that is something you would like to try?
-[[yes|yes breaks]]
-[[no|no breaks]]
+[[Yes|yes breaks]]
+[[No|no breaks]]
 ===
 title: no crowded hallway
 tags: 
@@ -200,8 +200,8 @@ position: 1237,-908
 Counselor: Some of the things that we can ask your teachers to do is to let you have access to specific activities  in class.
 Counselor: This could include having a fidget or coloring book.
 Counselor: Would either of these work? 
-[[yes|yes calming]]
-[[no|no calming]]
+[[Yes|yes calming]]
+[[No|no calming]]
 ===
 title: yes breaks
 tags: 
@@ -210,8 +210,9 @@ position: 476,-1125
 ---
 Counselor: Great. A universal pass to come visit me will be available to you as needed during class. 
 Counselor: Would you like to consider additional supports during the school day? 	
-[[no|counselor other topics]]
-[[yes|Social Emotional Learning Supports]]
+[[Yes|Social Emotional Learning Supports]]
+[[No|counselor other topics]]
+
 ===
 title: no breaks
 tags: 
@@ -300,7 +301,7 @@ tags:
 colorID: 0
 position: 1355,-1126
 ---
-<<set support calming to true>>
+<<set support_calming to true>>
 Counselor: Great. This means that you'll have access to both a fidget spinner and a coloring book during classes today. Do you need additional supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]

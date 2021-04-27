@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://themes/Default/DefaultCustom.tres" type="Theme" id=1]
 [ext_resource path="res://gui/InGame/ChoiceMenu/ChoiceMenu.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://gui/Minigames/ColoringBook.tscn" type="PackedScene" id=14]
 [ext_resource path="res://gui/Minigames/FidgetSpinner.tscn" type="PackedScene" id=15]
 [ext_resource path="res://gui/Minigames/Counselor.tscn" type="PackedScene" id=16]
+[ext_resource path="res://themes/alien.tres" type="Theme" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Skip Animation"
@@ -330,8 +331,10 @@ visible = false
 [node name="DeepBreathing" parent="Minigames/Games" instance=ExtResource( 13 )]
 
 [node name="FidgetSpinner" parent="Minigames/Games" instance=ExtResource( 15 )]
-margin_right = 1240.0
-margin_bottom = 680.0
+margin_left = -1.03265
+margin_top = 1.53095
+margin_right = 1238.97
+margin_bottom = 681.531
 
 [node name="Counselor" parent="Minigames/Games" instance=ExtResource( 16 )]
 visible = false
@@ -361,6 +364,34 @@ margin_left = 1153.28
 margin_top = 12.0
 margin_right = 1254.28
 margin_bottom = 312.0
+
+[node name="HelpDialog" type="WindowDialog" parent="."]
+anchor_top = -0.00247472
+anchor_bottom = -0.00247472
+margin_left = 865.0
+margin_top = 350.782
+margin_right = 1247.0
+margin_bottom = 587.782
+theme = ExtResource( 17 )
+window_title = "HELP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="HelpDialog"]
+margin_left = 9.0
+margin_right = 383.0
+margin_bottom = 269.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="HelpDialog/MarginContainer"]
+margin_right = 374.0
+margin_bottom = 269.0
+text = "If you are feeling unsafe, find a trusted adult immediately. You can also call the U.S. National Suicide Prevention Lifeline at 800-273-TALK (8255) or text the Crisis Text Line (text TALK to 741741). 
+"
+autowrap = true
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
 [connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]

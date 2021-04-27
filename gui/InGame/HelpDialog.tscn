@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://themes/alien.tres" type="Theme" id=1]
+
+[node name="HelpDialog" type="WindowDialog"]
+margin_left = 147.0
+margin_top = 42.0
+margin_right = 510.0
+margin_bottom = 157.0
+theme = ExtResource( 1 )
+window_title = "HELP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 362.0
+margin_bottom = 111.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer"]
+margin_top = 9.0
+margin_right = 363.0
+margin_bottom = 99.0
+text = "If you are feeling unsafe, find a trusted adult immediately. You can also call the U.S. National Suicide Prevention Lifeline at 800-273-TALK (8255) or text the Crisis Text Line (text TALK to 741741). 
+"
+autowrap = true

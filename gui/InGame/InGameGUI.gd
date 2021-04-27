@@ -5,10 +5,15 @@ var hide_toggle = false
 # a new signal system just for one button...
 onready var skip_button = $QuickMenu/ButtonList/Skip
 onready var quest = get_node("/root/Main/questions")
+onready var help = $QuickMenu/ButtonList/Help
 func _ready():
 	Rakugo.connect("game_ended", self, "_on_game_end")
+	help.connect("help_pressed", self, "open_help")
 	$SkipDisplay.hide()
-	
+
+func open_help():
+	$HelpDialog.visible = true
+
 func _input(event):
 	if visible:
 		# not sure what this is for
