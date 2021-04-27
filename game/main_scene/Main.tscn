@@ -8,7 +8,7 @@
 [ext_resource path="res://game/characters/Juana/Juana.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/main_scene/Q1.gd" type="Script" id=7]
 [ext_resource path="res://game/questions/PersonalityQuestions.gd" type="Script" id=8]
-[ext_resource path="res://game/questions/OptionButton.gd" type="Script" id=9]
+[ext_resource path="res://game/main_scene/Pronouns.gd" type="Script" id=9]
 [ext_resource path="res://game/questions/questionaire.gd" type="Script" id=10]
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
 [ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
@@ -242,6 +242,7 @@ __meta__ = {
 margin_top = 52.0
 margin_right = 1080.0
 margin_bottom = 90.0
+script = ExtResource( 9 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
 margin_right = 1080.0
@@ -266,7 +267,6 @@ margin_top = 18.0
 margin_right = 1080.0
 margin_bottom = 38.0
 text = "Item 0"
-script = ExtResource( 9 )
 
 [node name="OtherOption" type="HBoxContainer" parent="Questions/PageOne/VBoxContainer/PersonalQuestions/Pronouns"]
 visible = false

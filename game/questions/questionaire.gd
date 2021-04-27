@@ -110,6 +110,8 @@ func _on_Submit_pressed():
 		Global.set_var("category1", str(personality_array[0].category))
 		Global.set_var("category2", str(personality_array[1].category))
 		
+		print(str(personality_array[1].category))
+		
 		var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
 		"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
 		for i in range(0,len(anxieties)):
