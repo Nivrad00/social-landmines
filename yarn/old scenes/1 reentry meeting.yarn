@@ -1,0 +1,545 @@
+title: Re-entry Meeting
+tags: ""
+colorID: 0
+position: -1789,-1112
+---
+<<play Reentry.wav>>
+<<show background meeting-room>>
+Principal: Welcome back, {$player}. How are you feeling today?
+[[fine, thanks|Fine]]
+[[been better|been]]
+[[I don’t really want to talk about it|No talk]]
+===
+title: Fine
+tags: 
+colorID: 0
+position: -1612,-480
+---
+Counselor: Glad to hear it.
+Counselor: We like to come together as a team to meet and consider the best way to support students who have been gone, so this meeting is about thinking through different ways to help support your transition and make sure you get caught up with your school work.
+Counselor: Before we talk about academics, is there anything you are particularly worried about?
+[[No|plan of action]] 
+[[Yes|been]]
+[[I’m uncomfortable speaking about this right now|plan of action]]
+===
+title: been
+tags: 
+colorID: 0
+position: 795,-9
+---
+Counselor:I'm sorry to hear that. Would it be helpful to ask what supports you may need today?
+[[Yes|Social Emotional Learning Supports]]
+[[No|Alert]]
+===
+title: plan of action
+tags: 
+colorID: 0
+position: 804,-1360
+---
+Counselor:Ok, before we begin making a plan about your academic work, is there anything you want to share/want us to know? 
+
+[[No, I'm ready to talk|ready]]
+[[I'm nervous/scared about all of this, but let’s go ahead and talk|ready]]
+[[I don't want to share, and I'm not ready to talk|hesitant]]
+===
+title: ready
+tags: 
+colorID: 0
+position: 334,-1010
+---
+Counselor: Ok, just let us know if you can think of anything. 
+Counselor: We will now dive right in. 
+Counselor: We are nearly done with this quarter, so there is nothing we can do about changing classes, so you will have to make up missed work.
+Counselor: You will need to go to each of your teachers and make a plan for completing the missed assignments.
+Counselor: Mom, for next semester, we could make changes to {$player}'s schedule – is that something you would like?
+
+[[Mom schedule q]]
+===
+title: hesitant
+tags: 
+colorID: 0
+position: 1262,-1303
+---
+Counselor:I understand. Thank you for being honest with us. What do you need from us at this time?
+[[A break|break]]
+[[Alone time|alone]]
+===
+title: change
+tags: 
+colorID: 0
+position: 1740,-839
+---
+Teacher: Oh, I'm sorry to hear that. What would you like to see change? 
+[[I would like to revise my changes|changes to less diff]]
+[[I need more support|HELP]]
+===
+title: No talk
+tags: 
+colorID: 0
+position: -1328,-677
+---
+Counselor:I understand. Why don't we ease into this, ok? 
+How about I ask you what you need from us to be successful at school today? 
+[[Ok|Social Emotional Learning Supports]]
+[[No|Alert]]
+===
+title: Not at this time
+tags: 
+colorID: 0
+position: 899,-930
+---
+Counselor: Can I ask why? If it's too much, we can always reschedule. 
+[[Sure, [i]insert answer here[/i|]]]
+[[It's too much|badday]]
+===
+title: break
+tags: 
+colorID: 0
+position: 1958,-1403
+---
+Nurse: That sounds fair. 
+Nurse: Feel free to take a few moments to yourself. 
+Nurse: let us know when you're ready to continue. 
+[[Ok, ready|ready]]
+[[I'm not ready at this time|Not at this time]]
+===
+title: alone
+tags: 
+colorID: 0
+position: 1617,-1298
+---
+Nurse: Completely understandable. Please take a moment to yourself, and come back to us when you're ready. 
+[[Ok, I'm ready|ready]]
+[[I'm not ready at this time|Not at this time]]
+===
+title: revised plan
+tags: 
+colorID: 0
+position: 2380,-849
+---
+Counselor: We are going to make sure that you feel supported during your transition back to school. We will take your wishes, being: [i]insert changes to less diff[/i] into consideration when implementing your academic plan. 
+Counselor: How does this sound? 
+
+[[Good|counselor scheduling a 2]]
+[[Bad|change]]
+===
+title: badday
+tags: 
+colorID: 0
+position: 2707,-1023
+---
+Principal: It sounds like today is not the day to discuss this.
+Principal: I'm sorry we caught you at such a low point.
+Principal: Please know that we are here to help.
+Principal: We will know direct you to a point person, so that you can have support during your first day back.
+
+[[End]]
+===
+title: End
+tags: 
+colorID: 0
+position: 3038,-1011
+---
+You are now done with the re-entry meeting. Give yourself a pat on the back for getting through it!
+<<load 2 crowded hallway>>
+===
+title: Social Emotional Learning Supports
+tags: 
+colorID: 0
+position: -980,-513
+---
+Counselor: Select from the following options of things you might want help with
+
+*Note this is a critical time to ask for supports. If you don't provide this information now, you will not receive supports to make your first day back easier.*
+[[transitioning between classes with a lot of people in the hallway|no crowded hallway]]
+[[help making up school work |making up work]]
+[[help making up missed lessons|making up lessons]]
+[[calming strategies to use in class|calming strategies]]
+===
+title: breaks
+tags: 
+colorID: 0
+position: -1296,-273
+---
+Counselor: One thing that can help kids who have been out for a while is having a pass that allows them to come visit me when they are feeling overwhelmed.
+Counselor: This could be in class, in the hall, in the cafeteria--whereever and whenever. 
+Counselor: Do you think that is something you would like to try?
+
+[[yes|yes breaks]]
+[[no|no breaks]]
+[[I need something else|else breaks]]
+===
+title: no crowded hallway
+tags: 
+colorID: 0
+position: -1020,-188
+---
+Counselor: We can set it up so you leave class 5 minutes early and get to your next class before the bell rings. 
+Counselor: How does that sound? 
+
+[[Good|yes no ch]]
+[[Bad |no no ch]]
+[[I need something else |else no ch]]
+===
+title: making up work
+tags: 
+colorID: 0
+position: -686,-162
+---
+Teacher: I can meet with you to come up with a timeline and plan for tackling all the work you need to complete after you speak with your teachers. 
+Teacher: Do you like that plan? 
+
+[[yes|yes making up work]]
+[[no|no making up work]]
+[[I need something else|else making up work]]
+===
+title: making up lessons
+tags: 
+colorID: 0
+position: -288,-171
+---
+Counselor: After you speak with your teachers, we can make a plan for staying after school and working during your free period to learn some of the materials you missed. 
+Counselor: What do you think of that plan? 
+
+[[It sounds good|yes making up lessons]]
+[[It sounds bad|no making up lessons]]
+[[I need something else|else making up lessons]]
+===
+title: calming strategies
+tags: 
+colorID: 0
+position: 118,-227
+---
+Counselor: Some of the things that we can ask your teachers to do is to let you have certain supports in class.
+Counselor: This could include having a fidget or coloring coloring book.
+Counselor: Would either of these work? 
+
+[[yes|yes calming]]
+[[no|no calming]]
+[[I need something else|else calming]]
+===
+title: yes breaks
+tags: 
+colorID: 0
+position: -1775,57
+---
+Great. Breaks will be available to you as needed during class. 
+Do you need additional supports during the school day? 
+
+[[no|plan of action]]
+[[yes|Social Emotional Learning Supports]]
+===
+title: no breaks
+tags: 
+colorID: 0
+position: -1508,57
+---
+Ok, this means that you will NOT have the option to take breaks during class. 
+Do you need additional supports?
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: else breaks
+tags: 
+colorID: 0
+position: -1232,64
+---
+Ok, please type what you need below. 
+
+[i]insert answer here[/i]
+
+Do you need additional supports? 
+[[yes|Social Emotional Learning Supports]]
+[[no|plan of action]]
+===
+title: yes no ch
+tags: 
+colorID: 0
+position: -1231,504
+---
+Great.This means that you will never have to experience a crowded hallway while at school today. 
+Do you need any other supports today? 
+<<set $support_hallway to true>>
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: no no ch
+tags: 
+colorID: 0
+position: -953,497
+---
+Ok.This means that you will experience crowded hallways on your way to and from classes. 
+Do you need any other supports today? 
+
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: else no ch
+tags: 
+colorID: 0
+position: -678,504
+---
+Ok, please type what you need below. 
+
+[i]insert answer here[/i]
+Do you need additional supports? 
+[[yes|Social Emotional Learning Supports]]
+[[no|plan of action]]
+===
+title: yes making up work
+tags: 
+colorID: 0
+position: -916,1005
+---
+Great.This means a teacher of your choosing will be available to help you tackle missed work. 
+Do you need any other supports today?
+<<set $support_work to true>>
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: no making up work
+tags: 
+colorID: 0
+position: -644,1002
+---
+Ok. This means that you will not have the opportunity to meet with a teacher of your choosing regarding missed work. 
+Do you need other supports today? 
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: else making up work
+tags: 
+colorID: 0
+position: -341,1000
+---
+Ok, please type what you need below. 
+
+[i]insert answer here[/i]
+
+Do you need additional supports? 
+[[yes|Social Emotional Learning Supports]]
+[[no|plan of action]]
+===
+title: yes making up lessons
+tags: 
+colorID: 0
+position: -548,125
+---
+Great. You will have the opportunity to meet with the counselor after school and during free periods to discuss missed class lessons. 
+Do you need additional supports today? 
+<<set $support_lessons to true>>
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: no making up lessons
+tags: 
+colorID: 0
+position: -304,130
+---
+Ok. This means that you will not have the opportunity to meet with the counselor after school and during free periods to discuss missed class lessons. 
+Do you need additional supports today? 
+
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: else making up lessons
+tags: 
+colorID: 0
+position: -50,131
+---
+Ok, please type what you need below. 
+
+[i]insert answer here[/i]
+
+Do you need additional supports? 
+[[yes|Social Emotional Learning Supports]]
+[[no|plan of action]]
+===
+title: yes calming
+tags: 
+colorID: 0
+position: -229,372
+---
+Great. This means that you'll have access to either/both a fidget spinner and a coloring book during classes today. Do you need additional supports today? 
+<<set $support_calming to true>>
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: no calming
+tags: 
+colorID: 0
+position: 86,382
+---
+Ok. This means that you won't have access to either the fidget spinner or a coloring book during classes today. 
+Do you need additional supports today? 
+[[Yes|Social Emotional Learning Supports]]
+[[No|plan of action]]
+===
+title: else calming
+tags: 
+colorID: 0
+position: 377,349
+---
+Ok, please type what you need below. 
+
+[i]insert answer here[/i]
+
+Do you need additional supports? 
+[[yes|Social Emotional Learning Supports]]
+[[no|plan of action]]
+===
+title: Alert
+tags: 
+colorID: 0
+position: -975,-931
+---
+Please note that this meeting is critical for determining your supports for the day. 
+If you don't select the supports you need now, you will NOT get another opportunity to do so. 
+
+[[Click here for supports|Social Emotional Learning Supports]]
+[[I understand, and do not want any supports|plan of action]]
+===
+title: Mom schedule q
+tags: 
+colorID: 0
+position: 329,-1421
+---
+Mom: Yes, we’d like {$player} to take less challenging courses so {$pronoun_sbj} can focus on recovering. 
+Mom: Can you swap them out of some of those courses?
+
+[[counselor scheduling a]]
+===
+title: counselor scheduling a
+tags: 
+colorID: 0
+position: 623,-1647
+---
+Counselor: Sure, we can change some courses and maybe drop some of the extracurriculars and offer a course that is more like a study hall.
+Counselor: What do you think about that, {$player}?
+
+[[Click here to think about it|internal dialogue 1]]
+===
+title: internal dialogue 1
+tags: 
+colorID: 0
+position: 957,-1616
+---
+To Me: How do you feel about taking less challenging courses? 
+[[Ok/Good/Fine|internal dialogue 2]]
+[[Bad/Embarrassed/Upset|<<$if trigger is "academics">>]]
+===
+title: internal dialogue 2
+tags: 
+colorID: 0
+position: 1305,-1655
+---
+To Me: How should I respond to this idea? 
+
+[[I like the idea|yes to less diff]]
+[[I do not like the idea|no to less diff]]
+[[It's fine, but I want to make some changes|changes to less diff]]
+===
+title: <<$if trigger is "academics">>
+tags: 
+colorID: 0
+position: 1280,-2608
+---
+It's clear that academics are important to you. Be prepared to face challenges, specifically related to academic achievement during this game.
+[[End]]
+===
+title: yes to less diff
+tags: 
+colorID: 0
+position: 166,-2083
+---
+Me: Yes, this sounds like a good plan. 
+Counselor: Ok, good. Is there anything else you’d like us to consider or talk about?
+Mom: No. We are just really focused on making sure {$player} is caught up academically.
+
+What do you think of this, {$player}? 
+[[I want to talk about my friends and relationships at school|<<if $trigger is "social">>]]
+[[I want to talk about my extracurricular activities|<<if $trigger is "extracurricular">>]]
+[[I agree with Mom|counselor scheduling a 2]]
+===
+title: no to less diff
+tags: 
+colorID: 0
+position: 476,-2115
+---
+Me: No, I don't like this plan. 
+Counselor: Ok. What would you like to see change? 
+
+Type answer below:
+[i]insert answer here[/i]
+
+Mom: No, that is not an option. You need to get caught up academically. 
+
+How do you respond? 
+[[I believe I can handle the harder classes|<<$if trigger is "academics">>]]
+[[I agree. I want to focus on my relationships, anyway|<<if $trigger is "social">>|]]
+[[I agree. I want to focus on my extracurriculars, anyway|<<if $trigger is "extracurricular">>]]
+===
+title: changes to less diff
+tags: 
+colorID: 0
+position: 890,-2147
+---
+Me: This plan makes sense, but I'd like to change the following:
+
+[i]insert answer here[/i]
+
+Based off this answer, our plan of action will be revised. 
+Click here to see: 
+[[End]]
+===
+title: <<if $trigger is "social">>
+tags: 
+colorID: 0
+position: -261,-2590
+---
+It's clear that relationships at school are important to you. Be prepared to face challenges, specifically related to social, romantic, and/or friend relations during this game.
+[[End]]
+===
+title: counselor scheduling a 2
+tags: 
+colorID: 0
+position: 586,-2678
+---
+Counselor: Before we close for the day, is there anything else you’d like us to consider or talk about?
+
+[[Social life at school|<<if $trigger is "social">>]]
+[[Extracurricular activities that I was involved in|<<if $trigger is "extracurricular">>]]
+[[No, I'm good|End]]
+===
+title: <<if $trigger is "extracurricular">>
+tags: 
+colorID: 0
+position: 57,-2578
+---
+It's clear that extracurriculars are important to you. Be prepared to face challenges, specifically related to extracurricular participation and/or success during this game.
+[[End]]
+===
+title: HELP
+tags: 
+colorID: 0
+position: 2188,-1127
+---
+You will be directed to a school professional ASAP.
+[[counselor help]]
+===
+title: counselor help
+tags: 
+colorID: 0
+position: 2523,-1431
+---
+Counselor: What do you need help with at this time? 
+[[I don't want to do this|Not at this time]]
+[[I need resources|resources]]
+===
+title: resources
+tags: 
+colorID: 0
+position: 3073,-1439
+---
+*** If you are seriously considering hurting yourself or ending your life, call 911.If someone is hurting you, abusing you, or neglecting you, call 911.If you suspect that another child is in serious danger, call 911.***If you or your family is interested in psychological services, these local agency numbers may be useful to you.Freedom House Recovery Center: 104 New Stateside Dr. Chapel Hill, NC 27516 919-942-2803UNC Psychological Services Clinic: UNC Chapel Hill, CB#3270, Davie Hall, Chapel Hill, NC 27599-3270 919-962-6906Duke Psychological Services Clinic: Duke University, Psychology-Sociology Building, Suite 312 Durham, NC 27708 919-660-5771Durham Center for Child and Family Health: 1121 W. Chapel Hill St., Ste. 100. Durham, NC 27701 919-419-3474Duke Child and Family Center: Pavilion East at Lakeview 2608 Erwin Road, Suite 300 Durham, NC 27705NC department of Health and Human Services Adolescent Parenting ProgramTeen Pregnancy Prevention Initiatives (TPPI): 1929 Mail Service Center Raleigh, North Carolina 27699-1929 919-707-5700National Association of Anorexia Nervosa and Associated Disorders Hotline: 1-630-577-1330National Runaway Hotline: 1-800-621-4000National Suicide Prevention Lifeline: 1-800-273-8255HopeLine Suicide Hotline: 1-800-SUICIDE (1-800-784-2433)New Hope TeenLine Hotline Help Center: 1-714-NEW-TEEN (1-714-639-8336)Childhelp USA National Child Abuse Hotline: 1-800-4-A-CHILD (1-800-422-4453)National Domestic Violence Hotline: 1-800-799-SAFE (1-800-799-7233)National Teen Dating Abuse Helpline: 1-866-331-9474 (from 4pm-2am)Prevent Child Abuse North Carolina: 1-800-CHILDREN (1-800-244-5373)National Sexual Assault Hotline: 1-800-656-HOPE (1-800-656-4673)Orange County Rape Crisis Center: 1-866-WE-LISTEN (1-866- 935-4783)Boys and Girls Town National Hotline: 1-800-448-3000Covenant House Nine Line: 1-800-999-9999Teen Helpline: 1-800-400-0900S.A.F.E. (Self-Abuse Finally Ends) Alternatives Information and Referral Line: 1-800-DONT-CUT (1-800-366-8288)[[End]]
+===
