@@ -238,7 +238,7 @@ tags:
 colorID: 0
 position: 694,-1126
 ---
-<<set support_hallway to true>>
+<<set $support_hallway to true>>
 Counselor: Great. We will set this up for you today, and you should have a less busy hallway during your class transitions.. 
 Counselor: Do you need any other supports today? 
 [[Yes|Social Emotional Learning Supports]]
@@ -259,7 +259,7 @@ tags:
 colorID: 0
 position: 914,-1129
 ---
-<<set support_work to true>>
+<<set $support_work to true>>
 Counselor: Great.This means Mrs. Smith will meet with you today to help make a plan about missing work..
 Counselor: Do you need any other supports today?
 [[Yes|Social Emotional Learning Supports]]
@@ -280,7 +280,7 @@ tags:
 colorID: 0
 position: 1136,-1130
 ---
-<<set support_lessons to true>>
+<<set $support_lessons to true>>
 Counselor: Great. You will have the opportunity to meet with the counselor after school and during free periods to discuss the specific teachers to meet with about missed class lessons.
 Counselor: Do you need additional supports today?
 [[Yes|Social Emotional Learning Supports]]
@@ -301,7 +301,7 @@ tags:
 colorID: 0
 position: 1355,-1126
 ---
-<<set support_calming to true>>
+<<set $support_calming to true>>
 Counselor: Great. This means that you'll have access to both a fidget spinner and a coloring book during classes today. Do you need additional supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
