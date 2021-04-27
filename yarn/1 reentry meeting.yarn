@@ -3,6 +3,7 @@ tags:
 colorID: 0
 position: -132,-63
 ---
+<<show background counselors-office>>
 Principal: Welcome back, {$player}. How are you feeling today? 
 
 	[[fine, thanks|fine]]
@@ -134,10 +135,10 @@ colorID: 0
 position: 802,-2004
 ---
 You are now done with the re-entry meeting. Give yourself a pat on the back for getting through it!
-<<if support_hallway == false>>
-    <<load 2 crowded hallway>>
-<<else>>
-    <<load 2 not crowded hallway>>
+
+<<load 2 crowded hallway>>
+
+
 ===
 title: Ready
 tags: 
