@@ -12,7 +12,7 @@
 [ext_resource path="res://gui/InGame/ResourcesMenu/ResourceOption.tscn" type="PackedScene" id=10]
 [ext_resource path="res://gui/Minigames/Minigames.gd" type="Script" id=11]
 [ext_resource path="res://gui/InGame/ResourcesMenu/DeepBreathing.png" type="Texture" id=12]
-[ext_resource path="res://gui/Minigames/DeepBreathing.tscn" type="PackedScene" id=13]
+[ext_resource path="res://gui/Minigames/DeepBreathing3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://gui/Minigames/ColoringBook.tscn" type="PackedScene" id=14]
 [ext_resource path="res://gui/Minigames/FidgetSpinner.tscn" type="PackedScene" id=15]
 [ext_resource path="res://gui/Minigames/Counselor.tscn" type="PackedScene" id=16]
@@ -219,7 +219,7 @@ visible = false
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 373.0
-margin_bottom = 186.0
+margin_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Coping strategies not requested during reentry meeting"
@@ -228,7 +228,7 @@ text = "Coping strategies not requested during reentry meeting"
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 373.0
-margin_bottom = 186.0
+margin_bottom = 185.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -363,8 +363,8 @@ margin_right = 1254.28
 margin_bottom = 312.0
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
 [connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
-[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
+[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
 [connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
 [connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
 [connection signal="pressed" from="Minigames/CanvasLayer/BackButton" to="Minigames" method="end_minigame"]
