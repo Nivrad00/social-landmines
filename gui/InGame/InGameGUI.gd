@@ -95,12 +95,12 @@ func _on_resource_button_press(resource_name):
 	# when the user wants to use a resource!
 	# currently minigame state isn't stored, so saving during a minigame and then loading
 	#   that save should just cause the minigame to disappear
-	if Global.support_calming:
+	if Global.get_var('support_calming'):
 		$Minigames.show()
 		$Minigames.start_minigame(resource_name)
 
 func _on_resources_menu_opened():
-	if Global.support_calming:
+	if Global.get_var('support_calming'):
 		$ResourcesMenu/Content/MarginContainer/VBoxContainer.show()
 		$ResourcesMenu/Content/MarginContainer/no_support.hide()
 	else:
