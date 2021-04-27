@@ -103,25 +103,42 @@ func handle_checks():
 func _on_Submit_pressed():
 		var personality_array = handle_checks()
 
-		Global.mood = int(handle_mood())
-		main_dialog.set_var("$player", str(handle_name()))
-		main_dialog.set_var("$passion1", str(personality_array[0].passion))
-		main_dialog.set_var("$passion2", str(personality_array[1].passion))
-		main_dialog.set_var("$category1", str(personality_array[0].category))
-		main_dialog.set_var("$category2", str(personality_array[1].category))
+		Global.set_var('mood', int(handle_mood()))
+		Global.set_var("player", str(handle_name()))
+		Global.set_var("passion1", str(personality_array[0].passion))
+		Global.set_var("passion2", str(personality_array[1].passion))
+		Global.set_var("category1", str(personality_array[0].category))
+		Global.set_var("category2", str(personality_array[1].category))
 		
-		var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
-		"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
+		var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
+		"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
 		for i in range(0,len(anxieties)):
 			main_dialog.set_var(anxieties[i], handle_anxiety()[i])
 
-		main_dialog.set_var("$they", handle_pronouns(get_pronouns())[0].to_lower())
-		main_dialog.set_var("$them", handle_pronouns(get_pronouns())[1].to_lower())
-		main_dialog.set_var("$their", handle_pronouns(get_pronouns())[2].to_lower())
-		
-		print(main_dialog.yarn_importer.environment)
+		Global.set_var("they", handle_pronouns(get_pronouns())[0].to_lower())
+		Global.set_var("them", handle_pronouns(get_pronouns())[1].to_lower())
+		Global.set_var("their", handle_pronouns(get_pronouns())[2].to_lower())
 		
 		emit_signal("submit_success")
+		
+		# old code
+		
+		#main_dialog.set_var("$player", str(handle_name()))
+		#main_dialog.set_var("$passion1", str(personality_array[0].passion))
+		#main_dialog.set_var("$passion2", str(personality_array[1].passion))
+		#main_dialog.set_var("$category1", str(personality_array[0].category))
+		#main_dialog.set_var("$category2", str(personality_array[1].category))
+		
+		#var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
+		#"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
+		#for i in range(0,len(anxieties)):
+			#main_dialog.set_var(anxieties[i], handle_anxiety()[i])
+
+		#main_dialog.set_var("$they", handle_pronouns(get_pronouns())[0].to_lower())
+		#main_dialog.set_var("$them", handle_pronouns(get_pronouns())[1].to_lower())
+		#main_dialog.set_var("$their", handle_pronouns(get_pronouns())[2].to_lower())
+		
+		#print(main_dialog.yarn_importer.environment)
 
 
 func _on_PageOneNext_pressed():

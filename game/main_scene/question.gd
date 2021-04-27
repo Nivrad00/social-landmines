@@ -4,7 +4,7 @@ extends Dialogue
 func question():
 	start_event("question")
 	
-	print(Global.mood)
+	print(Global.get_var('mood'))
 	jump("","MainDialog","")
 	end_event()
 

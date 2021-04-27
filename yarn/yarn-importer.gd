@@ -15,40 +15,13 @@ extends Node
 # Fibre: a text or choice or logic (Yarn line)
 
 var yarn = {}
-var environment = {"$player": "Me"}
+var environment = {}
 var skip = false
 var if_hit = false
 var bracketRegex = RegEx.new()
 
 func clean_environment(env):
 	environment = {}
-	# maintain variables from questionnaire
-	var questionnaire_variables = [
-		'$player',
-		'$they',
-		'$them',
-		'$their',
-		'$passion1',
-		'$passion2',
-		'$category1',
-		'$category2',
-		"$around_kids", 
-		"$around_adults", 
-		"$one_on_one", 
-		"$wrong_thing", 
-		"$picked_on", 
-		"$crowded_places", 
-		"$attention_kids", 
-		"$attention_teachers",
-		'$support_hallway', 
-		'$support_work', 
-		'$support_lessons', 
-		'$support_calming'
-	]
-	
-	for variable in questionnaire_variables:
-		if variable in env:
-			environment[variable] = env[variable]
 	
 
 # OVERRIDE METHODS
@@ -131,25 +104,27 @@ func command(cmd):
 func logic(statement):
 	statement = statement.strip_edges()
 	var split_statement = statement.split(" ")
+	
 	# "SET variable TO expression"
 	if split_statement[0] == "set":
 		if split_statement[1].substr(0, 1) == '$':
-			# if the var is defined in Global, set it there (without the $)
-			if split_statement[1].substr(1) in Global.var_list:
-				var var_name = split_statement[1].substr(1)
-				var value = evaluate(statement.split("to")[1])
-				Global.set(var_name, value)
-				# prevent mood from being set outside of 0-100
-				if var_name == "mood":
-					if value > 100:
-						Global.set("mood", 100)
-					elif value < 0:
-						Global.set("mood", 0)
 			
-			# else set it locally
+			# set variables in Global (without the $)
+			var var_name = split_statement[1].substr(1)
+			var value = evaluate(statement.split("to")[1])
+			
+			# prevent mood from being set outside of 0-100
+			if var_name == "mood":
+				if value > 100:
+					Global.set_var("mood", 100)
+				elif value < 0:
+					Global.set_var("mood", 0)
 			else:
-				var var_name = split_statement[1]
-				environment[var_name] = evaluate(statement.split("to")[1])
+				Global.set_var(var_name, value)
+			
+			# local "environment" variables not currently used
+			# var var_name = split_statement[1]
+			# environment[var_name] = evaluate(statement.split("to")[1])
 		
 	# "IF expression"
 	elif split_statement[0] == "if":
