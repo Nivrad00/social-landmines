@@ -214,11 +214,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="no_support" type="RichTextLabel" parent="ResourcesMenu/Content/MarginContainer"]
+visible = false
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 373.0
+margin_bottom = 186.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Coping strategies not requested during reentry meeting"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="ResourcesMenu/Content/MarginContainer"]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 373.0
-margin_bottom = 185.0
+margin_bottom = 186.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -353,8 +363,8 @@ margin_right = 1254.28
 margin_bottom = 312.0
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
 [connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
-[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
+[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
 [connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
 [connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
 [connection signal="pressed" from="Minigames/CanvasLayer/BackButton" to="Minigames" method="end_minigame"]

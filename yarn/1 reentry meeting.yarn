@@ -148,13 +148,11 @@ tags:
 colorID: 0
 position: -980,-513
 ---
-Counselor: Select from the following options of things you might want help with:
+Counselor: Select from the following options of things you might want help with
 
 *Note this is a critical time to ask for supports. If you don't provide this information now, you will not receive supports to make your first day back easier.*
-
-[[taking breaks during class|breaks]]
 [[transitioning between classes with a lot of people in the hallway|no crowded hallway]]
-[[help making up school work|making up work]]
+[[help making up school work |making up work]]
 [[help making up missed lessons|making up lessons]]
 [[calming strategies to use in class|calming strategies]]
 ===
@@ -261,6 +259,7 @@ position: -1231,504
 ---
 Great.This means that you will never have to experience a crowded hallway while at school today. 
 Do you need any other supports today? 
+<<set $support_hallway to true>>
 [[Yes|Social Emotional Learning Supports]]
 [[No|plan of action]]
 ===
@@ -293,7 +292,8 @@ colorID: 0
 position: -916,1005
 ---
 Great.This means a teacher of your choosing will be available to help you tackle missed work. 
-Do you need any other supports today? 
+Do you need any other supports today?
+<<set $support_work to true>>
 [[Yes|Social Emotional Learning Supports]]
 [[No|plan of action]]
 ===
@@ -327,7 +327,7 @@ position: -548,125
 ---
 Great. You will have the opportunity to meet with the counselor after school and during free periods to discuss missed class lessons. 
 Do you need additional supports today? 
-
+<<set $support_lessons to true>>
 [[Yes|Social Emotional Learning Supports]]
 [[No|plan of action]]
 ===
@@ -361,7 +361,7 @@ colorID: 0
 position: -229,372
 ---
 Great. This means that you'll have access to either/both a fidget spinner and a coloring book during classes today. Do you need additional supports today? 
-
+<<set $support_calming to true>>
 [[Yes|Social Emotional Learning Supports]]
 [[No|plan of action]]
 ===
