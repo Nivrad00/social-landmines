@@ -119,6 +119,8 @@ func logic(statement):
 					Global.set_var("mood", 100)
 				elif value < 0:
 					Global.set_var("mood", 0)
+				else:
+					Global.set_var("mood", value)
 			else:
 				Global.set_var(var_name, value)
 			
