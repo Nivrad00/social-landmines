@@ -6,5 +6,4 @@ position: -19,-302
 <<show background hallway>>
 Hallway again.
 {$player}: Finally, time to go home!
-<<load 12 social media>>
 ===
