@@ -1,6 +1,6 @@
 extends Control
 
-
+#load interactable components in order to get their values
 onready var nameLine = $PageOne/VBoxContainer/PersonalQuestions/Name/askName
 onready var pnOptions = $PageOne/VBoxContainer/PersonalQuestions/Pronouns/OptionButton
 onready var subNoun = $PageOne/VBoxContainer/PersonalQuestions/Pronouns/OtherOption/subject
@@ -16,7 +16,6 @@ onready var PQ6 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/sports
 onready var PQ7 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/theater
 onready var PQ8 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/popularity
 onready var PQ9 = $PageOne/VBoxContainer/PersonalityQuestions/Checkboxes/friendships
-
 onready var AQ1 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ1/VBoxContainer/HSlider
 onready var AQ2 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ2/VBoxContainer/HSlider
 onready var AQ3 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ3/VBoxContainer/HSlider
@@ -25,7 +24,7 @@ onready var AQ5 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginC
 onready var AQ6 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ6/VBoxContainer/HSlider
 onready var AQ7 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ7/VBoxContainer/HSlider
 onready var AQ8 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginContainer/AnxietyQuestions/AQ8/VBoxContainer/HSlider
-
+onready var scrollBar = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer.get_v_scrollbar()
 onready var main_dialog = get_node("../MainDialog")
 
 signal submit_success
@@ -38,7 +37,7 @@ func handle_name():
 
 func get_pronouns():
 	var option_id = pnOptions.get_selected()
-	if(option_id != 4):
+	if option_id != 4:
 		return str(pnOptions.get_item_text(option_id))
 	else:
 		var otherNouns = subNoun.get_text() + "/" + objNoun.get_text() + "/" + posNoun.get_text()
@@ -68,13 +67,13 @@ func handle_mood():
 
 func basic_errors():
 	var errors = 0
-	if(nameLine.text.empty()):
+	if nameLine.text.empty():
 		$PageOne/VBoxContainer/PersonalQuestions/Name/HBoxContainer/nameError.show()
 		errors = errors + 1
-	if(pnOptions.get_selected() == 4 && (subNoun.text.empty() || objNoun.text.empty() || posNoun.text.empty())):
+	if(pnOptions.get_selected() == 4 and (subNoun.text.empty() or objNoun.text.empty() or posNoun.text.empty())):
 		$PageOne/VBoxContainer/PersonalQuestions/Pronouns/HBoxContainer/pronounError.show()
 		errors = errors + 1
-	if(handle_checks().size() != 2):
+	if handle_checks().size() != 2:
 		$PageOne/VBoxContainer/PersonalityQuestions/HBoxContainer/aspectError.show()
 		errors = errors + 1
 	else:
@@ -94,11 +93,17 @@ func handle_checks():
 		PQ9,
 	]
 	for i in checkArray:
-		if(i.is_pressed()):
+		if i.is_pressed():
 			pressed.append(i)
 	randomize()
 	pressed.shuffle()
 	return pressed
+	
+func check_scroll():
+	if scrollBar.value + scrollBar.page >= scrollBar.max_value:
+		return false
+	else:
+		return true
 
 func _on_Submit_pressed():
 		var personality_array = handle_checks()
@@ -110,7 +115,6 @@ func _on_Submit_pressed():
 		Global.set_var("category1", str(personality_array[0].category))
 		Global.set_var("category2", str(personality_array[1].category))
 		
-		print(str(personality_array[1].category))
 		
 		var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
 		"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
@@ -128,29 +132,10 @@ func _on_Submit_pressed():
 		Global.set_var("their", handle_pronouns(get_pronouns())[2].to_lower())
 		
 		emit_signal("submit_success")
-		
-		# old code
-		
-		#main_dialog.set_var("$player", str(handle_name()))
-		#main_dialog.set_var("$passion1", str(personality_array[0].passion))
-		#main_dialog.set_var("$passion2", str(personality_array[1].passion))
-		#main_dialog.set_var("$category1", str(personality_array[0].category))
-		#main_dialog.set_var("$category2", str(personality_array[1].category))
-		
-		#var anxieties = ["$around_kids", "$around_adults", "$one_on_one", "$wrong_thing", 
-		#"$picked_on", "$crowded_places", "$attention_kids", "$attention_teachers"]
-		#for i in range(0,len(anxieties)):
-			#main_dialog.set_var(anxieties[i], handle_anxiety()[i])
-
-		#main_dialog.set_var("$they", handle_pronouns(get_pronouns())[0].to_lower())
-		#main_dialog.set_var("$them", handle_pronouns(get_pronouns())[1].to_lower())
-		#main_dialog.set_var("$their", handle_pronouns(get_pronouns())[2].to_lower())
-		
-		#print(main_dialog.yarn_importer.environment)
 
 
 func _on_PageOneNext_pressed():
-	if(basic_errors() != 0):
+	if basic_errors() != 0:
 		pass
 	else:
 		$PageOne.hide()
@@ -163,8 +148,13 @@ func _on_PageTwoBack_pressed():
 
 
 func _on_PageTwoNext_pressed():
-	$PageTwo.hide()
-	$PageThree.show()
+	print(check_scroll())
+	if check_scroll():
+		pass
+	else:
+		$PageTwo.hide()
+		$PageThree.show()
+	
 
 
 func _on_PageThreeBack_pressed():

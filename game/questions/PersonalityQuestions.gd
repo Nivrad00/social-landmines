@@ -16,12 +16,12 @@ func _ready():
 
 
 func limit_checks(button_pressed,which):
-	if(checked.size()<2 && button_pressed == true):
+	if checked.size()<2 and button_pressed == true:
 		checked.append(which)
-	elif(checked.size() == 2 && button_pressed == true):
+	elif checked.size() == 2 and button_pressed == true:
 		checked[0].set_pressed(false)
 		checked.append(which)
-	elif(button_pressed == false):
+	elif button_pressed == false:
 		checked.erase(which)
 
 	
