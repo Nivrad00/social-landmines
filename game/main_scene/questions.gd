@@ -1,6 +1,9 @@
 extends Dialogue
 
+#controls rollback
 var question_shown = false
+
+#connect to UI elements
 onready var quest = get_node("../Questions")
 onready var choice = get_node("/root/Window/Panel/TabContainer/InGameGUI/ChoiceMenu")
 onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/DialoguePanel")
@@ -10,12 +13,17 @@ onready var quick = get_node("/root/Window/Panel/TabContainer/InGameGUI/QuickMen
 
 
 func _ready():
+	#when this is true, rollback is disabled
 	question_shown = true
+	
+	#hide UI elements
 	choice.hide()
 	dialogue.hide()
 	resource.hide()
 	therm.hide()
 	quick.hide()
+	
+	#connect to submit button signal
 	quest.connect("submit_success", self, "submit")
 
 

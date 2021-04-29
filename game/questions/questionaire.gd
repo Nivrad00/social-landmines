@@ -27,14 +27,14 @@ onready var AQ8 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginC
 onready var scrollBar = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer.get_v_scrollbar()
 onready var main_dialog = get_node("../MainDialog")
 
+#declare signal
 signal submit_success
 
-func _ready():
-	pass
-
+#returns input for player name
 func handle_name():
 	return nameLine.get_text()
-
+	
+#returns selected pronouns
 func get_pronouns():
 	var option_id = pnOptions.get_selected()
 	if option_id != 4:
@@ -43,10 +43,12 @@ func get_pronouns():
 		var otherNouns = subNoun.get_text() + "/" + objNoun.get_text() + "/" + posNoun.get_text()
 		return otherNouns
 
+#split the associated pronouns into their individual components, returns as array
 func handle_pronouns(string):
 	var nounArray = string.split("/")
 	return nounArray
 
+#returns array containg all the values associated with slider values on pages two.
 func handle_anxiety():
 	var array = [
 		AQ1.get_value(),
@@ -61,10 +63,11 @@ func handle_anxiety():
 	return array
 	
 
+#returns the value associated with the slider on page three 
 func handle_mood():
 	return setMood.get_value()
 	
-
+#input validation for Page One
 func basic_errors():
 	var errors = 0
 	if nameLine.text.empty():
@@ -78,7 +81,8 @@ func basic_errors():
 		errors = errors + 1
 	else:
 		return errors
-		
+
+#
 func handle_checks():
 	var pressed = []
 	var checkArray = [
