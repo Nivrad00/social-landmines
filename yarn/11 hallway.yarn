@@ -1,0 +1,95 @@
+title: Start
+tags: 
+colorID: 0
+position: -264,309
+---
+<<show background hallway>>
+<<show anonymous1 neutral left>>
+<<show anonymous1 neutral right>>
+<<play crowd.wav>>
+
+You leave the math classroom into a crowd of students. Everyone's heading home for the day.
+One student runs by, knocking into your shoulder
+{$player}: Rude...
+
+<<show juana laugh center>>
+You see Juana, who calls out to you from a distance.
+Juana: Hey, {$player}, have a safe trip home, okay?
+{$player}: You too!
+<<hide juana>>
+
+Before you make it outside, you pass a group of students you don't recognize staring and whispering. One of them laughs.
+
+Student: What are {$they} wearing?!
+
+[[(Ignore and keep walking)|Ignore and keep walking]]
+[[Hey, shut up!|Shut up]]
+[[(mocking) What is she wearing?|Mocking]]
+[[(make a face)|Face]]
+===
+title: Ignore and keep walking
+tags: 
+colorID: 0
+position: -548,26
+---
+<<hide anonymous1>>
+<<hide anonymous2>>
+You start walking faster until the laughing students are out of view.
+You think to yourself...
+
+[[They were just being childish. I look fine. |MoodIncrease]]
+[[Don't pay attention to them. Keep walking. I'm almost out.|MoodIncrease]]
+===
+title: MoodIncrease
+tags: 
+colorID: 0
+position: -384,-202
+---
+<<set $mood to $mood - 20>>
+[[leave school]]
+===
+title: Shut up
+tags: 
+colorID: 0
+position: -187,24
+---
+{$player}: Hey, shut up!
+<<hide anonymous1>>
+<<hide anonymous2>>
+You ignore their shocked expressions and stomp away, leaving them far behind.
+[[leave school]]
+===
+title: Mocking
+tags: 
+colorID: 0
+position: 63,22
+---
+You do your best imitation of their leering voice.
+{$player}: What are {$they} wearing?!
+<<hide anonymous1>>
+<<hide anonymous2>>
+You ignore their titters in response and stomp away, leaving them far behind.
+[[leave school]]
+===
+title: Face
+tags: 
+colorID: 0
+position: 310,27
+---
+You make a face at the group before walking away, ignoring their whispers.
+<<hide anonymous1>>
+<<hide anonymous2>>
+Soon, you've left them far behind.
+[[leave school]]
+===
+title: leave school
+tags: 
+colorID: 0
+position: -114,-356
+---
+<<show background suburb>>
+<<stop>>
+Once you push open the glass front doors, you breathe a sigh of relief. Now you just have to walk home.
+<<play Reentry.wav>>
+<<load 12 social media>>
+===

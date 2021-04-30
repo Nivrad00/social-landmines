@@ -2,7 +2,7 @@ extends Dialogue
 
 var yarn_importer = null
 var yarn_path = 'res://yarn/'
-var default_yarn_scene = '12 social media'
+var default_yarn_scene = '1 reentry meeting'
 onready var quest = get_node("../Questions")
 onready var choice = get_node("/root/Window/Panel/TabContainer/InGameGUI/ChoiceMenu")
 onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/DialoguePanel")

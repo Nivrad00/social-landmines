@@ -1,11 +1,59 @@
 title: Start
 tags: 
 colorID: 0
-position: -19,-302
+position: -75,-319
 ---
 <<show background classroom3>>
-Ms. Roberts: {$player}, what's 2 + 2?
-{$player}: Uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-Class ends, and Ms. Robert pulls you aside...
+<<show teacher happy center>>
+Ms. Roberts gives you a smile as you enter the class. 
+After a short review, she passes out worksheets for everyone to complete.
+{$player}: Oh, boy...
+
+[[Start the worksheet|Problem1]]
+===
+title: Problem1
+tags: 
+colorID: 0
+position: -35,-554
+---
+<<hide teacher>>
+Solve for x; 8x + 6 = 46
+
+[[5|Problem2]]
+[[6.5|Problem2]]
+[[32|Problem2]]
+[[46|Problem2]]
+===
+title: Problem2
+tags: 
+colorID: 0
+position: 85,-774
+---
+If Julio gave Sandra $6.00 to buy 3 dozen oranges that cost $4.68, how much change should Sandra bring back?
+
+[[$1.32|Problem3]]
+[[$2.32|Problem3]]
+[[$1.68|Problem3]]
+[[$2.68|Problem3]]
+===
+title: Problem3
+tags: 
+colorID: 0
+position: 205,-994
+---
+If Julio gave Sandra $6.00 to buy 3 dozen oranges that cost $4.68, how much did each orange cost?
+
+[[$0.13|End]]
+[[$0.17|End]]
+[[$0.39|End]]
+[[$1.56|End]]
+===
+title: End
+tags: 
+colorID: 0
+position: 325,-1214
+---
+Eventually, you finish your worksheet and turn it in.
+Before you can leave the room, Ms. Robert pulls you aside.
 <<load 10 meeting with teacher>>
 ===

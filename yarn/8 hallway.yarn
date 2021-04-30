@@ -4,7 +4,18 @@ colorID: 0
 position: -19,-302
 ---
 <<show background hallway>>
-Back in the hallway again.
-{$player}: *Yawn*
+
+<<if $support_hallway>>
+    You make sure to leave lunch early so you can have a quiet transition to your next class.
+<<else>>
+    <<play crowd.wav>>
+    <<show anonymous1 neutral left>>
+    <<show anonymous2 neutral right>>
+    The bell rings, and you follow the crowd through the hallway to your next class. 
+    <<hide anonymous1>>
+    <<hide anonymous2>>
+	<<play Forward.wav>>
+<<endif>>
+
 <<load 9 class 2>>
 ===

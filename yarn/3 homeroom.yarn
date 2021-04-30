@@ -1,12 +1,38 @@
 title: Start
 tags: 
 colorID: 0
-position: -19,-302
+position: 44,-350
 ---
 <<play Forward.wav>>
 <<show background classroom1>>
-You sit through homeroom.
-{$player}: Homeroom... so boring...
-The bell rings. Ring ring ring!
+Soon, you arrive at your homeroom. The class gradually fills with students.
+What do you do?
+
+[[Sit quietly|Sit]]
+[[Read a book|Book]]
+===
+title: Sit
+tags: 
+colorID: 0
+position: -29,-593
+---
+You sit patiently, waiting for homeroom to end.
+Eventually, it's time to go back to the hallway.
+[[End]]
+===
+title: Book
+tags: 
+colorID: 0
+position: 193,-591
+---
+You pass your time reading a book.
+Before you know it, it's time to return to the hallway.
+[[End]]
+===
+title: End
+tags: 
+colorID: 0
+position: 93,-811
+---
 <<load 4 hallway>>
 ===

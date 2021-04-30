@@ -1,13 +1,14 @@
 title: Start
 tags: 
 colorID: 0
-position: 45,-200
+position: 147,-201
 ---
 <<show background cafeteria>>
-You find your way to your usual seat in the cafeteria.
+You find your way to your usual seat in the cafeteria, next to your friend Juana.
 
 <<show juana laugh center>>
-Juana: Hey, how was your weekend?
+{$player}: Hey!
+Juana: Yo, how was your weekend?
 {$player}: Good, how was yours?
 <<show juana smile center>>
 Peer: Pretty good, didn't do much.
@@ -59,29 +60,18 @@ Chad: What?
 <<endif>>
 <<show chad smirk right>>
 
-[[Look to coping skills|Coping skills]]
 [[Ignore them|Ignore]]
 [[Say something back|Say something]]
-===
-title: Coping skills
-tags: 
-colorID: 0
-position: -220,-456
----
-Pick which skill you would like to use.
-<<set $mood to $mood - 20 * $picked_on>>
-<<copingskills>>
-...
-[[End lunch]]
 ===
 title: Ignore
 tags: 
 colorID: 0
-position: 34,-468
+position: 30,-457
 ---
 <<show brad angry left>>
 Brad: Oh, so you're just going to ignore us? 
 Chad: I told you {$they} were stupid.
+You keep ignoring them, poking at your food instead. Juana looks concerned, but stays silent.
 [[End lunch]]
 ===
 title: Say something
@@ -91,14 +81,14 @@ position: 317,-442
 ---
 {$player}: Whatever, I was busy anyways.
 Chad: Yeah, keep telling yourself that.
-Brad: Maybe it’s because no one likes you, loser.
+Brad: Maybe this is why no one likes you, loser.
 [[You should really watch your mouth!|Watch mouth]]
-[[Please just leave me alone|Leave alone]]
+[[Please, just leave me alone|Leave alone]]
 ===
 title: Watch mouth
 tags: 
 colorID: 0
-position: 302,-692
+position: 300,-692
 ---
 {$player}: You should really watch your mouth!
 Chad: Oh, what are you gonna do about it?
@@ -109,7 +99,7 @@ Chad: Oh, what are you gonna do about it?
 
 <<elseif $category1 == "popularity">>
     <<show brad angry left>>
-    Brad: Yeah, you’re all alone and have no one to back you up.
+    Brad: Yeah, who's gonna want to back [i]you[/i] up?
     Juana: Hey, I'm right here...
 
 <<elseif $category1 == "partner">>
@@ -118,36 +108,38 @@ Chad: Oh, what are you gonna do about it?
 
 <<elseif $category1 == "friendships">>
     <<show brad angry left>>
-    Brad: Yeah, you’re all alone and have no one to back you up.
+    Brad: Yeah, who's gonna want to back [i]you[/i] up?
     Juana: Hey, I'm right here...
 
 <<endif>>
 
-<<set $mood to $mood + 20 * $picked_on>>
+{$player}: Whatever.
+
+<<set $mood to $mood + $picked_on>>
 [[End lunch]]
 ===
 title: Leave alone
 tags: 
 colorID: 0
-position: 556,-681
+position: 555,-684
 ---
 {$player}: Please, just leave me alone. 
 Chad: Whatever, you’re not worth it.  
 Brad: Yeah, let’s just go eat.
 
-<<set $mood to $mood - 20 * $picked_on>>
+<<set $mood to $mood - $picked_on>>
 [[End lunch]]
 ===
 title: End lunch
 tags: 
 colorID: 0
-position: 333,-1017
+position: 307,-967
 ---
 <<hide brad>>
 <<hide chad>>
-The bullies wander away.
+Eventually, the bullies wander away.
 Juana: ...I'm sorry about that.
-{$player}: Whatever.
+{$player}: It's fine.
 <<hide juana>>
 The rest of your lunch passes uneventfully.
 <<load 8 hallway>>

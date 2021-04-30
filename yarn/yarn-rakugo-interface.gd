@@ -30,8 +30,8 @@ func hide(character):
 func say(text):
 	var speaker = null
 	if ":" in text:
-		speaker = text.split(":")[0]
-		text = text.split(":")[1]
+		speaker = text.split(":")[0].strip_edges()
+		text = text.split(":")[1].strip_edges()
 	parent.say(speaker, text, {'typing': true})
 	parent.last_say = [speaker, text]
 	parent.step()

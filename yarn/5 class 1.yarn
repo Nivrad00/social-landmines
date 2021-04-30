@@ -1,51 +1,96 @@
 title: Start
 tags: 
 colorID: 0
-position: -67,-128
+position: -64,9
 ---
 <<show background classroom3>>
-<<show teacher happy center>>
+<<show teacher2 neutral center>>
 
-Teacher: Hey {$player}. Where have you been? 
+As you take a seat at your first class, your teacher looks up.
+Mr. Lee: Hey, {$player}. Where have you been? 
 
-[[I was out sick |Work]] 
-[[I was in the hospital |Work]]
-[[I was dealing with mental health concerns |Work]]  
-[[Silence |Work]]
+[[I was out sick|sick]] 
+[[I was in the hospital|hospital]]
+[[I was dealing with mental health concerns|mental health]]  
+[[(Silence)|silence]]
 ===
 title: Work
 tags: 
 colorID: 0
-position: -71,-469
+position: -64,-440
 ---
-Teacher: Well, you have a lot of work to catch up on
-[[No problem |Thermometer Good]]
-[[I will try my best |Thermometer Neutral]]
-[[Silence |Thermometer Bad]]
+Mr. Lee: Well, you have a lot of work to catch up on.
+[[No problem |work1]]
+[[I will try my best |work2]]
+[[(Silence)|work3]]
 ===
-title: Thermometer Good
+title: sick
 tags: 
 colorID: 0
-position: -376,-725
+position: -426,-194
+---
+{$player}: Um, I was out sick.
+[[Work]]
+===
+title: hospital
+tags: 
+colorID: 0
+position: -198,-202
+---
+{$player}: I was in the hospital.
+[[Work]]
+===
+title: mental health
+tags: 
+colorID: 0
+position: 16,-221
+---
+{$player}: I was dealing with, you know, mental health concerns.
+[[Work]]
+===
+title: silence
+tags: 
+colorID: 0
+position: 247,-216
+---
+You stay silent, staring at your desk.
+[[Work]]
+===
+title: work1
+tags: 
+colorID: 0
+position: -312,-655
 ---
 <<set $mood to $mood - 10>>
-<<hide teacher>>
-<<load 6 hallway>>
+{$player}: No problem!
+Mr. Lee chuckles, then moves on with his lesson for the day.
+[[End]]
 ===
-title: Thermometer Neutral
+title: work2
 tags: 
 colorID: 0
-position: -64,-751
+position: -65,-656
 ---
-<<hide teacher>>
-<<load 6 hallway>>
+{$player}: I'll try my best.
+Mr. Lee nods, then moves on with his lesson for the day.
+[[End]]
 ===
-title: Thermometer Bad
+title: work3
 tags: 
 colorID: 0
-position: 242,-750
+position: 190,-652
 ---
 <<set $mood to $mood + 10>>
-<<hide teacher>>
+You say nothing.
+Mr. Lee shrugs, then moves on with his lesson for the day.
+[[End]]
+===
+title: End
+tags: 
+colorID: 0
+position: -31,-873
+---
+Thankfully, the rest of the class is uneventful.
+<<hide teacher2>>
 <<load 6 hallway>>
 ===

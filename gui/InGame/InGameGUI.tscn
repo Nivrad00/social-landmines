@@ -11,7 +11,6 @@
 [ext_resource path="res://gui/InGame/thermometer/moodThermo.tscn" type="PackedScene" id=9]
 [ext_resource path="res://gui/InGame/ResourcesMenu/ResourceOption.tscn" type="PackedScene" id=10]
 [ext_resource path="res://gui/Minigames/Minigames.gd" type="Script" id=11]
-[ext_resource path="res://gui/InGame/ResourcesMenu/DeepBreathing.png" type="Texture" id=12]
 [ext_resource path="res://gui/Minigames/DeepBreathing3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://gui/Minigames/ColoringBook.tscn" type="PackedScene" id=14]
 [ext_resource path="res://gui/Minigames/FidgetSpinner.tscn" type="PackedScene" id=15]
@@ -36,36 +35,23 @@ tracks/0/keys = {
 }
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.113725, 0.113725, 0.113725, 1 )
 border_width_left = 3
 border_width_right = 3
 border_width_bottom = 3
 border_blend = true
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.384314, 1, 0.913725, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+[sub_resource type="StyleBoxEmpty" id=9]
 
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.686275, 0.490196, 1, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+[sub_resource type="StyleBoxEmpty" id=10]
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.666667, 1, 0.482353, 1 )
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=12]
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.113725, 0.113725, 0.113725, 1 )
 border_width_left = 3
 border_width_right = 3
 border_width_bottom = 3
@@ -128,9 +114,9 @@ margin_right = 1.0
 margin_bottom = -18.0
 
 [node name="DialoguePanel" parent="." instance=ExtResource( 5 )]
-margin_left = 33.0
-margin_top = -43.0
-margin_right = 33.0
+margin_left = 2.0
+margin_top = -18.8
+margin_right = 65.0
 margin_bottom = -43.0
 rect_scale = Vector2( 0.95, 0.95 )
 rect_pivot_offset = Vector2( 0.95, 0.95 )
@@ -168,10 +154,11 @@ autoplay = "Skip Animation"
 "anims/Skip Animation" = SubResource( 1 )
 
 [node name="QuickMenu" parent="." instance=ExtResource( 6 )]
-margin_left = 642.0
-margin_top = -47.0
-margin_right = 193.0
-margin_bottom = -7.0
+margin_left = 700.74
+margin_top = -45.4698
+margin_right = 251.74
+margin_bottom = -5.46985
+rect_scale = Vector2( 0.9, 0.9 )
 
 [node name="ResourcesMenuBG" type="ColorRect" parent="."]
 visible = false
@@ -184,11 +171,12 @@ __meta__ = {
 }
 
 [node name="ResourcesMenu" type="VBoxContainer" parent="."]
-margin_left = 747.525
+margin_left = 770.603
 margin_top = 5.0
-margin_right = 1130.53
+margin_right = 1153.61
 margin_bottom = 240.0
 rect_min_size = Vector2( 100, 20 )
+rect_scale = Vector2( 0.95, 0.95 )
 mouse_filter = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -237,14 +225,13 @@ size_flags_vertical = 3
 margin_top = 0.0
 margin_right = 363.0
 margin_bottom = 40.0
-custom_styles/panel = SubResource( 3 )
+custom_styles/panel = SubResource( 9 )
 resource_name = "DeepBreathing"
 button_text = "Deep breathing"
-button_icon = ExtResource( 12 )
 
 [node name="ResourceOption2" parent="ResourcesMenu/Content/MarginContainer/VBoxContainer" instance=ExtResource( 10 )]
 margin_right = 363.0
-custom_styles/panel = SubResource( 4 )
+custom_styles/panel = SubResource( 10 )
 resource_name = "FidgetSpinner"
 button_text = "Fidget Spinner"
 
@@ -252,7 +239,7 @@ button_text = "Fidget Spinner"
 margin_top = 88.0
 margin_right = 363.0
 margin_bottom = 128.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 11 )
 resource_name = "ColoringBook"
 button_text = "Coloring Book"
 
@@ -260,6 +247,7 @@ button_text = "Coloring Book"
 margin_top = 132.0
 margin_right = 363.0
 margin_bottom = 172.0
+custom_styles/panel = SubResource( 12 )
 resource_name = "Counselor"
 button_text = "Counselor"
 
@@ -279,6 +267,7 @@ custom_styles/panel = SubResource( 6 )
 [node name="Button" type="Button" parent="ResourcesMenu/Tab/Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -1.0
 text = "Coping Strategies"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -298,6 +287,7 @@ __meta__ = {
 }
 
 [node name="Minigames" type="Control" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1

@@ -1,374 +1,504 @@
 title: Start
 tags: 
 colorID: 0
-position: -132,-63
+position: -347,2568
 ---
 <<show background meeting-room>>
-Principal: Welcome back, {$player}. How are you feeling today? 
+You fidget in your chair as a variety of adults file into the room.
+Your mother, the principal, the guidance counselor, and even the math teacher are present, and they all seem to be staring at you.
+<<show counselor neutral center>>
+The counselor, Ms. Martin, clears her throat.
+Ms. Martin: Welcome back, {$player}. How are you feeling today? 
 
-	[[fine, thanks|fine]]
-	[[been better|been]]
-	[[I don’t really want to talk about it|No talk]]
+[[Fine, thanks|fine]]
+[[Been better|been better]]
 ===
 title: fine
 tags: 
 colorID: 0
-position: -12,-282
+position: -495,2320
 ---
-Counselor: Glad to hear it. 
-Counselor: We like to come together as a team to meet and consider the best way to support students who have been gone, so this meeting is about thinking through different ways to help support your transition and make sure you get caught up with your school work.
-Counselor: Before we talk about academics, is there anything you are particularly worried about?
+{$player}: Fine, thanks.
+Ms. Martin: Glad to hear it.
 
-[[Yes|been]]
-[[No|plan of action]]
-[[I’m uncomfortable speaking about this right now|plan of action]]
+[[before plan]]
 ===
-title: been
+title: been better
 tags: 
 colorID: 0
-position: 208,-283
+position: -160,2337
 ---
-Counselor: I'm sorry to hear that. One thing we can consider are some of the things the school can do for you that may make this transition easier. Would you like to discuss some of the supports that you can use to help today?
-[[Yes|Social Emotional Learning Supports]]
-[[No|Alert]]
-===
-title: No talk
-tags: 
-colorID: 0
-position: 430,-278
----
-Counselor: I understand. Why don't we ease into this, ok? 
-Counselor: How about I ask you what you need from us to be successful at school today?
-	
-	[[Ok|Social Emotional Learning Supports]]
-	[[No|Alert]]
+{$player}: Been better, I guess.
+Ms. Martin: I'm sorry to hear that. Let's just try to ease into things.
+[[before plan]]
 ===
 title: plan of action
 tags: 
 colorID: 0
-position: -13,-651
+position: -354,1623
 ---
-Counselor: Ok, before we begin making a plan about your academic work, is there anything you want to share/want us to know?
+Ms. Martin: Okay, great!
+Ms. Martin: In that case, I know Mom was concerned about your missed work, so we can start by making an academic plan for you. But before we start, is there anything at all you want to share or want us to know?
 
-[[No, I'm ready to talk|ready]]
-[[I'm nervous/scared about all of this, but let’s go ahead and talk|ready]]
-[[I don't want to share, and I'm not ready to talk|hesitant]]
+[[No, I'm ready to talk|ready1]]
+[[I'm nervous about all of this, but let's go ahead and talk|ready2]]
+[[I'm not really comfortable talking about this right now.|hesitant]]
 ===
 title: Social Emotional Learning Supports
 tags: 
 colorID: 0
-position: 236,-686
+position: -65,-572
 ---
-Counselor: Here are a list of things some students have found helpful when returning to school. Let us know which ones you think you’d like to try today:
+Ms. Martin: Here are a list of things some students have found helpful when returning to school. Let us know which ones you think you'd like to try today.
 
-*Note this is a critical time to ask for supports. If you don't provide this information now, you will not receive supports to make your first day back easier.*
+Note this is a critical time to ask for supports. If you don't provide this information now, you will not receive supports to make your first day back easier.
 
-[[taking breaks during class|breaks]]
-[[transitioning between classes with a lot of people in the hallway|no crowded hallway]]
-[[help making up school work|making up work]]
-[[help making up missed lessons|making up lessons]]
-[[calming strategies to use in class|calming strategies]]
+[[Taking breaks during class|breaks]]
+[[Leaving class early to avoid crowded hallways|no crowded hallway]]
+[[Help making up school work|making up work]]
+[[Help making up missed lessons|making up lessons]]
+[[Calming strategies to use in class|calming strategies]]
 ===
 title: Alert
 tags: 
 colorID: 0
-position: 515,-665
+position: -66,-185
 ---
+{$player}: No, I'm good.
+Ms. Martin: Are you sure?
 Please note that this meeting is critical for determining your access to specific supports for the day.
 If you don't select the supports you need now, you will NOT get another opportunity to do so.
-[[Social Emotional Learning Supports]]
-[[I understand, and do not want any supports|counselor other topics]]
+[[Ask for supports|before supports3]]
+[[I understand, and I don't want any supports|end2]]
 ===
 title: ready
 tags: 
 colorID: 0
-position: -491,-964
+position: -414,776
 ---
-Counselor: Ok, just let us know if you can think of anything. 
-Counselor: We will dive right in. 
-Counselor: We are nearly done with this quarter, so there is nothing we can do about changing classes, so you will have to make up missed work.
-Counselor: You will need to go to each of your teachers and make a plan for completing the missed assignments.
-Counselor: Mom, for next semester, we could make changes to {$player}'s schedule – is that something you would like?
-[[Yes |Mom schedule a]]
+Ms. Martin: Okay, just let us know if you can think of anything!
+Ms. Martin: We will dive right in. We're nearly done with this semester, so there is nothing we can do about changing classes. That means you'll have to make up missed work.
+Ms. Martin: You'll need to go to each of your teachers and make a plan for completing the missed assignments.
+Ms. Martin: We could make changes to {$player}'s schedule for the next semester, though –- Mom, is that something you would like?
+<<show mom neutral right>>
+Mom: Yes, we'd like {$player} to take less challenging courses so {$they} can focus on recovering. 
+Mom: Can you swap {$them} out of some of those courses?
+Ms. Martin: Sure, we can change some courses. Maybe we can drop some of the extracurriculars, or offer a course that is more like a study hall.
+Ms. Martin: What do you think about that, {$player}?
+You think to yourself -- how do you feel about your classes being changed?
+[[Fine|internal dialogue 1]]
+[[Bad|internal dialogue 2]]
 ===
 title: hesitant
 tags: 
 colorID: 0
-position: -231,-971
+position: -95,1380
 ---
-Counselor: I understand. Thank you for being honest with us. What do you need from us at this time?
+{$player}: Honestly, I'm not really comfortable talking about this right now.
+Ms. Martin: I understand. Thank you for being honest with us. What do you need from us at this time?
 [[A break|break]]
-[[Nothing, I’m ok|ready]]
-===
-title: Mom schedule a
-tags: 
-colorID: 0
-position: -371,-1176
----
-Mom: Yes, we’d like {$player} to take less challenging courses so they can focus on recovering. 
-Mom: Can you swap them out of some of those courses?
-[[counselor scheduling a]]
+[[Nothing, I'm okay|ready3]]
 ===
 title: break
 tags: 
 colorID: 0
-position: -111,-1193
+position: 30,1134
 ---
-Nurse: That sounds fair. 
-Nurse: Feel free to take a few moments to yourself. 
-Nurse: let us know when you're ready to continue. 
-[[Ok, ready|ready]]
-[[I'm not ready at this time|Not at this time]]
+Ms. Martin: That sounds fair. 
+Ms. Martin: Feel free to take a few moments to yourself -- just let us know when you're ready to continue.
+You nod and take a deep breath.
+[[Okay, ready|ready4]]
+[[I'm not ready right now|Not at this time]]
 ===
 title: Not at this time
 tags: 
 colorID: 0
-position: 229,-1413
+position: 158,910
 ---
-Counselor: If it's too much, we can finish the meeting without you, and you can head right to class? 
-[[Yes|End]]
-[[No, I’m good to stay|Ready]]
+{$player}: I can't do it. I'm not ready right now.
+Ms. Martin: If it's too much, we can finish the meeting without you, and you can head right to class. How does that sound? 
+Please note that this meeting is critical for determining your access to specific supports for the day.
+If you leave now, you will NOT get another opportunity to get support.
+[[I'd like to leave|end1]]
+[[I'm good to stay|ready5]]
 ===
 title: End
 tags: 
 colorID: 0
-position: 802,-2004
+position: -57,-2135
 ---
-You are now done with the re-entry meeting. Give yourself a pat on the back for getting through it!
-
-<<load 2 crowded hallway>>
-
-
-===
-title: Ready
-tags: 
-colorID: 0
-position: 1541,-1560
----
-Counselor: Ok, just let us know if you can think of anything. 
-Counselor: We will dive right in. 
-Counselor: We are nearly done with this quarter, so there is nothing we can do about changing classes, so you will have to make up missed work.
-Counselor: You will need to go to each of your teachers and make a plan for completing the missed assignments.
-Counselor: Mom, for next semester, we could make changes to {$player}'s schedule – is that something you would like?
-[[Yes |Mom schedule a]]
+<<load 1.5 counselor>>
 ===
 title: breaks
 tags: 
 colorID: 0
-position: 356,-910
+position: -599,-840
 ---
-Counselor: One thing that can help kids who have been out for a while is having a pass that allows them to come visit me when they are feeling overwhelmed.
-Counselor: This could be in class, in the hall, in the cafeteria--wherever and whenever.
-Counselor: Do you think that is something you would like to try?
+Ms. Martin: One thing that can help kids who have been out for a while is having a pass that allows them to come visit me when they are feeling overwhelmed.
+Ms. Martin: This could be in class, in the hall, in the cafeteria -- wherever and whenever.
+Ms. Martin: Do you think that is something you would like to try?
 [[Yes|yes breaks]]
 [[No|no breaks]]
 ===
 title: no crowded hallway
 tags: 
 colorID: 0
-position: 576,-907
+position: -260,-840
 ---
-Counselor: We can set it up so you leave class 5 minutes early and get to your next class before the bell rings. That way, you won’t see as many other kids in the hallway.
-Counselor: How does that sound? 
+Ms. Martin: We can set it up so you leave class five minutes early and get to your next class before the bell rings. That way, you won't see as many other kids in the hallway.
+Ms. Martin: How does that sound? 
 [[Good|yes no ch]]
 [[Bad |no no ch]]
 ===
 title: making up work
 tags: 
 colorID: 0
-position: 794,-909
+position: 57,-846
 ---
-Teacher: I can meet with you to come up with a timeline and plan for tackling all the work you need to complete after you speak with your teachers. 
-Teacher: Do you like that plan? 
+<<show teacher happy right>>
+Your math teacher raises her hand.
+Ms. Roberts: I think I can help here. I can meet with you to come up with a timeline and plan for tackling all the work you need to complete for my class.
+Ms. Roberts: Do you like that plan? 
 [[Yes|yes making up work]]
 [[No|no making up work]]
 ===
 title: making up lessons
 tags: 
 colorID: 0
-position: 1016,-908
+position: 389,-839
 ---
-Counselor: After you speak with your teachers, we can make a plan for staying after school and working during your free period to learn some of the materials you missed. Counselor: What do you think of that plan?
+Ms. Martin: After you speak with your teachers, we can make a plan for staying after school and working during your free period to learn some of the materials you missed. 
+Ms. Martin: What do you think of that plan?
 [[It sounds good|yes making up lessons]]
 [[It sounds bad|no making up lessons]]
 ===
 title: calming strategies
 tags: 
 colorID: 0
-position: 1237,-908
+position: 657,-843
 ---
-Counselor: Some of the things that we can ask your teachers to do is to let you have access to specific activities  in class.
-Counselor: This could include having a fidget or coloring book.
-Counselor: Would either of these work? 
+Ms. Martin: Some of the things that we can ask your teachers to do is to let you have access to specific activities in class.
+Ms. Martin: This could include having a fidget or coloring book. Would either of these work? 
 [[Yes|yes calming]]
 [[No|no calming]]
 ===
 title: yes breaks
 tags: 
 colorID: 0
-position: 476,-1125
+position: -707,-1063
 ---
-Counselor: Great. A universal pass to come visit me will be available to you as needed during class. 
-Counselor: Would you like to consider additional supports during the school day? 	
+{$player}: Yes, please.
+Ms. Martin: Great. A universal pass to come visit me will be available to you as needed during class. 
+Ms. Martin: Would you like to consider additional supports during the school day? 	
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
-
 ===
 title: no breaks
 tags: 
 colorID: 0
-position: 696,-1128
+position: -510,-1066
 ---
-Ok, this means that you will NOT have the option to come visit me during class.
-Do you need additional supports?
+{$player}: No thanks.
+Ms. Martin: Okay, this means that you will NOT have the option to come visit me during class.
+Ms. Martin: Do you need additional supports?
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: counselor other topics
 tags: 
 colorID: 0
-position: 596,-1348
+position: -74,-1569
 ---
-Counselor: Before we close for the day, is there anything else you’d like us to consider or talk about?
+{$player}: I think I'm good.
+Ms. Martin: Awesome. Well, before we close for the day, is there anything else you'd like us to consider or talk about?
 [[Yes|Other topics]]
-[[No, I'm good|End]]
+[[No, I'm good|no other topics]]
 ===
 title: yes no ch
 tags: 
 colorID: 0
-position: 694,-1126
+position: -328,-1063
 ---
 <<set $support_hallway to true>>
-Counselor: Great. We will set this up for you today, and you should have a less busy hallway during your class transitions.. 
-Counselor: Do you need any other supports today? 
+{$player}: That sounds good.
+Ms. Martin: Great. We will set this up for you today, and you should have a less busy hallway during your class transitions..
+Ms. Martin: Do you need any other supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: no no ch
 tags: 
 colorID: 0
-position: 916,-1126
+position: -162,-1074
 ---
-Ok.This means that you will experience crowded hallways on your way to and from classes. 
-Do you need any other supports today? 
+{$player}: No thanks.
+Ms. Martin: Okay. Keep in mind this means that you will experience some crowded hallways on your way to and from classes. 
+Ms. Martin: Do you need any other supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: yes making up work
 tags: 
 colorID: 0
-position: 914,-1129
+position: -282,1500
 ---
 <<set $support_work to true>>
-Counselor: Great.This means Mrs. Smith will meet with you today to help make a plan about missing work..
-Counselor: Do you need any other supports today?
+{$player}: That sounds good.
+Ms. Martin: Great. This means Mrs. Roberts will meet with you today to help make a plan about missing work.
+<<hide teacher>>
+Ms. Martin: Do you need any other supports today?
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: no making up work
 tags: 
 colorID: 0
-position: 1134,-1126
+position: 137,-1062
 ---
-Ok. This means that you will not have the opportunity to meet with Mrs. Smith regarding missed work. 
-Do you need other supports today? 
+{$player}: No thanks.
+Ms. Martin: Okay. This means that you will not have the opportunity to meet with Mrs. Roberts regarding missed work. 
+<<hide teacher>>
+Ms. Martin: Do you need other supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: yes making up lessons
 tags: 
 colorID: 0
-position: 1136,-1130
+position: 296,-1058
 ---
 <<set $support_lessons to true>>
-Counselor: Great. You will have the opportunity to meet with the counselor after school and during free periods to discuss the specific teachers to meet with about missed class lessons.
-Counselor: Do you need additional supports today?
+{$player}: Sounds good.
+Ms. Martin: Great. You will have the opportunity to meet with the counselor after school and during free periods to discuss the specific teachers to meet with about missed class lessons.
+Ms. Martin: Do you need additional supports today?
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: no making up lessons
 tags: 
 colorID: 0
-position: 1356,-1127
+position: 431,-1053
 ---
-Ok. This means that you will not have the opportunity to meet with the counselor after school and during free periods to discuss missed class lessons.
-Do you need additional supports today?
+{$player}: No thanks.
+Ms. Martin: Okay. This means that you will not have the opportunity to meet with the counselor after school and during free periods to discuss missed class lessons.
+Ms. Martin: Do you need additional supports today?
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: yes calming
 tags: 
 colorID: 0
-position: 1355,-1126
+position: 628,-1063
 ---
 <<set $support_calming to true>>
-Counselor: Great. This means that you'll have access to both a fidget spinner and a coloring book during classes today. Do you need additional supports today? 
+{$player}: Yes please.
+Ms. Martin: Great. This means that you'll have access to both a fidget spinner and a coloring book during classes today. 
+Ms. Martin: Do you need additional supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
 ===
 title: no calming
 tags: 
 colorID: 0
-position: 1577,-1127
+position: 807,-1070
 ---
-Counselor: Ok. This means that you won't have access to either the fidget spinner or a coloring book during classes today. 
-Counselor: Do you need additional supports today? 
+{$player}: No thanks.
+Ms. Martin: Okay. This means that you won't have access to either the fidget spinner or a coloring book during classes today. 
+Ms. Martin: Do you need additional supports today? 
 [[Yes|Social Emotional Learning Supports]]
 [[No|counselor other topics]]
-===
-title: counselor scheduling a
-tags: 
-colorID: 0
-position: -251,-1394
----
-Counselor: Sure, we can change some courses and maybe drop some of the extracurriculars and offer a course that is more like a study hall.
-Counselor: What do you think about that, {$player}?
-[[internal dialogue 1]]
-===
-title: internal dialogue 1
-tags: 
-colorID: 0
-position: -131,-1612
----
-How do you feel about your classes being changed?
-[[Fine|internal dialogue 2]]
-[[Bad|internal dialogue 2]]
 ===
 title: internal dialogue 2
 tags: 
 colorID: 0
-position: -13,-1828
+position: -280,509
 ---
-How should I respond to this idea? 
-[[I like the idea|yes to less diff]]
-[[I do not like the idea|no to less diff]]
+The thought of having to change your classes makes you feel bad.
+[[internal dialogue]]
 ===
 title: yes to less diff
 tags: 
 colorID: 0
-position: 107,-2048
+position: -291,46
 ---
-Me: Yes, this sounds like a good plan.
-Counselor: Ok, good. Is there anything else you’d like us to consider or talk about?
-Mom: No. We are just really focused on making sure {$player} is caught up academically.
-What do you think of this, {$player}? 
-[[I still want to discuss more|Social Emotional Learning Supports]]
-[[I agree with mom|Social Emotional Learning Supports]]
+{$player}: Yeah, that plan sounds fine.
+Mr. Martin: Okay, good. Is there anything else you'd like us to consider or talk about, mom?
+Mom: No. We're just really focused on making sure {$player} is caught up academically.
+Mr. Martin: Okay, great! In that case, let's move on to our next topic.
+<<hide mom>>
+[[before supports1]]
 ===
 title: no to less diff
 tags: 
 colorID: 0
-position: 327,-2045
+position: -678,15
 ---
-Me: No, I don't like this plan. 
-Counselor: Ok. What would you like to see change? 
+{$player}: I don't really like that plan. 
+Ms. Martin: Okay. What would you like to see change? 
+<<hide mom>>
 [[making up work]]
 ===
 title: Other topics
 tags: 
 colorID: 0
-position: 1119,-1734
+position: 85,-1818
 ---
-Counselor: Thank you for that. We will try to address your concerns throughout the school day. 
+{$player}: Well, I was wondering...
+You chat with the counselor about a few more concerns you have.
+Ms. Martin: Thank you for that. We will do our best to address your concerns throughout the school day.
+[[End]]
+===
+title: ready1
+tags: 
+colorID: 0
+position: -572,1395
+---
+{$player}: No, I'm ready to talk.
+[[ready]]
+===
+title: ready2
+tags: 
+colorID: 0
+position: -330,1380
+---
+{$player}: I'm nervous about all of this, but I guess we can go ahead and talk.
+[[ready]]
+===
+title: ready3
+tags: 
+colorID: 0
+position: -195,1139
+---
+{$player}: Nothing, I'm okay.
+[[ready]]
+===
+title: ready4
+tags: 
+colorID: 0
+position: -87,913
+---
+{$player}: Okay, I think I'm ready.
+[[ready]]
+===
+title: ready5
+tags: 
+colorID: 0
+position: 7,691
+---
+{$player}: No, I'm good to stay.
+[[ready]]
+===
+title: plan of action1
+tags: 
+colorID: 0
+position: -115,1959
+---
+{$player}: Yes, actually...
+You explain what's been worrying you about your first day back.
+Ms. Martin: Ah, I totally understand.
+Ms. Martin: There's no perfect solution for that, but later in the meeting, we can go over some resources that might help you deal with those problems. Does that sound alright?
+
+[[Sure|plan of action3]]
+===
+title: end1
+tags: 
+colorID: 0
+position: 638,617
+---
+{$player}: Yes, I'd like to leave.
+Ms. Martin: Alright, you can head to your homeroom, then. Thank you for humoring us with this meeting, {$player}.
+You nod and hurry out the door.
+<<load 2 hallway>>
+===
+title: internal dialogue 1
+tags: 
+colorID: 0
+position: -511,509
+---
+You guess changing your classes wouldn't be that bad.
+[[internal dialogue]]
+===
+title: internal dialogue
+tags: 
+colorID: 0
+position: -379,276
+---
+What do you say out loud?
+[[Yeah, that sounds fine|yes to less diff]]
+[[I don't like that plan|no to less diff]]
+===
+title: before supports1
+tags: 
+colorID: 0
+position: -317,-173
+---
+Ms. Martin: One thing we can consider are some of the things the school can do for you that may make this transition easier. 
+Ms. Martin: Would you like to discuss some of the supports that you can use to help today?
+
+[[Yes|before supports2]]
+[[No|Alert]]
+===
+title: before plan
+tags: 
+colorID: 0
+position: -349,2081
+---
+Ms. Martin: We want to come together as a team to meet and consider the best way to support students who have been gone, so this meeting is about thinking through different ways to help support your transition and make sure you get caught up with your school work.
+Ms. Martin: First of all, is there anything you are particularly worried about?
+
+[[Yes|plan of action1]]
+[[No|plan of action2]]
+===
+title: plan of action2
+tags: 
+colorID: 0
+position: -519,1860
+---
+{$player}: Not really.
+[[plan of action]]
+===
+title: plan of action3
+tags: 
+colorID: 0
+position: -119,1731
+---
+{$player}: Sure.
+[[plan of action]]
+===
+title: end2
+tags: 
+colorID: 0
+position: 468,-164
+---
+{$player}: Yeah, I don't need any support.
+Ms. Martin: Alright, if you're sure.
+[[counselor other topics]]
+===
+title: before supports2
+tags: 
+colorID: 0
+position: -288,-389
+---
+{$player}: Sure.
+Ms. Martin: Great!
+[[Social Emotional Learning Supports]]
+===
+title: before supports3
+tags: 
+colorID: 0
+position: 165,-383
+---
+{$player}: Well... I guess it can't hurt to hear my options.
+Ms. Martin: Great!
+
+[[Social Emotional Learning Supports]]
+===
+title: no other topics
+tags: 
+colorID: 0
+position: -220,-1806
+---
+{$player}: I don't think so.
+Ms. Martin: In that case, I think we're all done!
 [[End]]
 ===

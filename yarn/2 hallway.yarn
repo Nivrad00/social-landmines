@@ -1,0 +1,22 @@
+title: Start
+tags: 
+colorID: 0
+position: -65,-502
+---
+<<show background hallway>>
+<<if $support_hallway>>
+    <<stop>>
+    You enter the hallway to head to homeroom.
+	Thankfully, you left early, so you can have a quiet transition between classes.
+<<else>>
+    <<play crowd.wav>>
+    <<show anonymous1 neutral left>>
+    <<show anonymous2 neutral right>>
+    You enter the hallway to head to homeroom.
+    Other students give you concerned looks as you pass, but no one says anything.
+    <<hide anonymous1>>
+    <<hide anonymous2>>
+<<endif>>
+
+<<load 3 homeroom>>
+===

@@ -4,21 +4,20 @@ colorID: 0
 position: 516,350
 ---
 <<show background suburb>>
-Your phone pings as you receive a text message notification
+Your phone pings as you receive a text message notification.
 <<show phone notif center>>
 
 <<if $category2 == "extracurricular">>
-    Claire: “Hey...”
-	
-    Claire: “Is it true that you got EXTRA time for a test that you BOMBED?!”
+    Claire: "Hey..."
+    Claire: "Is it true that you got EXTRA time for a test that you BOMBED?!"
     [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message back|Message back1]]
 
 <<elseif $category2 == "popularity">>
-    Claire: “Hey {$player}!”
-    Claire: “Did you hear all about how awesome my birthday party was last weekend?”
-    Claire: “You weren’t invited, huh? Probably because no one likes you”
+    Claire: "Hey {$player}!"
+    Claire: "Did you hear all about how awesome my birthday party was last weekend?"
+    Claire: "No one invited you, huh? Probably because no one likes you"
     
 
     [[Look to coping skills|coping skills]]
@@ -28,83 +27,81 @@ Your phone pings as you receive a text message notification
 
 
 <<elseif $category2 == "partner">>
-<<<<<<< Updated upstream
-    You open the message to see a photo of your partner holding hands with someone else.
-    Claire (the texter): “Looks like you weren’t worth waiting for.” 
+    <<show phone hands center>>
+    You open the message to see a photo of your {$partner} holding hands with someone else.
+    Claire: "Looks like you weren't worth waiting for."
     
     How do you respond to this notification? 
     
-    [[look to coping skills|coping skills]]
+    [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message back|Message back3]]
-=======
-    [[partner]]
->>>>>>> Stashed changes
 
 
 <<elseif $category2 == "friendships">>
-    Claire: Hey, are you coming?
-    {$player}: Huh?
-    Claire: Whoops, wrong person. 
-    {$player}: Are you having people over? 
-    Claire: “Listen, {$player}. You’re nice and all, but you’re just kind of a bummer.”
-    Claire: “We don’t want to hang out with you anymore.”
+    Claire: "Hey, are you coming?"
+    {$player}: "Huh?"
+    Claire: "Whoops, wrong person."
+    {$player}: "Are you having people over"
+    Claire: "Listen, {$player}. You’re nice and all, but you're just kind of a bummer."
+    Claire: "We don't want to hang out with you anymore."
     
-   
     [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
-    [[Message the friend|Message back4]]
+    [[Message back|Message back4]]
 
 <<endif>>
 ===
 title: Message back1
 tags: 
 colorID: 0
-position: -606,496
+position: -608,494
 ---
-{$player}: “That’s none of your business.”
-Claire: “So it IS true?.” 
+{$player}: "That's none of your business."
+Claire: "So it IS true?"
 
-[["You should really watch your mouth"|watch mouth]]
-[["Please just leave me alone"|leave alone]]
+[[You should really watch your mouth|watch mouth]]
+[[Please just leave me alone|leave alone]]
 ===
 title: Message back2
 tags: 
 colorID: 0
 position: -600,752
 ---
-{$player}: “Whatever, I was busy anyways.”
-Claire: “Yeah, keep telling yourself that.”
+{$player}: "Whatever, I was busy anyways."
+Claire: "Yeah, keep telling yourself that."
 
-[["You should really watch your mouth"|watch mouth]]
-[["Please just leave me alone"|leave alone]]
+[[You should really watch your mouth|watch mouth]]
+[[Please just leave me alone|leave alone]]
 ===
 title: Message back3
 tags: 
 colorID: 0
-position: -639,1004
+position: -608,1004
 ---
-{$player}: “Please stay out of my business.”
-Claire: “Well it Looks like SOMEONE definitely is lmao.”
+{$player}: "Please stay out of my business"
+Claire: "I'M not the one you should be worried about lmao"
 
-[["You should really watch your mouth"|watch mouth]]
-[["Please just leave me alone"|leave alone]]
+[[You should really watch your mouth|watch mouth]]
+[[Please just leave me alone|leave alone]]
 ===
 title: Message back4
 tags: 
 colorID: 0
-position: -647,1247
+position: -648,1245
 ---
+You type out a response...
 
-[["Your loss!"|your loss]]
-[["Whatever, goodbye.”|goodbye]]
+[[Your loss!|your loss]]
+[[Whatever, goodbye.|goodbye]]
 ===
 title: coping skills
 tags: 
 colorID: 0
 position: -611,-8
 ---
-Please use this time to use a coping skill
+<<hide phone>>
+You put away your phone. This would be a good time to use a coping skill!
 
 [[Finished|End]]
 ===
@@ -113,74 +110,76 @@ tags:
 colorID: 0
 position: -608,254
 ---
-<<hide phone notif center>>
-You don’t honor this message with a response. 
+<<hide phone>>
+You don't honor this message with a response. You have more important things to worry about.
 
 [[End]]
 ===
 title: watch mouth
 tags: 
 colorID: 0
-position: -1103,826
+position: -1030,688
 ---
-Claire: “Or what? You’ll go cry to your friends at the nuthouse?”
+{$player}: "You should really watch your mouth!"
+Claire: "Or what? You’ll go cry to your friends at the nuthouse?"
  
-[[“Whatever, man. Just stop it.”|End]]
-[[“Screw you! I hate you!”|End]]
-[[I block their messages, because this isn’t constructive|End]]
+[[Whatever, man. Just stop it.|Close]]
+[[Screw you! I hate you!|Close]]
+[[(Block her messages because this isn't constructive)|Close]]
 ===
 title: leave alone
 tags: 
 colorID: 0
-position: -1104,1117
+position: -987,1038
 ---
-Claire: “Me leaving you alone in exchange for you leaving me alone? Done.”
+{$player}: "Please just leave me alone"
+Claire: "Me leaving you alone in exchange for you leaving me alone? Done."
  
-[[“Whatever, man. Just stop it.”|End]]
-[[“Screw you! I hate you!”|End]]
-[[I block their messages, because this isn’t constructive|End]]
+[[Whatever, man. Just stop it.|Close]]
+[[Screw you! I hate you!|Close]]
+[[(Block her messages because this isn't constructive)|Close]]
 ===
 title: your loss
 tags: 
 colorID: 0
-position: -926,1447
+position: -969,1288
 ---
-Claire: “Mmm not really, dude. Maybe you were hot shit at the nuthouse, but you’re no one here.” 
+{$player}: "Your loss!"
+Claire: "Mmm not really, dude. Maybe you were hot shit at the nuthouse, but you're no one here."
 
-[["Whatever, man. Just stop it."|End]]
-[["Screw you! I hate you!"|End]]
-[[I block their messages, because this isn’t constructive|End]]
+[[Whatever, man. Just stop it.|Close]]
+[[Screw you! I hate you!|Close]]
+[[(Block her messages because this isn't constructive)|Close]]
 ===
 title: goodbye
 tags: 
 colorID: 0
-position: -173,1369
+position: -955,1509
 ---
-Claire: “Lol we WON’T miss you!”
+{$player}: "Whatever, goodbye"
+Claire: "Lol we WON’T miss you!"
 
-[["Whatever, man. Just stop it.”|End]]
-[[“Screw you! I hate you!”|End]]
-[[I block their messages, because this isn’t constructive|End]]
+[[Whatever, man. Just stop it.|Close]]
+[[Screw you! I hate you!|Close]]
+[[(Block her messages because this isn't constructive)|Close]]
 ===
 title: End
 tags: 
 colorID: 0
-position: -1140,255
+position: -1580,558
 ---
-<<hide phone notif center>>
-<<hide phone hands center>>
+Eventually, your home appears around the corner.
+You unlock the door, shrug off your backpack, and finally sit down to relax.
 <<end>>
 ===
-title: partner
+title: Close
 tags: 
 colorID: 0
-position: 426,1008
+position: -1332,1000
 ---
-You open the message to see a photo of your partner holding hands with someone else.
-<<show phone hands center>>
-	Claire, who sent you the picture, also sent you a message.
-    Claire: “Looks like you weren’t worth waiting for.” 
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back3]]
+<<hide phone>>
+With that, you end the conversation.
+{$player}: What a jerk...
+
+[[End]]
 ===

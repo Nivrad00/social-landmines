@@ -4,7 +4,20 @@ colorID: 0
 position: -19,-302
 ---
 <<show background hallway>>
-You walk through the hallway...
-{$player}: What a neutral hallway experience.
+
+<<if $support_hallway>>
+    You slip out of homeroom before the bell rings.
+	You manage to get to your first class without seeing anyone.
+<<else>>
+    <<play crowd.wav>>
+    <<show anonymous1 neutral left>>
+    <<show anonymous2 neutral right>>
+    You walk through the crowded hallway to your first class.
+	No one pays you any mind.
+    <<hide anonymous1>>
+    <<hide anonymous2>>
+	<<play Forward.wav>>
+<<endif>>
+
 <<load 5 class 1>>
 ===

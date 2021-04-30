@@ -22,21 +22,21 @@ func _on_end_game():
 	$Container/Supports.text = PoolStringArray(messages).join('\r\n') + '\r\n'
 	
 	var stressors = []
-	if Global.get_var('around_kids') >= 20:
+	if Global.get_var('around_kids') and Global.get_var('around_kids') >= 20:
 		stressors.append('Being around a lot of kids in school')
-	if Global.get_var('around_adults') >= 20:
+	if Global.get_var('around_adults') and Global.get_var('around_adults') >= 20:
 		stressors.append('Being around a lot of adults in school')
-	if Global.get_var('one_on_one') >= 20:
+	if Global.get_var('one_on_one') and Global.get_var('one_on_one') >= 20:
 		stressors.append('Having one-on-one conversations with adults in school')
-	if Global.get_var('wrong_thing') >= 20:
+	if Global.get_var('wrong_thing') and Global.get_var('wrong_thing') >= 20:
 		stressors.append('Saying the wrong thing to other kids')
-	if Global.get_var('picked_on') >= 20:
+	if Global.get_var('picked_on') and Global.get_var('picked_on') >= 20:
 		stressors.append('Getting picked on or made fun of by other kids')
-	if Global.get_var('crowded_places') >= 20:
+	if Global.get_var('crowded_places') and Global.get_var('crowded_places') >= 20:
 		stressors.append('Being in crowded places')
-	if Global.get_var('attention_kids') >= 20:
+	if Global.get_var('attention_kids') and Global.get_var('attention_kids') >= 20:
 		stressors.append('Getting a lot of attention from other kids')
-	if Global.get_var('attention_teachers') >= 20:
+	if Global.get_var('attention_teachers') and Global.get_var('attention_teachers') >= 20:
 		stressors.append('Getting a lot of attention from teachers')
 	$Container/Stressors.text = PoolStringArray(stressors).join('\r\n') + '\r\n'
 	

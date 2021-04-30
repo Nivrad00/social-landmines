@@ -6,8 +6,8 @@ func _ready():
 
 func _on_say(_character, _text, _parameters):
 	if _character:
-		show()
+		modulate.a = 1
 		self.bbcode_text = _character.get_composite_name("bbcode")
 	else:
-		hide()
+		modulate.a = 0
 		# self.bbcode_text = Rakugo.Say.get_narrator().name
