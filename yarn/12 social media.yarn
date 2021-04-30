@@ -6,7 +6,7 @@ position: 391,393
 <<show background suburb>>
 Your phone pings as you receive a text message notification
 
-<<if $category2 == 'extracurricular'>>
+<<if $category2 == "extracurricular">>
     Claire: “Hey...”
     Claire: “Is it true that you got EXTRA time for a test that you BOMBED?!”
     
@@ -16,7 +16,7 @@ Your phone pings as you receive a text message notification
     [[Ignore it|Ignore]]
     [[Message back|Message back1]]
 
-<<elseif $category2 == 'popularity'>>
+<<elseif $category2 == "popularity">>
     Claire: “Hey {$player}!”
     Claire: “Did you hear all about how awesome my birthday party was last weekend?”
     Claire: “You weren’t invited, huh? Probably because no one likes you”
@@ -28,7 +28,7 @@ Your phone pings as you receive a text message notification
 
 
 
-<<elseif $category2 == 'partner'>>
+<<elseif $category2 == "partner">>
     You open the message to see a photo of your partner holding hands with someone else.
     Claire (the texter): “Looks like you weren’t worth waiting for.” 
     
@@ -39,7 +39,7 @@ Your phone pings as you receive a text message notification
     [[Message back|Message back3]]
 
 
-<<elseif $category2 == 'friendships'>>
+<<elseif $category2 == "friendships">>
     Claire: Hey, are you coming?
     {$player}: Huh?
     Claire: Whoops, wrong person. 
