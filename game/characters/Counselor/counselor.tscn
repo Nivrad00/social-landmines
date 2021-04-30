@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/characters/Counselor/neutral.png" type="Texture" id=1]
+
+[node name="counselor" type="Node2D" groups=[
+"$ counselor *",
+"showable",
+]]
+
+[node name="neutral" type="Sprite" parent="." groups=[
+"$ counselor #",
+"showable",
+]]
+position = Vector2( -1.26465, 396.558 )
+scale = Vector2( 0.524, 0.528333 )
+texture = ExtResource( 1 )

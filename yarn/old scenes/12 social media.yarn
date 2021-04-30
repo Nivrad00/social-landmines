@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: 516,355
+position: 516,350
 ---
 <<show background suburb>>
 Your phone pings as you receive a text message notification.
@@ -27,7 +27,13 @@ Your phone pings as you receive a text message notification.
 
 
 <<elseif $category2 == "partner">>
-   [[partner]]
+    <<show phone hands center>>
+    You open the message to see a photo of your {$partner} holding hands with someone else.
+    Claire: "Looks like you weren't worth waiting for."
+       
+    [[Look to coping skills|coping skills]]
+    [[Ignore it|Ignore]]
+    [[Message back|Message back3]]
 
 
 <<elseif $category2 == "friendships">>
@@ -158,7 +164,7 @@ Claire: "Lol we WON’T miss you!"
 title: End
 tags: 
 colorID: 0
-position: -1580,560
+position: -1580,558
 ---
 Eventually, your home appears around the corner.
 You unlock the door, shrug off your backpack, and finally sit down to relax.
@@ -174,17 +180,4 @@ With that, you end the conversation.
 {$player}: What a jerk...
 
 [[End]]
-===
-title: partner
-tags: 
-colorID: 0
-position: 52,1237
----
-<<show phone hands center>>
-    You open the message to see a photo of your {$partner} holding hands with someone else.
-    Claire: "Looks like you weren't worth waiting for."
-       
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back3]]
 ===
