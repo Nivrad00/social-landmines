@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/characters/anonymous1/neutral.png" type="Texture" id=1]
+
+[node name="anonymous1" type="Node2D" groups=[
+"$ anonymous1 *",
+"showable",
+]]
+
+[node name="neutral" type="Sprite" parent="." groups=[
+"$ anonymous1 #",
+"showable",
+]]
+position = Vector2( 274.239, 394.032 )
+scale = Vector2( 0.517209, 0.516049 )
+texture = ExtResource( 1 )

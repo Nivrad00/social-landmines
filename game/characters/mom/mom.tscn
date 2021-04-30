@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://game/characters/mom/neutral.png" type="Texture" id=1]
+
+[node name="mom" type="Node2D" groups=[
+"$ mom *",
+"showable",
+]]
+
+[node name="neutral" type="Sprite" parent="." groups=[
+"$ mom #",
+"showable",
+]]
+position = Vector2( 368.153, 301.902 )
+scale = Vector2( 0.736491, 0.677229 )
+texture = ExtResource( 1 )
