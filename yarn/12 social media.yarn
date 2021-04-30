@@ -1,18 +1,17 @@
 title: Start
 tags: 
 colorID: 0
-position: 391,393
+position: 516,350
 ---
 <<show background suburb>>
 Your phone pings as you receive a text message notification
+<<show phone notif center>>
 
 <<if $category2 == "extracurricular">>
     Claire: “Hey...”
+	
     Claire: “Is it true that you got EXTRA time for a test that you BOMBED?!”
-    
-    How do you respond to this notification? 
-    
-    [[look to coping skills|coping skills]]
+    [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message back|Message back1]]
 
@@ -21,14 +20,15 @@ Your phone pings as you receive a text message notification
     Claire: “Did you hear all about how awesome my birthday party was last weekend?”
     Claire: “You weren’t invited, huh? Probably because no one likes you”
     
-    How do you respond to this notification?
-    [[look to coping skills|coping skills]]
+
+    [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message back|Message back2]]
 
 
 
 <<elseif $category2 == "partner">>
+<<<<<<< Updated upstream
     You open the message to see a photo of your partner holding hands with someone else.
     Claire (the texter): “Looks like you weren’t worth waiting for.” 
     
@@ -37,6 +37,9 @@ Your phone pings as you receive a text message notification
     [[look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message back|Message back3]]
+=======
+    [[partner]]
+>>>>>>> Stashed changes
 
 
 <<elseif $category2 == "friendships">>
@@ -47,9 +50,8 @@ Your phone pings as you receive a text message notification
     Claire: “Listen, {$player}. You’re nice and all, but you’re just kind of a bummer.”
     Claire: “We don’t want to hang out with you anymore.”
     
-    How do you respond to this notification? 
-    
-    [[look to coping skills|coping skills]]
+   
+    [[Look to coping skills|coping skills]]
     [[Ignore it|Ignore]]
     [[Message the friend|Message back4]]
 
@@ -61,42 +63,41 @@ colorID: 0
 position: -606,496
 ---
 {$player}: “That’s none of your business.”
-Claire: “So it IS true?.”
-What do you type next? 
+Claire: “So it IS true?.” 
 
-[[“You should really watch your mouth”|watch mouth]]
-[[“Please just leave me alone”|leave alone]]
+[["You should really watch your mouth"|watch mouth]]
+[["Please just leave me alone"|leave alone]]
 ===
 title: Message back2
 tags: 
 colorID: 0
 position: -600,752
 ---
-$player: “Whatever, I was busy anyways.”
-     Claire: “Yeah, keep telling yourself that.”
-    What do you type next? 
-    [[“You should really watch your mouth”|watch mouth]]
-    [[“Please just leave me alone”|leave alone]]
+{$player}: “Whatever, I was busy anyways.”
+Claire: “Yeah, keep telling yourself that.”
+
+[["You should really watch your mouth"|watch mouth]]
+[["Please just leave me alone"|leave alone]]
 ===
 title: Message back3
 tags: 
 colorID: 0
 position: -639,1004
 ---
-$player: “Please stay out of my business.”
-  Claire: “Well it looks like SOMEONE definitely is lmao.”
-    What do you type next? 
-    [[“You should really watch your mouth”|watch mouth]]
-    [[“Please just leave me alone”|leave alone]]
+{$player}: “Please stay out of my business.”
+Claire: “Well it Looks like SOMEONE definitely is lmao.”
+
+[["You should really watch your mouth"|watch mouth]]
+[["Please just leave me alone"|leave alone]]
 ===
 title: Message back4
 tags: 
 colorID: 0
 position: -647,1247
 ---
-What do you type next? 
-    [[“Your loss!”|your loss]]
-    [[“Whatever, goodbye.”|goodbye]]
+
+[["Your loss!"|your loss]]
+[["Whatever, goodbye.”|goodbye]]
 ===
 title: coping skills
 tags: 
@@ -112,6 +113,7 @@ tags:
 colorID: 0
 position: -608,254
 ---
+<<hide phone notif center>>
 You don’t honor this message with a response. 
 
 [[End]]
@@ -122,7 +124,7 @@ colorID: 0
 position: -1103,826
 ---
 Claire: “Or what? You’ll go cry to your friends at the nuthouse?”
-How do you respond?
+ 
 [[“Whatever, man. Just stop it.”|End]]
 [[“Screw you! I hate you!”|End]]
 [[I block their messages, because this isn’t constructive|End]]
@@ -133,10 +135,10 @@ colorID: 0
 position: -1104,1117
 ---
 Claire: “Me leaving you alone in exchange for you leaving me alone? Done.”
-How do you respond?
-	[[“Whatever, man. Just stop it.”|End]]
-	[[“Screw you! I hate you!”|End]]
-	[[I block their messages, because this isn’t constructive|End]]
+ 
+[[“Whatever, man. Just stop it.”|End]]
+[[“Screw you! I hate you!”|End]]
+[[I block their messages, because this isn’t constructive|End]]
 ===
 title: your loss
 tags: 
@@ -144,10 +146,10 @@ colorID: 0
 position: -926,1447
 ---
 Claire: “Mmm not really, dude. Maybe you were hot shit at the nuthouse, but you’re no one here.” 
-	How do you respond?
-	[[“Whatever, man. Just stop it.”|End]]
-	[[“Screw you! I hate you!”|End]]
-	[[I block their messages, because this isn’t constructive|End]]
+
+[["Whatever, man. Just stop it."|End]]
+[["Screw you! I hate you!"|End]]
+[[I block their messages, because this isn’t constructive|End]]
 ===
 title: goodbye
 tags: 
@@ -155,15 +157,30 @@ colorID: 0
 position: -173,1369
 ---
 Claire: “Lol we WON’T miss you!”
-How do you respond?
-	[[“Whatever, man. Just stop it.”|End]]
-	[[“Screw you! I hate you!”|End]]
-	[[I block their messages, because this isn’t constructive|End]]
+
+[["Whatever, man. Just stop it.”|End]]
+[[“Screw you! I hate you!”|End]]
+[[I block their messages, because this isn’t constructive|End]]
 ===
 title: End
 tags: 
 colorID: 0
 position: -1140,255
 ---
+<<hide phone notif center>>
+<<hide phone hands center>>
 <<end>>
+===
+title: partner
+tags: 
+colorID: 0
+position: 426,1008
+---
+You open the message to see a photo of your partner holding hands with someone else.
+<<show phone hands center>>
+	Claire, who sent you the picture, also sent you a message.
+    Claire: “Looks like you weren’t worth waiting for.” 
+    [[Look to coping skills|coping skills]]
+    [[Ignore it|Ignore]]
+    [[Message back|Message back3]]
 ===

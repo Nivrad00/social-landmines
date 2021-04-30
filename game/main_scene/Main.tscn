@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://game/main_scene/popularity.gd" type="Script" id=23]
 [ext_resource path="res://game/main_scene/friendships.gd" type="Script" id=24]
 [ext_resource path="res://game/characters/Peer2/Peer2.tscn" type="PackedScene" id=25]
+[ext_resource path="res://game/characters/phone/phone.tscn" type="PackedScene" id=26]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -166,6 +167,9 @@ visible = false
 [node name="Juana" parent="." instance=ExtResource( 6 )]
 visible = false
 position = Vector2( 650, 400 )
+
+[node name="phone" parent="." instance=ExtResource( 26 )]
+visible = false
 
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
 

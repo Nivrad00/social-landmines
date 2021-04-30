@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/characters/phone/notif.png" type="Texture" id=1]
+[ext_resource path="res://game/characters/phone/hands.png" type="Texture" id=2]
+
+[node name="phone" type="Node2D" groups=[
+"$ phone *",
+"showable",
+]]
+
+[node name="hands" type="Sprite" parent="." groups=[
+"$ phone #",
+"showable",
+]]
+position = Vector2( -11.8766, 357.251 )
+scale = Vector2( 0.276091, 0.28313 )
+texture = ExtResource( 2 )
+
+[node name="notif" type="Sprite" parent="." groups=[
+"$ phone #",
+"showable",
+]]
+position = Vector2( -14.1467, 354.323 )
+texture = ExtResource( 1 )
