@@ -28,7 +28,6 @@ __meta__ = {
 }
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
@@ -54,10 +53,15 @@ __meta__ = {
 [node name="TitleScreen" parent="SubMenus" instance=ExtResource( 3 )]
 mouse_filter = 2
 
-[node name="ForwardBackground" type="Sprite" parent="SubMenus/TitleScreen"]
-position = Vector2( 359.048, 362.041 )
-scale = Vector2( 0.669067, 0.674826 )
+[node name="ForwardBackground" type="TextureRect" parent="SubMenus/TitleScreen"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -281.6
 texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AboutScreen" parent="SubMenus" instance=ExtResource( 5 )]
 visible = false

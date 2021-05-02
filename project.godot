@@ -273,8 +273,8 @@ rakugo_hide_ui_toggle={
 
 [rakugo]
 
-game/info/credits="Team Landmines
-UNC COMP 585 Serious Games"
+game/info/version=""
+game/info/credits=""
 saves/save_folder="user://saves"
 saves/test_mode=false
 

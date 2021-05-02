@@ -92,9 +92,9 @@ __meta__ = {
 "nav_button",
 "nav_button_main_menu",
 ] instance=ExtResource( 6 )]
-margin_top = 181.0
+margin_top = 202.0
 margin_right = 1240.0
-margin_bottom = 210.0
+margin_bottom = 231.0
 theme = ExtResource( 2 )
 text = "Start"
 nav_action = "start"
@@ -103,9 +103,9 @@ nav_action = "start"
 "nav_button",
 "nav_button_game",
 ] instance=ExtResource( 6 )]
-margin_top = 222.0
+margin_top = 243.0
 margin_right = 1240.0
-margin_bottom = 251.0
+margin_bottom = 272.0
 theme = ExtResource( 2 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -116,9 +116,9 @@ nav_action = "history"
 "nav_button",
 "nav_button_game",
 ] instance=ExtResource( 6 )]
-margin_top = 263.0
+margin_top = 284.0
 margin_right = 1240.0
-margin_bottom = 292.0
+margin_bottom = 313.0
 theme = ExtResource( 2 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -128,9 +128,9 @@ nav_action = "save"
 [node name="Load" parent="NavList" groups=[
 "nav_button",
 ] instance=ExtResource( 6 )]
-margin_top = 304.0
+margin_top = 325.0
 margin_right = 1240.0
-margin_bottom = 333.0
+margin_bottom = 354.0
 theme = ExtResource( 2 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -140,9 +140,9 @@ nav_action = "load"
 [node name="Preferences" parent="NavList" groups=[
 "nav_button",
 ] instance=ExtResource( 6 )]
-margin_top = 345.0
+margin_top = 366.0
 margin_right = 1240.0
-margin_bottom = 374.0
+margin_bottom = 395.0
 theme = ExtResource( 2 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -153,9 +153,9 @@ nav_action = "preferences"
 "nav_button",
 "nav_button_game",
 ] instance=ExtResource( 6 )]
-margin_top = 386.0
+margin_top = 407.0
 margin_right = 1240.0
-margin_bottom = 415.0
+margin_bottom = 436.0
 theme = ExtResource( 2 )
 text = "Main Menu"
 nav_action = "main_menu"
@@ -163,9 +163,9 @@ nav_action = "main_menu"
 [node name="About" parent="NavList" groups=[
 "nav_button",
 ] instance=ExtResource( 6 )]
-margin_top = 427.0
+margin_top = 448.0
 margin_right = 1240.0
-margin_bottom = 456.0
+margin_bottom = 477.0
 theme = ExtResource( 2 )
 toggle_mode = true
 group = ExtResource( 7 )
@@ -175,6 +175,7 @@ nav_action = "about"
 [node name="Help" parent="NavList" groups=[
 "nav_button",
 ] instance=ExtResource( 6 )]
+visible = false
 margin_top = 468.0
 margin_right = 1240.0
 margin_bottom = 497.0
@@ -187,9 +188,9 @@ nav_action = "help"
 [node name="Quit" parent="NavList" groups=[
 "nav_button",
 ] instance=ExtResource( 6 )]
-margin_top = 509.0
+margin_top = 489.0
 margin_right = 1240.0
-margin_bottom = 538.0
+margin_bottom = 518.0
 theme = ExtResource( 2 )
 text = "Quit"
 nav_action = "quit"
@@ -205,5 +206,5 @@ margin_bottom = 35.0
 theme = ExtResource( 2 )
 text = "Return"
 nav_action = "return"
-[connection signal="show_menu" from="." to="SubMenu" method="_on_show_menu"]
 [connection signal="show_menu" from="." to="MainMenu" method="_on_show_menu"]
+[connection signal="show_menu" from="." to="SubMenu" method="_on_show_menu"]
