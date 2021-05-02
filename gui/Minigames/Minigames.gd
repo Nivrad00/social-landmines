@@ -32,6 +32,8 @@ func start_minigame(_minigame_name):
 	target_opacity = 1
 	minigame_name = _minigame_name
 	
+	$MinigameTimer.start()
+	
 func end_minigame():
 	target_opacity = 0
 	emit_signal('exiting')
@@ -42,6 +44,11 @@ func end_minigame():
 	# make nodes not interactible, even while fadeout is still happening
 	set_mouse_filter_recursive(self, Control.MOUSE_FILTER_IGNORE)
 	minigame_shown = false
+	
+	if $MinigameTimer.time_left == 0:
+		Global.set_var('mood', Global.get_var('mood') - 10)
+	$MinigameTimer.stop()
+		
 
 # for when the game resets
 func end_minigame_immediately():

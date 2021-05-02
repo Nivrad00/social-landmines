@@ -39,4 +39,3 @@ func _input(input):
 
 func _on_meditation_audio_finished():
 	set_dialogue("Good job getting through the meditation!")
-	Global.set_var('mood', Global.get_var('mood') - 15)

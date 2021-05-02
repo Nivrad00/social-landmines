@@ -9,6 +9,14 @@ var current_speed = 0
 var user_spinning = false
 var user_dragging = false
 
+func reset():
+	rect_position = Vector2(408, 44)
+	prev_mouse_pos = null
+	recent_speeds = []
+	current_speed = 0
+	user_spinning = false
+	user_dragging = false
+	
 func start_dragging():
 	user_dragging = true
 

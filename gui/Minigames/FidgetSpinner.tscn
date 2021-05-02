@@ -1,13 +1,15 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://gui/Minigames/FidgetSpinner.gd" type="Script" id=1]
 [ext_resource path="res://gui/Minigames/fidget_spinner.png" type="Texture" id=2]
 [ext_resource path="res://gui/Minigames/fidget_background.png" type="Texture" id=3]
+[ext_resource path="res://gui/Minigames/FidgetSpinnerGame.gd" type="Script" id=4]
 
 [node name="FidgetSpinner" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 1
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,9 +37,9 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 408.0
-margin_top = 43.5186
+margin_top = 44.0
 margin_right = -408.0
-margin_bottom = -177.481
+margin_bottom = -177.0
 rect_pivot_offset = Vector2( 231.783, 282.309 )
 texture = ExtResource( 2 )
 expand = true

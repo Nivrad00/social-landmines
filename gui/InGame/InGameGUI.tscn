@@ -42,15 +42,15 @@ border_width_bottom = 3
 border_blend = true
 corner_radius_bottom_left = 3
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id=3]
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=5]
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=6]
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.113725, 0.113725, 0.113725, 1 )
 border_width_left = 3
 border_width_right = 3
@@ -59,8 +59,7 @@ border_blend = true
 corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
-[sub_resource type="Animation" id=7]
-resource_name = "Fade In"
+[sub_resource type="Animation" id=8]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -75,8 +74,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "Fade Out"
+[sub_resource type="Animation" id=9]
 length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:modulate")
@@ -225,13 +223,13 @@ size_flags_vertical = 3
 margin_top = 0.0
 margin_right = 363.0
 margin_bottom = 40.0
-custom_styles/panel = SubResource( 9 )
+custom_styles/panel = SubResource( 3 )
 resource_name = "DeepBreathing"
 button_text = "Deep breathing"
 
 [node name="ResourceOption2" parent="ResourcesMenu/Content/MarginContainer/VBoxContainer" instance=ExtResource( 10 )]
 margin_right = 363.0
-custom_styles/panel = SubResource( 10 )
+custom_styles/panel = SubResource( 4 )
 resource_name = "FidgetSpinner"
 button_text = "Fidget Spinner"
 
@@ -239,7 +237,7 @@ button_text = "Fidget Spinner"
 margin_top = 88.0
 margin_right = 363.0
 margin_bottom = 128.0
-custom_styles/panel = SubResource( 11 )
+custom_styles/panel = SubResource( 5 )
 resource_name = "ColoringBook"
 button_text = "Coloring Book"
 
@@ -247,7 +245,7 @@ button_text = "Coloring Book"
 margin_top = 132.0
 margin_right = 363.0
 margin_bottom = 172.0
-custom_styles/panel = SubResource( 12 )
+custom_styles/panel = SubResource( 6 )
 resource_name = "Counselor"
 button_text = "Counselor"
 
@@ -262,7 +260,7 @@ custom_constants/margin_left = 80
 margin_left = 80.0
 margin_right = 383.0
 margin_bottom = 40.0
-custom_styles/panel = SubResource( 6 )
+custom_styles/panel = SubResource( 7 )
 
 [node name="Button" type="Button" parent="ResourcesMenu/Tab/Panel"]
 anchor_right = 1.0
@@ -348,14 +346,19 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Minigames"]
-"anims/Fade In" = SubResource( 7 )
-"anims/Fade Out" = SubResource( 8 )
+"anims/Fade In" = SubResource( 8 )
+"anims/Fade Out" = SubResource( 9 )
+
+[node name="MinigameTimer" type="Timer" parent="Minigames"]
+wait_time = 8.0
+one_shot = true
 
 [node name="MoodThermometer" parent="." instance=ExtResource( 9 )]
-margin_left = 1153.28
-margin_top = 12.0
-margin_right = 1254.28
-margin_bottom = 312.0
+margin_left = 1142.78
+margin_top = 24.5992
+margin_right = 1397.78
+margin_bottom = 586.599
+rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="HelpDialog" type="WindowDialog" parent="."]
 anchor_top = -0.00247472
@@ -386,8 +389,8 @@ text = "If you are feeling unsafe, find a trusted adult immediately. You can als
 autowrap = true
 [connection signal="quick_button_press" from="QuickMenu" to="." method="_on_quick_button_press"]
 [connection signal="opened" from="ResourcesMenu" to="." method="_on_resources_menu_opened"]
-[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
 [connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenu" method="toggle_dropdown"]
+[connection signal="pressed" from="ResourcesMenu/Tab/Panel/Button" to="ResourcesMenuBG" method="fade_in"]
 [connection signal="exiting" from="Minigames" to="ResourcesMenu" method="hide_dropdown_immediately"]
 [connection signal="starting" from="Minigames" to="." method="_on_minigame_started"]
 [connection signal="pressed" from="Minigames/CanvasLayer/BackButton" to="Minigames" method="end_minigame"]

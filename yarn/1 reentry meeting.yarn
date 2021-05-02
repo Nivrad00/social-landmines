@@ -408,6 +408,7 @@ position: 638,617
 {$player}: Yes, I'd like to leave.
 Ms. Martin: Alright, you can head to your homeroom, then. Thank you for humoring us with this meeting, {$player}.
 You nod and hurry out the door.
+<<hide counselor>>
 <<load 2 hallway>>
 ===
 title: internal dialogue 1
