@@ -115,10 +115,8 @@ config/description="Progress at Your Pace"
 run/main_scene="res://game/main_scene/Main.tscn"
 boot_splash/image="res://graphics/splash.png"
 boot_splash/fullsize=false
-boot_splash/bg_color=Color( 0.286275, 0.0196078, 0.568627, 1 )
-config/icon="res://graphics/forward_icon.png"
-config/macos_native_icon="res://graphics/forward_icon.icns"
-config/windows_native_icon="res://graphics/forward_icon.ico"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://graphics/window_icon.png"
 config/auto_accept_quit=false
 config/quit_on_go_back=false
 
@@ -273,8 +271,8 @@ rakugo_hide_ui_toggle={
 
 [rakugo]
 
-game/info/version=""
-game/info/credits=""
+game/info/credits="Team Landmines
+UNC COMP 585 Serious Games"
 saves/save_folder="user://saves"
 saves/test_mode=false
 
