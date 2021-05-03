@@ -27,9 +27,6 @@ onready var AQ8 = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer/MarginC
 onready var scrollBar = $PageTwo/MarginContainer/VBoxContainer/ScrollContainer.get_v_scrollbar()
 onready var main_dialog = get_node("../MainDialog")
 
-#declare signal
-signal submit_success
-
 #returns input for player name
 func handle_name():
 	return nameLine.get_text()
@@ -110,32 +107,32 @@ func check_scroll():
 		return true
 
 func _on_Submit_pressed():
-		var personality_array = handle_checks()
+	var personality_array = handle_checks()
 
-		Global.set_var('mood', int(handle_mood()))
-		Global.set_var("player", str(handle_name()))
-		Global.set_var("passion1", str(personality_array[0].passion))
-		Global.set_var("passion2", str(personality_array[1].passion))
-		Global.set_var("category1", str(personality_array[0].category))
-		Global.set_var("category2", str(personality_array[1].category))
-		
-		
-		var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
-		"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
-		for i in range(0,len(anxieties)):
-			var response = handle_anxiety()[i]
-			if response <= 2:
-				Global.set_var(anxieties[i], 10)
-			elif response <= 5:
-				Global.set_var(anxieties[i], 20)
-			elif response <= 8:
-				Global.set_var(anxieties[i], 30)
+	Global.set_var('mood', int(handle_mood()))
+	Global.set_var("player", str(handle_name()))
+	Global.set_var("passion1", str(personality_array[0].passion))
+	Global.set_var("passion2", str(personality_array[1].passion))
+	Global.set_var("category1", str(personality_array[0].category))
+	Global.set_var("category2", str(personality_array[1].category))
+	
+	
+	var anxieties = ["around_kids", "around_adults", "one_on_one", "wrong_thing", 
+	"picked_on", "crowded_places", "attention_kids", "attention_teachers"]
+	for i in range(0,len(anxieties)):
+		var response = handle_anxiety()[i]
+		if response <= 2:
+			Global.set_var(anxieties[i], 10)
+		elif response <= 5:
+			Global.set_var(anxieties[i], 20)
+		elif response <= 8:
+			Global.set_var(anxieties[i], 30)
 
-		Global.set_var("they", handle_pronouns(get_pronouns())[0].to_lower())
-		Global.set_var("them", handle_pronouns(get_pronouns())[1].to_lower())
-		Global.set_var("their", handle_pronouns(get_pronouns())[2].to_lower())
-		
-		emit_signal("submit_success")
+	Global.set_var("they", handle_pronouns(get_pronouns())[0].to_lower())
+	Global.set_var("them", handle_pronouns(get_pronouns())[1].to_lower())
+	Global.set_var("their", handle_pronouns(get_pronouns())[2].to_lower())
+	
+	Rakugo.story_step()
 
 
 func _on_PageOneNext_pressed():

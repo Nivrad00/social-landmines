@@ -4,9 +4,16 @@ signal show_main_menu(s)
 var shown = 0
 
 func _ready():
+	reset()
+
+func reset():
 	hide()
 	for child in $Container.get_children():
 		child.modulate.a = 0
+		child.get_node('AnimationPlayer').stop()
+	$Container/Button.disabled = true
+	$FadeInTimer.stop()
+	shown = 0
 
 func _on_end_game():
 	# customize text
@@ -43,9 +50,6 @@ func _on_end_game():
 	# start showing the text
 	show()
 	add_line()
-	yield($Container/Button, 'pressed')
-	Rakugo.reset_game()
-	Window.Screens._on_nav_button_press('main_menu')
 
 func add_line():
 	if shown >= $Container.get_children().size():

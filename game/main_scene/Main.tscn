@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
 [ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
 [ext_resource path="res://gui/InGame/thermometer/thermometer.png" type="Texture" id=13]
-[ext_resource path="res://game/main_scene/questions.gd" type="Script" id=14]
 [ext_resource path="res://game/main_scene/TextureProgress.gd" type="Script" id=16]
 [ext_resource path="res://game/main_scene/Q2.gd" type="Script" id=17]
 [ext_resource path="res://game/main_scene/Q3.gd" type="Script" id=18]
@@ -139,14 +138,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="questions" type="Node" parent="."]
-script = ExtResource( 14 )
-default_starting_event = "questions"
-auto_start = true
-
 [node name="MainDialog" type="Node" parent="."]
 script = ExtResource( 1 )
 default_starting_event = "default_event"
+auto_start = true
 
 [node name="background" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1.49829, 1.49835 )

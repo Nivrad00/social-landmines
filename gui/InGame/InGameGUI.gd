@@ -4,7 +4,7 @@ var hide_toggle = false
 # i know hardcoded paths are bad, but it seems silly to establish
 # a new signal system just for one button...
 onready var skip_button = $QuickMenu/ButtonList/Skip
-onready var quest = get_node("/root/Main/questions")
+onready var main_dialog = get_node("/root/Main/MainDialog")
 onready var help = $QuickMenu/ButtonList/Help
 func _ready():
 	Rakugo.connect("game_ended", self, "_on_game_end")
@@ -41,12 +41,12 @@ func _input(event):
 			
 		if event.is_action_pressed("rakugo_rollback"):
 			# ignore while resources menu or minigame is open
-			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown and not quest.question_shown :
+			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown:
 				Rakugo.rollback(1)
 				
 		if event.is_action_pressed("rakugo_rollforward"):
 			# ignore while resources menu or minigame is open
-			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown and not quest.question_shown:
+			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown:
 				Rakugo.rollback(-1)
 			
 		# the hide ui options were unbound

@@ -6,7 +6,7 @@ position: 516,355
 <<show background suburb>>
 Your phone pings as you receive a text message notification.
 <<show phone notif center>>
-
+<<set $category2 to "friendships">>
 <<if $category2 == "extracurricular">>
     Claire: "Hey..."
     Claire: "Is it true that you got EXTRA time for a test that you BOMBED?!"

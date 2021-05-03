@@ -54,8 +54,8 @@ func yarn_custom_logic_after(to):
 	pass
 	
 func play_audio(audio_name):
-	# don't start the audio if it's already playing or if the game's ended
-	if parent.current_audio == audio_name:
+	# don't start the audio if it's already playing
+	if parent.current_audio == audio_name and audioPlayer.playing:
 		return
 	parent.current_audio = audio_name
 	audioPlayer.stream = parent.audio_dict[audio_name]
@@ -63,3 +63,5 @@ func play_audio(audio_name):
 
 func stop_audio():
 	audioPlayer.stop()
+	audioPlayer.stream = null
+	parent.current_audio = null

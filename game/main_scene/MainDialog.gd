@@ -31,8 +31,9 @@ func _ready():
 	Rakugo.define_character("Peer2", "Peer2", Color.green)
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
 	yarn_importer.connect_scene(self, audioPlayer)
+	
 	# preload audio, otherwise there are issues
-	# check for .wav.import -- the .wav's aren't detected in the exported build
+	# check for .wav.import -- the .wav's themselves aren't detected in the exported build
 	var dir = Directory.new()
 	var path = 'res://game/audio/'
 	if dir.open(path) == OK:
@@ -49,10 +50,31 @@ func _ready():
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to load the audio files.")
-
+		
 
 func default_event():
-	#pressing play prompts the user with the questionaire
+	if first_time:
+		first_time = false
+	
+	print('entering default event')
+	start_event("default_event")
+	
+	# no audio during questionnaire please
+	yarn_importer.stop_audio()
+	
+	# reset end screen at the start of each game
+	$'../EndScreen'.reset()
+	
+	# start with quesionnaire stuff
+	quest.show()
+	choice.hide()
+	dialogue.hide()
+	resource.hide()
+	therm.hide()
+	quick.hide()
+	
+	step()
+	
 	quest.hide()
 	choice.show()
 	dialogue.show()
@@ -60,13 +82,7 @@ func default_event():
 	therm.show()
 	quick.show()
 	
-	if first_time:
-		first_time = false
-	
-	print('entering default event')
-	start_event("default_event")
-	
-	# start by initializing the yarn story and proceeding up to the first choice
+	# then initialize the yarn story and proceed up to the first choice
 	current_choices = []
 	next_scene = null
 	# print('initializing yarn story')
@@ -115,9 +131,14 @@ func default_event():
 	end_event()
 
 func end_game():
-	# need to wait a second or rakugo will crash. don't ask me why
-	yield(get_tree().create_timer(0.1), "timeout")
-	emit_signal('end_game')
+	if is_running():
+		dialogue.hide() # hide any text that might be lingering
+		emit_signal('end_game')
+		
+		# after they read the end screen and press "back"...
+		yield($'../EndScreen/Container/Button', 'pressed')
+		Rakugo.reset_game()
+		Window.Screens._on_nav_button_press('main_menu')
 	
 #set a var in the yarn environment
 func set_var(variable, value):

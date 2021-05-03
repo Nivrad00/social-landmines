@@ -1,3 +1,4 @@
+# this script is outdated! questionnaire stuff is now handled entirely by MainDialog
 extends Dialogue
 
 #controls rollback
