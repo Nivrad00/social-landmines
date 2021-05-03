@@ -32,6 +32,7 @@ func _ready():
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
 	yarn_importer.connect_scene(self, audioPlayer)
 	# preload audio, otherwise there are issues
+	# check for .wav.import -- the .wav's aren't detected in the exported build
 	var dir = Directory.new()
 	var path = 'res://game/audio/'
 	if dir.open(path) == OK:
@@ -41,8 +42,10 @@ func _ready():
 			if dir.current_is_dir():
 				pass
 			else:
-				if file_name.split('.')[-1] in ['ogg', 'wav']:
-					audio_dict[file_name] = load(path + file_name)
+				var split = file_name.split('.')
+				if split[-1] == 'import' and split[-2] == 'wav':
+					var new_file_name = file_name.substr(0, file_name.length()-7)
+					audio_dict[new_file_name] = load(path + new_file_name)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to load the audio files.")

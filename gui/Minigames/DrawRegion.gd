@@ -16,12 +16,16 @@ func _ready():
 		dir.list_dir_begin()
 		var file_name = dir.get_next()
 		while file_name != "":
-			var extension = file_name.split('.')[-1]
-			if extension in ['jpg', 'png']:
-				coloring_page_names.append(file_name)
+			if dir.current_is_dir():
+				pass
+			else:
+				var split = file_name.split('.')
+				if split[-1] == 'import' and split[-2] == 'png':
+					var new_file_name = file_name.substr(0, file_name.length()-7)
+					coloring_page_names.append(new_file_name)
 			file_name = dir.get_next()
 	else:
-		print("An error occured while trying to access the coloring pages.")
+		print("An error occured while trying to access the coloring pages.")		
 		
 	reset()
 	
