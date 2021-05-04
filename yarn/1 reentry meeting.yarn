@@ -4,7 +4,6 @@ colorID: 0
 position: -347,2568
 ---
 <<show background meeting-room>>
-<<play Reentry.wav>>
 You fidget in your chair as a variety of adults file into the room.
 Your mother, the principal, the guidance counselor, and even the math teacher are present, and they all seem to be staring at you.
 <<show counselor neutral center>>

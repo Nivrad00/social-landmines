@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://themes/Default/default.tres" type="Theme" id=11]
 [ext_resource path="res://game/main_scene/EndScreen.gd" type="Script" id=12]
 [ext_resource path="res://gui/InGame/thermometer/thermometer.png" type="Texture" id=13]
+[ext_resource path="res://game/characters/Teacher2/Teacher2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://game/characters/anonymous2/anonymous2.tscn" type="PackedScene" id=15]
 [ext_resource path="res://game/main_scene/TextureProgress.gd" type="Script" id=16]
 [ext_resource path="res://game/main_scene/Q2.gd" type="Script" id=17]
 [ext_resource path="res://game/main_scene/Q3.gd" type="Script" id=18]
@@ -28,6 +30,8 @@
 [ext_resource path="res://game/characters/background/background_dim.png" type="Texture" id=28]
 [ext_resource path="res://themes/Default/DefaultCustom.tres" type="Theme" id=29]
 [ext_resource path="res://gui/InGame/thermometer/progressbar.png" type="Texture" id=30]
+[ext_resource path="res://game/characters/mom/mom.tscn" type="PackedScene" id=31]
+[ext_resource path="res://game/characters/anonymous1/anonymous1.tscn" type="PackedScene" id=32]
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -180,6 +184,18 @@ position = Vector2( 650, 400 )
 visible = false
 
 [node name="counselor" parent="." instance=ExtResource( 27 )]
+visible = false
+
+[node name="mom" parent="." instance=ExtResource( 31 )]
+visible = false
+
+[node name="Teacher2" parent="." instance=ExtResource( 14 )]
+visible = false
+
+[node name="anonymous1" parent="." instance=ExtResource( 32 )]
+visible = false
+
+[node name="anonymous2" parent="." instance=ExtResource( 15 )]
 visible = false
 
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
