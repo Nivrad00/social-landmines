@@ -11,6 +11,6 @@
 "$ teacher2 #",
 "showable",
 ]]
-position = Vector2( 346.723, 368.573 )
-scale = Vector2( 0.595213, 0.587276 )
+position = Vector2( 2.25729, 401.908 )
+scale = Vector2( 0.519018, 0.531717 )
 texture = ExtResource( 1 )

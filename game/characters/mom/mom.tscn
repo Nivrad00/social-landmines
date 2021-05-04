@@ -11,6 +11,6 @@
 "$ mom #",
 "showable",
 ]]
-position = Vector2( -1.84697, 362.902 )
-scale = Vector2( 0.684491, 0.598896 )
+position = Vector2( 0.534119, 435.129 )
+scale = Vector2( 0.568611, 0.494392 )
 texture = ExtResource( 1 )

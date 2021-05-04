@@ -11,6 +11,6 @@
 "$ anonymous2 #",
 "showable",
 ]]
-position = Vector2( 361.009, 311.427 )
-scale = Vector2( 0.782526, 0.695748 )
+position = Vector2( -1.71169, 417.783 )
+scale = Vector2( 0.549178, 0.507906 )
 texture = ExtResource( 1 )

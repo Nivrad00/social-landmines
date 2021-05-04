@@ -197,6 +197,7 @@ visible = false
 
 [node name="anonymous2" parent="." instance=ExtResource( 15 )]
 visible = false
+position = Vector2( 1.12244, 0 )
 
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
 
