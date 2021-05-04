@@ -131,8 +131,16 @@ func _on_Submit_pressed():
 	Global.set_var("they", handle_pronouns(get_pronouns())[0].to_lower())
 	Global.set_var("them", handle_pronouns(get_pronouns())[1].to_lower())
 	Global.set_var("their", handle_pronouns(get_pronouns())[2].to_lower())
-	
+	is_are(handle_pronouns(get_pronouns())[0].to_lower())
 	Rakugo.story_step()
+
+func is_are(they):
+	var is_are = null
+	if they == "they":
+		is_are = "are"
+	else:
+		is_are = "is"
+	Global.set_var("are", is_are)
 
 
 func _on_PageOneNext_pressed():
