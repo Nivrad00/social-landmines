@@ -49,6 +49,7 @@ func get_save_name(save_name):
 ### Store lifecycle
 
 func call_for_restoring():
+	Global._restore(get_current_store())
 	get_tree().get_root().propagate_call('_restore', [get_current_store()])
 
 func call_for_storing():
