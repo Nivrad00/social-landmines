@@ -159,7 +159,7 @@ func _on_PageTwoBack_pressed():
 func _on_PageTwoNext_pressed():
 	print(check_scroll())
 	if check_scroll():
-		pass
+		$PageTwo/ScrollCheck.show()
 	else:
 		$PageTwo.hide()
 		$PageThree.show()
