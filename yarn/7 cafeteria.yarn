@@ -11,7 +11,7 @@ You find your way to your usual seat in the cafeteria, next to your friend Juana
 Juana: Yo, how was your weekend?
 {$player}: Good, how was yours?
 <<show juana smile center>>
-Peer: Pretty good, didn't do much.
+Juana: Pretty good, didn't do much.
 
 <<show brad smirk left>>
 <<show chad smirk right>>

@@ -1379,19 +1379,20 @@ __meta__ = {
 }
 
 [node name="Container" type="VBoxContainer" parent="EndScreen"]
-margin_left = 170.0
-margin_right = 1119.0
-margin_bottom = 720.0
+margin_right = 1277.0
+margin_bottom = 718.0
 mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="EndScreen/Container"]
-margin_top = 132.0
-margin_right = 949.0
-margin_bottom = 189.0
+margin_top = 131.0
+margin_right = 1277.0
+margin_bottom = 188.0
 text = "Congratulations on completing your first day back at school!
 "
 align = 1
@@ -1402,9 +1403,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 1 )
 
 [node name="Label2" type="Label" parent="EndScreen/Container"]
-margin_top = 193.0
-margin_right = 949.0
-margin_bottom = 280.0
+margin_top = 192.0
+margin_right = 1277.0
+margin_bottom = 279.0
 text = "Based on your responses, here are some ideas you could talk to your parents and/or clinician about in thinking about your real first day back.
 "
 align = 1
@@ -1415,9 +1416,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 2 )
 
 [node name="Label3" type="Label" parent="EndScreen/Container"]
-margin_top = 284.0
-margin_right = 949.0
-margin_bottom = 341.0
+margin_top = 283.0
+margin_right = 1277.0
+margin_bottom = 340.0
 text = "You may want to see if you can get access to the following for your return to school: 
 "
 align = 1
@@ -1428,9 +1429,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 3 )
 
 [node name="Supports" type="Label" parent="EndScreen/Container"]
-margin_top = 345.0
-margin_right = 949.0
-margin_bottom = 402.0
+margin_top = 344.0
+margin_right = 1277.0
+margin_bottom = 401.0
 text = "[Supports requested]
 "
 align = 1
@@ -1441,9 +1442,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 4 )
 
 [node name="Label5" type="Label" parent="EndScreen/Container"]
-margin_top = 406.0
-margin_right = 949.0
-margin_bottom = 493.0
+margin_top = 405.0
+margin_right = 1277.0
+margin_bottom = 492.0
 text = "You may want to talk to your parents and/or clinician about preparing for the following situations you reported as stressful when you return to school: 
 "
 align = 1
@@ -1454,9 +1455,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 5 )
 
 [node name="Stressors" type="Label" parent="EndScreen/Container"]
-margin_top = 497.0
-margin_right = 949.0
-margin_bottom = 554.0
+margin_top = 496.0
+margin_right = 1277.0
+margin_bottom = 553.0
 text = "[Stressors]
 "
 align = 1
@@ -1467,9 +1468,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 6 )
 
 [node name="Button" type="Button" parent="EndScreen/Container"]
-margin_top = 558.0
-margin_right = 949.0
-margin_bottom = 587.0
+margin_top = 557.0
+margin_right = 1277.0
+margin_bottom = 586.0
 disabled = true
 text = "Back"
 __meta__ = {
