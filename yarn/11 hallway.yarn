@@ -20,12 +20,12 @@ Juana: Hey, {$player}, have a safe trip home, okay?
 
 Before you make it outside, you pass a group of students you don't recognize staring and whispering. One of them laughs.
 
-Student: What are {$they} wearing?!
+Student: What {$are} {$they} wearing?!
 
 [[(Ignore and keep walking)|Ignore and keep walking]]
 [[Hey, shut up!|Shut up]]
-[[(mocking) What is she wearing?|Mocking]]
-[[(make a face)|Face]]
+[[(Mock them)|Mocking]]
+[[(Make a face)|Face]]
 ===
 title: Ignore and keep walking
 tags: 
@@ -65,7 +65,7 @@ colorID: 0
 position: 63,22
 ---
 You do your best imitation of their leering voice.
-{$player}: What are {$they} wearing?!
+{$player}: What {$are} {$they} wearing?!
 <<hide anonymous1>>
 <<hide anonymous2>>
 You ignore their titters in response and stomp away, leaving them far behind.

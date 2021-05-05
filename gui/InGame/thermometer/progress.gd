@@ -12,8 +12,9 @@ func _ready():
 #When signal is recieved, value of progress value changes to current mood value
 func on_mood_change(mood):
 	print('changing mood to ' + str(mood))
-	target = int(mood)
-	$"../../AnimationPlayer".play('Glow')
+	if mood != null:
+		target = int(mood)
+		$"../../AnimationPlayer".play('Glow')
 	
 func _process(delta):
 	current += (target - current) / 2 * delta * SPEED
