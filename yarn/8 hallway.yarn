@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -19,-302
+position: -20,-304
 ---
 <<show background hallway>>
 
@@ -11,6 +11,7 @@ position: -19,-302
     <<play crowd.wav>>
     <<show anonymous1 neutral left>>
     <<show anonymous2 neutral right>>
+    <<set $mood to $mood + $$crowded_places>>
     The bell rings, and you follow the crowd through the hallway to your next class. 
     <<hide anonymous1>>
     <<hide anonymous2>>

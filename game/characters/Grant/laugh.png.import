@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smirk.png-e97d8fb0d0d82808cc8bc0fd4e21983e.stex"
+path="res://.import/laugh.png-6cbea90c0d90a3409b241f1b7944bb5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/characters/Chad/smirk.png"
-dest_files=[ "res://.import/smirk.png-e97d8fb0d0d82808cc8bc0fd4e21983e.stex" ]
+source_file="res://game/characters/Grant/laugh.png"
+dest_files=[ "res://.import/laugh.png-6cbea90c0d90a3409b241f1b7944bb5c.stex" ]
 
 [params]
 

@@ -13,6 +13,7 @@ position: -19,-302
     <<show anonymous1 neutral left>>
     <<show anonymous2 neutral right>>
     You walk through the crowded hallway to your first class.
+    <<set $mood to $mood + $crowded_places>>
 	No one pays you any mind.
     <<hide anonymous1>>
     <<hide anonymous2>>

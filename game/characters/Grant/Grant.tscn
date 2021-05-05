@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://game/characters/Grant/laugh.png" type="Texture" id=1]
+[ext_resource path="res://game/characters/Grant/smirk.png" type="Texture" id=2]
+[ext_resource path="res://game/characters/Grant/angry.png" type="Texture" id=3]
+
+[node name="Grant" type="Node2D" groups=[
+"$ grant *",
+"showable",
+]]
+position = Vector2( 1000, 420 )
+scale = Vector2( 0.55, 0.55 )
+
+[node name="smirk" type="Sprite" parent="." groups=[
+"$ grant #",
+"showable",
+]]
+texture = ExtResource( 2 )
+
+[node name="angry" type="Sprite" parent="." groups=[
+"$ grant #",
+"showable",
+]]
+position = Vector2( 1728.32, -643.5 )
+texture = ExtResource( 3 )
+offset = Vector2( -1728.32, 682.026 )
+
+[node name="laugh" type="Sprite" parent="." groups=[
+"$ grant #",
+"showable",
+]]
+position = Vector2( 0, 48.1574 )
+texture = ExtResource( 1 )

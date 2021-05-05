@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/angry.png-555f5ed6c4275928325bcfa0f09fb6f3.stex"
+path="res://.import/angry.png-08ef8609a56757957dde50151996d9d4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/characters/Chad/angry.png"
-dest_files=[ "res://.import/angry.png-555f5ed6c4275928325bcfa0f09fb6f3.stex" ]
+source_file="res://game/characters/Grant/angry.png"
+dest_files=[ "res://.import/angry.png-08ef8609a56757957dde50151996d9d4.stex" ]
 
 [params]
 

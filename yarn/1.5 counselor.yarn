@@ -1,11 +1,11 @@
 title: Node1
 tags: 
 colorID: 0
-position: -72,-411
+position: -109,-639
 ---
 <<show background meeting-room>>
 <<show counselor neutral center>>
-Ms. Martin: One last thing. Before you head to class, I want to review with you what you will have available throughout the school day. Right now you have access to several coping mechanisms which you can use any time you feel the need.
+Ms. Martin: One last thing. Before you head to class, I want to review with you what you will have available throughout the school day.
 Ms. Martin: Do you want to stay and hear about how to access these tools?
 [[Yes|Yes]]
 [[No|Leave]]
@@ -16,8 +16,8 @@ colorID: 0
 position: -485,-471
 ---
 {$player}: Sure!
-Ms. Martin: I'm glad you want to hear about the tools you have at your disposal. 
-Ms. Martin: To get to your coping strategies, click on the button on the upper right hand corner that is titled "Coping Skills" and then choose the strategy you'd like to use.
+Ms. Martin: I'm glad you want to hear about the tools you can use. 
+Ms. Martin: To get to your coping strategies, click on the button on the upper right hand corner that is titled "Coping Strategies" and then choose the strategy you'd like to use.
 Ms. Martin: For example, one thing that's always available to you is practicing taking a deep breath when you're in class.
 Ms. Martin: You can go to these tools whenever you feel stressed or need a break! 
 Ms. Martin: Try to observe how you feel during and after these exercises. Staying present in the moment, regardless of mood, is great for self-regulation and can help manage symptoms.
@@ -26,7 +26,7 @@ Ms. Martin: Try to observe how you feel during and after these exercises. Stayin
 title: Leave
 tags: 
 colorID: 0
-position: -45,-752
+position: -487,-757
 ---
 {$player}: Um, no thanks.
 Ms. Martin: Well, that's alright.
@@ -35,7 +35,7 @@ Ms. Martin: Well, that's alright.
 title: End
 tags: 
 colorID: 0
-position: -849,-741
+position: -843,-652
 ---
 Ms. Martin: That's all we have for you, {$player}. Why don't you head on to your homeroom now?
 {$player}: Sure. Thanks, Ms. Martin.

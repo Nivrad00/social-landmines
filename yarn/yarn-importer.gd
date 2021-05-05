@@ -106,7 +106,7 @@ func logic(statement):
 	var split_statement = statement.split(" ")
 	
 	# "SET variable TO expression"
-	if split_statement[0] == "set":
+	if split_statement[0] == "set" and not skip:
 		if split_statement[1].substr(0, 1) == '$':
 			
 			# set variables in Global (without the $)
@@ -155,7 +155,8 @@ func logic(statement):
 
 	# other commands handled by command func
 	else:
-		command(statement)
+		if not skip:
+			command(statement)
 
 	
 # called for each line of text

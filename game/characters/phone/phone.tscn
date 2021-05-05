@@ -12,6 +12,7 @@
 "$ phone #",
 "showable",
 ]]
+visible = false
 position = Vector2( -11.8766, 357.251 )
 scale = Vector2( 0.276091, 0.28313 )
 texture = ExtResource( 2 )
@@ -20,5 +21,6 @@ texture = ExtResource( 2 )
 "$ phone #",
 "showable",
 ]]
+visible = false
 position = Vector2( -14.1467, 354.323 )
 texture = ExtResource( 1 )

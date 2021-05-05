@@ -1,175 +1,106 @@
 title: Start
 tags: 
 colorID: 0
-position: -2,903
+position: -119,1124
 ---
 <<show background hallway>>
 <<play crowd.wav>>
 You enter the hallway for your lunch period and head towards the cafeteria.
 Then you hear someone calling your name.
 <<show peer2 smirk center>>
+<<set $mood to $mood + $attention_kids>>
 Noah: Hey, {$player}! You’ve been gone forever. Where have you been?
 [[I was out sick|Sick]]
-[[I was dealing with mental health issues |Dealing]]
+[[I was in the hospital because I tried to kill myself |Dealing]]
 [[Leave me alone |Leave me]]
 [[(Ignore and keep walking)|Ignore]]
 ===
 title: Ignore
 tags: 
 colorID: 0
-position: -503,924
+position: -365,1121
 ---
 You stay silent and try to outpace him.
-Noah: Hey, not so fast! I’ll walk with you. 
+Noah: Hey, not so fast! I'll walk with you. 
 <<show peer2 smirk center>>
+<<set $mood to $mood + $attention_kids>>
 Noah: I heard that you went to the hospital for something.
-[[That's none of your business |Business1]] 
-[[I have somewhere to be |Early]]
-[[I was dealing with mental health issues |Dealing]] 
 [[I was out sick |Sick]]
-[[(Ignore and keep walking) |Ignore1]]
-===
-title: Hurt
-tags: 
-colorID: 0
-position: 186,287
----
-<<show peer2 tired center>>
-Peer: I heard that you wanted to hurt yourself.
-
-[[Mind your own business |Business2]] 
-[[I have somewhere to be |Early2]]
-[[I was dealing with mental health issues |Dealing]]
-[[I was out sick. But I'm back now|Sick2]]
-[[Ignore and keep walking |Ignore2]]
+[[Because I tried to kill myself |Dealing]] 
+[[That's none of your business |Business1]]
 ===
 title: Leave me
 tags: 
 colorID: 0
-position: 25,611
+position: -742,599
 ---
 {$player}: Just leave me alone.
-Noah: No way! I want to talk to you!
-Noah: Why were you gone last week? 
-[[Hurt]]
+Noah: Huh? I was just asking...
+Noah: People were worried about you.
+{$player}: Whatever. I don't want to talk about it.
+Noah shrugs.
+[[End]]
 ===
 title: Dealing
 tags: 
 colorID: 0
-position: -337,300
+position: 269,580
 ---
-{$player}: I was dealing with mental health issues, that's all.
-Noah: Oh. Are you feeling better?
-
-[[Mind your own business |Business2]]
-[[I have to get to class early |Early2]]
-[[Thanks for asking. I'm glad to be back |Glad]] 
-[[Thanks for asking. I'm still feeling pretty crappy, actually |Crappy]]
-[[Ignore and keep walking |Ignore2]]
+{$player}: To be honest, I was in the hospital because I tried to kill myself.
+Noah: Ooh, so the rumors are true?
+<<set $mood to $mood + $attention_kids>>
+Noah: I can't believe you did that!
+{$player}: Whatever...
+[[End]]
 ===
 title: Sick
 tags: 
 colorID: 0
-position: -213,627
+position: -247,697
 ---
 {$player}: I was out sick, that's all.
-[[Hurt]]
+Noah: Aw, I'm sorry to hear. Are you feeling better?
+
+[[Yeah, I'm doing better now|Better]]
+[[Still recovering, thanks|Recovering]]
 ===
 title: Business1
 tags: 
 colorID: 0
-position: -674,626
+position: -974,594
 ---
-{$player}: That's none of your business.
-[[Hurt]]
-===
-title: Early
-tags: 
-colorID: 0
-position: -439,622
----
-{$player}: Listen, I have somewhere to be...
-[[Hurt]]
-===
-title: Ignore1
-tags: 
-colorID: 0
-position: -906,617
----
-You keep ignoring Noah, hoping he'll go away.
-[[Hurt]]
-===
-title: Business2
-tags: 
-colorID: 0
-position: -128,-11
----
-{$player}: Mind your own business!
+{$player}: That's none of your business!
 Noah: Sheesh, okay.
-<<hide peer2>>
-You walk away, leaving Noah behind.
-[[End]]
-===
-title: Early2
-tags: 
-colorID: 0
-position: 111,-12
----
-{$player}: Listen, I really have to go!
-<<hide peer2>>
-You walk quickly away, leaving Noah scratching his head.
-[[End]]
-===
-title: Glad
-tags: 
-colorID: 0
-position: -375,-8
----
-{$player}: Thanks for asking. I'm glad to be back, at least.
-Noah: Cool, cool.
-<<hide peer2>>
-You part ways from Noah as you reach the cafeteria.
-[[End]]
-===
-title: Crappy
-tags: 
-colorID: 0
-position: -619,-13
----
-{$player}: Thanks for asking. I'm still feeling pretty crappy, actually.
-Noah: Aw, that sucks.
-You shrug.
-{$player}: Happens sometimes.
-<<hide peer2>>
-You part ways from Noah as you reach the cafeteria.
-[[End]]
-===
-title: Ignore2
-tags: 
-colorID: 0
-position: 365,-4
----
-<<hide peer2>>
-You ignore Noah until he loses interest and wanders off.
-[[End]]
-===
-title: Sick2
-tags: 
-colorID: 0
-position: 607,-7
----
-{$player}: I was sick, okay? But I'm back now.
-Noah shrugs.
-Noah: If you say so.
-<<hide peer2>>
-You walk away, leaving Noah behind.
 [[End]]
 ===
 title: End
 tags: 
 colorID: 0
-position: 30,-275
+position: -245,-1
 ---
+<<hide peer2>>
+You walk away, leaving Noah behind.
 <<play Forward.wav>>
 <<load 7 cafeteria>>
+===
+title: Better
+tags: 
+colorID: 0
+position: -361,457
+---
+{$player}: Yeah, I'm doing better now.
+{$player}: Other than having to go back to school, heh.
+<<set $mood to $mood - $attention_kids>>
+Noah: You said it!
+[[End]]
+===
+title: Recovering
+tags: 
+colorID: 0
+position: -125,459
+---
+{$player}: I'm still recovering, thanks.
+<<set $mood to $mood - $attention_kids>>
+Noah: Get well soon, alright?
+[[End]]
 ===

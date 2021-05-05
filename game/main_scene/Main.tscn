@@ -3,8 +3,8 @@
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game/characters/Teacher/Teacher.tscn" type="PackedScene" id=3]
-[ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=4]
-[ext_resource path="res://game/characters/Chad/Chad.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/characters/Grant/Grant.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/characters/Brad/Brad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://game/characters/Juana/Juana.tscn" type="PackedScene" id=6]
 [ext_resource path="res://game/main_scene/Q1.gd" type="Script" id=7]
 [ext_resource path="res://game/questions/PersonalityQuestions.gd" type="Script" id=8]
@@ -165,11 +165,11 @@ visible = false
 position = Vector2( 650, 400 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Brad" parent="." instance=ExtResource( 4 )]
+[node name="Grant" parent="." instance=ExtResource( 4 )]
 visible = false
 position = Vector2( 650, 400 )
 
-[node name="Chad" parent="." instance=ExtResource( 5 )]
+[node name="Brad" parent="." instance=ExtResource( 5 )]
 visible = false
 position = Vector2( 650, 400 )
 
@@ -185,6 +185,7 @@ visible = false
 
 [node name="counselor" parent="." instance=ExtResource( 27 )]
 visible = false
+position = Vector2( 0, 10 )
 
 [node name="mom" parent="." instance=ExtResource( 31 )]
 visible = false
@@ -202,7 +203,6 @@ position = Vector2( 1.12244, 0 )
 [node name="YarnAudioPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="Questions" type="Control" parent="."]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_horizontal = 3

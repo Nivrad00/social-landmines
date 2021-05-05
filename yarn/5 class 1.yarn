@@ -1,57 +1,53 @@
 title: Start
 tags: 
 colorID: 0
-position: -64,9
+position: -64,18
 ---
 <<show background classroom3>>
 <<show teacher2 neutral center>>
 
 As you take a seat at your first class, your teacher looks up.
+<<set $mood to $mood + $one_on_one>>
 Mr. Lee: Hey, {$player}. Where have you been? 
 
 [[I was out sick|sick]] 
-[[I was in the hospital|hospital]]
-[[I was dealing with mental health concerns|mental health]]  
+[[I tried to kill myself|mental health]]  
 [[(Silence)|silence]]
 ===
 title: Work
 tags: 
 colorID: 0
-position: -64,-440
+position: -63,-431
 ---
 Mr. Lee: Well, you have a lot of work to catch up on.
 [[No problem |work1]]
-[[I will try my best |work2]]
+[[I'm not doing it |work2]]
 [[(Silence)|work3]]
 ===
 title: sick
 tags: 
 colorID: 0
-position: -426,-194
+position: -322,-213
 ---
+<<set $mood to $mood - $one_on_one>>
 {$player}: Um, I was out sick.
-[[Work]]
-===
-title: hospital
-tags: 
-colorID: 0
-position: -198,-202
----
-{$player}: I was in the hospital.
 [[Work]]
 ===
 title: mental health
 tags: 
 colorID: 0
-position: 16,-221
+position: -63,-211
 ---
-{$player}: I was dealing with, you know, mental health concerns.
+{$player}: I tried to kill myself.
+<<set $mood to $mood + $one_on_one>>
+You hear a murmur spread through the class.
+Mr. Lee coughs.
 [[Work]]
 ===
 title: silence
 tags: 
 colorID: 0
-position: 247,-216
+position: 192,-205
 ---
 You stay silent, staring at your desk.
 [[Work]]
@@ -61,8 +57,8 @@ tags:
 colorID: 0
 position: -312,-655
 ---
-<<set $mood to $mood - 10>>
-{$player}: No problem!
+<<set $mood to $mood - $one_on_one>>
+{$player}: No problem.
 Mr. Lee chuckles, then moves on with his lesson for the day.
 [[End]]
 ===
@@ -71,16 +67,18 @@ tags:
 colorID: 0
 position: -65,-656
 ---
-{$player}: I'll try my best.
-Mr. Lee nods, then moves on with his lesson for the day.
+<<set $mood to $mood + $one_on_one>>
+{$player}: I'm not doing it.
+Mr. Lee clicks his tongue.
+Mr. Lee: We'll talk about this later.
+Mr. Lee moves on with his lesson for the day.
 [[End]]
 ===
 title: work3
 tags: 
 colorID: 0
-position: 190,-652
+position: 185,-658
 ---
-<<set $mood to $mood + 10>>
 You say nothing.
 Mr. Lee shrugs, then moves on with his lesson for the day.
 [[End]]
@@ -88,7 +86,7 @@ Mr. Lee shrugs, then moves on with his lesson for the day.
 title: End
 tags: 
 colorID: 0
-position: -31,-873
+position: -63,-885
 ---
 Thankfully, the rest of the class is uneventful.
 <<hide teacher2>>

@@ -5,9 +5,10 @@ position: -264,309
 ---
 <<show background hallway>>
 <<show anonymous1 neutral left>>
-<<show anonymous1 neutral right>>
+<<show anonymous2 neutral right>>
 <<play crowd.wav>>
 
+<<set $mood to $mood + $crowded_places>>
 You leave the math classroom into a crowd of students. Everyone's heading home for the day.
 One student runs by, knocking into your shoulder
 {$player}: Rude...
@@ -20,55 +21,51 @@ Juana: Hey, {$player}, have a safe trip home, okay?
 
 Before you make it outside, you pass a group of students you don't recognize staring and whispering. One of them laughs.
 
+<<set $mood to $mood + $picked_on>>
 Student: What {$are} {$they} wearing?!
 
 [[(Ignore and keep walking)|Ignore and keep walking]]
-[[Hey, shut up!|Shut up]]
+[[Please leave me alone|Shut up]]
 [[(Mock them)|Mocking]]
 [[(Make a face)|Face]]
 ===
 title: Ignore and keep walking
 tags: 
 colorID: 0
-position: -548,26
+position: -550,15
 ---
 <<hide anonymous1>>
 <<hide anonymous2>>
 You start walking faster until the laughing students are out of view.
 You think to yourself...
 
-[[They were just being childish. I look fine. |MoodIncrease]]
-[[Don't pay attention to them. Keep walking. I'm almost out.|MoodIncrease]]
-===
-title: MoodIncrease
-tags: 
-colorID: 0
-position: -384,-202
----
-<<set $mood to $mood - 20>>
-[[leave school]]
+[[They were just being childish.|self talk 1]]
+[[Ugh, I'm such a loser.|self talk 2]]
+[[Don't pay attention to them.|self talk 3]]
 ===
 title: Shut up
 tags: 
 colorID: 0
-position: -187,24
+position: -201,33
 ---
-{$player}: Hey, shut up!
+<<set $mood to $mood - $picked_on>>
+{$player}: Please, leave me alone.
 <<hide anonymous1>>
 <<hide anonymous2>>
-You ignore their shocked expressions and stomp away, leaving them far behind.
+You ignore their surprised expressions and stomp away, leaving them far behind.
 [[leave school]]
 ===
 title: Mocking
 tags: 
 colorID: 0
-position: 63,22
+position: 48,41
 ---
 You do your best imitation of their leering voice.
 {$player}: What {$are} {$they} wearing?!
 <<hide anonymous1>>
 <<hide anonymous2>>
-You ignore their titters in response and stomp away, leaving them far behind.
+<<set $mood to $mood + $picked_on>>
+You ignore their laughs in response and stomp away, leaving them far behind.
 [[leave school]]
 ===
 title: Face
@@ -85,11 +82,38 @@ Soon, you've left them far behind.
 title: leave school
 tags: 
 colorID: 0
-position: -114,-356
+position: -110,-427
 ---
 <<show background suburb>>
 <<stop>>
 Once you push open the glass front doors, you breathe a sigh of relief. Now you just have to walk home.
 <<play Reentry.wav>>
 <<load 12 social media>>
+===
+title: self talk 1
+tags: 
+colorID: 0
+position: -764,-210
+---
+<<set $mood to $mood - $picked_on>>
+You think to yourself - They were just being childish. I look fine.
+[[leave school]]
+===
+title: self talk 2
+tags: 
+colorID: 0
+position: -549,-206
+---
+<<set $mood to $mood + $picked_on>>
+You think to yourself - Ugh, I'm such a loser.
+[[leave school]]
+===
+title: self talk 3
+tags: 
+colorID: 0
+position: -329,-207
+---
+<<set $mood to $mood - $picked_on>>
+You think to yourself - Don't pay attention to them. You're almost out. Just keep walking.
+[[leave school]]
 ===

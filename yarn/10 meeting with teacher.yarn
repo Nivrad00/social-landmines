@@ -1,41 +1,21 @@
 title: Start
 tags: 
-colorID: 8
-position: -48,174
+colorID: 0
+position: -24,-452
 ---
 <<show teacher happy center>>
 Ms. Roberts: Hey {$player}, welcome back! I hope you don't mind taking a moment to talk.
-Ms. Roberts: I'm glad to have you back in my classroom and to help you get situated so you can catch up on the work that you've missed. We need to figure out how to get you caught up on all of the assignments.
-Ms. Roberts: How are you feeling about this?
-[[I don't want to fall behind in this class|Start1]]
-[[I'm nervous that I won't be able to catch up|Start2]]
-[[I'm feeling overwhelmed|Start3]]
-[[I don't want to talk about it |Start4]]
-===
-title: Complete
-tags: 
-colorID: 0
-position: -21,-385
----
-<<set $mood to $mood + 20>>
-Ms. Roberts: I have a list of assignments you need to complete.
-Ms. Roberts: But first, what kind of support do you need from me?
-<<if $support_work is true>>
-[[You said you could help me make a timeline, right?|Help me]]
+<<if not $support_work>>
+    <<set $mood to $mood + $one_on_one>>
+    Ms. Roberts: I'm glad to have you back in my classroom and to help you get situated so you can catch up on the work that you've missed. We need to figure out how to get you caught up on all of the assignments.
+    Ms. Roberts: How are you feeling about this?
+    [[I don't want to fall behind in this class|Start1]]
+    [[I'm nervous that I won't be able to catch up|Start2]]
+    [[I'm feeling overwhelmed|Start3]]
+    [[I don't want to talk about it |Start4]]
+<<else>>
+    [[Streamlined]]
 <<endif>>
-[[Nothing|Nothing]] 
-[[I'm not doing any of this|Not]]
-===
-title: Help me
-tags: 
-colorID: 0
-position: -304,-695
----
-{$player}: At the reentry meeting you said you could help me make a timeline or something, right?
-Ms. Roberts: Yes, absolutely!
-Ms. Roberts: I'll walk you through all the material you missed and come up with a plan for making it up.
-{$player}: Okay, I'm ready.
-[[Quiz]]
 ===
 title: Quiz
 tags: 
@@ -88,68 +68,52 @@ Ms. Roberts: Do try your hardest, but take breaks if you need it.
 Ms. Roberts: And always let me know if you need any help, {$player}.
 {$player}: Thanks, I will.
 You grab your bag and wave goodbye to Ms. Roberts.
-<<set $mood to $mood - 20>>
 <<hide teacher>>
 <<load 11 hallway>>
 ===
 title: Start1
 tags: 
 colorID: 0
-position: -391,-88
+position: -379,-716
 ---
 {$player}: I don't want to fall behind in this class.
 Ms. Roberts: I totally get it. I'll do everything I can to help you catch up.
-[[Complete]]
+[[Quiz]]
 ===
 title: Start2
 tags: 
 colorID: 0
-position: -165,-91
+position: -141,-717
 ---
+<<set $mood to $mood - $one_on_one>>
 {$player}: I'm nervous that I won't be able to catch up.
 Ms. Roberts: Don't worry, it's not too much material! And I'll be here if you ever need help with anything.
-[[Complete]]
+[[Quiz]]
 ===
 title: Start3
 tags: 
 colorID: 0
-position: 70,-98
+position: 95,-718
 ---
+<<set $mood to $mood - $one_on_one>>
 {$player}: I'm sort of feeling overwhelmed...
 Ms. Roberts: I'm really sorry about that. I'll try to keep it as simple as possible, okay?
-[[Complete]]
+[[Quiz]]
 ===
 title: Start4
 tags: 
 colorID: 0
-position: 313,-94
+position: 336,-721
 ---
+<<set $mood to $mood + $one_on_one>>
 {$player}: I don't want to talk about it.
 Ms. Roberts: Well, unfortunately, this is something we'll have to discuss sooner or later.
-[[Complete]]
-===
-title: Nothing
-tags: 
-colorID: 0
-position: -19,-699
----
-{$player}: Nothing.
-Ms. Roberts: Okay, that's fine. Now, I do need you to get started on a few things for me...
-[[Quiz]]
-===
-title: Not
-tags: 
-colorID: 0
-position: 255,-700
----
-{$player}: I'm not doing any of this.
-Ms. Roberts: I'm sorry, {$player}, I know this is tough, but I need you to do your best to catch up.
 [[Quiz]]
 ===
 title: Reading
 tags: 
 colorID: 0
-position: -11,-1488
+position: -13,-1488
 ---
 Ms. Roberts: Oh, I almost forgot!
 Ms. Roberts: I'll also need you to read through chapters 4 to 6 over the weekend. We're going to start on chapter 7 next week.
@@ -162,7 +126,7 @@ Ms. Roberts: Do you have any questions for me?
 title: Reading1
 tags: 
 colorID: 0
-position: -298,-1712
+position: -266,-1718
 ---
 {$player}: Can I come to you later if I need help?
 Ms. Roberts: Of course, you're always welcome to come and talk to me if you need any additional instruction or if you're stuck on any concept.     
@@ -180,9 +144,23 @@ Ms. Roberts: I encourage you to reach out to a classmate to get some of the note
 title: Reading3
 tags: 
 colorID: 0
-position: 205,-1707
+position: 221,-1728
 ---
 {$player}: I'm feeling a bit nervous, but I will try my hardest.
 Ms. Roberts: Good, good!
 [[End]]
+===
+title: Streamlined
+tags: 
+colorID: 0
+position: 661,-1247
+---
+Ms. Roberts: Since you asked for my help with catching up at the meeting earlier, I wrote out this guide for you.
+Ms. Roberts: Here's all the reading you missed, and here's a list of any assignments you have to make up.
+Ms. Roberts: I put some due dates down to help you out, but if you need more time, just let me know.
+Ms. Roberts: Do you have any questions?
+
+[[Can I come to you later if I need help?|Reading1]]
+[[Do you have any notes from the days I missed?|Reading2]]
+[[I'm feeling a bit nervous, but I will try my hardest.|Reading3]]
 ===

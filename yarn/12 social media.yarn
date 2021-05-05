@@ -1,164 +1,68 @@
 title: Start
 tags: 
 colorID: 0
-position: 516,355
+position: -333,451
 ---
 <<show background suburb>>
-Your phone pings as you receive a text message notification.
 <<show phone notif center>>
-<<set $category2 to "friendships">>
-<<if $category2 == "extracurricular">>
-    Claire: "Hey..."
-    Claire: "Is it true that you got EXTRA time for a test that you BOMBED?!"
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back1]]
+Your phone pings as you receive a text message notification.
 
-<<elseif $category2 == "popularity">>
+<<if $category2 == "popularity">>
     Claire: "Hey {$player}!"
     Claire: "Did you hear all about how awesome my birthday party was last weekend?"
+    <<set $mood to $mood + $picked_on>>
     Claire: "No one invited you, huh? Probably because no one likes you"
-    
-
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back2]]
-
-
 
 <<elseif $category2 == "partner">>
-   [[partner]]
-
+    <<show phone hands center>>
+    You open the message to see a photo of your {$passion2} holding hands with someone else.
+    <<set $mood to $mood + $picked_on>>
+    Claire: "Looks like you weren't worth waiting for."
 
 <<elseif $category2 == "friendships">>
     Claire: "Hey, are you coming?"
     {$player}: "Huh?"
     Claire: "Whoops, wrong person."
-    {$player}: "Are you having people over"
+    {$player}: "Are you having people over?"
     Claire: "Listen, {$player}. You’re nice and all, but you're just kind of a bummer."
+    <<set $mood to $mood + $picked_on>>
     Claire: "We don't want to hang out with you anymore."
-    
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back4]]
 
+<<elseif $passion2 == "academic">>
+    Claire: "Hey..."
+    <<set $mood to $mood + $picked_on>>
+    Claire: "Is it true that you got EXTRA time for a test that you BOMBED?!"
+<<elseif $passion2 == "sports">>
+    Claire: "Hey..."
+    <<set $mood to $mood + $picked_on>>
+    Claire: "Is it true that you BLEW IT at the game last week?!
+<<elseif $passion2 == "theater">>
+    Claire: "Hey..."
+    <<set $mood to $mood + $picked_on>>
+    Claire: "Is it true that you EMBARRASSED yourself at the play last week?!"
+<<elseif $passion2 == "arts">>
+    Claire: "Hey..."
+    <<set $mood to $mood + $picked_on>>
+    Claire: "Is it true that you EMBARRASSED yourself at the art show last week?!"
 <<endif>>
-===
-title: Message back1
-tags: 
-colorID: 0
-position: -608,494
----
-{$player}: "That's none of your business."
-Claire: "So it IS true?"
 
-[[You should really watch your mouth|watch mouth]]
-[[Please just leave me alone|leave alone]]
-===
-title: Message back2
-tags: 
-colorID: 0
-position: -600,752
----
-{$player}: "Whatever, I was busy anyways."
-Claire: "Yeah, keep telling yourself that."
-
-[[You should really watch your mouth|watch mouth]]
-[[Please just leave me alone|leave alone]]
-===
-title: Message back3
-tags: 
-colorID: 0
-position: -608,1004
----
-{$player}: "Please stay out of my business"
-Claire: "I'M not the one you should be worried about lmao"
-
-[[You should really watch your mouth|watch mouth]]
-[[Please just leave me alone|leave alone]]
-===
-title: Message back4
-tags: 
-colorID: 0
-position: -648,1245
----
-You type out a response...
-
-[[Your loss!|your loss]]
-[[Whatever, goodbye.|goodbye]]
-===
-title: coping skills
-tags: 
-colorID: 0
-position: -611,-8
----
-<<hide phone>>
-You put away your phone. This would be a good time to use a coping skill!
-
-[[Finished|End]]
+[[Ignore it|Ignore]]
+[[Message back|Message back]]
 ===
 title: Ignore
 tags: 
 colorID: 0
-position: -608,254
+position: -661,231
 ---
 <<hide phone>>
 You don't honor this message with a response. You have more important things to worry about.
 
 [[End]]
 ===
-title: watch mouth
-tags: 
-colorID: 0
-position: -1030,688
----
-{$player}: "You should really watch your mouth!"
-Claire: "Or what? You’ll go cry to your friends at the nuthouse?"
- 
-[[Whatever, man. Just stop it.|Close]]
-[[Screw you! I hate you!|Close]]
-[[(Block her messages because this isn't constructive)|Close]]
-===
-title: leave alone
-tags: 
-colorID: 0
-position: -987,1038
----
-{$player}: "Please just leave me alone"
-Claire: "Me leaving you alone in exchange for you leaving me alone? Done."
- 
-[[Whatever, man. Just stop it.|Close]]
-[[Screw you! I hate you!|Close]]
-[[(Block her messages because this isn't constructive)|Close]]
-===
-title: your loss
-tags: 
-colorID: 0
-position: -969,1288
----
-{$player}: "Your loss!"
-Claire: "Mmm not really, dude. Maybe you were hot shit at the nuthouse, but you're no one here."
-
-[[Whatever, man. Just stop it.|Close]]
-[[Screw you! I hate you!|Close]]
-[[(Block her messages because this isn't constructive)|Close]]
-===
-title: goodbye
-tags: 
-colorID: 0
-position: -955,1509
----
-{$player}: "Whatever, goodbye"
-Claire: "Lol we WON’T miss you!"
-
-[[Whatever, man. Just stop it.|Close]]
-[[Screw you! I hate you!|Close]]
-[[(Block her messages because this isn't constructive)|Close]]
-===
 title: End
 tags: 
 colorID: 0
-position: -1580,560
+position: -1296,229
 ---
 Eventually, your home appears around the corner.
 You unlock the door, shrug off your backpack, and finally sit down to relax.
@@ -167,24 +71,69 @@ You unlock the door, shrug off your backpack, and finally sit down to relax.
 title: Close
 tags: 
 colorID: 0
-position: -1332,1000
+position: -1307,660
 ---
 <<hide phone>>
-With that, you end the conversation.
 {$player}: What a jerk...
 
 [[End]]
 ===
-title: partner
+title: Message back
 tags: 
 colorID: 0
-position: 52,1237
+position: -654,657
 ---
-<<show phone hands center>>
-    You open the message to see a photo of your {$partner} holding hands with someone else.
-    Claire: "Looks like you weren't worth waiting for."
-       
-    [[Look to coping skills|coping skills]]
-    [[Ignore it|Ignore]]
-    [[Message back|Message back3]]
+<<if $category2 == "extracurricular">>
+    {$player}: "That's none of your business"
+    Claire: "So it IS true?"
+
+<<elseif $category2 == "popularity">>
+    {$player}: "Whatever, I was busy anyways"
+    Claire: "Yeah, keep telling yourself that"
+
+<<elseif $category2 == "partner">>
+    {$player}: "Please stay out of my business"
+    Claire: "I'M not the one you should be worried about lmao"
+
+<<elseif $category2 == "friendships">>
+    {$player}: "Whatever, goodbye"
+    Claire: "Lol we WON’T miss you!"
+
+<<endif>>
+
+[[Just leave me alone|Close1]]
+[[Screw you! I hate you!|Close2]]
+[[(Block her messages)|Close3]]
+===
+title: Close1
+tags: 
+colorID: 0
+position: -987,417
+---
+{$player}: "Just leave me alone"
+<<set $mood to $mood - $picked_on>>
+Claire: "Me leaving you alone in exchange for you leaving me alone? Done."
+You shove your phone into your pocket.
+ 
+[[Close]]
+===
+title: Close2
+tags: 
+colorID: 0
+position: -979,659
+---
+{$player}: "Screw you! I hate you!"
+<<set $mood to $mood + $picked_on>>
+Claire: "Aww, are you gonna go cry to your friends at the nuthouse?"
+Instead of responding, you shove your phone into your pocket.
+[[Close]]
+===
+title: Close3
+tags: 
+colorID: 0
+position: -981,930
+---
+<<set $mood to $mood - $picked_on>>
+You block her and the messages disappear from your screen.
+[[Close]]
 ===
