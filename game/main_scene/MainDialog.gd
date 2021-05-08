@@ -23,12 +23,15 @@ signal end_game
 onready var audioPlayer = get_node("../YarnAudioPlayer")
 
 func _ready():	
-	Rakugo.define_character("Background", "Background", Color.pink)
-	Rakugo.define_character("Teacher", "Teacher", Color.red)
-	Rakugo.define_character("Grant", "Grant", Color.red)
+	Rakugo.define_character("Background", "Background", Color.white)
+	Rakugo.define_character("Ms. Roberts", "Ms. Roberts", Color("#de9778")) # light brown
+	Rakugo.define_character("Ms. Martin", "Ms. Martin", Color("#ff3838")) # light red
+	Rakugo.define_character("Mr. Lee", "Mr. Lee", Color("#aaaaaa")) # gray
+	Rakugo.define_character("Grant", "Grant", Color("#ff3838")) # light red
 	Rakugo.define_character("Brad", "Brad", Color.yellow)
 	Rakugo.define_character("Juana", "Juana", Color.pink)
-	Rakugo.define_character("Peer2", "Peer2", Color.green)
+	Rakugo.define_character("Noah", "Noah", Color.cyan)
+	Rakugo.define_character("Claire", "Claire", Color.green)
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
 	yarn_importer.connect_scene(self, audioPlayer)
 	
@@ -66,6 +69,7 @@ func default_event():
 	$'../EndScreen'.reset()
 	
 	# start with quesionnaire stuff
+	
 	quest.show()
 	choice.hide()
 	dialogue.hide()

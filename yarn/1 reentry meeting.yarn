@@ -246,7 +246,7 @@ position: -18,-1076
 ---
 <<set $support_work to true>>
 {$player}: That sounds good.
-Ms. Martin: Great. This means Mrs. Roberts will meet with you today to help make a plan about missing work.
+Ms. Martin: Great. This means Ms. Roberts will meet with you today to help make a plan about missing work.
 <<hide teacher>>
 Ms. Martin: Do you need any other supports today?
 [[Yes|Social Emotional Learning Supports]]
@@ -328,9 +328,9 @@ position: -277,40
     <<set $mood to $mood + $around_adults>>
 <<endif>>
 {$player}: Yeah, that plan sounds fine.
-Mr. Martin: Okay, good. Is there anything else you'd like us to consider or talk about, mom?
+Ms. Martin: Okay, good. Is there anything else you'd like us to consider or talk about, mom?
 Mom: No. We're just really focused on making sure {$player} is caught up academically.
-Mr. Martin: Okay, great! In that case, let's move on to our next topic.
+Ms. Martin: Okay, great! In that case, let's move on to our next topic.
 <<hide mom>>
 [[before supports1]]
 ===
