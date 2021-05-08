@@ -55,7 +55,7 @@ Ms. Martin: Here are a list of things some students have found helpful when retu
 
 Note this is a critical time to ask for supports. If you don't provide this information now, you will not receive supports to make your first day back easier.
 
-[[Taking breaks during class|breaks]]
+[[Taking breaks to see the counselor during class|breaks]]
 [[Leaving class early to avoid crowded hallways|no crowded hallway]]
 [[Help making up school work|making up work]]
 [[Help making up missed lessons|making up lessons]]
@@ -189,6 +189,7 @@ tags:
 colorID: 0
 position: -707,-1063
 ---
+<<set $support_counselor to true>>
 {$player}: Yes, please.
 Ms. Martin: Great. A universal pass to come visit me will be available to you whenever you need it. 
 Ms. Martin: Would you like to consider additional supports during the school day? 	

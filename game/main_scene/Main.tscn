@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://game/main_scene/MainDialog.gd" type="Script" id=1]
 [ext_resource path="res://game/characters/background/background.tscn" type="PackedScene" id=2]
@@ -32,6 +32,14 @@
 [ext_resource path="res://gui/InGame/thermometer/progressbar.png" type="Texture" id=30]
 [ext_resource path="res://game/characters/mom/mom.tscn" type="PackedScene" id=31]
 [ext_resource path="res://game/characters/anonymous1/anonymous1.tscn" type="PackedScene" id=32]
+[ext_resource path="res://fonts/Lato/Lato-Regular.ttf" type="DynamicFontData" id=33]
+
+[sub_resource type="DynamicFont" id=8]
+size = 21
+font_data = ExtResource( 33 )
+
+[sub_resource type="Theme" id=9]
+Label/fonts/font = SubResource( 8 )
 
 [sub_resource type="Animation" id=1]
 tracks/0/type = "value"
@@ -1355,7 +1363,6 @@ size_flags_vertical = 0
 text = "Submit"
 
 [node name="EndScreen" type="Control" parent="."]
-visible = false
 margin_right = 1280.0
 margin_bottom = 720.0
 mouse_filter = 2
@@ -1369,7 +1376,10 @@ __meta__ = {
 margin_right = 1280.0
 margin_bottom = 720.0
 mouse_filter = 1
-color = Color( 0, 0, 0, 0.733333 )
+color = Color( 0, 0, 0, 0.823529 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SkipButton" type="Button" parent="EndScreen"]
 modulate = Color( 1, 1, 1, 0.780392 )
@@ -1385,20 +1395,25 @@ __meta__ = {
 }
 
 [node name="Container" type="VBoxContainer" parent="EndScreen"]
-margin_right = 1277.0
-margin_bottom = 718.0
+margin_left = 150.0
+margin_top = -1.0
+margin_right = 1130.0
+margin_bottom = 722.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = SubResource( 9 )
+custom_constants/separation = 0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="EndScreen/Container"]
-margin_top = 131.0
-margin_right = 1277.0
-margin_bottom = 188.0
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 153.0
+margin_right = 980.0
+margin_bottom = 208.0
 text = "Congratulations on completing your first day back at school!
 "
 align = 1
@@ -1409,10 +1424,10 @@ autowrap = true
 "anims/Fade In" = SubResource( 1 )
 
 [node name="Label2" type="Label" parent="EndScreen/Container"]
-margin_top = 192.0
-margin_right = 1277.0
-margin_bottom = 279.0
-text = "Based on your responses, here are some ideas you could talk to your parents and/or clinician about in thinking about your real first day back.
+margin_top = 208.0
+margin_right = 980.0
+margin_bottom = 292.0
+text = "Based on your responses, here are some ideas you could talk to your parents or clinician about when thinking about your real first day back.
 "
 align = 1
 valign = 1
@@ -1422,9 +1437,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 2 )
 
 [node name="Label3" type="Label" parent="EndScreen/Container"]
-margin_top = 283.0
-margin_right = 1277.0
-margin_bottom = 340.0
+margin_top = 292.0
+margin_right = 980.0
+margin_bottom = 347.0
 text = "You may want to see if you can get access to the following for your return to school: 
 "
 align = 1
@@ -1435,10 +1450,11 @@ autowrap = true
 "anims/Fade In" = SubResource( 3 )
 
 [node name="Supports" type="Label" parent="EndScreen/Container"]
-margin_top = 344.0
-margin_right = 1277.0
-margin_bottom = 401.0
-text = "[Supports requested]
+margin_top = 347.0
+margin_right = 980.0
+margin_bottom = 402.0
+custom_colors/font_color = Color( 0.580392, 0.301961, 0.87451, 1 )
+text = "(None)
 "
 align = 1
 valign = 1
@@ -1448,9 +1464,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 4 )
 
 [node name="Label5" type="Label" parent="EndScreen/Container"]
-margin_top = 405.0
-margin_right = 1277.0
-margin_bottom = 492.0
+margin_top = 402.0
+margin_right = 980.0
+margin_bottom = 486.0
 text = "You may want to talk to your parents and/or clinician about preparing for the following situations you reported as stressful when you return to school: 
 "
 align = 1
@@ -1461,10 +1477,11 @@ autowrap = true
 "anims/Fade In" = SubResource( 5 )
 
 [node name="Stressors" type="Label" parent="EndScreen/Container"]
-margin_top = 496.0
-margin_right = 1277.0
-margin_bottom = 553.0
-text = "[Stressors]
+margin_top = 486.0
+margin_right = 980.0
+margin_bottom = 541.0
+custom_colors/font_color = Color( 0.580392, 0.301961, 0.87451, 1 )
+text = "(None)
 "
 align = 1
 valign = 1
@@ -1474,9 +1491,9 @@ autowrap = true
 "anims/Fade In" = SubResource( 6 )
 
 [node name="Button" type="Button" parent="EndScreen/Container"]
-margin_top = 557.0
-margin_right = 1277.0
-margin_bottom = 586.0
+margin_top = 541.0
+margin_right = 980.0
+margin_bottom = 570.0
 disabled = true
 text = "Back"
 __meta__ = {

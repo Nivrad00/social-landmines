@@ -105,6 +105,11 @@ func _on_resource_button_press(resource_name):
 
 func _on_resources_menu_opened():
 	$ResourcesMenu/Content/MarginContainer/VBoxContainer.show()
+	if Global.get_var('support_counselor'):
+		$ResourcesMenu/Content/MarginContainer/VBoxContainer/ResourceOption4.show()
+	else:
+		$ResourcesMenu/Content/MarginContainer/VBoxContainer/ResourceOption4.hide()
+		
 	if Global.get_var('support_calming'):
 		$ResourcesMenu/Content/MarginContainer/VBoxContainer/ResourceOption2.show()
 		$ResourcesMenu/Content/MarginContainer/VBoxContainer/ResourceOption3.show()
