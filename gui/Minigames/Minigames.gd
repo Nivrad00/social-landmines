@@ -46,7 +46,7 @@ func end_minigame():
 	minigame_shown = false
 	
 	if $MinigameTimer.time_left == 0:
-		Global.set_var('mood', Global.get_var('mood') - 10)
+		Global.set_var('mood', Global.get_var('mood') - 20)
 	$MinigameTimer.stop()
 		
 
