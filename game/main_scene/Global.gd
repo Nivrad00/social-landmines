@@ -2,8 +2,6 @@ extends Node
 
 signal mood_changed
 
-var moodMultiplier = []
-
 # contains all global variables
 var var_dict = {}
 
@@ -24,6 +22,10 @@ func get_var(key):
 func get_dict():
 	return var_dict
 
+# called when game ends
+func reset():
+	var_dict = {}
+	
 func _restore(a):
 	var restore_vars = ["original_mood", "player", "passion1",'passion2',"category1","category2","around_kids", "around_adults", "one_on_one", "wrong_thing", 
 	"picked_on", "crowded_places", "attention_kids", "attention_teachers", "they","them","their"]

@@ -114,10 +114,14 @@ func reset_game():
 	# (this makes sure the visuals reset when the game ends)
 	SceneLoader.load_scene(Settings.get("application/run/main_scene"), true, true)
 	started = false
+	
 	# Screens.gd was already using the game_ended signal to reset the ui focus
 	# now ChoiceMenu.gd uses it to get rid of any lingering choices
 	# and InGameGUI.gd uses it to stop skipping and hide ResourcesMenu/Minigames
 	emit_signal("game_ended") 
+	
+	# make sure to reset variables too
+	Global.reset()
 	
 	menu_return(null)
 
