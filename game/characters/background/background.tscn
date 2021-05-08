@@ -56,8 +56,8 @@ texture = ExtResource( 5 )
 "showable",
 ]]
 visible = false
-position = Vector2( 640, 360 )
-scale = Vector2( 2.5, 2.5 )
+position = Vector2( 638.119, 311.615 )
+scale = Vector2( 0.628433, 0.628433 )
 texture = ExtResource( 3 )
 
 [node name="restroom" type="Sprite" parent="." groups=[
@@ -65,8 +65,8 @@ texture = ExtResource( 3 )
 "showable",
 ]]
 visible = false
-position = Vector2( 638.813, 359.332 )
-scale = Vector2( 1.07317, 1.07317 )
+position = Vector2( 642.41, 382.915 )
+scale = Vector2( 0.676091, 0.676091 )
 texture = ExtResource( 1 )
 
 [node name="classroom3" type="Sprite" parent="." groups=[

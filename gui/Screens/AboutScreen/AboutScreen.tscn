@@ -42,7 +42,7 @@ __meta__ = {
 
 [node name="About" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 660.0
-margin_bottom = 2203.0
+margin_bottom = 2302.0
 rect_min_size = Vector2( 650, 0 )
 theme = SubResource( 2 )
 custom_constants/separation = 25
@@ -68,6 +68,7 @@ margin_right = 660.0
 margin_bottom = 365.0
 rect_min_size = Vector2( 100, 40 )
 rect_clip_content = false
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -86,6 +87,7 @@ margin_right = 660.0
 margin_bottom = 430.0
 rect_min_size = Vector2( 100, 40 )
 rect_clip_content = false
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -121,6 +123,7 @@ margin_right = 660.0
 margin_bottom = 560.0
 rect_min_size = Vector2( 100, 40 )
 rect_clip_content = false
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -236,6 +239,7 @@ margin_right = 660.0
 margin_bottom = 885.0
 rect_min_size = Vector2( 100, 40 )
 rect_clip_content = false
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -252,6 +256,7 @@ margin_right = 660.0
 margin_bottom = 950.0
 rect_min_size = Vector2( 100, 40 )
 rect_clip_content = false
+focus_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
@@ -511,7 +516,7 @@ align = 1
 [node name="Backgrounds" type="GridContainer" parent="ScrollContainer/About"]
 margin_top = 1826.0
 margin_right = 660.0
-margin_bottom = 2203.0
+margin_bottom = 2220.0
 custom_constants/vseparation = 0
 custom_constants/hseparation = 35
 columns = 2
@@ -521,7 +526,7 @@ __meta__ = {
 
 [node name="Label15" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_right = 312.0
-margin_bottom = 40.0
+margin_bottom = 57.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -533,18 +538,18 @@ autowrap = true
 [node name="Label16" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
 margin_right = 659.0
-margin_bottom = 40.0
+margin_bottom = 57.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
-text = "[...]"
+text = "Nightscream on Wikimedia (CC BY 3.0)"
 autowrap = true
 
 [node name="Label17" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 40.0
+margin_top = 57.0
 margin_right = 312.0
-margin_bottom = 80.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -555,9 +560,9 @@ autowrap = true
 
 [node name="Label18" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 40.0
+margin_top = 57.0
 margin_right = 659.0
-margin_bottom = 80.0
+margin_bottom = 97.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -566,9 +571,9 @@ text = "Dids on Pexels"
 autowrap = true
 
 [node name="Label19" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 80.0
+margin_top = 97.0
 margin_right = 312.0
-margin_bottom = 120.0
+margin_bottom = 137.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -579,9 +584,9 @@ autowrap = true
 
 [node name="Label20" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 80.0
+margin_top = 97.0
 margin_right = 659.0
-margin_bottom = 120.0
+margin_bottom = 137.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -590,9 +595,9 @@ text = "MChe Lee on Unsplash"
 autowrap = true
 
 [node name="Label21" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 120.0
+margin_top = 137.0
 margin_right = 312.0
-margin_bottom = 160.0
+margin_bottom = 177.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -603,9 +608,9 @@ autowrap = true
 
 [node name="Label22" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 120.0
+margin_top = 137.0
 margin_right = 659.0
-margin_bottom = 160.0
+margin_bottom = 177.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -614,9 +619,9 @@ text = "Matt Hoffman on Unsplash"
 autowrap = true
 
 [node name="Label23" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 160.0
+margin_top = 177.0
 margin_right = 312.0
-margin_bottom = 200.0
+margin_bottom = 217.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -627,9 +632,9 @@ autowrap = true
 
 [node name="Label24" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 160.0
+margin_top = 177.0
 margin_right = 659.0
-margin_bottom = 200.0
+margin_bottom = 217.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -638,9 +643,9 @@ text = "Chalo Garcia on Unsplash"
 autowrap = true
 
 [node name="Label25" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 200.0
+margin_top = 217.0
 margin_right = 312.0
-margin_bottom = 240.0
+margin_bottom = 257.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -651,9 +656,9 @@ autowrap = true
 
 [node name="Label26" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 200.0
+margin_top = 217.0
 margin_right = 659.0
-margin_bottom = 240.0
+margin_bottom = 257.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -662,9 +667,9 @@ text = "Aedrian on Unsplash"
 autowrap = true
 
 [node name="Label27" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 240.0
+margin_top = 257.0
 margin_right = 312.0
-margin_bottom = 297.0
+margin_bottom = 314.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -675,9 +680,9 @@ autowrap = true
 
 [node name="Label28" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 240.0
+margin_top = 257.0
 margin_right = 659.0
-margin_bottom = 297.0
+margin_bottom = 314.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -686,9 +691,9 @@ text = "Arlington Research on Unsplash"
 autowrap = true
 
 [node name="Label29" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 297.0
+margin_top = 314.0
 margin_right = 312.0
-margin_bottom = 337.0
+margin_bottom = 354.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -699,20 +704,20 @@ autowrap = true
 
 [node name="Label30" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 297.0
+margin_top = 314.0
 margin_right = 659.0
-margin_bottom = 337.0
+margin_bottom = 354.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
-text = "[...]"
+text = "Raysonho on Wikimedia"
 autowrap = true
 
 [node name="Label31" type="Label" parent="ScrollContainer/About/Backgrounds"]
-margin_top = 337.0
+margin_top = 354.0
 margin_right = 312.0
-margin_bottom = 377.0
+margin_bottom = 394.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -723,12 +728,24 @@ autowrap = true
 
 [node name="Label32" type="Label" parent="ScrollContainer/About/Backgrounds"]
 margin_left = 347.0
-margin_top = 337.0
+margin_top = 354.0
 margin_right = 659.0
-margin_bottom = 377.0
+margin_bottom = 394.0
 rect_min_size = Vector2( 100, 40 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource( 2 )
 text = "Bibin Tom on Unsplash"
+autowrap = true
+
+[node name="12" type="Label" parent="ScrollContainer/About"]
+margin_top = 2245.0
+margin_right = 660.0
+margin_bottom = 2302.0
+rect_min_size = Vector2( 100, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 2 )
+text = "CC BY 3.0 license can be found at https://creativecommons.org/licenses/by/3.0/deed.en"
+align = 1
 autowrap = true
