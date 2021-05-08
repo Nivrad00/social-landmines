@@ -9,6 +9,7 @@ onready var dialogue = get_node("/root/Window/Panel/TabContainer/InGameGUI/Dialo
 onready var resource = get_node("/root/Window/Panel/TabContainer/InGameGUI/ResourcesMenu")
 onready var therm = get_node("/root/Window/Panel/TabContainer/InGameGUI/MoodThermometer")
 onready var quick = get_node("/root/Window/Panel/TabContainer/InGameGUI/QuickMenu")
+onready var counselor = get_node("/root/Window/Panel/TabContainer/InGameGUI/Minigames/Games/Counselor")
 
 var current_choices = []
 var next_scene = null
@@ -34,7 +35,8 @@ func _ready():
 	Rakugo.define_character("Claire", "Claire", Color.green)
 	yarn_importer = load('res://yarn/yarn-rakugo-interface.gd').new()
 	yarn_importer.connect_scene(self, audioPlayer)
-	
+	counselor.connect("counselorStart",self,"_on_counselor_start")
+	counselor.connect("counselorEnd",self,"_on_counselor_end")
 	# preload audio, otherwise there are issues
 	# check for .wav.import -- the .wav's themselves aren't detected in the exported build
 	var dir = Directory.new()
@@ -133,6 +135,12 @@ func default_event():
 			break
 		
 	end_event()
+
+func _on_counselor_start():
+	audioPlayer.set_stream_paused(true)
+
+func _on_counselor_end():
+	audioPlayer.set_stream_paused(false)
 
 func end_game():
 	if is_running():
