@@ -1,6 +1,7 @@
 extends Control
-
 var state = 0
+signal counselorStart
+signal counselorEnd
 
 func _ready():
 	pass
@@ -9,12 +10,14 @@ func set_dialogue(text):
 	$Controls/Dialogue/MarginContainer/VBoxContainer/message.text = text
 
 func start_minigame():
+	emit_signal("counselorStart")
 	state = 0
 	$Controls/Options.hide()
 	set_dialogue("Hello! Would you like to join me for a guided meditation?")
 
 
 func end_minigame():
+	emit_signal("counselorEnd")
 	$meditation_audio.stop()
 
 func _on_Button_pressed():
