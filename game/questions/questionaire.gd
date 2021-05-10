@@ -134,6 +134,7 @@ func _on_Submit_pressed():
 	is_are(handle_pronouns(get_pronouns())[0].to_lower())
 	Rakugo.story_step()
 
+#sets variable are depending on what pronoun is chosen
 func is_are(they):
 	var is_are = null
 	if they == "they":

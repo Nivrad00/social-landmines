@@ -136,9 +136,10 @@ func default_event():
 		
 	end_event()
 
+#pauses music when counselor minigame starts
 func _on_counselor_start():
 	audioPlayer.set_stream_paused(true)
-
+#unpauses music when counselor minigame ends
 func _on_counselor_end():
 	audioPlayer.set_stream_paused(false)
 
