@@ -28,8 +28,11 @@ func _input(event):
 		
 		# however, the toggled skip works and is bound to tab
 		if event.is_action_pressed("rakugo_skip_toggle"):
-			# ignore while resources menu or minigame is open
-			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown:
+			# ignore while resources menu, minigame, or questionnaire is open
+			# (sorry for the hacky questionnaire check)
+			if not $ResourcesMenu.dropdown_shown\
+			and not $Minigames.minigame_shown\
+			and not Window.get_node('Panel/SceneAnchor/Main/Questions').visible:
 				if Rakugo.skipping:
 					Rakugo.deactivate_skipping()
 					$SkipDisplay.hide()
@@ -80,7 +83,9 @@ func _on_quick_button_press(quick_action):
 			# ignore while resources menu or minigame is open
 			# (it shouldn't be possible to hit quick menu buttons while
 			#    one of those is open -- but just in case)
-			if not $ResourcesMenu.dropdown_shown and not $Minigames.minigame_shown:
+			if not $ResourcesMenu.dropdown_shown\
+			and not $Minigames.minigame_shown\
+			and not Window.get_node('Panel/SceneAnchor/Main/Questions').visible:
 				if Rakugo.skipping:
 					Rakugo.deactivate_skipping()
 					$SkipDisplay.hide()

@@ -28,7 +28,7 @@ Your phone pings as you receive a text message notification.
     <<set $mood to $mood + $picked_on>>
     Claire: "We don't want to hang out with you anymore."
 
-<<elseif $passion2 == "academic">>
+<<elseif $passion2 == "academics">>
     Claire: "Hey..."
     <<set $mood to $mood + $picked_on>>
     Claire: "Is it true that you got EXTRA time for a test that you BOMBED?!"

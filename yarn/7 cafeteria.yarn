@@ -37,7 +37,7 @@ Brad: What?
     <<show brad laugh right>>
     Brad: Yeah, I know, right?
 
-<<elseif $passion1 == "academic">>
+<<elseif $passion1 == "academics">>
     Grant: Did you see that {$player} failed that test last week?
     Brad: Nice going, loser.
 <<elseif $passion1 == "sports">>

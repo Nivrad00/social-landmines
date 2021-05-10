@@ -329,7 +329,7 @@ position: -277,40
     <<set $mood to $mood + $around_adults>>
 <<endif>>
 {$player}: Yeah, that plan sounds fine.
-Ms. Martin: Okay, good. Is there anything else you'd like us to consider or talk about, mom?
+Ms. Martin: Okay, good. Is there anything else you'd like us to consider or talk about, Mom?
 Mom: No. We're just really focused on making sure {$player} is caught up academically.
 Ms. Martin: Okay, great! In that case, let's move on to our next topic.
 <<hide mom>>
@@ -482,8 +482,7 @@ tags:
 colorID: 0
 position: 468,-164
 ---
-{$player}: Yeah, I don't need any support.
-Ms. Martin: Alright, if you're sure.
+{$player}: Hm...
 [[counselor other topics]]
 ===
 title: before supports2
